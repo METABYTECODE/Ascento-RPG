@@ -1,0 +1,13 @@
+"CustomHeroList"
+{
+		
+
+		"npc_dota_hero_johny"					"1"
+		"npc_dota_hero_bob"						"0"
+		"npc_dota_hero_jane"					"0"
+		"npc_dota_hero_may"						"0"
+		"npc_dota_hero_son"						"0"
+		"npc_dota_hero_ranged"					"0"
+	
+
+}

@@ -1,0 +1,13 @@
+"AddonInfo"
+{
+	"version"		"0.2"
+ 	"maps"      "hueta"
+	"CheckAFKPlayers"	"0"
+
+  "hueta"
+  {
+          "MaxPlayers"                    "16"
+          "TeamCount" "4"
+  }
+  
+}

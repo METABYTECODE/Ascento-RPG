@@ -1,0 +1,1204 @@
+"lang"
+{
+    "Language"      "Russian"
+    "Tokens"
+    {       
+        "addon_game_name"           "ASCENTO BOSS FIGHT"
+        "addon_game_version"            "beta 0.2"
+
+        "DOTA_Tooltip_modifier_custom_shmot_attr"            "Шмотка с сайта"
+        "DOTA_Tooltip_modifier_custom_shmot_attr_Description"            "<h1>Бонус атрибутов:</h1>
+        Бонус к скорости атаки +%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%<br>
+        Бонус к урону +%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%<br>
+        Бонус к маг урону +%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%<br>
+        Бонус к исх урону +%dMODIFIER_PROPERTY_TOTALDAMAGEOUTGOING_PERCENTAGE%<br>
+        Бонус к силе +%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%<br>
+        Бонус к ловкости +%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%<br>
+        Бонус к интеллекту +%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%<br>
+        Бонус к понижению кд +%dMODIFIER_PROPERTY_COOLDOWN_PERCENTAGE%<br>
+        Бонус к мувспиду +%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%<br>
+        Бонус к дальности скилов +%dMODIFIER_PROPERTY_CAST_RANGE_BONUS_STACKING%<br>
+        Бонус к статус резисту +%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%<br>
+        Бонус к броне +%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%<br>
+        Бонус к хп +%dMODIFIER_PROPERTY_HEALTH_BONUS%<br>
+        Бонус к хп +%dMODIFIER_PROPERTY_EXTRA_HEALTH_PERCENTAGE%%%<br>
+        Бонус к мане +%dMODIFIER_PROPERTY_MANA_BONUS%<br>"
+
+        "DOTA_Tooltip_modifier_gold_extra_storage"          "Ваше золото сохранено"
+        "DOTA_Tooltip_modifier_gold_extra_storage_Description"          "Мы бережно храним Ваше золото, чтобы вернуть его, когда оно Вам потребуется. Без налогов, пошлин и посредников"
+
+        "DOTA_Tooltip_dota_courier_god"          "Неуязвимость"
+        "DOTA_Tooltip_dota_courier_god_Description"          "Когда-то давно этот осёл упал в чан с волшебным эликсиром...а впрочем вы эту историю и так знаете"
+
+
+
+
+        "tp_final_boss"                                "Телепорт к последнему боссу"
+        "tp_bosses"                               "Телепорты на боссов"
+
+
+
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_1"   "Slot for Helmet"
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_2"   "Slot for Gloves/Bracers"
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_3"   "Slot for Weapon/Shield"
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_4"   "Slot for Chestplate"
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_5"   "Slot for Boots"
+        "DOTA_Tooltip_ability_item_inventory_plug_slot_6"   "Slot for Artifact"
+
+        "talent_tree_column_0_title"            "Требуемый уровень"
+        "talent_tree_column_1_title"            "Маг урон"
+        "talent_tree_column_2_title"            "Физ урон"
+        "talent_tree_column_3_title"            "Броня"
+        "talent_tree_current_talent_points"     "Количество очков: %POINTS%"
+        "talent_tree_reset_talents"             "Сбросить таланты"
+        "talent_tree_window_button"         "Таланты"
+
+
+        "dota_custom1"          "Группа Альфа"
+        "dota_custom2"          "Группа Бета"
+        "dota_custom3"          "Группа Дельта"
+        "dota_custom4"          "Группа Сигма"
+
+        "npc_creep_farm_1"                  "Фарми меня"
+        "npc_creep_farm_2"                  "Фарми меня"
+        "npc_creep_farm_3"                  "Фарми меня"
+        "npc_creep_farm_4"                  "Фарми меня"
+        "DOTA_Tooltip_ability_item_tpfarm"                      "Телепорт на фарм локацию"
+
+
+        "DOTA_Tooltip_ability_item_upgrade_1"                      "Свиток улучшения +2"
+        "DOTA_Tooltip_ability_item_upgrade_1_Description"          "Улучшит Ваш предмет с первого уровня до второго"
+        "DOTA_Tooltip_ability_item_upgrade_1_Note0"                "Внимание! Улучшает предметы по порядку их расположения в инвентаре!"
+
+        "DOTA_Tooltip_ability_item_upgrade_2"                      "Свиток улучшения +3"
+        "DOTA_Tooltip_ability_item_upgrade_2_Description"          "Улучшит Ваш предмет со второго уровня до третьего"
+        "DOTA_Tooltip_ability_item_upgrade_2_Note0"                "Внимание! Улучшает предметы по порядку их расположения в инвентаре!"
+
+        "DOTA_Tooltip_ability_item_upgrade_3"                      "Свиток улучшения +4"
+        "DOTA_Tooltip_ability_item_upgrade_3_Description"          "Улучшит Ваш предмет с третьего уровня до четвертого"
+        "DOTA_Tooltip_ability_item_upgrade_3_Note0"                "Внимание! Улучшает предметы по порядку их расположения в инвентаре!"
+
+        "DOTA_Tooltip_ability_item_upgrade_4"                      "Свиток улучшения +5"
+        "DOTA_Tooltip_ability_item_upgrade_4_Description"          "Улучшит Ваш предмет с четвертого уровня до пятого"
+        "DOTA_Tooltip_ability_item_upgrade_4_Note0"                "Внимание! Улучшает предметы по порядку их расположения в инвентаре!"
+
+        "DOTA_Tooltip_modifier_neutral_upgrade_attackspeed"                 "Уровень"
+        "DOTA_Tooltip_modifier_neutral_upgrade_attackspeed_Description"                 "С каждым уровнем крипы становятся сильнее"
+
+        
+        "npc_boss1"                                             "Мини босс"
+        "npc_boss2"                                             "Мини босс"
+        "npc_boss3"                                             "Мини босс"
+        "npc_boss4"                                             "Мини босс"
+
+
+        "npc_b_1"                                               "Легионка"
+        "npc_b_2"                                               "Дракоша"
+        "npc_b_3"                                               "Дузыч"
+        "npc_b_4"                                               "Сларкешник"
+        "npc_b_5"                                               "Хускарёк"
+        "npc_b_6"                                               "Жогернот"
+        "npc_b_7"                                               "Селёдка"
+        "npc_b_8"                                               "Водяной"
+        "npc_b_9"                                               "Злыдень"
+
+        "npc_ascmka_1"                                          "ЦМКА Защитница"
+        "npc_ascmka_2"                                          "ЦМКА Защитница"
+        "npc_ascmka_3"                                          "ЦМКА Защитница"
+        "npc_ascmka_4"                                          "ЦМКА Защитница"
+
+
+        "npc_dummy_unit"                        "Dummy"
+        "DOTA_Tooltip_ability_exp_boss"                     "Бей меня"
+        "DOTA_Tooltip_ability_exp_boss_Description"                     "За каждый удар Вы будете получать опыт равный Вашему урону"
+
+
+        "DOTA_Tooltip_ability_johny_book"                       "Улучшение аттрибутов"
+
+        "DOTA_Tooltip_ability_up_str"                       "Сила"
+        "DOTA_Tooltip_ability_up_str_Description"                       "Увеличивает силу на 1 ед."
+        "DOTA_Tooltip_ability_up_str_cost"                  "Стоимость: "
+
+        "DOTA_Tooltip_ability_up_agi"                       "Ловкость"
+        "DOTA_Tooltip_ability_up_agi_Description"                       "Увеличивает ловкость на 1 ед."
+        "DOTA_Tooltip_ability_up_agi_cost"                  "Стоимость: "
+
+        "DOTA_Tooltip_ability_up_int"                       "Интеллект"
+        "DOTA_Tooltip_ability_up_int_Description"                       "Увеличивает интеллект на 1 ед."
+        "DOTA_Tooltip_ability_up_int_cost"                  "Стоимость: "
+
+
+        "donate_list_name_artifacts"                                "Телепорты на боссов"
+        "donate_list_name_heroes"                               "Телепорт домой и в город"
+
+        "DOTA_Tooltip_ability_item_teleport_boss1"                                  "Телепорт босс 1"
+        "DOTA_Tooltip_ability_item_teleport_boss1_Description"                  "Телепортирует вас в локацию первого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss2"                              "Телепорт босс 2"
+        "DOTA_Tooltip_ability_item_teleport_boss2_Description"                  "Телепортирует вас в локацию второго босса"
+        "DOTA_Tooltip_ability_item_teleport_boss3"                              "Телепорт босс 3"
+        "DOTA_Tooltip_ability_item_teleport_boss3_Description"                  "Телепортирует вас в локацию третьего босса"
+        "DOTA_Tooltip_ability_item_teleport_boss4"                              "Телепорт босс 4"
+        "DOTA_Tooltip_ability_item_teleport_boss4_Description"                  "Телепортирует вас в локацию четвертого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss5"                              "Телепорт босс 5"
+        "DOTA_Tooltip_ability_item_teleport_boss5_Description"                  "Телепортирует вас в локацию пятого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss6"                              "Телепорт босс 6"
+        "DOTA_Tooltip_ability_item_teleport_boss6_Description"                  "Телепортирует вас в локацию шестого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss7"                              "Телепорт босс 7"
+        "DOTA_Tooltip_ability_item_teleport_boss7_Description"                  "Телепортирует вас в локацию седьмого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss8"                              "Телепорт босс 8"
+        "DOTA_Tooltip_ability_item_teleport_boss8_Description"                  "Телепортирует вас в локацию восьмого босса"
+        "DOTA_Tooltip_ability_item_teleport_boss9"                              "Телепорт босс 9"
+        "DOTA_Tooltip_ability_item_teleport_boss9_Description"                  "Телепортирует вас в локацию финального босса"
+
+
+
+        "npc_dota_hero_johny"               "Крип-крипочек"
+        "npc_dota_hero_johny_npedesc1"      "Крип - смелый крип-крипочек, идёт напролом защищая своих близких глядя страху в лицо."
+        
+        "npc_dota_hero_may"                 "May"
+        "npc_dota_hero_may_npedesc1"        "May выходец из монстров, его удара бояться все живые существа, он обладает нечеловеческой силой."
+
+
+        "npc_dota_hero_bob"                 "Боб"
+        "npc_dota_hero_bob_npedesc1"        "Однажды он был простым лесным крипом, но обрел разум и начал развиваться. Надежный защитник для своей команды."
+
+
+        "npc_dota_hero_jane"                "Джейн"
+        "npc_dota_hero_jane_npedesc1"       "Джейн была рождена, чтобы помогать своим товарищам. После позорного поражения от рук героев - она переродилась и с новыми силами готова свергнуть богов вместе со своей командой."
+
+        "npc_dota_hero_son"                 "성진우"
+        "npc_dota_hero_son_npedesc1"        "Самый слабый охотник в мире"
+
+       
+
+        "DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven"   "Аура урона"
+        "DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_Description"   "Герой увеличивает урон союзников и уменьшает урон врагов."
+        "DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_bonus_damage_pct"  "Урон союзников %:"
+        "DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_aura_radius"   "Радиус:"
+        "DOTA_Tooltip_ability_vengefulspirit_command_aura_datadriven_negative_damage_pct"   "Урон врагов %:"
+
+        "DOTA_Tooltip_ability_shallow_grave_datadriven" "Крест"
+        "DOTA_Tooltip_ability_shallow_grave_datadriven_Description" "Вешает крест на союзных героев не позволяя им умереть некоторое время."
+        "DOTA_Tooltip_ability_shallow_grave_datadriven_duration_tooltip"    "Длительность:"
+        "DOTA_Tooltip_ability_shallow_grave_datadriven_range_tooltip"   "Дальность:"
+
+
+        "DOTA_Tooltip_ability_empower_datadriven"   "Молот"
+        "DOTA_Tooltip_ability_empower_datadriven_Description"   "Однажды на поле боя Джейн нашла молот Магнуса, поделитесь им с союзниками, чтобы увеличить их урон и дать возможность атаковать по области."
+        "DOTA_Tooltip_ability_empower_datadriven_bonus_damage_pct"  "Доп урон %:"
+        "DOTA_Tooltip_ability_empower_datadriven_cleave_damage_pct" "Сплеш %:"
+
+
+        "DOTA_Tooltip_ability_voodoo_restoration_datadriven"    "Лечилка"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Description"    "Герой направляет свои чары на лечение ближайших союзников."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Lore"   "Фокусы Жарвакко могут не только околдовать врагов, но и исцелить от различных болезней."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Note0"  "Лечение происходит каждые 0,33 секунды."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_Note1"  "Лечит союзников, невосприимчивых к магии."
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_mana_per_second"    "МАНЫ В СЕКУНДУ:"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_heal"   "ЛЕЧЕНИЕ:"
+"DOTA_Tooltip_ability_voodoo_restoration_datadriven_radius" "РАДИУС:"
+
+
+"DOTA_Tooltip_Ability_item_clothes_0101"            "Доспехи новичка +1"
+        "DOTA_Tooltip_Ability_item_clothes_0101_Description"            "Увеличивает здоровье"
+        "DOTA_Tooltip_Ability_item_clothes_0101_bonus_health"       "Бонус ХП:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0102"            "<font color='#67c900'>Доспехи новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0102_Description"            "Увеличивает здоровье и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0102_bonus_health"       "Бонус ХП:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0103"            "<font color='#1e9af0'>Доспехи новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0103_Description"            "Увеличивает здоровье, сопротивление магии и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0103_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0103_bonus_magic_armor"      "Сопротивление магии:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0104"            "<font color='#c223f0'>Доспехи новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0104_Description"            "Увеличивает здоровье, сопротивление магии, максимальное восстановление здоровья и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0104_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0104_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0104_bonus_health_regen_pct"     "Реген здоровья %:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0105"            "<font color='#f0d853'>Доспехи новичка +5</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0105_Description"            "Увеличивает здоровье , сопротивление магии, максимальное восстановление здоровья и два случайных атрибута"
+        "DOTA_Tooltip_Ability_item_clothes_0105_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0105_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0105_bonus_health_regen_pct"     "Реген здоровья %:"
+
+
+        "DOTA_Tooltip_Ability_item_clothes_0201"            "Доспехи гоблина +1"
+        "DOTA_Tooltip_Ability_item_clothes_0201_Description"            "Увеличивает здоровье"
+        "DOTA_Tooltip_Ability_item_clothes_0201_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0201_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0201_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0201_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0202"            "<font color='#67c900'>Доспехи гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0202_Description"            "Увеличивает здоровье и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0202_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0202_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0202_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0202_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0203"            "<font color='#1e9af0'>Доспехи гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0203_Description"            "Увеличивает здоровье, сопротивление магии и случайную характеристику"
+        "DOTA_Tooltip_Ability_item_clothes_0203_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0203_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0203_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0203_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0204"            "<font color='#c223f0'>Доспехи гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0204_Description"            "Увеличивает здоровье, сопротивление магии, броню и случайную характеристику"
+        "DOTA_Tooltip_Ability_item_clothes_0204_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0204_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0204_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0204_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0205"            "<font color='#f0d853'>Доспехи гоблина +5</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0205_Description"            "Увеличивает здоровье , сопротивление магии, броню и две случайные характеристики"
+        "DOTA_Tooltip_Ability_item_clothes_0205_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0205_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0205_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0205_bonus_armor"        "Броня:"
+
+
+        "DOTA_Tooltip_Ability_item_clothes_0301"            "Доспехи дракона +1"
+        "DOTA_Tooltip_Ability_item_clothes_0301_Description"            "Увеличивает здоровье"
+        "DOTA_Tooltip_Ability_item_clothes_0301_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0301_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0301_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0301_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0302"            "<font color='#67c900'>Доспехи дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0302_Description"            "Увеличивает здоровье и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0302_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0302_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0302_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0302_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0303"            "<font color='#1e9af0'>Доспехи дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0303_Description"            "Увеличивает здоровье, максимальное восстановление здоровья и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0303_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0303_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0303_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0303_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0304"            "<font color='#c223f0'>Доспехи дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0304_Description"            "Увеличивает здоровье, максимальное восстановление здоровья, броню и случайный атрибут"
+        "DOTA_Tooltip_Ability_item_clothes_0304_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0304_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0304_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0304_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0305"            "<font color='#f0d853'>Доспехи дракона +5</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0305_Description"            "Увеличивает здоровье, максимальное восстановление здоровья, броню и два случайных атрибута"
+        "DOTA_Tooltip_Ability_item_clothes_0305_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0305_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0305_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0305_bonus_armor"        "Броня:"
+
+
+        "DOTA_Tooltip_Ability_item_clothes_0401"            "Доспехи бога +1"
+        "DOTA_Tooltip_Ability_item_clothes_0401_Description"            "Увеличивает максимальное восстановление здоровья"
+        "DOTA_Tooltip_Ability_item_clothes_0401_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0401_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0401_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0401_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0402"            "<font color='#67c900'>Доспехи бога +2</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0402_Description"            "Увеличивает максимальное восстановление здоровья и случайную характеристику"
+        "DOTA_Tooltip_Ability_item_clothes_0402_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0402_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0402_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0402_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0403"            "<font color='#1e9af0'>Доспехи бога +3</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0403_Description"            "Увеличивает максимальное восстановление здоровья, броню и случайную характеристику"
+        "DOTA_Tooltip_Ability_item_clothes_0403_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0403_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0403_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0403_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0404"            "<font color='#c223f0'>Доспехи бога +4</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0404_Description"            "Увеличивает максимальное восстановление здоровья, броню, сопротивление магии и случайную характеристику."
+        "DOTA_Tooltip_Ability_item_clothes_0404_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0404_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0404_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0404_bonus_armor"        "Броня:"
+
+        "DOTA_Tooltip_Ability_item_clothes_0405"            "<font color='#f0d853'>Доспехи бога +5</font>"
+        "DOTA_Tooltip_Ability_item_clothes_0405_Description"            "Увеличивает максимальное восстановление здоровья, броню, сопротивление магии и две случайные характеристики"
+        "DOTA_Tooltip_Ability_item_clothes_0405_bonus_health"       "Бонус ХП:"
+        "DOTA_Tooltip_Ability_item_clothes_0405_bonus_magic_armor"      "Сопротивление магии:"
+        "DOTA_Tooltip_Ability_item_clothes_0405_bonus_health_regen_pct"     "Реген здоровья %:"
+        "DOTA_Tooltip_Ability_item_clothes_0405_bonus_armor"        "Броня:"
+
+
+
+        "DOTA_Tooltip_Ability_item_gloves_0101"         "Перчатки новичка +1"
+        "DOTA_Tooltip_Ability_item_gloves_0102"         "<font color='#67c900'>Перчатки новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0103"         "<font color='#1e9af0'>Перчатки новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0104"         "<font color='#c223f0'>Перчатки новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0105"         "<font color='#f0d853'>Перчатки новичка +5</font>"
+
+        "DOTA_Tooltip_Ability_item_gloves_0101_Description"     "Увеличивает скорость атаки."
+        "DOTA_Tooltip_Ability_item_gloves_0102_Description"     "Увеличивает скорость атаки и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0103_Description"     "Увеличивает скорость атаки, HP при попадании и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0104_Description"     "Увеличивает скорость атаки, восстановление здоровья при попадании, восстановление маны при попадании и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0105_Description"     "Увеличивает скорость атаки, восстановление здоровья при попадании , восстановление маны при попадании и два случайных атрибута."
+
+
+
+        "DOTA_Tooltip_Ability_item_gloves_0201"         "Перчатки гоблина +1"
+        "DOTA_Tooltip_Ability_item_gloves_0202"         "<font color='#67c900'>Перчатки гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0203"         "<font color='#1e9af0'>Перчатки гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0204"         "<font color='#c223f0'>Перчатки гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0205"         "<font color='#f0d853'>Перчатки гоблина +5</font>"
+
+        "DOTA_Tooltip_Ability_item_gloves_0201_Description"     "Увеличивает скорость атаки."
+        "DOTA_Tooltip_Ability_item_gloves_0202_Description"     "Увеличивает скорость атаки и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0203_Description"     "Увеличивает скорость атаки, восстанавливает ману при попадании и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0204_Description"     "Увеличивает скорость атаки, регенерацию маны при попадании, усиление навыков и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0205_Description"     "Увеличивает скорость атаки, восстановление маны при попадании, улучшение навыков и два случайных атрибута."
+
+
+        "DOTA_Tooltip_Ability_item_gloves_0301"         "Перчатки дракона +1"
+        "DOTA_Tooltip_Ability_item_gloves_0302"         "<font color='#67c900'>Перчатки дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0303"         "<font color='#1e9af0'>Перчатки дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0304"         "<font color='#c223f0'>Перчатки дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0305"         "<font color='#f0d853'>Перчатки дракона +5</font>"
+
+        "DOTA_Tooltip_Ability_item_gloves_0301_Description"     "Увеличивает скорость атаки."
+        "DOTA_Tooltip_Ability_item_gloves_0302_Description"     "Увеличивает скорость атаки и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0303_Description"     "Увеличивает скорость атаки, повышение навыков и случайную характеристику."
+        "DOTA_Tooltip_Ability_item_gloves_0304_Description"     "Увеличивает скорость атаки, повышение навыков , ману при попадании и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0305_Description"     "Увеличение скорости атаки, повышение навыков , восстановление маны при попадании и два случайных атрибута."
+
+
+        "DOTA_Tooltip_Ability_item_gloves_0401"         "Перчатки бога +1"
+        "DOTA_Tooltip_Ability_item_gloves_0402"         "<font color='#67c900'>Перчатки бога +2</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0403"         "<font color='#1e9af0'>Перчатки бога +3</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0404"         "<font color='#c223f0'>Перчатки бога +4</font>"
+        "DOTA_Tooltip_Ability_item_gloves_0405"         "<font color='#f0d853'>Перчатки бога +5</font>"
+
+        "DOTA_Tooltip_Ability_item_gloves_0401_Description"      "Увеличивает HP при попадании."
+        "DOTA_Tooltip_Ability_item_gloves_0402_Description"      "Увеличивает восстановление после удара и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0403_Description"      "Увеличивает восстановление после удара, восстановление маны и случайный атрибут."
+        "DOTA_Tooltip_Ability_item_gloves_0404_Description"      "Увеличивает восстановление HP при попадании, восстановление маны при попадании и улучшение навыка до случайного атрибута."
+        "DOTA_Tooltip_Ability_item_gloves_0405_Description"      "Увеличивает два случайных атрибута: восстановление HP, восстановление HP и улучшение навыков."
+
+        "DOTA_Tooltip_Ability_item_gloves_0101_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0101_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0101_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0101_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0102_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0102_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0102_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0102_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0103_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0103_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0103_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0103_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0104_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0104_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0104_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0104_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0105_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0105_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0105_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0105_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0201_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0201_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0201_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0201_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0202_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0202_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0202_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0202_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0203_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0203_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0203_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0203_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0204_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0204_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0204_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0204_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0205_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0205_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0205_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0205_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0301_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0301_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0301_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0301_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0302_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0302_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0302_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0302_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0303_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0303_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0303_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0303_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0304_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0304_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0304_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0304_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0305_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0305_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0305_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0305_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0401_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0401_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0401_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0401_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0402_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0402_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0402_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0402_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0403_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0403_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0403_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0403_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0404_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0404_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0404_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0404_bonus_spell_amplify"     "Сила заклинаний:"
+
+        "DOTA_Tooltip_Ability_item_gloves_0405_bonus_attack_speed"      "Скорость атаки:"
+        "DOTA_Tooltip_Ability_item_gloves_0405_bonus_hit_hp"        "ХП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0405_bonus_hit_mp"        "МП за удар:"
+        "DOTA_Tooltip_Ability_item_gloves_0405_bonus_spell_amplify"     "Сила заклинаний:"
+
+
+
+        "DOTA_Tooltip_Ability_item_hat_0101"            "Шляпа новичка +1"
+        "DOTA_Tooltip_Ability_item_hat_0102"            "<font color='#67c900'>Шляпа новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_hat_0103"            "<font color='#1e9af0'>Шляпа новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_hat_0104"            "<font color='#c223f0'>Шляпа новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_hat_0105"            "<font color='#f0d853'>Шляпа новичка +5</font>"
+
+                "DOTA_Tooltip_Ability_item_hat_0101_Description"             " Увеличивает все атрибуты."
+"DOTA_Tooltip_Ability_item_hat_0102_Description"     " Добавляет все атрибуты и случайный атрибут "
+"DOTA_Tooltip_Ability_item_hat_0103_Description"    " Добавляет все характеристики, сопротивление статусу и случайную статистику."
+"DOTA_Tooltip_Ability_item_hat_0104_Description"    "Увеличивает все характеристики, сопротивление статусу , процент здоровья и случайную характеристику."
+"DOTA_Tooltip_Ability_item_hat_0105_Description"     "Увеличивает все атрибуты, сопротивление статусу , процент здоровья и два случайных атрибута ."
+
+        "DOTA_Tooltip_Ability_item_hat_0201"            "Шляпа гоблина +1"
+        "DOTA_Tooltip_Ability_item_hat_0202"            "<font color='#67c900'>Шляпа гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_hat_0203"            "<font color='#1e9af0'>Шляпа гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_hat_0204"            "<font color='#c223f0'>Шляпа гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_hat_0205"            "<font color='#f0d853'>Шляпа гоблина +5</font>"
+
+        "DOTA_Tooltip_Ability_item_hat_0201_Description"     "Увеличивает все атрибуты."
+"DOTA_Tooltip_Ability_item_hat_0202_Description"    "Добавляет все атрибуты и случайный атрибут"
+"DOTA_Tooltip_Ability_item_hat_0203_Description"    "Увеличивает все характеристики, сопротивление статусу и случайную характеристику."
+"DOTA_Tooltip_Ability_item_hat_0204_Description"    "Увеличивает все характеристики, сопротивление статусу , дальность применения и случайную характеристику."
+"DOTA_Tooltip_Ability_item_hat_0205_Description"    "Увеличивает все атрибуты, сопротивление статусу , дальность применения и два случайных атрибута."
+
+        "DOTA_Tooltip_Ability_item_hat_0301"            "Шляпа дракона +1"
+        "DOTA_Tooltip_Ability_item_hat_0302"            "<font color='#67c900'>Шляпа дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_hat_0303"            "<font color='#1e9af0'>Шляпа дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_hat_0304"            "<font color='#c223f0'>Шляпа дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_hat_0305"            "<font color='#f0d853'>Шляпа дракона +5</font>"
+
+        "DOTA_Tooltip_Ability_item_hat_0301_Description"    "Увеличивает все атрибуты."
+"DOTA_Tooltip_Ability_item_hat_0302_Description"    "Добавляет все атрибуты и случайный атрибут "
+"DOTA_Tooltip_Ability_item_hat_0303_Description"    "Увеличивает все характеристики, дальность применения и случайную характеристику ."
+"DOTA_Tooltip_Ability_item_hat_0304_Description"    "Увеличивает все характеристики, дальность применения, процент здоровья и случайную характеристику."
+"DOTA_Tooltip_Ability_item_hat_0305_Description"    "Увеличивает все характеристики, дальность применения, процент здоровья и две случайные характеристики."
+
+        "DOTA_Tooltip_Ability_item_hat_0401"            "Шляпа бога +1"
+        "DOTA_Tooltip_Ability_item_hat_0402"            "<font color='#67c900'>Шляпа бога +2</font>"
+        "DOTA_Tooltip_Ability_item_hat_0403"            "<font color='#1e9af0'>Шляпа бога +3</font>"
+        "DOTA_Tooltip_Ability_item_hat_0404"            "<font color='#c223f0'>Шляпа бога +4</font>"
+        "DOTA_Tooltip_Ability_item_hat_0405"            "<font color='#f0d853'>Шляпа бога +5</font>"
+
+        "DOTA_Tooltip_Ability_item_hat_0401_Description"     "Увеличивает процент здоровья."
+"DOTA_Tooltip_Ability_item_hat_0402_Description"    "Увеличивает процент здоровья и случайный атрибут."
+"DOTA_Tooltip_Ability_item_hat_0403_Description"    "Увеличивает процент здоровья, сопротивление статусу и случайную характеристику."
+"DOTA_Tooltip_Ability_item_hat_0404_Description"    "Увеличивает процент здоровья, сопротивление статусу, дальность применения и случайный атрибут."
+"DOTA_Tooltip_Ability_item_hat_0405_Description"     "Увеличивает процент здоровья, сопротивление статусу, дальность применения и случайный атрибут."
+
+
+
+"DOTA_Tooltip_Ability_item_hat_0101_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0101_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0101_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0101_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0102_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0102_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0102_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0102_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0103_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0103_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0103_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0103_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0104_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0104_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0104_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0104_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0105_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0105_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0105_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0105_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0201_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0201_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0201_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0201_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0202_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0202_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0202_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0202_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0203_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0203_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0203_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0203_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0204_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0204_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0204_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0204_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0205_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0205_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0205_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0205_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0301_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0301_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0301_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0301_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0302_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0302_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0302_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0302_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0303_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0303_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0303_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0303_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0304_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0304_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0304_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0304_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0305_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0305_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0305_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0305_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0401_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0401_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0401_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0401_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0402_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0402_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0402_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0402_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0403_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0403_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0403_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0403_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0404_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0404_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0404_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0404_bonus_spell_range"  "Доп дальность заклинаний:"
+
+"DOTA_Tooltip_Ability_item_hat_0405_bonus_all_stats"    "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_hat_0405_bonus_status_resistance"    "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_hat_0405_bonus_health_percent"   "Бонус % HP:"
+"DOTA_Tooltip_Ability_item_hat_0405_bonus_spell_range"  "Доп дальность заклинаний:"
+
+
+
+
+
+
+
+
+
+        "DOTA_Tooltip_Ability_item_trinket_0101"            "Кольцо новичка +1"
+        "DOTA_Tooltip_Ability_item_trinket_0102"            "<font color='#67c900'>Кольцо новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0103"            "<font color='#1e9af0'>Кольцо новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0104"            "<font color='#c223f0'>Кольцо новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0105"            "<font color='#f0d853'>Кольцо новичка +5</font>"
+
+                "DOTA_Tooltip_Ability_item_trinket_0101_Description"    "Увеличивает урон против не-героев."
+"DOTA_Tooltip_Ability_item_trinket_0102_Description"    "Увеличивает урон не-героям и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0103_Description"    "Увеличивает урон не-героям, сокращает время восстановления и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0104_Description"    "Увеличивает урон не-героям, сокращает время восстановления, вампиризм умений и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0105_Description"    "Увеличивает урон не-героям, сокращает время восстановления, вампиризм умений и две случайные характеристики "
+
+        "DOTA_Tooltip_Ability_item_trinket_0201"            "Кольцо гоблина +1"
+        "DOTA_Tooltip_Ability_item_trinket_0202"            "<font color='#67c900'>Кольцо гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0203"            "<font color='#1e9af0'>Кольцо гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0204"            "<font color='#c223f0'>Кольцо гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0205"            "<font color='#f0d853'>Кольцо гоблина +5</font>"
+
+        "DOTA_Tooltip_Ability_item_trinket_0201_Description"    "Увеличивает урон против не-героев."
+"DOTA_Tooltip_Ability_item_trinket_0202_Description"    "Увеличивает урон не-героям и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0203_Description"    "Увеличивает урон не-героям, сокращает время восстановления и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0204_Description"    "Увеличивает урон не-героям, сокращает время восстановления, усиливает навыки и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0205_Description"    "Увеличивает урон не-героям, сокращает время восстановления, повышает навык и две случайные характеристики."
+        
+        "DOTA_Tooltip_Ability_item_trinket_0301"            "Кольцо дракона +1"
+        "DOTA_Tooltip_Ability_item_trinket_0302"            "<font color='#67c900'>Кольцо дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0303"            "<font color='#1e9af0'>Кольцо дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0304"            "<font color='#c223f0'>Кольцо дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0305"            "<font color='#f0d853'>Кольцо дракона +5</font>"
+
+        "DOTA_Tooltip_Ability_item_trinket_0301_Description"    "Увеличивает урон против не-героев."
+"DOTA_Tooltip_Ability_item_trinket_0302_Description"    "Увеличивает урон не-героям и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0303_Description"    "Увеличивает урон не-героям, усиление навыков и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0304_Description"    "Увеличивает урон не-героям, повышение навыков, вампиризм умений и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0305_Description"    "Увеличивает урон не-героям, повышение навыков, вампиризм умений и две случайные характеристики."
+        
+        "DOTA_Tooltip_Ability_item_trinket_0401"            "Кольцо бога +1"
+        "DOTA_Tooltip_Ability_item_trinket_0402"            "<font color='#67c900'>Кольцо бога +2</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0403"            "<font color='#1e9af0'>Кольцо бога +3</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0404"            "<font color='#c223f0'>Кольцо бога +4</font>"
+        "DOTA_Tooltip_Ability_item_trinket_0405"            "<font color='#f0d853'>Кольцо бога +5</font>"
+
+        "DOTA_Tooltip_Ability_item_trinket_0401_Description"    " Обеспечивает сокращение времени восстановления."
+"DOTA_Tooltip_Ability_item_trinket_0402_Description"     " Обеспечивает сокращение времени восстановления и случайную статистику."
+"DOTA_Tooltip_Ability_item_trinket_0403_Description"    " Обеспечивает сокращение времени восстановления, вампиризм умений и случайную статистику."
+"DOTA_Tooltip_Ability_item_trinket_0404_Description"    " Обеспечивает сокращение времени восстановления, вампиризм умений, улучшение умения и случайную характеристику."
+"DOTA_Tooltip_Ability_item_trinket_0405_Description"    " Обеспечивает сокращение времени восстановления, вампиризм умений, улучшение умения и два случайных атрибута."
+
+
+        "DOTA_Tooltip_Ability_item_trinket_0101_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0101_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0101_bonus_spell_lifesteal"  "Магический вампиризм:" 
+
+        "DOTA_Tooltip_Ability_item_trinket_0102_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0102_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0102_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0103_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0103_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0103_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0104_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0104_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0104_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0105_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0105_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0105_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0201_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0201_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0201_bonus_spell_lifesteal"  "Магический вампиризм:" 
+
+        "DOTA_Tooltip_Ability_item_trinket_0202_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0202_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0202_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0203_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0203_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0203_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0204_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0204_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0204_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0205_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0205_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0205_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0301_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0301_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0301_bonus_spell_lifesteal"  "Магический вампиризм:" 
+
+        "DOTA_Tooltip_Ability_item_trinket_0302_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0302_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0302_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0303_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0303_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0303_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0304_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0304_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0304_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0305_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0305_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0305_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0401_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0401_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0401_bonus_spell_lifesteal"  "Магический вампиризм:" 
+
+        "DOTA_Tooltip_Ability_item_trinket_0402_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0402_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0402_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0403_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0403_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0403_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0404_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0404_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0404_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+        "DOTA_Tooltip_Ability_item_trinket_0405_bonus_creep_damage"     "Доп урон по монстрам:"
+        "DOTA_Tooltip_Ability_item_trinket_0405_bonus_cooldown_reduction"   "Уменьшение перезарядки заклинаний:"
+        "DOTA_Tooltip_Ability_item_trinket_0405_bonus_spell_lifesteal"  "Магический вампиризм:"
+
+
+
+
+
+
+
+        "DOTA_Tooltip_Ability_item_weapon_0701"         "Оружие новичка +1"
+        "DOTA_Tooltip_Ability_item_weapon_0702"         "<font color='#67c900'>Оружие новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0703"         "<font color='#1e9af0'>Оружие новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0704"         "<font color='#c223f0'>Оружие новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0705"         "<font color='#f0d853'>Оружие новичка +5</font>"
+
+        "DOTA_Tooltip_Ability_item_weapon_0701_Description"          " Увеличивает силу атаки ."
+"DOTA_Tooltip_Ability_item_weapon_0702_Description"          " Увеличивает силу атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_0703_Description"          " Увеличивает силу атаки , основную и случайную характеристики."
+"DOTA_Tooltip_Ability_item_weapon_0704_Description"          " Увеличивает силу атаки , основную характеристику, дальность атаки и случайную характеристику."
+"DOTA_Tooltip_Ability_item_weapon_0705_Description"          " Увеличивает силу атаки , основную характеристику, дальность атаки и две случайные характеристики."
+
+        "DOTA_Tooltip_Ability_item_weapon_0801"         "Оружие гоблина +1"
+        "DOTA_Tooltip_Ability_item_weapon_0802"         "<font color='#67c900'>Оружие гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0803"         "<font color='#1e9af0'>Оружие гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0804"         "<font color='#c223f0'>Оружие гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0805"         "<font color='#f0d853'>Оружие гоблина +5</font>"
+
+        "DOTA_Tooltip_Ability_item_weapon_0801_Description"          " Добавляет основной атрибут "
+"DOTA_Tooltip_Ability_item_weapon_0802_Description"          " Добавляет основной атрибут и случайный атрибут "
+"DOTA_Tooltip_Ability_item_weapon_0803_Description"          " Увеличивает основную характеристику, скорость атаки и случайную характеристику."
+"DOTA_Tooltip_Ability_item_weapon_0804_Description"          " Увеличивает основную характеристику, скорость атаки , дистанцию атаки и случайную характеристику."
+"DOTA_Tooltip_Ability_item_weapon_0805_Description"          " Увеличивает основную характеристику, скорость атаки , дистанцию атаки и две случайные характеристики."
+
+        "DOTA_Tooltip_Ability_item_weapon_0901"         "Оружие дракона +1"
+        "DOTA_Tooltip_Ability_item_weapon_0902"         "<font color='#67c900'>Оружие дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0903"         "<font color='#1e9af0'>Оружие дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0904"         "<font color='#c223f0'>Оружие дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_weapon_0905"         "<font color='#f0d853'>Оружие дракона +5</font>"
+
+        "DOTA_Tooltip_Ability_item_weapon_0901_Description"          " Увеличивает силу атаки ."
+"DOTA_Tooltip_Ability_item_weapon_0902_Description"          " Увеличивает силу атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_0903_Description"          " Увеличивает силу атаки, скорость атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_0904_Description"          " Увеличивает силу атаки, скорость атаки, дальность атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_0905_Description"          " Увеличивает силу атаки, скорость атаки, дистанцию атаки и два случайных атрибута."
+
+        "DOTA_Tooltip_Ability_item_weapon_1001"         "Оружие бога +1"
+        "DOTA_Tooltip_Ability_item_weapon_1002"         "<font color='#67c900'>Оружие бога +2</font>"
+        "DOTA_Tooltip_Ability_item_weapon_1003"         "<font color='#1e9af0'>Оружие бога +3</font>"
+        "DOTA_Tooltip_Ability_item_weapon_1004"         "<font color='#c223f0'>Оружие бога +4</font>"
+        "DOTA_Tooltip_Ability_item_weapon_1005"         "<font color='#f0d853'>Оружие бога +5</font>"
+
+        "DOTA_Tooltip_Ability_item_weapon_1001_Description"          " Увеличивает силу атаки "
+"DOTA_Tooltip_Ability_item_weapon_1002_Description"          " Увеличивает силу атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_1003_Description"          " Увеличивает силу атаки, скорость атаки и случайный атрибут."
+"DOTA_Tooltip_Ability_item_weapon_1004_Description"          " Увеличивает силу атаки, скорость атаки, основные характеристики и случайную характеристику."
+"DOTA_Tooltip_Ability_item_weapon_1005_Description"          " Увеличивает силу атаки, скорость атаки, основные характеристики и две случайные характеристики."
+
+
+"DOTA_Tooltip_Ability_item_weapon_0701_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0701_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0701_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0701_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0702_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0702_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0702_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0702_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0703_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0703_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0703_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0703_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0704_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0704_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0704_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0704_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0705_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0705_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0705_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0705_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0801_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0801_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0801_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0801_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0802_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0802_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0802_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0802_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0803_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0803_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0803_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0803_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0804_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0804_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0804_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0804_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0805_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0805_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0805_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0805_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0901_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0901_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0901_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0901_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0902_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0902_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0902_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0902_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0903_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0903_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0903_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0903_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0904_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0904_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0904_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0904_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_0905_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_0905_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_0905_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_0905_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_1001_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_1001_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_1001_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_1001_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_1002_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_1002_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_1002_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_1002_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_1003_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_1003_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_1003_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_1003_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_1004_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_1004_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_1004_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_1004_bonus_attack_speed"           "Скорость атаки:"
+
+"DOTA_Tooltip_Ability_item_weapon_1005_bonus_damage"             "Урон:"
+"DOTA_Tooltip_Ability_item_weapon_1005_bonus_primary"            "Основной атрибут:"
+"DOTA_Tooltip_Ability_item_weapon_1005_bonus_attack_range"           "Дальность атаки:"
+"DOTA_Tooltip_Ability_item_weapon_1005_bonus_attack_speed"           "Скорость атаки:"
+
+
+
+
+
+        "DOTA_Tooltip_Ability_item_shoes_0101"          "Сапоги новичка +1"
+        "DOTA_Tooltip_Ability_item_shoes_0102"          "<font color='#67c900'>Сапоги новичка +2</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0103"          "<font color='#1e9af0'>Сапоги новичка +3</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0104"          "<font color='#c223f0'>Сапоги новичка +4</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0105"          "<font color='#f0d853'>Сапоги новичка +5</font>"
+
+        "DOTA_Tooltip_Ability_item_shoes_0101_Description"           " Увеличивает скорость передвижения . "
+"DOTA_Tooltip_Ability_item_shoes_0102_Description"           " Увеличивает скорость передвижения и случайный атрибут. "
+"DOTA_Tooltip_Ability_item_shoes_0103_Description"           " Увеличивает скорость передвижения , все характеристики и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0104_Description"           " Увеличивает скорость передвижения , все характеристики, сопротивление статусу и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0105_Description"           " Увеличивает скорость передвижения , все характеристики, сопротивление статусу и две случайные характеристики. "
+
+        "DOTA_Tooltip_Ability_item_shoes_0201"          "Сапоги гоблина +1"
+        "DOTA_Tooltip_Ability_item_shoes_0202"          "<font color='#67c900'>Сапоги гоблина +2</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0203"          "<font color='#1e9af0'>Сапоги гоблина +3</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0204"          "<font color='#c223f0'>Сапоги гоблина +4</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0205"          "<font color='#f0d853'>Сапоги гоблина +5</font>"
+
+        "DOTA_Tooltip_Ability_item_shoes_0201_Description"           " Увеличивает скорость передвижения . "
+"DOTA_Tooltip_Ability_item_shoes_0202_Description"           " Увеличивает скорость передвижения и случайный атрибут. "
+"DOTA_Tooltip_Ability_item_shoes_0203_Description"           " Увеличивает скорость передвижения , все характеристики и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0204_Description"           " Увеличивает скорость передвижения , все характеристики, броню и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0205_Description"           " Увеличивает скорость передвижения , все характеристики, броню и две случайные характеристики. "
+
+        "DOTA_Tooltip_Ability_item_shoes_0301"          "Сапоги дракона +1"
+        "DOTA_Tooltip_Ability_item_shoes_0302"          "<font color='#67c900'>Сапоги дракона +2</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0303"          "<font color='#1e9af0'>Сапоги дракона +3</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0304"          "<font color='#c223f0'>Сапоги дракона +4</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0305"          "<font color='#f0d853'>Сапоги дракона +5</font>"
+
+        "DOTA_Tooltip_Ability_item_shoes_0301_Description"           " Увеличивает скорость передвижения . "
+"DOTA_Tooltip_Ability_item_shoes_0302_Description"           " Увеличивает скорость передвижения . "
+"DOTA_Tooltip_Ability_item_shoes_0303_Description"           " Увеличивает скорость передвижения , сопротивление эффектам и случайный атрибут. "
+"DOTA_Tooltip_Ability_item_shoes_0304_Description"           " Увеличивает скорость передвижения , сопротивление эффектам, броню и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0305_Description"           " Увеличивает скорость передвижения , сопротивление эффектам, броню и два случайных атрибута. "
+
+        "DOTA_Tooltip_Ability_item_shoes_0401"          "Сапоги бога +1"
+        "DOTA_Tooltip_Ability_item_shoes_0402"          "<font color='#67c900'>Сапоги бога +2</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0403"          "<font color='#1e9af0'>Сапоги бога +3</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0404"          "<font color='#c223f0'>Сапоги бога +4</font>"
+        "DOTA_Tooltip_Ability_item_shoes_0405"          "<font color='#f0d853'>Сапоги бога +5</font>"
+
+        "DOTA_Tooltip_Ability_item_shoes_0401_Description"           " Увеличивает броню. "
+"DOTA_Tooltip_Ability_item_shoes_0402_Description"           " Увеличивает броню. "
+"DOTA_Tooltip_Ability_item_shoes_0403_Description"           " Увеличивает броню, полную статистику и случайную статистику. "
+"DOTA_Tooltip_Ability_item_shoes_0404_Description"           " Увеличивает броню, все характеристики, сопротивление статусу и случайную характеристику. "
+"DOTA_Tooltip_Ability_item_shoes_0405_Description"           " Увеличивает броню, все характеристики, сопротивление статусу и две случайные характеристики. "
+
+
+
+"DOTA_Tooltip_Ability_item_shoes_0101_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0101_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0101_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0101_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0102_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0102_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0102_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0102_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0103_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0103_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0103_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0103_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0104_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0104_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0104_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0104_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0105_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0105_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0105_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0105_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0201_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0201_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0201_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0201_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0202_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0202_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0202_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0202_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0203_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0203_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0203_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0203_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0204_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0204_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0204_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0204_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0205_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0205_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0205_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0205_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0301_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0301_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0301_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0301_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0302_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0302_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0302_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0302_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0303_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0303_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0303_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0303_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0304_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0304_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0304_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0304_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0305_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0305_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0305_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0305_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0401_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0401_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0401_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0401_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0402_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0402_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0402_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0402_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0403_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0403_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0403_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0403_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0404_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0404_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0404_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0404_bonus_bonus_armor"             "Броня:"
+
+"DOTA_Tooltip_Ability_item_shoes_0405_bonus_movement_speed"          "Скорость передвижения:"
+"DOTA_Tooltip_Ability_item_shoes_0405_bonus_all_stats"           "Бонус ко всем атрибутам:"
+"DOTA_Tooltip_Ability_item_shoes_0405_bonus_status_resistance"           "Сопротивление эффектам:"
+"DOTA_Tooltip_Ability_item_shoes_0405_bonus_bonus_armor"             "Броня:"
+
+
+
+
+
+
+
+
+
+
+        "xxwar_ability_special_bonus_strength"           " Сила "
+"xxwar_ability_special_bonus_agility"            " Ловкость "
+"xxwar_ability_special_bonus_intellect"          " Интеллект "
+"xxwar_ability_special_bonus_primary"            " Основной атрибут "
+"xxwar_ability_special_bonus_all_stats"          " Все атрибуты "
+"xxwar_ability_special_bonus_health"             " Очки здоровья "
+"xxwar_ability_special_bonus_health_regen_pct"           " % максимального восстановления здоровья "
+"xxwar_ability_special_bonus_health_percent"             " % здоровья в процентах "
+"xxwar_ability_special_bonus_mana"           " Магическая ценность "
+"xxwar_ability_special_bonus_armor"          " Броня "
+"xxwar_ability_special_bonus_magic_armor"            " % сопротивления магии "
+"xxwar_ability_special_bonus_attack_speed"           " Скорость атаки "
+"xxwar_ability_special_bonus_movement_speed"             " Скорость передвижения "
+"xxwar_ability_special_bonus_damage"             " Сила атаки "
+"xxwar_ability_special_bonus_spell_amplify"          " % повышения навыка "
+"xxwar_ability_special_bonus_spell_lifesteal"            " % вампиризм заклинаний "
+"xxwar_ability_special_bonus_spell_range"            " Диапазон заклинаний "
+"xxwar_ability_special_bonus_attack_range"           " Дальность атаки "
+"xxwar_ability_special_bonus_status_resistance"          " % сопротивления статусу "
+"xxwar_ability_special_bonus_hit_hp"             " Восстановление после удара "
+"xxwar_ability_special_bonus_hit_mp"             " Ответный удар до синего "
+"xxwar_ability_special_bonus_cooldown_reduction"             " % уменьшения перезарядки "
+"xxwar_ability_special_bonus_creep_damage"           " % бонус к урону не по героям "
+// снаряжение с аффиксами
+"xxwar_attributes"           " Дополнительные атрибуты :"
+"xxwar_attribute_str"            " Сила "
+"xxwar_attribute_str_value"          " {s:str}"
+"xxwar_attribute_agi"            " Ловкость "
+"xxwar_attribute_agi_value"          " {s:agi}"
+"xxwar_attribute_int"            " Разведка "
+"xxwar_attribute_int_value"          " {s:int}"
+"xxwar_attribute_primary"            " Основной атрибут "
+"xxwar_attribute_primary_value"          " {s:primary}"
+"xxwar_attribute_hp"             " HP "
+"xxwar_attribute_hp_value"           " {s:hp}"
+"xxwar_attribute_mana"           " Мана "
+"xxwar_attribute_mana_value"             " {s:mana}"
+"xxwar_attribute_armor"          " Броня "
+"xxwar_attribute_armor_value"            " {s:броня}"
+"xxwar_attribute_magic_armor"            " % сопротивления магии "
+"xxwar_attribute_magic_armor_value"          " {s:magic_armor}"
+"xxwar_attribute_health_regen"           " Регенерация здоровья "
+"xxwar_attribute_health_regen_value"             " {s:health_regen}"
+"xxwar_attribute_mana_regen"             " Магическая регенерация "
+"xxwar_attribute_mana_regen_value"           " {s:mana_regen}"
+"xxwar_attribute_attack_speed"           " Скорость атаки "
+"xxwar_attribute_attack_speed_value"             " {s:attack_speed}"
+"xxwar_attribute_attack_damage"          " Урон от атаки "
+"xxwar_attribute_attack_damage_value"            " {s:attack_damage}"
+"xxwar_attribute_attack_range"           " Дальность атаки "
+"xxwar_attribute_attack_range_value"             " {s:attack_range}"
+"xxwar_attribute_move_speed"             " Скорость передвижения "
+"xxwar_attribute_move_speed_value"           " {s:move_speed}"
+"xxwar_attribute_spell_amp"          " % повышения навыка "
+"xxwar_attribute_spell_amp_value"            " {s:spell_amp}"
+"xxwar_attribute_spell_range"            " % дальности применения "
+"xxwar_attribute_spell_range_value"          " {s:spell_range}"
+"xxwar_attribute_status_resistance"          " % сопротивления статусу "
+"xxwar_attribute_status_resistance_value"            " {s:status_resistance}"
+"xxwar_attribute_magic_find"             " % шанс выпадения "
+"xxwar_attribute_magic_find_value"           " {s:magic_find}"
+"xxwar_attribute_gold_gain"          " % бонус золота "
+"xxwar_attribute_gold_gain_value"            " {s:gold_gain}"
+"xxwar_attribute_exp_gain"           " % бонус к опыту "
+"xxwar_attribute_exp_gain_value"             " {s:exp_gain}"
+"xxwar_attribute_crystal_regen"          " Скорость регенерации кристаллов "
+"xxwar_attribute_crystal_regen_value"            " {s:crystal_regen}"
+"xxwar_attribute_cleave"             " % урона от прорубания "
+"xxwar_attribute_cleave_value"           " {s:cleave}"
+"xxwar_attribute_corporation"            " Порченая броня "
+"xxwar_attribute_повреждение_значение"           " {s:повреждение}"
+"xxwar_attribute_crit_chance"            " % шанс критического удара "
+"xxwar_attribute_crit_chance_value"          " {s:crit_chance}"
+"xxwar_attribute_crit_mult"          " % критического урона "
+"xxwar_attribute_crit_mult_value"            " {s:crit_mult}"
+"xxwar_attribute_stun"           " % шанс оглушения "
+"xxwar_attribute_stun_value"             " {s:stun}"
+"xxwar_attribute_evasion"            " % уклонения "
+"xxwar_attribute_evasion_value"          " {s:уклонение}"
+"xxwar_attribute_incoming_damage"            " % снижения урона "
+"xxwar_attribute_incoming_damage_value"          " {s:incoming_damage}"
+"xxwar_attribute_outgoing_damage"            " % бонус к урону "
+"xxwar_attribute_outgoing_damage_value"          " {s:outgoing_damage}"
+"xxwar_attribute_damage_block"           " Физический блок "
+"xxwar_attribute_damage_block_value"             " {s:damage_block}"
+"xxwar_attribute_attack_return"          " % отскока атаки "
+"xxwar_attribute_attack_return_value"            " {s:attack_return}"
+"xxwar_attribute_health_percent"             " % здоровья в процентах "
+"xxwar_attribute_health_percent_value"           " {s:health_percent}"
+"xxwar_attribute_pierce_chance"          " % Игнорировать уклонение "
+"xxwar_attribute_pierce_chance_value"            " {s:pierce_chance}"
+"xxwar_attribute_bonus_vision"           " Бонус видения "
+"xxwar_attribute_bonus_vision_value"             " {s:bonus_vision}"
+"xxwar_attribute_collection"             " % скорость сбора "
+"xxwar_attribute_collection_value"           " {s:коллекция}"
+"xxwar_attribute_teleport"           " % скорости телепорта "
+"xxwar_attribute_teleport_value"             " {s:телепорт}"
+"xxwar_attribute_hp_regen_amplify"           " Увеличение регенерации здоровья на % "
+"xxwar_attribute_hp_regen_amplify_value"             " {s:hp_regen_amplify}"
+"xxwar_attribute_jump_length"            " Бонус на расстояние прыжка "
+"xxwar_attribute_jump_length_value"          " {s:jump_length}"
+"xxwar_attribute_jump_cooldown"          " % уменьшения перезарядки прыжка "
+"xxwar_attribute_jump_cooldown_value"            " {s:jump_cooldown}"
+"xxwar_attribute_mana_regen_pct"             " % максимальной регенерации маны "
+"xxwar_attribute_mana_regen_pct_value"           " {s:mana_regen_pct}"
+
+
+    }
+}
