@@ -1,0 +1,504 @@
+
+"DOTAAbilities"
+{
+  
+
+"item_ring_1"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_2"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_3"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_4"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_5"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_6"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_7"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_8"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_9"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_10"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_11"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_12"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_13"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_14"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_15"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_16"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_17"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_18"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_19"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_20"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_21"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_22"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_23"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_24"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_25"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_26"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_27"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_28"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_29"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_30"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+"item_ring_31"
+{
+"BaseClass"           "item_lua"
+"ScriptFile"           "items/item_ring_primary.lua"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  
+}
+
+} //end

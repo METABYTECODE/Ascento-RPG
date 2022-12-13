@@ -1,0 +1,20 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/ingame_leaderboard.css" />
+	</styles>
+	<scripts>
+		<include src="s2r://panorama/scripts/custom_game/ingame_leaderboard_player.js" />
+		<include src="s2r://panorama/scripts/custom_game/ingame_leaderboard.js" />
+	</scripts>
+	<snippets>
+		<snippet name="InGameLeaderboardButtonSnippet">
+			<Panel class="InGameLeaderboardButton" hittest="false">
+				<Label id="Activator" onmouseover="DOTAShowTextTooltip(&apos;#lootdrop&apos;)" onmouseout="DOTAHideTextTooltip()" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" style="width: 100%; height: 100%; z-index:-1;">
+		<Panel id="InGameLeaderboard" />
+	</Panel>
+</root>

@@ -1,0 +1,80 @@
+<root> 
+
+  <styles>
+    <include src="file://panorama/styles/custom_game/online_players.css" />
+  </styles>
+
+  <scripts>
+    <include src="file://panorama/scripts/custom_game/online_players.js" />
+  </scripts>
+
+  <Panel hittest="false" class="Root">
+
+    <Panel class="OnlineTable" id="OnlineTable" onactivate="ShowAllOnlinePlayers()">
+      <Label id="PlayersOnline" class="PlayersOnline" text="Online: 0"/> 
+    </Panel>
+
+    <Panel class="OnlineTableFull" id="OnlineTableFull">
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Easy: "/> 
+
+        <Label id="PlayersOnlineEasy" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Normal: "/> 
+
+        <Label id="PlayersOnlineNormal" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Hard: "/> 
+
+        <Label id="PlayersOnlineHard" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Unfair: "/> 
+
+        <Label id="PlayersOnlineUnfair" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Impossible: "/> 
+
+        <Label id="PlayersOnlineImpossible" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Hell: "/> 
+
+        <Label id="PlayersOnlineHell" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayersOnlineHead" text="Hardcore: "/> 
+
+        <Label id="PlayersOnlineHardcore" class="PlayersOnlineCount" text="0"/>
+
+      </Panel>
+      
+    </Panel>
+
+  </Panel>
+  
+</root>
+

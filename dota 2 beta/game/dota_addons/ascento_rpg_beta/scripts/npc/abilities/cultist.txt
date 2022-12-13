@@ -1,0 +1,234 @@
+"DOTAAbilities"
+{
+
+"cultist_1_decay"
+{
+
+//Makes enemy decay, dealing (55 60 65 70 75 80 85 90 95 100)% of your attack damage each (0.35)sec for 3sec
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/cultist/cultist_1_decay.lua" 
+
+    "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                "cultist_1_decay"
+
+    "AbilityManaCost"                   "10"
+    "AbilityCooldown"                   "0.1"
+
+    "AbilityCastRange"        "500"
+    "AbilityCastPoint"        "0"
+
+    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
+
+    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"targets"					"1"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"55 60 65 70 75 80 85 90 95 100"
+    	  		"CalculateSpellDamageTooltip"		"1"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"projectile_speed"	"1300"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"duration"		"3"
+			} 
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"distance"					"500"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"tick_rate"					"0.5"
+			}
+    }
+
+
+}
+
+
+"cultist_1_decay_curse"
+{
+
+//Makes chosen enemy deal (16 17 18 19 20 21 22 23 24 25)% less damage and lose (0.5 1 1.5 2 2.5 3 3.5 4 4.5 5)% of current health every 3 sec for 15sec
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/cultist/cultist_1_decay_curse.lua" 
+
+    "AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+	"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+	"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                "cultist_1_decay_curse"
+
+    "AbilityManaCost"                   "200"
+    "AbilityCooldown"                   "60"
+
+    "AbilityCastRange"        "500"
+    "AbilityCastPoint"        "0"
+
+    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
+
+    "AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"targets"					"1"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"damage"			"0.5 1 1.5 2 2.5 3 3.5 4 4.5 5"
+    	  		"CalculateSpellDamageTooltip"		"1"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"projectile_speed"	"1500"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"duration"		"15"
+			} 
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"distance"					"500"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tick_rate"					"5"
+			}
+			"07"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"damage_less"			"-16 -17 -18 -19 -20 -21 -22 -23 -24 -25"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+    }
+
+
+}
+
+
+"cultist_2_decay_aura"
+{
+
+//All enemies in 600 aoe lose (0.65 0.8 0.95 1.1 1.25 1.4 1.55 1.7 1.85 2.0)% of their current health each sec. In addition to that Cultist heals for (5 10 15 20 25 30 35 40 45 50)% of damage they suffer. 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/cultist/cultist_2_decay_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                            "cultist_2_decay_aura"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        				"FIELD_FLOAT"
+    	  "hp_lose"    						"0.65 0.8 0.95 1.1 1.25 1.4 1.55 1.7 1.85 2.0"
+    	  "CalculateSpellDamageTooltip"		"0"
+    	}
+    	"02"
+    	{
+    	  "var_type"        				"FIELD_INTEGER"
+    	  "hp_heal"    						"11 12 13 14 15 16 17 18 19 20"
+    	  "CalculateSpellDamageTooltip"		"0"
+    	}
+        "03"
+        {
+          "var_type"        				"FIELD_INTEGER"
+          "radius"          				"600"
+        }
+    }
+
+
+}
+
+
+"cultist_2_magic_health"
+{
+
+//Adds (20 40 60 80 100 120 140 160 180 200)% of your max mana as max health, but loses 1% of current health each sec. Cultist gets extra (0.3 0.6 0.9 1.2 1.5 1.8 2.1 2.4 2.7 3.0) mana per int
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/cultist/cultist_2_magic_health.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                            "cultist_2_magic_health"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        "FIELD_INTEGER"
+    	  "hp_from_mana"    "25 50 75 100 125 150 175 200 225 250"
+    	}
+    	"02"
+    	{
+    	  "var_type"        "FIELD_INTEGER"
+    	  "hp_lose"    "1"
+    	  "CalculateSpellDamageTooltip"	"0"
+    	}
+        "03"
+        {
+          "var_type"        "FIELD_FLOAT"
+          "extra_mana"          "0.3 0.6 0.9 1.2 1.5 1.8 2.1 2.4 2.7 3.0"
+        }
+    }
+
+
+}
+
+
+
+
+
+
+
+}

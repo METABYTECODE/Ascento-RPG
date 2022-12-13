@@ -1,0 +1,155 @@
+"DOTAAbilities"
+{
+
+"magic_warrior_1_magic_attack"
+{
+
+//Deals extra (25 50 75 100 125 150 175 200 225 250)% of attack damage as magical damage
+
+
+    "BaseClass"                     "ability_datadriven"
+    //"ScriptFile"                    "abilities/magic_warrior/magic_warrior_1_magic_attack.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "magic_warrior_1_magic_attack"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        "FIELD_INTEGER"
+    	  "magic_damage"    "80 85 90 95 100 105 110 115 120 125"
+    	}
+    }
+
+    "Modifiers"
+    {
+        "modifier_magic_warrior_1_magic_attack"
+        {
+          "Passive" "1"
+          "IsHidden"  "1"
+    
+          "OnAttack"
+          {
+            "RunScript"
+            {
+              "ScriptFile"  "abilities/magic_warrior/magic_warrior_1_magic_attack.lua"
+              "Function"    "magic_damage"
+              "Target"    "TARGET"
+            }
+          }
+        }
+    }
+
+}
+
+"magic_warrior_1_manashield"
+{
+
+//(50 55 60 65 70 75 80 85 90 95)% of damage first goes to mana instead of health
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/magic_warrior/magic_warrior_1_manashield.lua" 
+
+    "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"  
+
+    "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_medusa.vsndevts"
+            "particle"  "particles/units/heroes/hero_medusa/medusa_mana_shield.vpcf"
+            "particle"  "particles/units/heroes/hero_medusa/medusa_mana_shield_impact.vpcf"
+        }
+
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "magic_warrior_1_manashield"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        "FIELD_INTEGER"
+    	  "damage_to_mana"    "50 55 60 65 70 75 80 85 90 95"
+    	}
+    }
+}
+
+
+"magic_warrior_2_manablood"
+{
+
+//Regenerates (0.3 0.6 0.9 1.2 1.5 1.8 2.1 2.4 2.7 3.0)% of max mana and (0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0)% of max health with each attack
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/magic_warrior/magic_warrior_2_manablood.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                            "magic_warrior_2_manablood"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+          "var_type"        "FIELD_FLOAT"
+          "health_regen"    "0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0"
+        }
+        "02"
+        {
+          "var_type"        "FIELD_FLOAT"
+          "mana_regen"    "0.3 0.6 0.9 1.2 1.5 1.8 2.1 2.4 2.7 3.0"
+        }
+    }
+}
+
+
+"magic_warrior_2_magic_penetration"
+{
+
+//Attacks ignore (2 4 6 8 10 12 14 16 18 20)% of enemy magic resistance
+
+
+    "BaseClass"                     "ability_datadriven"
+    //"ScriptFile"                    "abilities/magic_warrior/magic_warrior_2_magic_penetration.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                            "magic_warrior_2_magic_penetration"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+          "var_type"        "FIELD_FLOAT"
+          "penetrate"    "1 2 3 4 5 6 7 8 9 10"
+        }
+    }
+
+"Modifiers"
+  {
+    "modifier_magic_warrior_2_magic_penetration"
+    {
+      "Passive" "1"
+      "IsHidden"  "1"
+    }
+
+  }
+}
+
+
+
+}

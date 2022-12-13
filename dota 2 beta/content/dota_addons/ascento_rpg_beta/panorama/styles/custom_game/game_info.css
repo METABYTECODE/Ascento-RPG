@@ -1,0 +1,314 @@
+
+
+ .GameInfo{
+  padding: 0px 10px 10px 10px;
+  flow-children: down;
+  overflow: squish scroll;
+  height: 1000px;
+ }
+
+ #GameInfoPanel{
+  background-color: #25292f;
+  width: 600px;
+  height: 100%;
+  transform: translateX( -100% );
+  transition-duration: 0.3s;
+  transition-property: transform;
+  box-shadow: fill #00000088 0px 0px 8px 0px;
+ }
+
+ Label{
+
+   font-size: 20px;
+   color: #999999;
+   vertical-align: top;
+
+ }
+
+  #author{
+
+   font-size: 30px;
+ }
+
+ #Title{
+
+   flow-children: right;
+
+   color: #fff;
+  font-weight: bold;
+  text-shadow:
+    -3px -3px 0 #222,
+    3px -3px 0 #222,
+    -3px 3px 0 #222,
+    3px 3px 0 #222,
+    4px 4px 0 #fff,
+    5px 5px 0 #fff,
+    6px 6px 0 #fff,
+    7px 7px 0 #fff;
+  text-align: center;
+ }
+
+ #TitleName{
+
+   color: white;
+   font-size: 32px;
+   margin-left: 0px;
+   margin-top: 4px;
+   text-transform: uppercase;
+   vertical-align: center;
+ }
+
+
+ .Header{
+
+   text-align: left;
+   font-size: 25px;
+   margin-top: 26px;
+   color: white;
+   text-transform: uppercase;
+ }
+
+
+
+
+
+ .InfoStringRight{
+
+   font-size: 20px;
+   flow-children: right;
+   width: 100%;
+   margin-top: 18px;
+ }
+
+
+ .InfoStringLeft{
+
+   font-size: 20px;
+   flow-children: right-wrap;
+   width: 100%;
+   margin-top: 18px;
+ }
+
+
+ .InfoStringDown{
+
+   font-size: 20px;
+   flow-children: down;
+   width: 100%;
+   margin-top: 18px;
+ }
+
+
+ #InfoText{
+
+   margin-top: 10px;
+   text-align: left;
+   width: 200px;
+ }
+
+ #item1{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+ #p1{
+
+   margin-top: 50px;
+   margin-left: 105px;
+ }
+ #p2{
+
+   margin-top: 50px;
+   margin-left: 225px;
+ }
+ #item2{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #r1{
+
+   margin-top: 50px;
+   margin-left: 225px;
+ }
+ #item3{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+
+ #item4{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item5{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item6{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+
+ #item7{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item8{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item9{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+
+ #item10{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item11{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #r2{
+
+   margin-top: 50px;
+   margin-left: 350px;
+ }
+ #item12{
+
+   margin-top: 35px;
+   margin-left: 375px;
+ }
+ #text1{
+
+   font-size: 20px;
+   margin-top: 35px;
+   margin-left: 0px;
+ }
+ #text3{
+
+   font-size: 20px;
+   margin-top: 15px;
+   margin-left: 0px;
+ }
+ #text2{
+
+   font-size: 15px;
+   margin-top: 50px;
+   margin-left: 5px;
+ }
+ #item13{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+ #item14{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item15{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item16{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+ #item17{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item18{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item19{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+
+ #item20{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item21{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item22{
+
+   margin-top: 35px;
+   margin-left: 375px;
+ }
+ #item23{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+
+ #item24{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item25{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item26{
+
+   margin-top: 35px;
+   margin-left: 375px;
+ }
+
+ #item27{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+ #item28{
+
+   margin-top: 35px;
+   margin-left: 125px;
+ }
+ #item29{
+
+   margin-top: 35px;
+   margin-left: 250px;
+ }
+ #item30{
+
+   margin-top: 35px;
+   margin-left: 375px;
+ }
+
+ #item31{
+
+   margin-top: 35px;
+   margin-left: 5px;
+ }
+ #p3{
+
+   font-size: 15px;
+   margin-top: 58px;
+   margin-left: 130px;
+}

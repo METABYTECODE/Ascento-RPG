@@ -1,0 +1,693 @@
+"DOTAAbilities"
+{
+  
+
+"item_mage_1"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"0.5"
+		}
+	}
+}
+
+"item_mage_2"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_2"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"1"
+		}
+	}
+}
+
+"item_mage_3"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_3"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"2"
+		}
+	}
+}
+
+"item_mage_4"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_4"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"3"
+		}
+	}
+}
+
+"item_mage_5"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_5"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"5"
+		}
+	}
+}
+
+"item_mage_6"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_6"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"10"
+		}
+	}
+}
+
+"item_mage_7"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"15"
+		}
+	}
+}
+
+"item_mage_8"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_8"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"20"
+		}
+	}
+}
+
+"item_mage_9"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_9"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"25"
+		}
+	}
+}
+
+"item_mage_10"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_10"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"50"
+		}
+	}
+}
+
+"item_mage_11"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_11"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"60"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_12"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_12"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"70"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_13"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_13"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"100"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_14"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_14"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"120"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_15"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_15"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"140"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_16"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_16"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"160"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_17"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_17"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"180"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_18"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_18"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"200"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_19"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_19"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"250"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_20"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_20"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"300"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+	}
+}
+
+"item_mage_21"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_21"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"400"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_22"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_22"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"500"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_23"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_23"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"700"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_24"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_24"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"900"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_25"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_25"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"1100"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_26"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_26"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"1300"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_27"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_27"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"1500"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_28"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_28"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"2000"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_29"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_29"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"2500"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_30"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_30"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"3500"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+"item_mage_31"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"mage/mage_weapon_31"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_intellect"	"5000"
+		}
+		"02"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_spell"	"10"
+		}
+		"03"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"dismagic"		"-10"
+		}
+	}
+}
+
+
+}

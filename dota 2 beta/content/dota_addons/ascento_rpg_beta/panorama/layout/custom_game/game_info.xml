@@ -1,0 +1,34 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/custom_game/dotastyles.vcss_c" />
+		<include src="file://panorama/styles/custom_game/game_info.css" />
+	</styles>
+	<Panel class="GameInfo">
+		<Panel id="Title">
+			<Label id="TitleName" text="#addon_game_name" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description1" />
+		</Panel>
+		<Panel>
+			<Label id="text3" html="true" text="#addon_game_description2" />
+		</Panel>
+		<!--
+		<Panel hittest="true" onmouseover="DOTAShowAbilityTooltip(item_hallowen_legendary_pet_datadriven)" onmouseout="DOTAHideAbilityTooltip()">
+        	<DOTAAbilityImage id="TalentImage" abilityname="pet_helloween_buff"/>
+   		</Panel>
+   		!-->
+		<Panel>
+			<Label id="text4" html="true" text="#addon_game_author" />
+		</Panel>
+		<Panel>
+			<DOTAUserName id="author" steamid="76561198290873082" onmouseover="DOTAShowProfileCardTooltip(76561198290873082, false)" onmouseout="DOTAHideProfileCardTooltip()"/>
+		</Panel>
+		<Panel>
+			<DOTAAvatarImage id="author" steamid="76561198290873082" style="height:80px;width:80px; margin-top:10px; margin-left:0px;"/>
+		</Panel>
+	</Panel>
+</root>

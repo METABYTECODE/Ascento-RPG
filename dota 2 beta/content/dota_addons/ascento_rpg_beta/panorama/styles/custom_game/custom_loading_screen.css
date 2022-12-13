@@ -1,0 +1,15 @@
+.AddonLoadingRoot
+{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("file://panorama/images/custom_game/loading_screen/custom_bg_png.png");
+}
+
+.ProBg
+{
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+}

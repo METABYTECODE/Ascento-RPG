@@ -1,0 +1,180 @@
+"DOTAAbilities"
+{
+
+"assasin_1_weak_spot"
+{
+
+//(1 2 3 4 5 6 7 8 9 10)% chance to increase damage dealt x10 times
+
+
+    "BaseClass"                     "ability_datadriven"
+    //"ScriptFile"                    "abilities/assasin/assasin_1_weak_spot.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "assasin_1_weak_spot"
+
+    "precache"
+    {
+        "soundfile"     "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+            "var_type"        "FIELD_INTEGER"
+            "critical_chance"    "1 2 3 4 5 6 7 8 9 10"
+    	}
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "critical_damage"         "1000"
+        }
+    }
+
+    "Modifiers"
+  {
+    "modifier_assasin_1_weak_spot"
+    {
+      "Passive" "1"
+      "IsHidden"  "1"
+    }
+
+  }
+}
+
+
+"assasin_1_hidden_blade"
+{
+
+//(5 10 15 20 25 30 35 40 45 50)% chance to attack twice in a row
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/assasin/assasin_1_hidden_blade.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "assasin_1_hidden_blade"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        "FIELD_INTEGER"
+    	  "double_attack_chance"    "33 36 39 42 45 48 51 54 57 60"
+    	}
+    }
+}
+
+
+"assasin_2_poison"
+{
+
+//Has 10% chance to apply poison, when dealing damage. Poison slows enemy attack damage, attack speed and movement speed by (16 17 18 19 20 21 22 23 24 25)% and deals x(0.1) of attack damage each (0.33 0.31 0.29 0.27 0.25 0.23 0.21 0.19 0.17 0.15)sec
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/assasin/assasin_2_poison.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_MAGICAL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                            "assasin_2_poison"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+          "var_type"        "FIELD_INTEGER"
+          "chance"    "15"
+        }
+        "02"
+        {
+          "var_type"        "FIELD_INTEGER"
+          "slow"    "16 17 18 19 20 21 22 23 24 25"
+        }
+        "03"
+        {
+          "var_type"        "FIELD_INTEGER"
+          "damage"    "10"
+        }
+        "04"
+        {
+          "var_type"        "FIELD_FLOAT"
+          "interval"    "0.33 0.31 0.29 0.27 0.25 0.23 0.21 0.19 0.17 0.15"
+        }
+        "05"
+        {
+          "var_type"        "FIELD_INTEGER"
+          "duration"    "5"
+        }
+    }
+}
+
+
+"assasin_2_darkness"
+{
+
+//Assassin hides in darkness, receiving (11 12 13 14 15 16 17 18 19 20)% magic resistance, (25 30 35 40 45 50 55 60 65 70)% evasion and doubles "weak spot" chance
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/assasin/assasin_2_darkness.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                "assasin_2_darkness"
+
+    "AbilityManaCost"                   "100"
+    "AbilityCooldown"                   "30"
+
+    "AbilityCastRange"        "0"
+    "AbilityCastPoint"        "0"
+
+    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_3"
+
+    "precache"
+    {
+      "particle"  "particles/units/heroes/hero_phantom_assassin/phantom_assassin_blur.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "duration"              "10"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "magic_resistance"       "11 12 13 14 15 16 17 18 19 20"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "evasion"               "25 30 35 40 45 50 55 60 65 70"
+        }                 
+    }
+}
+
+
+
+
+
+}

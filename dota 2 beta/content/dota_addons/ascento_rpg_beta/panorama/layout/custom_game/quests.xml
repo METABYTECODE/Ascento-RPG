@@ -1,0 +1,65 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="file://{resources}/styles/custom_game/quests.css" />
+	</styles>
+	<scripts>
+		<include src="file://{resources}/scripts/custom_game/quests.js" />
+	</scripts>
+	<snippets>
+		<snippet name="ProgressPanelSnippet">
+			<Panel id="ProgressPanel">
+				<Panel id="ProgressIconPanel">
+					<Image src="file://{resources}/images/quest_icon_png.png" />
+
+				</Panel>
+				<Panel id="ProgressTitlePanel">
+					<Label id="SideQuestTitleLabel" text="Quest Title" />
+				</Panel>
+				<Panel id="ProgressBarPanel">
+					<Panel id="ProgressBarBackground" />
+					<Label id="ProgressBarInfo" text="Kill 5 Kobold" />
+					<Label id="ProgressBarObjectives" text="0/5" />
+				</Panel>
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel class="MainPanel" hittest="false">
+		<Panel id="SidePanel">
+			<Panel id="SideTitlePanel">
+				<Label id="SideTitleLabel" text="Quests" />
+			</Panel>
+			<Panel id="SideQuestPanel" hittest="false" />
+		</Panel>
+		<Panel id="InteractionPanel">
+			<Image id="InteractionImage" src="file://{resources}/images/quest_interaction_png.png">
+				<Panel id="TitlePanel">
+					<Label id="TitleLabel" text="Test Title" />
+				</Panel>
+				<Panel id="DescriptionPanel">
+					<Label id="DescriptionLabel" text="Quest Description Quest Descriptio Quest Description" />
+				</Panel>
+				<Panel id="InfoPanel">
+					<Panel id="ObjectivesPanel">
+						<Label id="ObjectivesLabel" text="Req: Kill 5 Kobold" />
+					</Panel>
+					<Panel id="RewardsPanel">
+						<Label id="GoldLabel" text="Gold: 50" />
+						<Label id="XPLabel" text="XP: 50" />
+					</Panel>
+				</Panel>
+				<Panel id="ButtonsPanel">
+					<Button id="AcceptButton" onactivate="AcceptQuest()">
+						<Label id="AcceptLabel" text="Accept" />
+					</Button>
+					<Button id="DeclineButton" onactivate="DeclineQuest()">
+						<Label id="DeclineLabel" text="Decline" />
+					</Button>
+					<Button id="CompleteButton" onactivate="CompleteQuest()">
+						<Label id="CompleteLabel" text="Complete" />
+					</Button>
+				</Panel>
+			</Image>
+		</Panel>
+	</Panel>
+</root>

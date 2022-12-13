@@ -1,0 +1,941 @@
+
+"DOTAAbilities"
+{
+  
+
+"item_health_1"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_2"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_3"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_4"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_5"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_6"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_7"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_8"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_9"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_10"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_11"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_12"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_13"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_14"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"    "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"            "%bonus_mana"
+      }
+    }
+  }
+}
+
+"item_health_15"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_16"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_17"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_18"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_19"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_20"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_21"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_22"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_23"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_24"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_25"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_26"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_27"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_28"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_29"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_30"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+"item_health_31"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_health"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_HEALTH_BONUS"            "%bonus_health"
+        "MODIFIER_PROPERTY_MANA_BONUS"                    "%bonus_mana"
+        "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"       "%hp_regen"
+        "MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE"         "%mp_regen"
+      }
+    }
+  }
+}
+
+} //end

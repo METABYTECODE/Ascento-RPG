@@ -1,0 +1,433 @@
+
+--СКИЛЛ ВОЙДА ДЛЯ 900 РУБ ДОНАТЕРА И ЕГО ДРУГА |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 312502679 then
+            --https://steamcommunity.com/id/1234567890ab123/ друг 900 руб донатера
+            hero:RemoveAbility("chaos_strike_datadriven")
+            hero:AddAbility("faceless_void_time_walk")
+            hero:AddAbility("chaos_strike_datadriven")
+            hero:FindAbilityByName("faceless_void_time_walk"):UpgradeAbility(true)
+        end
+        if steamID == 331942895 then
+            --https://steamcommunity.com/profiles/76561198292208623 --900 руб донатер (скилл войда)
+            hero:RemoveAbility("chaos_strike_datadriven")
+            hero:AddAbility("faceless_void_time_walk")
+            hero:AddAbility("chaos_strike_datadriven")
+            hero:FindAbilityByName("faceless_void_time_walk"):UpgradeAbility(true)
+        end
+
+        --ЯД ЗА 1000 РУБ ДЛЯ ДОНАТЕРА |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 1014880386 then
+            --https://steamcommunity.com/profiles/76561198975146114/ 1000 rub donat (QIWI)
+            hero:RemoveAbility("wind_walk_datadriven")
+            hero:AddAbility("venomancer_poison_sting")
+        end
+
+        --ИЛЛЮЗИИ ТБ ЗА 14 ЕВРО ДЛЯ ДОНАТЕРА |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 232793475 then
+            --https://steamcommunity.com/id/BLRockShooter/ 14 EUR
+            hero:RemoveAbility("chaos_strike_datadriven")
+            hero:AddAbility("terrorblade_conjure_image")
+            hero:AddAbility("chaos_strike_datadriven")
+            hero:FindAbilityByName("terrorblade_conjure_image"):UpgradeAbility(true)
+        end
+        if steamID == 293822853 then
+            --https://steamcommunity.com/id/djcattivo/ 14 EUR FRIEND
+            hero:RemoveAbility("chaos_strike_datadriven")
+            hero:AddAbility("terrorblade_conjure_image")
+            hero:AddAbility("chaos_strike_datadriven")
+            hero:FindAbilityByName("terrorblade_conjure_image"):UpgradeAbility(true)
+        end
+        if steamID == 123578080 then
+            --https://steamcommunity.com/profiles/76561198843106717/ 14 EUR FRIEND 
+            hero:RemoveAbility("chaos_strike_datadriven")
+            hero:AddAbility("terrorblade_conjure_image")
+            hero:AddAbility("chaos_strike_datadriven")
+            hero:FindAbilityByName("terrorblade_conjure_image"):UpgradeAbility(true)
+        end
+        --ТЕРОРБЛЕЙД ДЛЯ $15 ПАТРЕОНА |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 109440035 then --https://steamcommunity.com/profiles/76561198069705763/ $15 patreon
+            Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 6, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Terroblade Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_terrorblade" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_terrorblade", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+            end 
+            })
+        end
+        --ПАССИВКИ НА УРОН И ЧИСТЫЙ ДПС |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 114522339 then --https://steamcommunity.com/profiles/76561198074788067/
+            hero:AddAbility("special_damage_passive_datadriven") 
+            hero:FindAbilityByName("special_damage_passive_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        --ФОРМА БАЛАНАРА И СВЕЧЕНИЕ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 114522339 then --https://steamcommunity.com/profiles/76561198074788067/  
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven")
+            hero:AddAbility("balanar_form_crit_datadriven")
+            hero:FindAbilityByName("balanar_form_crit_datadriven"):UpgradeAbility(true)             
+        end
+        --$15 PATREON ВОЗВРАТ 30% УРОНА |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 142644323 then --https://steamcommunity.com/profiles/76561198102910051/ $15 patreon
+            hero:AddAbility("spectre_dispersion_datadriven")
+            hero:FindAbilityByName("spectre_dispersion_datadriven"):UpgradeAbility(true)
+        end
+        --900rub URSA-PIPE ABILITY-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 369499244 then
+            hero:AddAbility("ursa_fury_swipes_datadriven")
+            hero:SwapAbilities("ursa_fury_swipes_datadriven", "phantom_assassin_phantom_strike_datadriven", true, true)
+            ParticleManager:CreateParticle("particles/items_fx/aura_assault.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+        end
+        --SF SECOND JOB |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 399990664 then
+        hero:AddAbility("penitence_datadriven_passive")
+        hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)    
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Sf Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_nevermore" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_nevermore", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_nevermore" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        if steamID == 238342963 then
+        hero:AddAbility("penitence_datadriven_passive")
+        hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Abba Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_abaddon" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_abaddon", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_abaddon" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        if steamID == 103678113 then
+        hero:AddAbility("penitence_datadriven_passive")
+        hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Zuus Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_zuus" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_zuus", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_zuus" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        if steamID == 160474198 then
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Sf Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_nevermore" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_nevermore", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_nevermore" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        if steamID == 1036055526 then
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Abba Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_abaddon" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_abaddon", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_abaddon" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        if steamID == 117505538 then
+        Timers:CreateTimer({
+            useGameTime = false,
+            endTime = 1, -- when this timer should first execute, you can omit this if you want it to run first on the next frame
+            callback = function()
+                print ("Abba Swap Check")
+                if hero:GetUnitName() ~= "npc_dota_hero_abaddon" and hero:GetUnitName() ~= "npc_dota_hero_sven" and hero:GetUnitName() ~= "npc_dota_hero_drow_ranger" and hero:GetUnitName() ~= "npc_dota_hero_skywrath_mage" then
+                    PlayerResource:ReplaceHeroWith(hero:GetPlayerOwnerID(), "npc_dota_hero_abaddon", PlayerResource:GetGold(hero:GetPlayerOwnerID()), 0)
+                end
+                if hero:GetUnitName() == "npc_dota_hero_abaddon" and hero:GetLevel() == 1 then
+                    hero:AddExperience(30000000, false, false)
+                    ParticleManager:CreateParticle("particles/econ/items/necrolyte/necro_ti9_immortal/necro_ti9_immortal_ambient.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                end
+            end 
+            })
+        end
+        --ПАССИВКИ НА УРОН И ЧИСТЫЙ ДПС |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 136367311 then --https://steamcommunity.com/profiles/76561198074788067/
+            hero:AddAbility("special_damage_passive_datadriven") 
+            hero:FindAbilityByName("special_damage_passive_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        --ФОРМА БАЛАНАРА И СВЕЧЕНИЕ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 136367311 then --https://steamcommunity.com/profiles/76561198074788067/  
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven")        
+        end
+        if steamID == 137661800 then --https://steamcommunity.com/profiles/76561198074788067/
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        --ФОРМА БАЛАНАРА И СВЕЧЕНИЕ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+        if steamID == 106235965 then --https://steamcommunity.com/profiles/76561198074788067/  
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven")           
+        end
+        if steamID == 106235965 then --https://steamcommunity.com/profiles/76561198074788067/
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        if steamID == 103258204 then    
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("phoenix_form_datadriven")
+            hero:SetRenderColor(162, 162, 162) 
+            hero:AddAbility("special_damage_passive_datadriven") 
+            hero:FindAbilityByName("special_damage_passive_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        if steamID == 84061308 or steamID == 74523147 then 
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven") 
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        if steamID == 455583756 then 
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven") 
+            hero:AddAbility("faceless_void_time_walk")
+            hero:FindAbilityByName("faceless_void_time_walk"):UpgradeAbility(true)
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        end
+        if steamID == 181686836 then 
+            hero:AddAbility("special_damage_passive_datadriven") 
+            hero:FindAbilityByName("special_damage_passive_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true) 
+        end
+        if steamID == 925548569 then 
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+        end
+        if steamID == 113731831 or steamID == 84061308 or steamID == 455583756 or steamID == 181091831 or steamID == 90563717 or steamID == 147030692 or steamID == 331065959
+        or steamID == 479688478 or steamID == 83461202 or steamID == 70724616 or steamID == 87401104 then 
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_rubick")
+                end
+            end
+        end
+        if steamID == 322246559 then    
+            hero:AddAbility("absorb_itsy_spider_datadriven")
+            hero:FindAbilityByName("absorb_itsy_spider_datadriven"):UpgradeAbility(true)
+            ParticleManager:CreateParticle("particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012_webs.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            ParticleManager:CreateParticle("particles/econ/courier/courier_trail_hw_2012/courier_trail_hw_2012_spiderwebs.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+        end
+        if steamID == 331065959 then 
+            hero:AddAbility("faceless_void_time_walk")
+            hero:FindAbilityByName("faceless_void_time_walk"):UpgradeAbility(true)
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven") 
+        end
+        if steamID == 113731831 then 
+            hero:AddAbility("balanar_form_datadriven") 
+        end
+        if steamID == 32988064 then
+            hero:AddAbility("ursa_fury_swipes_datadriven")
+            hero:SwapAbilities("ursa_fury_swipes_datadriven", "phantom_assassin_phantom_strike_datadriven", true, true)
+            ParticleManager:CreateParticle("particles/items_fx/aura_assault.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+        end
+        if steamID == 238342963 or steamID == 399990664 or steamID == 103678113 then
+            hero:AddAbility("ursa_fury_swipes_datadriven")
+            hero:SwapAbilities("ursa_fury_swipes_datadriven", "phantom_assassin_phantom_strike_datadriven", true, true)
+            ParticleManager:CreateParticle("particles/items_fx/aura_assault.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("rubick_bonus_damage")
+        end
+        if steamID == 90026769 or steamID == 102306673 or steamID == 173960754 then --https://steamcommunity.com/profiles/76561198074788067/  
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)            
+        end
+        if steamID == 89983906 then
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven")
+            hero:AddAbility("balanar_form_crit_datadriven")
+            hero:FindAbilityByName("balanar_form_crit_datadriven"):UpgradeAbility(true)    
+            hero:AddAbility("ursa_fury_swipes_datadriven")
+            hero:SwapAbilities("ursa_fury_swipes_datadriven", "phantom_assassin_phantom_strike_datadriven", true, true)
+        end
+        if steamID == 158686274 or steamID == 150398227 then 
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_rubick")
+                end
+            end
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:FindAbilityByName("special_pure_damage_spell_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("special_damage_passive_datadriven") 
+            hero:FindAbilityByName("special_damage_passive_datadriven"):UpgradeAbility(true)
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+            hero:AddAbility("balanar_form_crit_datadriven")
+            hero:FindAbilityByName("balanar_form_crit_datadriven"):UpgradeAbility(true)
+
+            local sfpassive = hero:AddAbility("sf_ulti_damage_passive_datadriven")
+            sfpassive:UpgradeAbility(true)
+            --sfpassive:ApplyDataDrivenModifier(hero, hero, "modifier_sf_block_datadriven", {})
+            --sfpassive:Destroy()
+
+            hero:AddAbility("balanar_form_datadriven")
+
+            
+        end
+        if steamID == 48397409 then
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_antimage")
+                end
+            end
+        end
+        if steamID == 371987155 then 
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        end
+        if steamID == 103258204 then 
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_lonedruid")
+                end
+            end
+        end
+        if steamID == 324596888 or steamID == 1017704921 or steamID == 62965026 then
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_voidspirit")
+                end
+            end
+            ParticleManager:CreateParticle("particles/units/heroes/hero_demonartist/demonartist_soulchain_debuff.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+            hero:AddAbility("balanar_form_datadriven")
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+            hero:AddAbility("special_damage_passive_datadriven")
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        end
+        if steamID == 81297093 or steamID == 291371668 then 
+            hero:AddAbility("ursa_fury_swipes_datadriven")
+            hero:SwapAbilities("ursa_fury_swipes_datadriven", "phantom_assassin_phantom_strike_datadriven", true, true)
+        end
+        if steamID == 169452912 then
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_wisp")
+                end
+            end
+            hero:AddAbility("penitence_datadriven_passive")
+            hero:FindAbilityByName("penitence_datadriven_passive"):UpgradeAbility(true)
+        end
+        if steamID == 141072586 then 
+            hero:AddAbility("special_pure_damage_spell_datadriven")
+        end
+        if steamID == 471126777 then
+            for _, FirstJobName in pairs(FirstJobHeroesList) do
+                if hero:GetUnitName() == FirstJobName then 
+                    hero:AddItemByName("item_hero_change_to_doom")
+                end
+            end
+        end
+
+
+
+
+
+
+
+
+
+
+
+        local hp = npc:GetMaxHealth()
+            if hp > 10000 then
+                hp = hp / 10
+            end
+
+            while hp > 1000000 do
+                if hp < 1000000 then break end
+                hp = hp / 10
+            end
+
+            if hp > INT_MAX_LIMIT then
+                hp = INT_MAX_LIMIT
+            end
+
+            npc:SetBaseMaxHealth(hp)
+            npc:SetMaxHealth(hp)
+            npc:SetHealth(hp)
+
+            local hpregen = npc:GetHealthRegen() or npc:GetBaseHealthRegen()
+            if hpregen > 1000 then
+                npc:SetBaseHealthRegen(500)
+            end
+
+            local armor = npc:GetPhysicalArmorValue(false) or npc:GetPhysicalArmorBaseValue()
+            if armor > 200 then
+                npc:SetPhysicalArmorBaseValue(200)
+            end
+    
+            local damage = npc:GetAverageTrueAttackDamage(npc)
+            if damage > 1000 then
+                damage = damage / 10
+            end
+
+            while damage > 600000 do
+                if damage < 600000 then break end
+                damage = damage / 1.5
+            end
+
+            if damage > 600000 then
+                damage = damage / 2
+            end
+                
+            if damage > INT_MAX_LIMIT then
+                damage = INT_MAX_LIMIT
+            end
+            npc:SetBaseDamageMax(damage)
+            npc:SetBaseDamageMin(damage)

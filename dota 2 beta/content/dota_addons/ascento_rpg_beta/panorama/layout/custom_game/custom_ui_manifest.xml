@@ -1,0 +1,137 @@
+<root> 
+  <scripts>
+    <include src="file://{resources}/scripts/custom_game/playertables_base.js" />
+    
+  </scripts>
+  <script><![CDATA[
+    function HidePickScreen() {
+        var dotaHud = $.GetContextPanel().GetParent().GetParent();
+        if (Game.GameStateIsBefore(DOTA_GameState.DOTA_GAMERULES_STATE_HERO_SELECTION)) {
+            dotaHud.FindChild("PreGame").visible = false;
+        }
+        else if (Game.GameStateIs(DOTA_GameState.DOTA_GAMERULES_STATE_HERO_SELECTION)) {
+            dotaHud.FindChild("PreGame").visible = true;
+        }
+        else if (Game.GameStateIs(DOTA_GameState.DOTA_GAMERULES_STATE_STRATEGY_TIME)) {
+            dotaHud.FindChild("PreGame").visible = true;
+        }
+        else if (Game.GameStateIs(DOTA_GameState.DOTA_GAMERULES_STATE_PRE_GAME)) {
+            dotaHud.FindChild("PreGame").visible = false;
+        } else {
+            dotaHud.FindChild("PreGame").visible = false;
+        }
+        
+
+    }
+    (function()
+    {
+        GameEvents.Subscribe( "game_rules_state_change", HidePickScreen );
+    })();
+    
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_SHOP, false );     //Shop portion of the Inventory. 
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_QUICKBUY, false );     //Quickbuy.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_COURIER, false );      //Courier controls.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_PROTECT, false );      //Glyph.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_INVENTORY_GOLD, false );     //Gold display.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_SHOP_SUGGESTEDITEMS, false );      //Suggested items shop panel.
+    //GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_HERO_SELECTION_TEAMS, true );     //Hero selection Radiant and Dire player lists.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_MENU_BUTTONS, false );     //Top-left menu buttons in the HUD.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR_BACKGROUND, false );     //Top-left menu buttons in the HUD.
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR, true );     //
+
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR_RADIANT_TEAM, false );     //
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR_DIRE_TEAM, false );     //
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_HEROES, false );     //Heroes and team score at the top of the HUD.
+
+
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_TOP_BAR_SCORE, false );     //
+
+    GameUI.SetDefaultUIEnabled( DotaDefaultUIElement_t.DOTA_DEFAULT_UI_CUSTOMUI_BEHIND_HUD_ELEMENTS, false );     //
+
+    // These lines set up the panorama colors used by each team (for game select/setup, etc)
+    GameUI.CustomUIConfig().team_colors = {}
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_GOODGUYS] = "#3dd296;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_BADGUYS ] = "#F3C909;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_1] = "#c54da8;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_2] = "#FF6C00;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_3] = "#3455FF;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_4] = "#65d413;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_5] = "#815336;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_6] = "#1bc0d8;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_7] = "#c7e40d;";
+    GameUI.CustomUIConfig().team_colors[DOTATeam_t.DOTA_TEAM_CUSTOM_8] = "#8c2af4;";
+
+    GameEvents.Subscribe("create_error_message", function(data) {
+        GameEvents.SendEventClientSide("dota_hud_error_message", {
+            "splitscreenplayer": 0,
+            "reason": data.reason || 80,
+            "message": data.message
+        })
+    })
+	
+	var NoTPScrollUI = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("center_with_stats").FindChildTraverse("center_block");
+
+    var NoStatBranch = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("lower_hud").FindChildTraverse("StatBranchDrawer");
+
+	var NoGlyphAndRadar = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("minimap_container");
+
+	var NoDashboardButton = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("MenuButtons");
+
+    var NoScoreboardButton = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("MenuButtons");
+
+    var inventory_neutral_slot_container = $.GetContextPanel().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("inventory_neutral_slot_container")
+
+    var dire_panel = $.GetContextPanel().GetParent().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("topbar").FindChildTraverse("TopBarDireTeam");
+
+    var radiant_panel = $.GetContextPanel().GetParent().GetParent().GetParent().FindChildTraverse("HUDElements").FindChildTraverse("topbar").FindChildTraverse("TopBarRadiantTeam");
+
+
+    dire_panel.FindChildTraverse("TopBarDirePlayers").FindChildTraverse("TopBarDirePlayersContainer").style.visibility = "collapse";
+    dire_panel.FindChildTraverse("TopBarDirePlayers").FindChildTraverse("TopBarDireTeamInfo").style.visibility = "collapse";
+
+    radiant_panel.FindChildTraverse("TopBarRadiantPlayers").FindChildTraverse("TopBarRadiantTeamInfo").style.visibility = "collapse";
+    radiant_panel.FindChildTraverse("TopBarRadiantPlayers").FindChildTraverse("TopBarRadiantPlayersContainer").style.visibility = "collapse";
+
+	//NoTPScrollUI.FindChildTraverse("inventory_tpscroll_container").style.visibility = "visible";
+    //NoTPScrollUI.FindChildTraverse("inventory_composition_layer_container").style.visibility = "visible";
+    //NoTPScrollUI.FindChildTraverse("right_flare").style.visibility = "visible";
+
+    NoTPScrollUI.FindChildTraverse("AghsStatusContainer").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("StatBranch").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("StatBranch").FindChildTraverse("StatBranchBG").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("StatBranch").FindChildTraverse("StatBranchBGBranchWell").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("StatBranch").FindChildTraverse("StatBranchGraphics").style.visibility = "collapse";
+    NoStatBranch.style.visibility = "collapse";
+
+
+    NoTPScrollUI.FindChildTraverse("LevelUpTab").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("level_stats_frame").style.visibility = "collapse";
+    NoTPScrollUI.FindChildTraverse("StatBranchHotkey").style.visibility = "collapse";
+
+    NoTPScrollUI.FindChildTraverse("inventory_neutral_slot_container").style.visibility = "visible";
+
+	NoGlyphAndRadar.FindChildTraverse("GlyphScanContainer").style.visibility = "collapse";
+	NoDashboardButton.FindChildTraverse("DashboardButton").style.visibility = "collapse";
+    NoScoreboardButton.FindChildTraverse("ToggleScoreboardButton").style.visibility = "collapse";
+    inventory_neutral_slot_container.style.visibility = "visible";
+    
+
+   
+    
+   
+   
+
+  ]]></script> 
+
+  <Panel>
+    <CustomUIElement type="GameInfo" layoutfile="file://{resources}/layout/custom_game/game_info.xml" />
+    <CustomUIElement type="GameSetup" layoutfile="file://{resources}/layout/custom_game/kills.xml" />
+    <CustomUIElement type="GameSetup" layoutfile="s2r://panorama/layout/custom_game/team_select.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/tops.xml" />   
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/mainui.xml" />
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/online_players.xml" /> 
+    <CustomUIElement type="Hud" layoutfile="file://{resources}/layout/custom_game/hero_stats.xml" /> 
+    <CustomUIElement type="Hud" layoutfile="file://panorama/layout/custom_game/ingame_leaderboard.xml" />
+
+  </Panel>
+</root>

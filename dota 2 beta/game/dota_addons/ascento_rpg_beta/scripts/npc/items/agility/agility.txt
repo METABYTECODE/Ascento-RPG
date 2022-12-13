@@ -1,0 +1,1196 @@
+
+"DOTAAbilities"
+{
+  
+
+"item_agility_1"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_2"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_3"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_4"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_5"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_6"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_7"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_8"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"    "%bonus_agility"
+      }
+    }
+  }
+}
+
+"item_agility_9"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_10"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_11"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_12"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_13"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_14"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_15"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_16"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_17"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_18"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_19"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_20"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+    }
+  }
+}
+
+"item_agility_21"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_22"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_23"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_24"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_25"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_26"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_27"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_28"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_29"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_30"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+"item_agility_31"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_agility"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_AGILITY_BONUS"      "%bonus_agility"
+        "MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"  "%bonus_attack_speed"
+      }
+
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_agility_disarmor"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_agility_disarmor"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"    "%disarmor"
+      }
+    }
+  }
+}
+
+} //end

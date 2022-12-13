@@ -1,0 +1,48 @@
+<root>
+	<styles>
+		<include src="file://panorama/styles/custom_game/button_load.css" />
+	</styles>
+	<scripts>
+		<include src="file://panorama/scripts/custom_game/button_load.js" />
+	</scripts>
+	<snippets>
+
+		<snippet name="SaveApproveSnippet">
+			<Panel class="MainSaveApprove" >
+				<Panel id="SaveApprove" />
+				<Panel id="SaveApproveOk" onactivate="OnSaveEvent('FastSaveEvent')" onmouseover="UIShowTextTooltip(#save_approve_ok)"  onmouseout="UIHideTextTooltip()" /> 
+				<Panel id="SaveApproveNo" onactivate="OnCancelSaveEvent('CancelSaveEvent')" onmouseover="UIShowTextTooltip(#save_approve_no)"  onmouseout="UIHideTextTooltip()" />
+			</Panel>
+		</snippet>
+
+
+		<snippet name="LoadApproveSnippet">
+			<Panel class="MainLoadApprove" >
+				<Panel id="LoadApprove" />
+				<Panel id="LoadApproveOk" onactivate="OnLoadEvent('FastLoadEvent')" onmouseover="UIShowTextTooltip(#load_approve_ok)"  onmouseout="UIHideTextTooltip()" /> 
+				<Panel id="LoadApproveNo" onactivate="OnCancelLoadEvent('CancelLoadEvent')" onmouseover="UIShowTextTooltip(#load_approve_no)"  onmouseout="UIHideTextTooltip()" />
+			</Panel>
+		</snippet>
+
+
+	</snippets>
+
+		<Panel class="Main" >
+
+			<Panel class="MainLoadSnippet" >
+				<Panel id="LoadSaveApproveSnippet" tabsnippet="SaveApproveSnippet"> </Panel>
+				<Panel id="LoadLoadApproveSnippet" tabsnippet="LoadApproveSnippet"> </Panel>
+			</Panel>
+
+			<Panel id="FastLoadBtn">
+				<Label id="FastloadText" text="#faste_save_load_desc" />
+				<Panel id="btnLoadEntry" />
+				<Panel id="LoadEntryText" />
+
+				<Panel id="EntryLoadButton" onactivate="OnShowLoadApprove('ShowLoadApprove')" onmouseover="UIShowTextTooltip(#fastload_click_load)" onmouseout="UIHideTextTooltip()" />
+
+				<Panel id="EntrySaveButton" onactivate="OnShowSaveApprove('ShowSaveApprove')" onmouseover="UIShowTextTooltip(#fastload_click_save)" onmouseout="UIHideTextTooltip()" />
+			</Panel>
+
+		</Panel>
+</root>

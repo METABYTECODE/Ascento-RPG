@@ -1,0 +1,20 @@
+//#base "abilities/npc_abilities_override.txt"
+#base "abilities/npc_special_abilities.txt"
+#base "abilities/enemy_abilities.txt"
+#base "abilities/donate_abilities.txt"
+#base "abilities/heroes_abilities.txt"
+
+#base "abilities/assasin.txt"
+#base "abilities/cultist.txt"
+#base "abilities/fighter.txt"
+#base "abilities/mage.txt"
+#base "abilities/magic_warrior.txt"
+#base "abilities/ranger.txt"
+#base "abilities/support.txt"
+#base "abilities/tank.txt"
+
+"DOTAAbilities"
+{
+
+
+}

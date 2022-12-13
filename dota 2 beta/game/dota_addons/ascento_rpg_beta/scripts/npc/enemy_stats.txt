@@ -1,0 +1,723 @@
+"DOTAUnits"
+{
+    "npc_dota_neutral_kobold"
+   {
+        "AttackDamageMin" "20"
+        "AttackDamageMax" "20"
+        "ArmorPhysical" "0"
+        "StatusHealth" "200"
+        "StatusHealthRegen" "1"
+        "StatusMana" "100"
+        "StatusManaRegen" "5"
+   }
+    "npc_dota_neutral_kobold_tunneler"
+    {
+        "AttackDamageMin" "40"
+        "AttackDamageMax" "40"
+        "ArmorPhysical" "0"
+        "StatusHealth" "400"
+        "StatusHealthRegen" "5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "50"
+    }
+    "npc_dota_neutral_ogre_mauler"
+   {
+        "AttackDamageMin" "40"
+        "AttackDamageMax" "40"
+        "ArmorPhysical" "0"
+        "StatusHealth" "500"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "100"
+        "StatusManaRegen" "5"
+   }
+    "npc_dota_neutral_ogre_magi"
+    {
+        "AttackDamageMin" "80"
+        "AttackDamageMax" "80"
+        "ArmorPhysical" "0"
+        "StatusHealth" "800"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_satyr_hellcaller"
+    {
+        "AttackDamageMin" "100"
+        "AttackDamageMax" "100"
+        "ArmorPhysical" "0"
+        "StatusHealth" "1200"
+        "StatusHealthRegen" "1"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_roshan_halloween_minion"
+    {
+        "AttackDamageMin" "50"
+        "AttackDamageMax" "50"
+        "ArmorPhysical" "0"
+        "StatusHealth" "1000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_goodguys_melee_upgraded_mega"
+    {
+        "AttackDamageMin" "150"
+        "AttackDamageMax" "150"
+        "ArmorPhysical" "0"
+        "StatusHealth" "1800"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_granite_golem"
+    {
+        "AttackDamageMin" "90"
+        "AttackDamageMax" "90"
+        "ArmorPhysical" "0"
+        "StatusHealth" "2200"
+        "StatusHealthRegen" "1.5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_necronomicon_warrior_1"
+    {
+        "AttackDamageMin" "140"
+        "AttackDamageMax" "140"
+        "ArmorPhysical" "0"
+        "StatusHealth" "2000"
+        "StatusHealthRegen" "5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_necronomicon_archer_2"
+    { 
+        "AttackDamageMin" "300"
+        "AttackDamageMax" "300"
+        "ArmorPhysical" "0"
+        "StatusHealth" "3500"
+        "StatusHealthRegen" "5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_polar_furbolg_champion"
+    {
+        "AttackDamageMin" "300"
+        "AttackDamageMax" "300"
+        "ArmorPhysical" "0"
+        "StatusHealth" "3000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_polar_furbolg_ursa_warrior"
+    { 
+        "AttackDamageMin" "275"
+        "AttackDamageMax" "275"
+        "ArmorPhysical" "0"
+        "StatusHealth" "4500"
+        "StatusHealthRegen" "1"
+        "StatusMana" "1000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_kobold_taskmaster"
+    { 
+        "AttackDamageMin" "300"
+        "AttackDamageMax" "300"
+        "ArmorPhysical" "0"
+        "StatusHealth" "5000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+   "npc_dota_broodmother_spiderling"
+   {
+        "AttackDamageMin" "750"
+        "AttackDamageMax" "750"
+        "ArmorPhysical" "0"
+        "StatusHealth" "5000"
+        "StatusHealthRegen" "1"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+   }
+    "npc_dota_broodmother_spiderite"
+    {
+        "AttackDamageMin" "500"
+        "AttackDamageMax" "500"
+        "ArmorPhysical" "0"
+        "StatusHealth" "6000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_furion_treant_large"
+    {
+        "AttackDamageMin" "550"
+        "AttackDamageMax" "550"
+        "ArmorPhysical" "0"
+        "StatusHealth" "6500"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_warlock_golem_1"
+    {
+        "AttackDamageMin" "850"
+        "AttackDamageMax" "850"
+        "ArmorPhysical" "0"
+        "StatusHealth" "7000"
+        "StatusHealthRegen" "15"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_warlock_golem_2"
+    {
+        "AttackDamageMin" "400"
+        "AttackDamageMax" "400"
+        "ArmorPhysical" "0"
+        "StatusHealth" "7500"
+        "StatusHealthRegen" "20"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_mud_golem_split"
+    {
+        "AttackDamageMin" "450"
+        "AttackDamageMax" "450"
+        "ArmorPhysical" "0"
+        "StatusHealth" "8000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_mud_golem"
+    {
+        "AttackDamageMin" "500"
+        "AttackDamageMax" "500"
+        "ArmorPhysical" "0"
+        "StatusHealth" "8500"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_centaur_outrunner"
+    {
+        "AttackDamageMin" "1750"
+        "AttackDamageMax" "1750"
+        "ArmorPhysical" "0"
+        "StatusHealth" "10000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_centaur_khan"
+    {
+        "AttackDamageMin" "750"
+        "AttackDamageMax" "750"
+        "ArmorPhysical" "0"
+        "StatusHealth" "12000"
+        "StatusHealthRegen" "1"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_mud_golem_split_doom"
+    {
+        "AttackDamageMin" "800"
+        "AttackDamageMax" "800"
+        "ArmorPhysical" "0"
+        "StatusHealth" "13000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_brewmaster_earth_1"
+    {
+        "AttackDamageMin" "1200"
+        "AttackDamageMax" "1200"
+        "ArmorPhysical" "0"
+        "StatusHealth" "12000"
+        "StatusHealthRegen" "1"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_brewmaster_storm_1"
+    {
+        "AttackDamageMin" "900"
+        "AttackDamageMax" "900"
+        "ArmorPhysical" "0"
+        "StatusHealth" "15000"
+        "StatusHealthRegen" "1"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_brewmaster_fire_1"
+    {
+        "AttackDamageMin" "1100"
+        "AttackDamageMax" "1100"
+        "ArmorPhysical" "0"
+        "StatusHealth" "17000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_unit_undying_zombie"
+    {
+        "AttackDamageMin" "3000"
+        "AttackDamageMax" "3000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "15000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_unit_undying_zombie_torso"
+    {
+        "AttackDamageMin" "1600"
+        "AttackDamageMax" "1600"
+        "ArmorPhysical" "0"
+        "StatusHealth" "19000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_lone_druid_bear1"
+    {
+        "AttackDamageMin" "1800"
+        "AttackDamageMax" "1800"
+        "ArmorPhysical" "0"
+        "StatusHealth" "20000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_badguys_tower1_bot"
+    {
+        "AttackDamageMin" "2250"
+        "AttackDamageMax" "2250"
+        "ArmorPhysical" "0"
+        "StatusHealth" "17500"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_goodguys_tower4"
+    {
+        "AttackDamageMin" "1000"
+        "AttackDamageMax" "1000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "22500"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_courier"
+    {
+        "AttackDamageMin" "1"
+        "AttackDamageMax" "1"
+        "ArmorPhysical" "5"
+        "StatusHealth" "25000"
+        "StatusHealthRegen" "0.5"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_badguys_ranged"
+    {
+        "AttackDamageMin" "2000"
+        "AttackDamageMax" "2000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "17500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_badguys_ranged_upgraded"
+    {
+        "AttackDamageMin" "2100"
+        "AttackDamageMax" "2100"
+        "ArmorPhysical" "0"
+        "StatusHealth" "17500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_badguys_ranged_upgraded_mega"
+    {
+        "AttackDamageMin" "2200"
+        "AttackDamageMax" "2200"
+        "ArmorPhysical" "0"
+        "StatusHealth" "17500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_goodguys_ranged"
+    {
+        "AttackDamageMin" "2300"
+        "AttackDamageMax" "2300"
+        "ArmorPhysical" "0"
+        "StatusHealth" "22500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creep_goodguys_ranged_upgraded_mega"
+    {
+        "AttackDamageMin" "4000"
+        "AttackDamageMax" "4000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "25000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_boss_volk1"
+    {
+        "AttackDamageMin" "4250"
+        "AttackDamageMax" "4250"
+        "ArmorPhysical" "0"
+        "StatusHealth" "27500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_boss_volk2"
+    {
+        "AttackDamageMin" "4400"
+        "AttackDamageMax" "4400"
+        "ArmorPhysical" "0"
+        "StatusHealth" "30000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_neutral_big_thunder_lizard"
+    {
+        "AttackDamageMin" "4500"
+        "AttackDamageMax" "4500"
+        "ArmorPhysical" "2"
+        "StatusHealth" "32500"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_last_boss" 
+    {
+        "AttackDamageMin" "7000"
+        "AttackDamageMax" "7000"
+        "ArmorPhysical" "5"
+        "StatusHealth" "34000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_tiny_creep"
+    {
+        "AttackDamageMin" "20000"
+        "AttackDamageMax" "20000"
+        "ArmorPhysical" "5"
+        "StatusHealth" "35000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_tiny_boss"
+    {
+        "AttackDamageMin" "27000"
+        "AttackDamageMax" "27000"
+        "ArmorPhysical" "10"
+        "StatusHealth" "50000"
+        "StatusHealthRegen" "2"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_slardar_creep"
+    {
+        "AttackDamageMin" "25000"
+        "AttackDamageMax" "25000"
+        "ArmorPhysical" "7"
+        "StatusHealth" "50000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_tide_boss"
+    {
+        "AttackDamageMin" "32500"
+        "AttackDamageMax" "32500"
+        "ArmorPhysical" "16"
+        "StatusHealth" "80000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_clock_creep"
+    {
+        "AttackDamageMin" "50000"
+        "AttackDamageMax" "50000"
+        "ArmorPhysical" "20"
+        "StatusHealth" "70000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_timbersaw_boss"
+    {
+        "AttackDamageMin" "50000"
+        "AttackDamageMax" "50000"
+        "ArmorPhysical" "22"
+        "StatusHealth" "100000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_gyro_creep"
+    {
+        "AttackDamageMin" "75000"
+        "AttackDamageMax" "75000"
+        "ArmorPhysical" "35"
+        "StatusHealth" "90000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_tinker_boss"
+    {
+        "AttackDamageMin" "70000"
+        "AttackDamageMax" "70000"
+        "ArmorPhysical" "25"
+        "StatusHealth" "140000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_enigma_creep"
+    {
+        "AttackDamageMin" "90000"
+        "AttackDamageMax" "90000"
+        "ArmorPhysical" "45"
+        "StatusHealth" "130000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_arc_warden_boss"
+    {
+        "AttackDamageMin" "80000"
+        "AttackDamageMax" "80000"
+        "ArmorPhysical" "40"
+        "StatusHealth" "160000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_aa_creep" 
+    {
+        "AttackDamageMin" "100000"
+        "AttackDamageMax" "100000"
+        "ArmorPhysical" "50"
+        "StatusHealth" "150000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_tusk_boss"
+    {
+        "AttackDamageMin" "90000"
+        "AttackDamageMax" "90000"
+        "ArmorPhysical" "55"
+        "StatusHealth" "200000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_lich_creep"
+    {
+        "AttackDamageMin" "130000"
+        "AttackDamageMax" "130000"
+        "ArmorPhysical" "55"
+        "StatusHealth" "180000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    } 
+    "npc_dota_creature_wywern_boss"
+    {
+        "AttackDamageMin" "110000"
+        "AttackDamageMax" "110000"
+        "ArmorPhysical" "60"
+        "StatusHealth" "230000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_wisp_creep"
+    {
+        "AttackDamageMin" "35000"
+        "AttackDamageMax" "35000"
+        "ArmorPhysical" "60"
+        "StatusHealth" "225000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_cm_boss"
+    {
+        "AttackDamageMin" "120000"
+        "AttackDamageMax" "120000"
+        "ArmorPhysical" "65"
+        "StatusHealth" "275000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_grimstroke_creep"
+    {
+        "AttackDamageMin" "200000"
+        "AttackDamageMax" "200000"
+        "ArmorPhysical" "80"
+        "StatusHealth" "300000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_qop_boss"
+    {
+        "AttackDamageMin" "140000"
+        "AttackDamageMax" "140000"
+        "ArmorPhysical" "65"
+        "StatusHealth" "325000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_dazzle_creep"
+    {
+        "AttackDamageMin" "250000"
+        "AttackDamageMax" "250000"
+        "ArmorPhysical" "90"
+        "StatusHealth" "350000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_templar_boss"
+    {
+        "AttackDamageMin" "150000"
+        "AttackDamageMax" "150000"
+        "ArmorPhysical" "65"
+        "StatusHealth" "400000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_luna_boss"
+    {
+        "AttackDamageMin" "160000"
+        "AttackDamageMax" "160000"
+        "ArmorPhysical" "70"
+        "StatusHealth" "425000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_lina_boss"
+    {
+        "AttackDamageMin" "170000"
+        "AttackDamageMax" "170000"
+        "ArmorPhysical" "75"
+        "StatusHealth" "450000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_meepo_boss"
+    {
+        "AttackDamageMin" "180000"
+        "AttackDamageMax" "180000"
+        "ArmorPhysical" "80"
+        "StatusHealth" "475000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_weekly_boss_odin"
+    {
+        "AttackDamageMin" "190000"
+        "AttackDamageMax" "190000"
+        "ArmorPhysical" "85"
+        "StatusHealth" "500000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_weekly_boss_dva"
+    {
+        "AttackDamageMin" "325000"
+        "AttackDamageMax" "325000"
+        "ArmorPhysical" "100"
+        "StatusHealth" "525000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_weekly_boss_tri"
+    {
+        "AttackDamageMin" "400000"
+        "AttackDamageMax" "400000"
+        "ArmorPhysical" "150"
+        "StatusHealth" "760000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_final_tron"
+    {
+        "AttackDamageMin" "0"
+        "AttackDamageMax" "0"
+        "ArmorPhysical" "150"
+        "StatusHealth" "1000000"
+        "StatusHealthRegen" "100"
+        "StatusMana" "0"
+        "StatusManaRegen" "0"
+    }
+    "npc_dota_boss_aghanim"
+    {
+        "AttackDamageMin" "199999"
+        "AttackDamageMax" "199999"
+        "ArmorPhysical" "225"
+        "StatusHealth" "800000"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_boss_aghanim_crystal"
+    {
+        "AttackDamageMin" "0"
+        "AttackDamageMax" "500000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "10"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_boss_aghanim_spear"
+    {
+        "AttackDamageMin" "0"
+        "AttackDamageMax" "500000"
+        "ArmorPhysical" "0"
+        "StatusHealth" "10"
+        "StatusHealthRegen" "0"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+    "npc_dota_creature_aghanim_minion"
+    {
+        "AttackDamageMin" "1500"
+        "AttackDamageMax" "500000"
+        "ArmorPhysical" "155"
+        "StatusHealth" "30000"
+        "StatusHealthRegen" "500"
+        "StatusMana" "10000"
+        "StatusManaRegen" "100"
+    }
+}

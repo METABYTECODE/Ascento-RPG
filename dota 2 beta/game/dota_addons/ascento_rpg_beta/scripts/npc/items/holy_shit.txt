@@ -1,0 +1,3529 @@
+
+"DOTAAbilities"
+{
+
+ 
+"item_holy_1"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "1"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_2"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "2"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_3"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "3"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_4"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "4"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_5"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "5"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_6"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "6"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_7"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "7"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_8"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "8"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_9"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "9"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_10"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "10"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_11"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "11"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_12"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "12"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_13"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "13"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_14"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "14"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_15"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "15"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_16"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "16"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_17"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "17"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_18"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "18"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_19"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "19"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_20"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "20"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_21"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "21"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_22"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "22"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_23"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "23"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_24"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "24"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_25"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "25"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_26"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "26"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_27"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "27"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_28"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "28"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_29"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "29"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_30"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "30"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_31"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "31"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_32"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "32"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_33"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "33"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_34"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "34"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_35"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "35"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_36"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "36"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_37"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "37"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_38"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "38"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_39"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "39"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_40"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "40"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_41"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "41"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_42"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "42"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_43"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "43"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_44"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "44"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_45"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "45"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_46"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "46"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_47"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "47"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_48"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "48"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_49"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "49"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_50"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "50"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_51"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "51"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_52"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "52"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_53"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "53"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_54"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "54"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_55"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "55"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_56"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "56"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_57"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "57"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_58"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "58"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_59"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "59"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_60"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "60"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_61"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "61"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_62"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "62"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_63"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "63"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_64"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "64"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_65"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "65"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_66"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "66"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_67"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "67"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_68"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "68"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_69"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "69"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_70"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "70"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_71"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "71"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_72"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "72"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_73"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "73"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_74"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "74"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_75"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "75"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_76"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "76"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_77"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "77"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_78"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "78"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_79"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "79"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_80"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "80"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_81"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "81"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_82"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "82"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_83"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "83"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_84"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "84"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_85"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "85"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_86"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "86"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_87"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "87"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_88"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "88"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_89"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "89"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_90"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "90"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_91"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "91"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_92"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "92"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_93"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "93"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_94"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "94"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_95"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "95"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_96"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "96"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_97"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "97"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_98"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "98"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_99"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "99"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+ 
+"item_holy_100"
+{
+"BaseClass"           "item_datadriven"
+"ItemSellable"                "0"
+"ItemShareability" "ITEM_NOT_SHAREABLE"
+"ItemPurchasable" "0"
+"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+"AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+"AllowedInBackpack" "0"
+"Effect"        "particles/econ/events/ti10/compendium_treasure_ambient.vpcf"
+"Model"         "models/props_gameplay/treasure_chest_gold.vmdl"
+"AbilityTextureName"  "holy_artifact"
+"AbilitySpecial"
+{
+    "01"
+{
+    "var_type"    "FIELD_FLOAT"
+    "bonus_damage_pct" "100"
+}
+}
+"Modifiers"
+{
+    "modifier_item_holy"
+{
+    "Passive"     "1"
+    "IsHidden"      "1"
+    "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+    "Properties"
+{
+    "MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"    "%bonus_damage_pct"
+}
+}
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,1183 @@
+
+"DOTAAbilities"
+{
+  
+
+"item_mage_1"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_2"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_3"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_4"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_5"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_6"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_7"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_8"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_9"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_10"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+      }
+    }
+  }
+}
+
+"item_mage_11"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_12"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_13"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_14"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_15"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_16"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_17"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_18"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_19"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_20"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+    }
+  }
+}
+
+"item_mage_21"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_22"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_23"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_24"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_25"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_26"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_27"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_28"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+"Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_29"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_30"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+"item_mage_31"
+{
+"BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+  "AllowedInBackpack" "1"
+  
+  "Modifiers"
+  {
+    "modifier_item_mage"
+    {
+      "Passive"     "1"
+      "IsHidden"      "1"
+      "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"    "%bonus_intellect"
+        "MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"  "%bonus_spell"
+      }
+      "OnAttack"
+      {
+        "ApplyModifier"
+        {
+          "Target"      "TARGET"
+          "ModifierName"    "modifier_item_mage_dismagic"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Item_Desolator.Target"
+          "Target"      "TARGET"
+        }
+      }
+    }
+    "modifier_item_mage_dismagic"
+    {
+      "Duration"        "7"
+      "Passive"       "0"
+      "IsHidden"        "0"
+      "IsDebuff"        "1"
+      
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"    "%dismagic"
+      }
+    }
+  }
+}
+
+} //end

@@ -1,0 +1,25 @@
+<!-- xml reconstructed by ValveResourceFormat: https://vrf.steamdb.info/ -->
+<root>
+	<styles>
+		<include src="file://panorama/styles/custom_game/kills.css" />
+	</styles>
+	<scripts>
+		<include src="file://panorama/scripts/custom_game/kills_selection.js" />
+		<include src="file://panorama/scripts/custom_game/kills.js" />
+	</scripts>
+	<snippets>
+		<snippet name="KillsSelection">
+			<Panel class="KillsSelection" hittest="false">
+				<TextButton id="DefaultValveButtonID" class="DefaultValveButtonClass" text="#DefaultValveButton" />
+			</Panel>
+		</snippet>
+	</snippets>
+	<Panel hittest="false" style="width: 100%; height: 100%;flow-children: down;">
+		<Label id="Header" />
+		<Panel id="Kills" />
+		<Button id="Instructions">
+			<Label id="HasVoted" />
+			<Label id="Discord" />
+		</Button>
+	</Panel>
+</root>

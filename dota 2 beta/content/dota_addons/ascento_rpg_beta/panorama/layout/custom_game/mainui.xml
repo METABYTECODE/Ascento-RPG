@@ -1,0 +1,57 @@
+<root>
+	<styles>
+		<include src="file://panorama/styles/custom_game/mainhud.css" />
+    </styles>
+    
+    <scripts>
+		 <include src="file://panorama/scripts/custom_game/mainhud.js" />
+    </scripts>
+
+
+    <Panel hittest="false" class="Root">
+        <Panel hittest="false" class="TopLeftMenu">
+			<Button id="NewDashboardButton" class="TopLeftMenuButton" onactivate="DOTAHUDShowDashboard();" onmouseover="UIShowTextTooltip(#DOTA_HUD_BackToDashboard)"  onmouseout="UIHideTextTooltip()" />
+
+			<Button id="NewScoreboardButton" class="TopLeftMenuButton" onactivate="DOTAHUDToggleScoreboard();" onmouseover="UIShowTextTooltip(#DOTA_HUD_Scoreboard)"  onmouseout="UIHideTextTooltip()" />
+
+			<Button id="StoreButton" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://boosty.to/ascento');" onload="DOTAShowTextTooltip(Support us on Boosty and get in-game rewards!)" onmouseover="UIShowTextTooltip(Click Here to subsribe on Boosty and get rewards)"  onmouseout="UIHideTextTooltip()"/>
+
+			<Panel hittest="false" id="Divider" class="Divider" />
+
+			<Label class="Discord" text="Discord" onactivate="ExternalBrowserGoToURL('https://discord.gg/A9G9qpYWWF');" onmouseover="UIShowTextTooltip(Join the Community at Discord)"  onmouseout="UIHideTextTooltip()"/>	
+
+			<Label class="VK" text="WEB" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Open Ascento-RPG.ru site with your stats and saves)"  onmouseout="UIHideTextTooltip()"/>	
+
+			<Label class="Credits" text="Credits" onactivate="OnCreditsPressed()" onmouseover="UIShowTextTooltip(List of Developers)"  onmouseout="UIHideTextTooltip()"/>
+
+			<Panel hittest="false" id="Divider2" class="Divider" />
+
+			<Button id="SaveButton" class="TopLeftMenuButton" onactivate="OnSaveEvent('FastSaveEvent')" onmouseover="UIShowTextTooltip(#save_approve_ok)"  onmouseout="UIHideTextTooltip()" />
+
+			<Button id="LoadButton" class="TopLeftMenuButton" onactivate="OnLoadEvent('FastLoadEvent')" onmouseover="UIShowTextTooltip(#load_approve_ok)"  onmouseout="UIHideTextTooltip()" />
+
+			<Panel hittest="false" id="Divider3" class="Divider" />
+			
+			<Button id="CoinButton" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
+
+			<Label id="CoinLabel" class="TopLeftMenuButton" text="0" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
+
+
+			
+		</Panel>	
+
+		<!--<Button id="StoreButton_big" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://boosty.to/ascento');" onmouseover="UIShowTextTooltip(Click Here to subsribe on Boosty and get unique rewards!)"  onmouseout="UIHideTextTooltip()"/>!-->
+		
+		
+		<Panel hittest="false" id="CreditsRoot">
+			<Panel hittest="false" class="CreditsMain">
+				<Label class="CreditsLabel" text="Credits" />
+				<Button id="CloseRoot" onactivate="OnCreditsCloseButtonPressed()"/>
+				<Label text="UI for Reincarnating game" class="Credits1" onmouseover="DOTAShowProfileCardTooltip(76561198290873082, false)" onmouseout="DOTAHideProfileCardTooltip()" />
+				<Label text="Andr3mar for BONK UI" class="Credits2" onmouseover="DOTAShowProfileCardTooltip(76561198083843808, false)" onmouseout="DOTAHideProfileCardTooltip()" />
+				<Panel id="BonkImage" class="BonkImage" />
+				
+			</Panel>
+		</Panel>
+    </Panel>
+</root>

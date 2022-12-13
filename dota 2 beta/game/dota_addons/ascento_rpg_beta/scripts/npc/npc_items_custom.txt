@@ -1,0 +1,470 @@
+//#base "npc_items_fake.txt"
+
+#base "items/agility/agility.txt"
+#base "items/agility/recipes_agility.txt"
+#base "items/agility/agility.kv"
+
+#base "items/armor/armor.txt"
+#base "items/armor/recipes_armor.txt"
+#base "items/armor/armor.kv"
+
+#base "items/artifact/artifact.txt"
+#base "items/artifact/recipes_artifact.txt"
+#base "items/artifact/artifact.kv"
+
+#base "items/health/health.txt"
+#base "items/health/recipes_health.txt"
+#base "items/health/health.kv"
+
+#base "items/mage/mage.txt"
+#base "items/mage/recipes_mage.txt"
+#base "items/mage/mage.kv"
+
+#base "items/ring/ring.txt"
+#base "items/ring/recipes_ring.txt"
+#base "items/ring/ring.kv"
+
+#base "items/strength/strength.txt"
+#base "items/strength/recipes_strength.txt"
+#base "items/strength/strength.kv"
+
+#base "items/weapon/weapon.txt"
+#base "items/weapon/recipes_weapon.txt"
+#base "items/weapon/weapon.kv"
+
+#base "items/potion.txt"
+#base "items/holy_shit.txt"
+
+// Dota Heroes File
+"DOTAAbilities"
+{
+
+
+"item_recipe_helm_of_the_dominator"     "REMOVED"
+"item_helm_of_the_dominator"        "REMOVED"
+"item_recipe_helm_of_the_overlord"      "REMOVED"
+"item_helm_of_the_overlord"         "REMOVED"
+"item_blink"                "REMOVED"
+"item_hand_of_midas"            "REMOVED"
+"item_force_staff"              "REMOVED"
+"item_recipe_force_staff"         "REMOVED"
+"item_recipe_hurricane_pike"        "REMOVED"
+"item_hurricane_pike"           "REMOVED"
+"item_super_blink"              "REMOVED" 
+"item_fallen_sky"             "REMOVED" 
+"item_overwhelming_blink"         "REMOVED" 
+"item_swift_blink"              "REMOVED" 
+"item_arcane_blink"             "REMOVED" 
+"item_recipe_arcane_blink"          "REMOVED" 
+"item_recipe_swift_blink"         "REMOVED" 
+"item_recipe_overwhelming_blink"      "REMOVED"
+"item_wind_waker"             "REMOVED"
+"item_recipe_wind_waker"          "REMOVED"
+"item_smoke_of_deceit"            "REMOVED"
+"item_spider_legs"              "REMOVED"
+"item_force_boots"              "REMOVED"
+"item_giants_ring"              "REMOVED"
+"item_flicker"                "REMOVED"
+"item_tumblers_toy"             "REMOVED"
+
+"item_tpscroll"
+{
+  "AllowedInBackpack" "0"
+  "ItemKillable" "1"
+  "ItemCost" "0"
+  "ItemSellable"                "0"
+  "ItemPurchasable" "0"
+}
+
+"item_hallowen_legendary_pet_datadriven"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "Model"             "models/props_gameplay/halloween_cupcakes001_bat.vmdl"
+  "AbilityTextureName"      "halloween_pet_item"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  
+    // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemCost" "0"
+  "ItemSellable"                "0"
+  "ItemPurchasable" "0"
+
+  "AbilitySpecial"
+  {
+    
+  }
+
+  "Modifiers"
+  {
+    "modifier_hallowen_legendary_pet_run_script"
+    {
+      "Attributes"       "MODIFIER_ATTRIBUTE_PERMANENT" 
+      "Passive"      "1"
+      "IsHidden"      "1"
+      "IsDebuff"      "0"
+      "TextureName" "pumkin_pet"
+
+      "OnCreated"
+      {
+        "RunScript"
+        {
+          "ScriptFile"  "items/item_hallowen_legendary_pet.lua"
+          "Function"    "CreatePet"
+        }
+      }
+    }
+  }
+}
+
+"item_hero_change_to_nevermore"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemCost" "0"
+  "ItemSellable"                "0"
+  "ItemPurchasable" "0"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "Model"             "models/props_winter/present.vmdl"
+  "AbilityTextureName"      "Nevermore_icon"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  
+
+  "AbilityCooldown"        "5"
+  "AbilityManaCost"        "0"
+
+  "AbilitySpecial"
+  {
+    
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "items/item_special_hero_nevermore.lua"
+      "Function"    "ChangeHero"
+    }
+  }
+}
+
+"item_hero_change_to_juggernaut"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "Model"             "models/props_winter/present.vmdl"
+  "AbilityTextureName"      "Juggernaut_icon"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  
+    // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost" "0"
+  "ItemShopTags"          "damage"
+  "ItemQuality"         "epic"
+  "ItemAliases"         "broadsword"
+  "SideShop"            "1"
+  "AllowedInBackpack" "1"
+
+  "AbilityCooldown"        "5"
+  "AbilityManaCost"        "0"
+
+  "AbilitySpecial"
+  {
+    
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "items/item_hero_change_to_juggernaut.lua"
+      "Function"    "ChangeHero"
+    }
+  }
+}
+
+"item_hero_change_to_tb"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "Model"             "models/props_winter/present.vmdl"
+  "AbilityTextureName"      "Terrorblade_icon"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  
+    // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost" "0"
+  "ItemShopTags"          "damage"
+  "ItemQuality"         "epic"
+  "ItemAliases"         "broadsword"
+  "SideShop"            "1"
+  "AllowedInBackpack" "1"
+
+  "AbilityCooldown"        "5"
+  "AbilityManaCost"        "0"
+
+  "AbilitySpecial"
+  {
+    
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "items/item_hero_change_to_tb.lua"
+      "Function"    "ChangeHero"
+    }
+  }
+}
+
+
+"item_hero_change_to_crystal_maiden"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "Model"             "models/props_winter/present.vmdl"
+  "AbilityTextureName"      "Crystal_Maiden"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+  
+    // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost" "0"
+  "ItemShopTags"          "damage"
+  "ItemQuality"         "epic"
+  "ItemAliases"         "broadsword"
+  "SideShop"            "1"
+  "AllowedInBackpack" "1"
+
+  "AbilityCooldown"        "5"
+  "AbilityManaCost"        "0"
+
+  "AbilitySpecial"
+  {
+    
+  }
+
+  "OnSpellStart"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "items/item_hero_change_to_crystal_maiden.lua"
+      "Function"    "ChangeHero"
+    }
+  }
+}
+
+
+"item_phantom_assassin_phantom_strike_datadriven"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "item_datadriven"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_ALL"
+  "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+  "AbilityTextureName"      "tpblink"
+  "CastFilterRejectCaster"    "1"
+  "MaxLevel" "1"
+
+  
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemCost" "0"
+  "ItemSellable"                "0"
+  "ItemPurchasable" "0"
+
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+
+  // Precache
+  //-------------------------------------------------------------------------------------------------------------
+  "precache"
+  {
+    "soundfile"     "soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+    "particle"      "particles/units/heroes/hero_phantom_assassin/phantom_assassin_phantom_strike_end.vpcf"
+  }
+  
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "99999999"
+  "AbilityCastPoint"        "0.2 0.2 0.2 0.2 0.2"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "5"
+
+  // Duration
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityDuration"       "0"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "0"
+  
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"      "0"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "tooltip_range"     "99999999"
+    }
+  }
+
+  "OnSpellStart"
+  {
+    "FireSound"
+    {
+      "EffectName"    "Hero_Riki.Blink_Strike"
+      "Target"      "CASTER"
+    }
+
+    "AttachEffect"
+    {
+      "EffectName"    "particles/units/heroes/hero_riki/riki_blink_strike.vpcf"
+      "EffectAttachType"  "follow_origin"
+      "Target"      "CASTER"
+    }
+    
+    "RunScript"
+    {
+      "ScriptFile"  "heroes/hero_riki/blink_strike.lua"
+      "Function"    "BlinkStrike"
+    }
+  }
+
+}
+
+"item_grade_profession"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/gem01.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_refresher_shard.vpcf"
+  "AbilityTextureName"      "upgrade_prof"
+
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost" "0"
+  "ItemShopTags"          ""
+  "ItemQuality"         epic
+  "ItemAliases"         ""
+  "SideShop"            "1"
+  "AllowedInBackpack" "1"
+
+
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+    "OnEquip"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "libraries/autoload/second_job/second_job.lua"
+      "Function"        "UpgradeJobTo2"
+    }
+  }
+
+  "AbilitySpecial"
+  {
+
+  }
+}
+
+"item_grade_profession_3"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ItemSellable"                "0"
+  "AllowedInBackpack" "1"
+  "ItemKillable" "1"
+  "ItemShareability" "ITEM_NOT_SHAREABLE"
+  "ItemPurchasable" "0"
+  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "Model"             "models/props_gameplay/gem01.vmdl" 
+  "Effect"            "particles/generic_gameplay/dropped_refresher_shard.vpcf"
+  "AbilityTextureName"      "upgrade_prof"
+
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost" "0"
+  "ItemShopTags"          ""
+  "ItemQuality"         epic
+  "ItemAliases"         ""
+  "SideShop"            "1"
+  "AllowedInBackpack" "1"
+
+
+  // Special  
+  //-------------------------------------------------------------------------------------------------------------
+    "OnEquip"
+  {
+    "RunScript"
+    {
+      "ScriptFile"      "libraries/autoload/second_job/second_job.lua"
+      "Function"        "UpgradeJobTo3"
+    }
+  }
+
+  "AbilitySpecial"
+  {
+
+  }
+}
+
+
+
+
+
+} //end

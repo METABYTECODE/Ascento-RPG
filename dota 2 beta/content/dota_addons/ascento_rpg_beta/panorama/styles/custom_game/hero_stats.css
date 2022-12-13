@@ -1,0 +1,341 @@
+@keyframes 'blinkerReinc' {
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.Root {
+    width: 100%;
+    height: 100%;
+}
+
+.row{
+	flow-children:right;
+}
+.column{
+	flow-children:down;
+}
+
+
+
+.PlayerStatsCurrentCreeps {
+	background-image: url("s2r://panorama/images/hud/reborn/top_bar_team_bg_psd.vtex");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right;
+	z-index: -1;
+    width: 100px;
+    height: 44px;
+  	margin-right: 170px;
+    flow-children: left;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+.PlayerCreepsCurrent{
+	font-weight: bold;
+	color: white;
+	font-size: 22px;
+	font-family: monospaceNumbersFont;
+	height: 38px;
+	tooltip-position: bottom;
+	width: 58px;
+	text-align: right;
+	margin-top: 7px;
+	z-index: 5;
+	margin-right: 20px;
+}
+
+.PlayerStatsCurrentBoss {
+	background-image: url("s2r://panorama/images/hud/reborn/top_bar_team_bg_psd.vtex");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: right;
+	z-index: -1;
+    width: 100px;
+    height: 44px;
+    margin-left: 170px;
+    flow-children: right;
+	horizontal-align: center;
+	vertical-align: top;
+}
+
+.PlayerBossCurrent{
+	font-weight: bold;
+	color: white;
+	font-size: 22px;
+	tooltip-position: bottom;
+	font-family: monospaceNumbersFont;
+	height: 38px;
+	width: 58px;
+	text-align: left;
+	margin-top: 7px;
+	z-index: 5;
+	margin-left: 20px;
+}
+
+.PlayerStatsShowTable {
+	background-image: url("file://panorama/images/stats.png");
+	
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	opacity: 1;
+    width: 80px;
+    height: 80px;
+	text-align: center;
+	horizontal-align: right;
+	vertical-align: bottom;
+	border-radius: 2px;
+
+	margin-right: 1%;
+  	margin-bottom: 1%;
+
+	padding: 2px 2px 2px 28px;
+	box-shadow: 0px 0px 5px 2px #0000005b;
+}
+
+.PlayerStatsShowTable:hover{
+	opacity: 1.5;
+}
+
+
+.PlayerEndlessShowTable {
+	background-image: url("file://panorama/images/infinity.png");
+	
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	opacity: 1;
+    width: 80px;
+    height: 80px;
+	text-align: center;
+	horizontal-align: right;
+	vertical-align: bottom;
+	border-radius: 2px;
+
+	margin-right: 10.1%;
+  	margin-bottom: 1%;
+
+	padding: 2px 2px 2px 28px;
+	box-shadow: 0px 0px 5px 2px #0000005b;
+}
+
+.PlayerEndlessShowTable:hover{
+	opacity: 1.5;
+}
+
+.PlayerEndlessTable {
+	visibility: collapse;
+	overflow: squish scroll;
+    width: 400px;
+    height: 360px;
+	background-size: 1400px 800px;
+	horizontal-align: right;
+	flow-children:down;
+	vertical-align: bottom;
+	border-radius: 2px;
+  	margin-right: 1%;
+  	margin-bottom: 9.5%;
+	padding: 10px;
+	box-shadow: 0px 0px 5px 2px #0000009b;
+}
+
+
+.PlayerStatsShow{
+	horizontal-align: center;
+	text-align: center;
+	padding: 5px;
+	vertical-align: top;
+	transition-duration: 1s;
+	font-size: 30px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+
+
+
+.PlayerStatsTable {
+	visibility: collapse;
+	overflow: squish scroll;
+    width: 400px;
+    height: 360px;
+	background-size: 1400px 800px;
+	horizontal-align: right;
+	flow-children:down;
+	vertical-align: bottom;
+	border-radius: 2px;
+  	margin-right: 1%;
+  	margin-bottom: 9.5%;
+	padding: 10px;
+	box-shadow: 0px 0px 5px 2px #0000009b;
+}
+
+.PlayerStats{
+	horizontal-align: left;
+	padding: 5px;
+	vertical-align: top;
+	opacity: 1.5;
+	transition-duration: 0.0s;
+	font-size: 20px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+.PlayerStatsMini{
+	horizontal-align: left;
+	padding: 0px 5px 5px 5px;
+	vertical-align: top;
+	opacity: 1.5;
+	transition-duration: 0.0s;
+	font-size: 14px;
+	color: grey;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+
+.PlayerStatsCount{
+	width: 1000px;
+	horizontal-align: right;
+	padding: 5px;
+	text-align: right;
+	vertical-align: top;
+	opacity: 1.5;
+	transition-duration: 0.0s;
+	font-size: 20px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+
+
+
+
+
+
+
+
+
+.PlayerReincDoIt {
+	opacity: 0.9;
+    width: 160px;
+    height: 40px;
+	text-align: center;
+	visibility: collapse;
+	background-image: url("s2r://panorama/images/hud/reborn/levelup_button_2_psd.vtex");
+	transition-property: opacity, brightness, pre-transform-scale2d;
+	transition-timing-function: ease-in-out;
+	transition-duration: 0.1s;
+	animation-name: blinkerReinc;
+	animation-timing-function: linear;
+	animation-iteration-count: 10;
+	animation-duration: 2s;
+	background-size: 100%;
+	background-position: 50% 50%;
+	horizontal-align: center;
+	vertical-align: bottom;
+	border-radius: 2px;
+	margin-right: 600px;
+  	margin-bottom: 170px;
+	padding: 2px 2px 2px 12px;
+}
+
+.PlayerReincDoIt:hover{
+	opacity: 1.5;
+}
+
+.PlayerReincDoItButton{
+	horizontal-align: center;
+	text-align: center;
+	padding: 5px;
+	vertical-align: top;
+	transition-duration: 1s;
+	font-size: 23px;
+	color: black;
+	tooltip-position: bottom;
+	margin-left: 0px;
+	font-weight: bold;
+}
+
+
+.PlayerReincShowTable {
+	background-image: url("file://panorama/images/reinc_icon.png");
+	
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	opacity: 1;
+    width: 80px;
+    height: 80px;
+	text-align: center;
+	horizontal-align: right;
+	vertical-align: bottom;
+	border-radius: 2px;
+
+	margin-right: 5.55%;
+  	margin-bottom: 1%;
+
+	padding: 2px 2px 2px 28px;
+	box-shadow: 0px 0px 5px 2px #0000005b;
+}
+
+.PlayerReincShowTable:hover{
+	opacity: 1.5;
+
+}
+
+.PlayerReincShow{
+	horizontal-align: center;
+	text-align: center;
+	padding: 5px;
+	vertical-align: top;
+	transition-duration: 1s;
+	font-size: 23px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+
+
+.PlayerReincTable {
+	visibility: collapse;
+	overflow: squish scroll;
+    width: 400px;
+    height: 360px;
+	background-size: 1400px 800px;
+	horizontal-align: right;
+	flow-children:down;
+	vertical-align: bottom;
+	border-radius: 2px;
+  	margin-right: 1%;
+  	margin-bottom: 9.5%;
+	padding: 0px 10px 10px 10px;
+	box-shadow: 0px 0px 5px 2px #0000009b;
+}
+
+.PlayerReinc{
+	horizontal-align: left;
+	padding: 5px;
+	vertical-align: top;
+	opacity: 1.5;
+	transition-duration: 0.0s;
+	font-size: 15px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}
+
+.PlayerReincCount{
+	width: 1000px;
+	horizontal-align: right;
+	padding: 5px;
+	text-align: right;
+	vertical-align: top;
+	opacity: 1.5;
+	transition-duration: 0.0s;
+	font-size: 15px;
+	color: white;
+	tooltip-position: bottom;
+	margin-left: 0px;
+}

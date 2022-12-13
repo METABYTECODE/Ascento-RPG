@@ -1,0 +1,127 @@
+
+// Dota Heroes File
+"DOTAAbilities"
+{
+
+
+
+
+  
+
+  //=================================================================================================================
+  // Backdoor Protection
+  //=================================================================================================================
+  "backdoor_protection"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"              "5350"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"            "1"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "radius"        "900"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "activation_time"   "15.0"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "regen_rate"      "90"
+      }
+    }
+  }
+
+  //=================================================================================================================
+  // Backdoor Protection In Base
+  //=================================================================================================================
+  "backdoor_protection_in_base"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"              "5351"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"            "1"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "activation_time"   "15.0"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "regen_rate"      "90"
+      }
+    }
+  }
+  
+  
+
+  //=================================================================================================================
+  // Ability: Healing Campfire
+  //=================================================================================================================
+  "healing_campfire"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"          "5579"                            // unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+    
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastRange"        "350"
+    "AbilityCastPoint"        "0.3 0.3 0.3 0.3"
+    
+    // Time   
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"       "10.0"
+    "AbilityDuration"       "10.0"
+  
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"       "0"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "heal_amount"     "5"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "healing_aura_radius" "500"
+      }
+    }
+  }
+
+
+
+
+} //end
+
+
+
+
+////////////////////////
+////////////////////////
+// Next Ability ID: 5693
+////////////////////////
+////////////////////////

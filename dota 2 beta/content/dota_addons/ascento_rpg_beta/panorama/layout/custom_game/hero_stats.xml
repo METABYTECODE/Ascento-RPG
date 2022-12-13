@@ -1,0 +1,859 @@
+<root> 
+  <styles>
+    <include src="file://panorama/styles/custom_game/hero_stats.css" />
+  </styles>
+  <scripts>
+    <include src="file://panorama/scripts/custom_game/hero_stats.js" />
+  </scripts>
+
+
+
+
+  <Panel hittest="false" class="Root">
+
+      <Panel class="PlayerReincDoIt" id="PlayerReincDoIt" onactivate="DoItPlayerReinc()">
+
+      <Panel class="row">
+
+        <Label class="PlayerReincDoItButton" id="PlayerReincDoItButtonId" text="Reincarnate"/> 
+
+      </Panel>
+
+  </Panel>
+
+
+    <Panel class="PlayerEndlessShowTable" id="PlayerEndlessShowTable" onactivate="ShowPlayerEndlessTable()">
+
+    </Panel>
+
+
+    <Panel class="PlayerEndlessTable" id="PlayerEndlessTable">
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Damage: "/> 
+
+        <Label id="Endless_Modifier_3" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.01 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Damage Outgoing: "/> 
+
+        <Label id="Endless_Modifier_5" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.005 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Strength: "/> 
+
+        <Label id="Endless_Modifier_15" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Agility: "/> 
+
+        <Label id="Endless_Modifier_1" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Intellect: "/> 
+
+        <Label id="Endless_Modifier_9" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Attack Speed: "/> 
+
+        <Label id="Endless_Modifier_4" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Armor: "/> 
+
+        <Label id="Endless_Modifier_2" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.01 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Health: "/> 
+
+        <Label id="Endless_Modifier_6" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Health Regen: "/> 
+
+        <Label id="Endless_Modifier_7" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Health Regen %: "/> 
+
+        <Label id="Endless_Modifier_8" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Mana: "/> 
+
+        <Label id="Endless_Modifier_10" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.1 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Mana Regen: "/> 
+
+        <Label id="Endless_Modifier_11" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.05 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Mana Regen %: "/> 
+
+        <Label id="Endless_Modifier_12" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.01 x Hero Level"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Move Speed: "/> 
+
+        <Label id="Endless_Modifier_13" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 2"/> 
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Endless Spell Amp: "/> 
+
+        <Label id="Endless_Modifier_14" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+        <Label class="PlayerStatsMini" text="Stack Count x 0.01 x Hero Level"/> 
+      </Panel>
+
+
+
+
+    </Panel>
+
+
+
+  
+
+    <Panel class="PlayerStatsCurrentCreeps" id="PlayerStatsCurrentCreeps">
+
+        <Label id="PlayerCreepsCurrent" class="PlayerCreepsCurrent" text="0" onmouseover="UIShowTextTooltip(Number of creeps killed)"  onmouseout="UIHideTextTooltip()"/>
+
+
+    </Panel>
+
+    <Panel class="PlayerStatsCurrentBoss" id="PlayerStatsCurrentBoss">
+
+        <Label id="PlayerBossCurrent" class="PlayerBossCurrent" text="0" onmouseover="UIShowTextTooltip(Number of boss killed)"  onmouseout="UIHideTextTooltip()"/>
+
+    </Panel>
+
+
+    <Panel class="PlayerStatsShowTable" id="PlayerStatsShowTable" onactivate="ShowPlayerStatsTable()">
+
+
+    </Panel>
+
+
+
+    <Panel class="PlayerStatsTable" id="PlayerStatsTable">
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="All Killed Creeps: "/> 
+
+        <Label id="KillCreeps" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="All Killed Boss: "/> 
+
+        <Label id="KillBoss" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+
+
+
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Easy Wins: "/> 
+
+        <Label id="EasyWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Normal Wins: "/> 
+
+        <Label id="NormalWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Hard Wins: "/> 
+
+        <Label id="HardWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Unfair Wins: "/> 
+
+        <Label id="UnfairWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Impossible Wins: "/> 
+
+        <Label id="ImpossibleWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Hell Wins: "/> 
+
+        <Label id="HellWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Hardcore Wins: "/> 
+
+        <Label id="HardcoreWins" class="PlayerStatsCount" text="0"/>
+
+       </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerStats" text="Total Play Time: "/> 
+
+        <Label id="PlayerGameTime" class="PlayerStatsCount" text="0"/>
+
+      </Panel>
+
+
+
+  </Panel>
+
+
+
+
+
+
+    <Panel class="PlayerReincShowTable" id="PlayerReincShowTable" onactivate="ShowPlayerReincTable()">
+
+      <Panel class="row">
+
+        <Label class="PlayerReincShow" id="PlayerReincCountShow" text="0"/> 
+
+      </Panel>
+
+    </Panel>
+
+
+
+    <Panel class="PlayerReincTable" id="PlayerReincTable">
+
+
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="Every: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_Every_1" text="+0.2% Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="Every: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_Every_2" text="+0.3% HP"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="Every 5: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_Every_3" text="+1 Max LVL"/>
+
+      </Panel>
+
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="1: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_1" text="+10 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="5: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_5" text="+50 Attack Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="10: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_10" text="+10% Spell Amplify"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="15: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_15" text="+10% Magic Resistance"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="20: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_20" text="+50 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="25: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_25" text="+25% Move Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="30: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_30" text="+100 Base Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="40: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_40" text="-5% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="50: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_50" text="+100 Attack Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="60: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_60" text="+100 Move Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="70: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_70" text="+25% Spell Amplify"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="80: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_80" text="+50 Primary Attribute"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="90: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_90" text="+25 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="100: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_100" text="+1000 HP and +750 MP"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="125: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_125" text="+100 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="150: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_150" text="+200 Attack Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="175: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_175" text="-7.5% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="200: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_200" text="+7.5% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="250: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_250" text="+500 Base Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="300: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_300" text="+25% Experience"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="350: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_350" text="+25% Drop Chance"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="400: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_400" text="+100 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="450: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_450" text="-10% Incoming Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_500" text="+10% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="600: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_600" text="+50% Bonus Exp"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="700: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_700" text="+10% Base Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="800: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_800" text="+5000 HP, +4000 MP"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="900: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_900" text="+400 Attack Speed"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="1000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_1000" text="-12.5% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="1500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_1500" text="+12.5% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="2000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_2000" text="+15% Magic Resist"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="2500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_2500" text="Cast speed halved"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="3000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_3000" text="+50% Drop Chance"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="3500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_3500" text="+300 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="4000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_4000" text="+1500 Base Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="4500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_4500" text="+200 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="5000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_5000" text="+500 Primary Attribute"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="6000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_6000" text="+100% Bonus Exp"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="7000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_7000" text="+500 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="8000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_8000" text="+50% Spell Amplify"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="9000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_9000" text="+400 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="10000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_10000" text="+1000 Primary Attribute"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="12500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_12500" text="-15% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="15000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_15000" text="+15% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="17500: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_17500" text="+20% Magic Resist"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="20000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_20000" text="+1500 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="25000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_25000" text="+800 Armor"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="30000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_30000" text="+25% Magic Resist"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="35000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_35000" text="-17.5% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="40000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_40000" text="+17.5% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="45000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_45000" text="+3000 Base Damage"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="50000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_50000" text="25% Cooldown Reduction"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="60000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_60000" text="+2500 Primary Attribute"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="70000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_70000" text="+3000 All Stats"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="80000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_80000" text="-20% Damage Received"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="90000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_90000" text="+20% Damage Done"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="100000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_100000" text="+100% Spell Amplify"/>
+
+      </Panel>
+
+
+
+  </Panel>
+  </Panel>
+
+  
+</root>
+

@@ -1,0 +1,392 @@
+"Drops" 
+{ 
+   "npc_dota_neutral_kobold"
+   {
+    "item_broadsword_datadriven" "50"
+    "item_chainmail_datadriven" "50"
+    "item_lia_health_elixir" "30"
+   }
+    "npc_dota_neutral_kobold_tunneler"
+    {
+        "item_lia_health_elixir" "100"
+        "item_ultimate_orb_datadriven" "100"  
+        "item_broadsword_datadriven" "100"
+        "item_chainmail_datadriven" "100" 
+    }
+     "npc_dota_neutral_ogre_mauler"
+   {
+    "item_broadsword_datadriven_one" "25"
+    "item_chainmail_datadriven_one" "25"
+    "item_lia_health_elixir" "30"
+    "item_gloves_datadriven" "15"
+   }
+    "npc_dota_neutral_satyr_hellcaller"
+    { 
+        "item_lia_health_elixir" "100"
+        "item_broadsword_datadriven_one" "100"
+        "item_chainmail_datadriven_one" "100"
+        "item_gloves_datadriven" "100"
+        "item_ultimate_orb_datadriven_component_one" "75"
+    }
+    "npc_dota_neutral_ogre_magi"
+    { 
+        "item_lia_health_elixir" "100"
+        "item_broadsword_datadriven_one" "100"
+        "item_chainmail_datadriven_one" "100"
+        "item_gloves_datadriven" "100"
+        "item_ultimate_orb_datadriven_component" "75"
+    }
+    "npc_dota_roshan_halloween_minion"
+    {
+        "item_lia_health_elixir" "30"
+        "item_gloves_datadriven" "20"
+    }
+    "npc_dota_creep_goodguys_melee_upgraded_mega"
+    { 
+        "item_gloves_datadriven" "50"
+        "item_lia_health_elixir" "100"
+        "item_broadsword_datadriven_two" "100"
+        "item_ultimate_orb_datadriven_component_two" "75"
+    }
+    "npc_dota_neutral_granite_golem"
+    { 
+        "item_gloves_datadriven" "50"
+        "item_lia_health_elixir" "100"
+        "item_broadsword_datadriven_two" "100"
+        "item_ultimate_orb_datadriven_component_vtoroy" "75"
+    }
+    "npc_dota_necronomicon_warrior_1"
+    {
+        "item_lia_health_elixir" "25"
+        "item_broadsword_datadriven_two" "25"
+    }
+    "npc_dota_necronomicon_archer_2"
+    { 
+        "item_boots_datadriven" "75"
+        "item_lia_health_elixir" "100"
+        "item_broadsword_datadriven_two" "100"
+    }
+    "npc_dota_neutral_polar_furbolg_champion"
+    {
+        "item_broadsword_datadriven_two" "25"
+        "item_lia_health_elixir" "40"
+    }
+    "npc_dota_neutral_kobold_taskmaster"
+    { 
+        "item_broadsword_datadriven_two" "100"
+        "item_lia_health_elixir" "100"
+        "item_ultimate_orb_datadriven_component_three" "75"
+    }
+    "npc_dota_neutral_polar_furbolg_ursa_warrior"
+    { 
+        "item_broadsword_datadriven_two" "100"
+        "item_lia_health_elixir" "100"
+        "item_ultimate_orb_datadriven_component_tretiy" "75"
+    }
+   "npc_dota_broodmother_spiderling"
+   {
+    "item_lia_health_stone_potion" "40"
+    "item_broadsword_datadriven_three" "25"
+   }
+    "npc_dota_broodmother_spiderite"
+    { 
+    "item_lia_health_stone_potion" "100"
+    "item_broadsword_datadriven_three" "100"
+    "item_ultimate_orb_datadriven_component_chetvertiy" "75"
+    }
+    "npc_dota_furion_treant_large"
+    { 
+    "item_lia_health_stone_potion" "100"
+    "item_broadsword_datadriven_three" "100"
+    "item_ultimate_orb_datadriven_component_four" "75"
+    }
+    "npc_dota_warlock_golem_1"
+    {
+    "item_lia_health_stone_potion" "40"
+    "item_broadsword_datadriven_four" "25"
+    }
+    "npc_dota_warlock_golem_2"
+    { 
+        "item_boots_datadriven_recept" "50"
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_four" "100"
+    }
+    "npc_dota_neutral_mud_golem_split"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_four" "100"
+        "item_ultimate_orb_datadriven_component_five" "75"
+    }
+    "npc_dota_neutral_mud_golem"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_four" "100"
+        "item_ultimate_orb_datadriven_component_pyatiy" "75"
+    }
+    "npc_dota_neutral_centaur_outrunner"
+    {
+        "item_lia_health_stone_potion" "40"
+        "item_broadsword_datadriven_five" "25"
+    }
+    "npc_dota_neutral_mud_golem_split_doom"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_five" "100"
+        "item_ultimate_orb_datadriven_component_shestoi" "75"
+    }
+    "npc_dota_neutral_centaur_khan"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_five" "100"
+        "item_ultimate_orb_datadriven_component_six" "75"
+    }
+    "npc_dota_brewmaster_earth_1"
+    {
+        "item_lia_health_stone_potion" "40"
+        "item_broadsword_datadriven_six" "25"
+    }
+    "npc_dota_brewmaster_storm_1"
+    { 
+        "item_broadsword_datadriven_six" "100"
+        "item_lia_health_stone_potion" "100"
+        "item_ultimate_orb_datadriven_component_seven" "75"
+    }
+    "npc_dota_brewmaster_fire_1"
+    { 
+        "item_broadsword_datadriven_six" "100"
+        "item_lia_health_stone_potion" "100"
+        "item_ultimate_orb_datadriven_component_sem" "75"
+    }
+    "npc_dota_unit_undying_zombie"
+    {
+        "item_lia_health_stone_potion" "40"
+        "item_broadsword_datadriven_seven" "25"
+    }
+    "npc_dota_unit_undying_zombie_torso"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_seven" "100"
+        "item_ultimate_orb_datadriven_component_eith" "75"
+    }
+    "npc_dota_lone_druid_bear1"
+    { 
+        "item_lia_health_stone_potion" "100"
+        "item_broadsword_datadriven_seven" "100"
+        "item_ultimate_orb_datadriven_component_vosem" "75"
+    }
+    "npc_dota_badguys_tower1_bot"
+    { 
+        "item_lia_health_stone_potion_two" "40"
+    }
+    "npc_dota_goodguys_tower4"
+    { 
+        "item_lia_health_stone_potion_two" "100"
+        "item_shard_recipe_item_claymore_datadriven_eith" "100"
+    }
+    "npc_dota_courier"
+    { 
+        "item_lia_health_stone_potion_two" "100"
+        "item_ultimate_orb_datadriven_jaba" "100"
+        "item_shard_recipe_item_ultimate_orb_datadriven_nine" "100"
+    }
+    "npc_dota_creep_badguys_ranged"
+    { 
+        "item_lia_health_stone_potion_two" "40"
+        "item_kusok_elementa_odin_datadriven" "25"
+        "item_shard_recipe_item_element_odin_datadriven" "20"
+    }
+    "npc_dota_creep_badguys_ranged_upgraded"
+    { 
+        "item_lia_health_stone_potion_two" "40"
+        "item_kusok_elementa_dva_datadriven" "25"
+        "item_shard_recipe_item_element_dva_datadriven" "20"
+    }
+    "npc_dota_creep_badguys_ranged_upgraded_mega"
+    { 
+        "item_lia_health_stone_potion_two" "40"
+        "item_kusok_elementa_tri_datadriven" "25"
+        "item_shard_recipe_item_element_tri_datadriven" "20"
+    }
+    "npc_dota_creep_goodguys_ranged"
+    { 
+        "item_lia_health_stone_potion_two" "40"
+        "item_kusok_elementa_chetire_datadriven" "25"
+        "item_shard_item_recipe_item_element_chetire_datadriven" "20"
+    }
+    "npc_dota_creep_goodguys_ranged_upgraded_mega"
+    { 
+        "item_lia_health_stone_potion_two" "50"
+        "item_glavnii_element_datadriven" "40"
+        "item_shard_item_recipe_item_main_element_odin_datadriven" "30"
+        "item_shard_item_recipe_item_main_element_dva_datadriven" "30"
+        "item_shard_item_recipe_item_main_element_tri_datadriven" "30"
+        "item_shard_item_recipe_item_main_element_chetire_datadriven" "30"
+        "item_shard_item_recipe_item_final_artifact_datadriven" "20"
+    }
+    "npc_boss_volk1"
+    { 
+        "item_lia_health_stone_potion_two" "100"
+        "item_butterfly_datadriven" "75"
+    }
+    "npc_boss_volk2"
+    { 
+        "item_lia_health_stone_potion_two" "100"
+        "item_desolator_datadriven" "75"
+        "item_vladmir_datadriven" "75"
+    }
+    "npc_dota_neutral_big_thunder_lizard"
+    {
+        "item_desolator_datadriven_one" "75"
+        "item_butterfly_datadriven_one" "75"
+        "item_lia_health_stone_potion_two" "100"
+    }
+    "npc_dota_creature_last_boss" 
+    {
+        "item_shard_item_recipe_item_claymore_datadriven_nine" "50"
+        "item_basher_datadriven" "25"
+        "item_lia_health_stone_potion_two" "100"
+        "item_shard_item_final_artifact_sharpened_datadriven" "50"
+        "item_shard_item_recipe_item_claymore_datadriven_ten" "50"
+    }
+    "npc_dota_creature_tiny_creep"
+    {
+        "item_d_grade_datadriven" "25"
+    }
+    "npc_dota_creature_tiny_boss"
+    {
+        "item_second_job_sven_datadriven" "25"
+        "item_second_job_drow_datadriven" "25"
+        "item_second_job_sky_datadriven" "25"
+        "item_desolator_and_battelfury_grade" "60"
+    }
+    "npc_dota_creature_slardar_creep"
+    {
+        "item_c_grade_datadriven" "25"
+    }
+    "npc_dota_creature_tide_boss"
+    {
+        "item_artifact_d_grade_datadriven" "60"
+    }
+    "npc_dota_creature_clock_creep"
+    {
+        "item_b_grade_datadriven" "25"
+    }
+    "npc_dota_creature_timbersaw_boss"
+    {
+        "item_artifact_c_grade_datadriven" "60"
+    }
+    "npc_dota_creature_gyro_creep"
+    {
+        "item_a_grade_datadriven" "25"
+    }
+    "npc_dota_creature_tinker_boss"
+    {
+        "item_artifact_b_grade_datadriven" "60"
+    }
+    "npc_dota_creature_enigma_creep"
+    {
+        "item_s_grade_datadriven" "25"
+    }
+    "npc_dota_creature_arc_warden_boss"
+    {
+        "item_artifact_a_grade_datadriven" "60"
+    }
+    "npc_dota_creature_aa_creep" 
+    {
+        "item_ss_grade_datadriven" "25"
+    }
+    "npc_dota_creature_tusk_boss"
+    {
+        "item_artifact_s_grade_datadriven" "60"
+        "item_spceial_spell_sven" "25"
+        "item_spceial_spell_drow" "25"
+        "item_spceial_spell_skymage" "25"
+    }
+    "npc_dota_creature_lich_creep"
+    {
+        "item_sss_grade_datadriven" "25"
+    } 
+    "npc_dota_creature_wywern_boss"
+    {
+        "item_artifact_ss_grade_datadriven" "60"
+    }
+    "npc_dota_creature_wisp_creep"
+    {
+        "item_vladmir_s_grade_datadriven" "25"
+    }
+    "npc_dota_creature_cm_boss"
+    {
+        "item_artifact_sss_grade_datadriven" "60"
+    }
+    "npc_dota_creature_grimstroke_creep"
+    {
+        "item_vladmir_ss_grade_datadriven" "25"
+    }
+    "npc_dota_creature_qop_boss"
+    {
+        "item_desolator_and_battelfury_stone_s_grade" "60"
+    }
+    "npc_dota_creature_dazzle_creep"
+    {
+        "item_vladmir_sss_grade_datadriven" "25"
+    }
+    "npc_dota_creature_templar_boss"
+    {
+        "item_desolator_and_battelfury_stone_ss_grade" "60"
+    }
+    "npc_dota_creature_luna_boss"
+    {
+        "item_desolator_and_battelfury_stone_sss_grade" "40"
+        "item_basher_datadriven_s_grade_stone" "40"
+        "item_spceial_spell_sven_s_grade_stone" "25"
+        "item_spceial_spell_drow_s_grade_stone" "25"
+        "item_spceial_spell_skymage_s_grade_stone" "25"
+    }
+    "npc_dota_creature_lina_boss"
+    {
+        "item_basher_datadriven_ss_grade_stone" "40"
+        "item_spceial_spell_sven_ss_grade_stone" "25"
+        "item_spceial_spell_drow_ss_grade_stone" "25"
+        "item_spceial_spell_skymage_ss_grade_stone" "25"
+    }
+    "npc_dota_creature_meepo_boss"
+    {
+        "item_basher_datadriven_sss_grade_stone" "40"
+        "item_spceial_spell_sven_sss_grade_stone" "25"
+        "item_spceial_spell_drow_sss_grade_stone" "25"
+        "item_spceial_spell_skymage_sss_grade_stone" "25"
+    }
+    "npc_dota_creature_weekly_boss_halloween"
+    {
+        "item_sss_grade_datadriven_heroic" "10"
+        "item_hallowen_legendary_pet_datadriven" "10"
+    }
+    "npc_dota_creature_weekly_boss_odin"
+    {
+        "item_artifact_sss_grade_datadriven_heroic" "30"
+        "item_sss_grade_datadriven_heroic" "30"
+        "item_spceial_spell_skymage_sss_grade_stone_heroic" "30"
+    }
+    "npc_dota_creature_weekly_boss_dva"
+    {
+        "item_vladmir_sss_grade_datadriven_heroic" "30"
+        "item_spceial_spell_sven_sss_grade_stone_heroic" "30"
+    }
+    "npc_dota_creature_weekly_boss_tri"
+    {
+        "item_desolator_and_battelfury_stone_sss_grade_heroic" "30"
+        "item_basher_datadriven_sss_grade_stone_heroic" "30"
+        "item_spceial_spell_drow_sss_grade_stone_heroic" "30"
+    }
+    "npc_dota_creature_weekly_boss_new_year"
+    {
+        "item_new_year_legendary_pet_datadriven" "10"
+        "item_new_year_ancient_pet_datadriven" "3"
+        "item_new_year_mount_datadriven" "3"
+        "item_basher_datadriven_sss_grade_stone_heroic" "4"
+        "item_sss_grade_datadriven_heroic" "4"
+        "item_artifact_sss_grade_datadriven_heroic" "4"
+        "item_vladmir_sss_grade_datadriven_heroic" "4"
+        "item_desolator_and_battelfury_stone_sss_grade_heroic" "4"
+    }
+}

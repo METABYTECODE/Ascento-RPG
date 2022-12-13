@@ -1,0 +1,10 @@
+	"AddonInfo"
+{
+  "maps"  "ascento_rpg"
+  "IsPlayable" "1"
+  
+  "ascento_rpg"
+  {
+      "MaxPlayers" "6"
+  }
+}

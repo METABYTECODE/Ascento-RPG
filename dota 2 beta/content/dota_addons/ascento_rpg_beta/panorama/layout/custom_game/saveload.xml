@@ -1,0 +1,13 @@
+<root>
+	<styles>
+		<include src="file://panorama/styles/custom_game/saveload.css" />
+	</styles>
+	<scripts>
+		<include src="file://panorama/scripts/custom_game/saveload.js" />
+	</scripts>
+	<Panel class="Main" >
+		<!-- Элемент кнопка, добавляем в атрибуты слушатель на клик onactivate, указываем имя функции, которую создадим в JS -->
+		<Button id="btnTest" onactivate="onBtnTestClick('myArgument')"><TextEntry id="SaveEntry" maxchars="64" /><Panel id="DonationsBotBar" onactivate="ExternalBrowserGoToURL('https://vk.com/shop_rpg_033_new');"/>
+		<Panel id="DonationsDemon" onactivate="ExternalBrowserGoToURL('https://vk.com/shop_rpg_033_new');"/><Panel id="DonationsPets" onactivate="ExternalBrowserGoToURL('https://vk.com/shop_rpg_033_new');"/></Button>
+	</Panel>
+</root>

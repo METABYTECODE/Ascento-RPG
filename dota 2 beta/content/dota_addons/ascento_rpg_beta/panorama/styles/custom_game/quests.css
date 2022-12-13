@@ -1,0 +1,219 @@
+.MainPanel{
+  height: 100%;
+  width: 100%;
+  align: center center;
+}
+#SidePanel{
+  align: right center;
+  height: 600px;
+  width: 500px;
+  margin-bottom: 400px;
+}
+#SidePanel #SideTitlePanel{
+  height: 35px;
+}
+#SidePanel #SideTitlePanel #SideTitleLabel{
+  align: center center;
+  font-size: 30px;
+  font-weight: bold;
+  color:rgb(225, 125, 0);
+  margin-left: 50%;
+  text-shadow: 1px 1px 5px 1.5 #333333b0;
+
+  text-transform: uppercase;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 2px 5px 0 rgba(0,0,0,0.2);
+
+}
+#SidePanel #SideQuestPanel{
+  align: center bottom;
+  height: 550px;
+  width: 350px;
+  flow-children: down;
+}
+#InteractionPanel{
+  align: center center;
+  width: 500px;
+  height: 400px;
+  visibility: collapse;
+}
+#InteractionPanel #InteractionImage{
+  border-radius: 20px;
+}
+#InteractionPanel #TitlePanel{
+  align: center top;
+  width: 450px;
+  height: 30px;
+  margin-top: 25px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(100, 0, 0, 0.1);
+}
+#InteractionPanel #TitlePanel #TitleLabel{
+  align: center center;
+  color:rgba(200, 200, 0, 0.75);
+  font-size:20px;
+  font-weight: bold;
+}
+#InteractionPanel #DescriptionPanel{
+  align: center center;
+  width: 450px;
+  height: 190px;
+  margin-bottom: 80px;
+  border-radius: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #DescriptionPanel #DescriptionLabel{
+  align: left top;
+  margin-left: 20px;
+  margin-top: 20px;
+  color:rgba(200, 200, 200, 0.75);
+  font-size:16px;
+  font-weight: bold;
+}
+#InteractionPanel #InfoPanel{
+  align: center bottom;
+  width: 450px;
+  height: 75px;
+  margin-bottom: 65px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #InfoPanel #ObjectivesPanel{
+  align: left center;
+  width: 210px;
+  height: 60px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 100, 100, 0.05);
+  border: 3px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #InfoPanel #RewardsPanel{
+  align: right center;
+  width: 210px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 100, 0, 0.05);
+  border: 3px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #InfoPanel #RewardsPanel #GoldLabel,#InteractionPanel #InfoPanel #ObjectivesPanel #ObjectivesLabel{
+  color:rgba(200, 200, 0, 0.9);
+  font-size:16px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+#InteractionPanel #InfoPanel #RewardsPanel #XPLabel{
+  color:rgba(200, 200, 0, 0.9);
+  font-size:16px;
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 10px;
+}
+#InteractionPanel #ButtonsPanel{
+  align: center bottom;
+  width: 450px;
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #ButtonsPanel #AcceptButton{
+  align: center center;
+  width: 100px;
+  height: 25px;
+  margin-left: 110px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 150, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #ButtonsPanel #CompleteButton{
+  align: center center;
+  width: 100px;
+  height: 25px;
+  margin-left: 110px;
+  border-radius: 5px;
+  background-color: rgba(0, 150, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #ButtonsPanel #DeclineButton{
+  align: right center;
+  width: 100px;
+  height: 25px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: rgba(150, 0, 0, 0.2);
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+#InteractionPanel #ButtonsPanel #AcceptButton #AcceptLabel,#InteractionPanel #ButtonsPanel #DeclineButton #DeclineLabel,#InteractionPanel #ButtonsPanel #CompleteButton #CompleteLabel{
+  align: center center;
+  color:rgba(200, 200, 200, 0.90);
+  font-size:18px;
+  font-weight: bold;
+}
+#AcceptButton:hover,#DeclineButton:hover,#CompleteButton:hover{
+  saturation: 0.9;
+  wash-color:#ffffff;
+}
+#AcceptButton:active,#DeclineButton:active,#CompleteButton:active{
+  opacity: 0.5;
+}
+#ProgressPanel{
+  height: 50px;
+  width: 350px;
+  margin-top: 10px;
+}
+#ProgressIconPanel{
+  align: left center;
+  width: 50px;
+  height: 50px;
+  margin-left: 20px;
+}
+#ProgressTitlePanel{
+  align: right top;
+  width: 270px;
+  height: 20px;
+  margin-left: 80px;
+  margin-top: 5px;
+}
+#SideQuestTitleLabel{
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 5px;
+  text-shadow: 1px 1px 2px 3.0 #333333b0;
+  color:rgb(250, 150, 0);
+}
+#ProgressBarPanel{
+  align: right bottom;
+  width: 270px;
+  height: 20px;
+  margin-bottom: 5px;
+  margin-left: 80px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+#ProgressBarBackground{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255,215,0, 0.9);
+  border-radius: 10px;
+}
+#ProgressBarInfo{
+  color:white;
+  font-size:14px;
+  text-shadow: 1px 1px 2px 3.0 #333333b0;
+  margin-left: 5px;
+  align: left center;
+}
+#ProgressBarObjectives{
+  color:white;
+  font-size:14px;
+  text-shadow: 1px 1px 2px 3.0 #333333b0;
+  margin-right: 10px;
+  align: right center;
+}

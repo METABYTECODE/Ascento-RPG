@@ -1,0 +1,703 @@
+"DOTAAbilities"
+{
+  
+
+"item_agility_1"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_1"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"0.5"
+		}
+	}
+}
+
+"item_agility_2"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_2"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"1"
+		}
+	}
+}
+
+"item_agility_3"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_3"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"2"
+		}
+	}
+}
+
+"item_agility_4"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_4"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"3"
+		}
+	}
+}
+
+"item_agility_5"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_5"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"5"
+		}
+	}
+}
+
+"item_agility_6"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_6"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"10"
+		}
+	}
+}
+
+"item_agility_7"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_7"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"15"
+		}
+	}
+}
+
+"item_agility_8"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_8"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"20"
+		}
+	}
+}
+
+"item_agility_9"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_9"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"25"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_10"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_10"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"50"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_11"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_11"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"60"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_12"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_12"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"70"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_13"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_13"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_14"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_14"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"120"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_15"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_15"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"140"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_16"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_16"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"160"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_17"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_17"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"180"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_18"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_18"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"200"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_19"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_19"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"250"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_20"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_20"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"300"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+	}
+}
+
+"item_agility_21"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_21"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"400"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_22"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_22"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_23"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_23"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"700"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_24"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_24"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"900"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_25"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_25"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"1100"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_26"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_26"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"1300"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_27"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_27"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"1500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_28"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_28"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"2000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_29"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_29"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"2500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_30"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_30"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"3500"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+"item_agility_31"
+{
+
+	"Effect"				"particles/generic_gameplay/dropped_dust.vpcf"
+	"Model"					"models/props_gameplay/red_box.vmdl" 
+	"AbilityTextureName"	"agility/agility_31"
+
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"		"FIELD_FLOAT"
+			"bonus_agility"	"5000"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"bonus_attack_speed"	"50"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"disarmor"				"-50"
+		}
+	}
+}
+
+
+}

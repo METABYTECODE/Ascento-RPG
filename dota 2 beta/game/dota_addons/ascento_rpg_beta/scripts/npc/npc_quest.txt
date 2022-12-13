@@ -1,0 +1,259 @@
+"DOTAUnits"
+{
+	"npc_town_starter"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"225"
+	}
+	"npc_location_1_prof_help"
+	{
+		"Model"						"models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"270"
+	}
+	"npc_location_1_prof"
+	{
+		"Model"						"models/heroes/omniknight/omniknight.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"270"
+		"Creature"
+		{
+			"AttachWearables"
+			{
+				"Wearable1" { "ItemDef" "8955" }
+				"Wearable2" { "ItemDef" "8956" }
+				"Wearable3" { "ItemDef" "8954" }
+				"Wearable4" { "ItemDef" "8958" }
+				"Wearable5" { "ItemDef" "8957" }
+			}
+		}
+	}
+	"npc_town_chef"
+	{
+		"Model"						"models/heroes/shopkeeper/shopkeeper.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"270"
+	}
+	"npc_town_kobold_hunter"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"270"
+	}
+	"npc_town_herbalist"
+	{
+		"Model"						"models/npc/npc_folks/desert_folk001.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"320"
+	}
+	"npc_town_gnoll_hunter"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_town_stranger"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_forest_jungler"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_town_kobold_frost"
+	{
+		"Model"						"models/npc/npc_folks/desert_folk005.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"320"
+	}
+	"npc_town_kobold_soldier"
+	{
+		"Model"						"models/npc/npc_folks/desert_folk006.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"140"
+	}
+
+	"npc_town_child"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"120"
+	}
+	"npc_town_spiderling"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"150"
+	}
+	"npc_town_spider_queen"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"250"
+	}
+	"npc_town_graveyard"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"250"
+	}
+	"npc_town_nightlord"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"250"
+	}
+	"npc_mountain_lake"
+	{
+		"Model"						"models/npc/npc_folks/desert_folk001.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_mountain_warrior_range"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"180"
+	}
+	"npc_mountain_warrior_melee"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"180"
+	}
+	"npc_mountain_lumber"
+	{
+		"Model"						"models/props_gameplay/shopkeeper_fountain/shopkeeper_fountain.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"45"
+	}
+	"npc_mountain_chef"
+	{
+		"Model"						"models/heroes/shopkeeper/shopkeeper.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_desert_chef"
+	{
+		"Model"						"models/heroes/shopkeeper/shopkeeper.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"310"
+	}
+	"npc_desert_citizen"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_desert_sand"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"300"
+	}
+	"npc_desert_crocodilian_melee"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"220"
+	}
+	"npc_desert_crocodilian_range"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_ranged/radiant_ranged.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"220"
+	}
+	"npc_desert_stableman"
+	{
+		"Model"						"models/creeps/lane_creeps/creep_radiant_melee/radiant_melee.vmdl"
+		"BaseClass"					"npc_dota_creature"
+		"Ability1"					"invulnerability"
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"NpcType"					"quest"
+		"NpcAngle"					"270"
+	}
+}
+

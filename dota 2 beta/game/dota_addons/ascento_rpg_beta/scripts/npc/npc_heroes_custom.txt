@@ -1,0 +1,1024 @@
+"DOTAHeroes"
+{
+   "npc_dota_hero_base"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"     "npc_dota_hero"
+        "Model"     "models/error.vmdl"
+        "SoundSet"      "0"
+        "Enabled"       "0"
+        "Level"     "1"
+        "BotImplemented"        "0"
+        "NewHero"       "0"
+        "HeroPool1"     "0"
+        "HeroUnlockOrder"       "1"
+        "CMEnabled"     "0"
+        "CMTournamentIgnore"        "0"
+        "new_player_enable"     "0"
+        "Legs"  "2"
+
+        // Abilities
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityLayout"     "4"
+        "StatusMana"                  "0"
+        "Ability1"                  ""                                      // Ability 1.
+        "Ability2"                  ""                                      // Ability 2.
+        "Ability3"                  ""                                      // Ability 3.
+        "Ability4"                  ""                                      // Ability 4.
+        "Ability5"                  ""
+        "Ability6"                  ""                                      // Ability 6 - Extra.
+        "Ability7"                  ""                                      // Ability 7 - Extra.
+        "Ability8"                  ""                                      // Ability 8 - Extra.
+        "Ability9"                  ""
+
+        // Armor
+        //-------------------------------------------------------------------------------------------------------------
+        "ArmorPhysical"     "-1"
+        "MagicalResistance"     "25"
+
+        // Attack
+        //-------------------------------------------------------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageMin"       "1"
+        "AttackDamageMax"       "1"
+        "AttackDamageType"      "DAMAGE_TYPE_ArmorPhysical"
+        "AttackRate"        "1.700000"
+        "AttackAnimationPoint"      "0.750000"
+        "AttackAcquisitionRange"        "800"
+        "AttackRange"       "600"
+        "ProjectileModel"       "particles/base_attacks/ranged_hero.vpcf"
+        "ProjectileSpeed"       "900"
+
+        // Attributes
+        //-------------------------------------------------------------------------------------------------------------
+        "AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "0"
+        "AttributeStrengthGain"     "0"
+        "AttributeBaseIntelligence"     "0"
+        "AttributeIntelligenceGain"     "0"
+        "AttributeBaseAgility"      "0"
+        "AttributeAgilityGain"      "0"
+
+        // Bounty
+        //-------------------------------------------------------------------------------------------------------------
+        "BountyXP"      "62"
+        "BountyGoldMin"     "0"
+        "BountyGoldMax"     "0"
+
+        // Bounds
+        //-------------------------------------------------------------------------------------------------------------
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "RingRadius"        "70"
+
+        // Movement
+        //-------------------------------------------------------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"     "331"
+        "MovementTurnRate"      "0.500000"
+        "HasAggressiveStance"       "0"
+
+        // Status
+        //-------------------------------------------------------------------------------------------------------------
+        "StatusHealth"      "5"
+        "StatusHealthRegen"     "0.0000"
+        "StatusMana"        "5"
+        "StatusManaRegen"       "0.010000"
+
+        // Team
+        //-------------------------------------------------------------------------------------------------------------
+        "TeamName"      "DOTA_TEAM_GOODGUYS"
+        "CombatClassAttack"     "DOTA_COMBAT_CLASS_ATTACK_HERO"
+        "CombatClassDefend"     "DOTA_COMBAT_CLASS_DEFEND_HERO"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_HERO"
+
+        // Vision
+        //-------------------------------------------------------------------------------------------------------------
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+        //Inventory
+        "HasInventory"      "1"
+
+        //Voice
+        "VoiceBackgroundSound"      ""
+        "HealthBarOffset"       "200"       
+        "IdleExpression"        "scenes/default_idle.vcd"
+        "IdleSoundLoop"             ""
+        "AbilityDraftDisabled"      "0"
+        "ARDMDisabled"      "0"
+        "HUD"
+        {
+            "StatusHUD"
+            {
+                "StatusStrength"
+                {
+                    "LocalizeToken"     "#DOTA_StrengthStatus"
+                    "Parameters"        "Traits:Strength"
+                    "HUDName"       "unitstrength"
+                }
+                "StatusAgility"
+                {
+                    "LocalizeToken"     "#DOTA_AgilityStatus"
+                    "Parameters"        "Traits:Agility"
+                    "HUDName"       "unitagility"
+                }
+                "StatusIntellect"
+                {
+                    "LocalizeToken"     "#DOTA_IntellectStatus"
+                    "Parameters"        "Traits:Intellect"
+                    "HUDName"       "unitintellect"
+                }
+            }
+        }
+    }
+
+    "npc_dota_hero_dragon_knight"
+    {
+        "BaseClass"     "npc_dota_hero"
+        "Model"     "models/heroes/dragon_knight/dragon_knight.vmdl"
+        "SoundSet"      "Hero_DragonKnight"
+        "UnitLabel"                 "Tank"
+
+        "DisableWearables"              "0"
+
+        "Enabled"       "1"
+        "HeroPool1"     "1"
+        "HeroPool2"     "1"
+        "HeroUnlockOrder"       "0"
+        "Role"          "Carry,Pusher,Durable,Disabler,Initiator,Nuker"
+        "Rolelevels"    "2,3,2,2,1,1"
+        "Complexity"    "1"
+        "Team"      "Good"
+        "HeroID"        "49"
+        "ModelScale"                "1"
+        "VersusScale"       "0.790000"
+        "HeroGlowColor"     "209 143 71"
+        "PickSound"     "dragon_knight_drag_spawn_01"
+        "BanSound"      "dragon_knight_drag_anger_06"
+        "CMEnabled"     "1"
+        "BotImplemented"        "1"
+        "NameAliases"       "dk"
+        "workshop_guide_name"       "Dragon Knight"
+        "new_player_enable"     "1"
+        "LastHitChallengeRival"     "npc_dota_hero_sven"
+        "HeroSelectSoundEffect"     "Hero_DragonKnight.Pick"
+        "GibType"       "default"
+        "Ability1"      "tank_1_tough"
+        "Ability2"      "tank_1_shielded"
+        "Ability3"      "empty_2_1_tank"
+        "Ability4"      "empty_2_2_tank" 
+        "Ability5"      "empty_3_1_tank" 
+        "Ability6"      "empty_3_2_tank"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+        "AbilityLayout" "9"
+
+        "ArmorPhysical"     "5"
+        "MagicalResistance"     "25"
+
+        "AbilityTalentStart" "10"
+        
+        "ProjectileSpeed"       "6000"
+
+        "StatusHealth" "250"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "50"
+        "StatusManaRegen"   "1"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+        "AttackRate"        "3.0"
+        "AttackAnimationPoint"      "0.330000"
+        "AttackAcquisitionRange"        "600"
+        "AttackRange"       "75"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "35"
+        "AttributeStrengthGain"     "2.0"
+        "AttributeBaseIntelligence"     "5"
+        "AttributeIntelligenceGain"     "0.1"
+        "AttributeBaseAgility"      "5"
+        "AttributeAgilityGain"      "0.6"
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.600000"
+        "HasAggressiveStance"       "1"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "VoiceFile"     ""
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_dragon_knight/dragon_knight_loadout.vpcf"      "loadout"
+            }
+        }
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+    }
+
+"npc_dota_hero_legion_commander"
+    {
+        "BaseClass"     "npc_dota_hero"
+        "Model"     "models/heroes/legion_commander/legion_commander.vmdl"
+        "Portrait"      "vgui/hud/heroportraits/portrait_legion_commander"
+        "IdleExpression"        "scenes/legion_commander/legion_commander_exp_idle_01.vcd"
+        "SoundSet"      "Hero_LegionCommander"
+        "UnitLabel"                 "Fighter"
+        
+        //"DisableWearables"              "0"
+
+        "VoiceFile"     ""
+        "Enabled"       "1"
+        "CMEnabled"     "1"
+        "Role"          "Carry,Disabler,Initiator,Durable,Nuker"
+        "Rolelevels"    "1,2,1,1,1"
+        "Complexity"    "1"
+        "Team"      "Good"
+        "HeroID"        "104"
+        "ModelScale"                "1"
+        "NameAliases"       "Tresdin,Legion"
+        "PickSound"     "legion_commander_legcom_spawn_01"
+        "BanSound"      "legion_commander_legcom_anger_07"
+        "url"       "Legion_Commander"
+        "LastHitChallengeRival"     "npc_dota_hero_kunkka"
+        "HeroSelectSoundEffect"     "Hero_LegionCommander.Pick"
+        "Ability1"      "fighter_1_bruiser"
+        "Ability2"      "fighter_1_warborn"
+        "Ability3"      "empty_2_1_fighter"
+        "Ability4"      "empty_2_2_fighter" 
+        "Ability5"      "empty_3_1_fighter" 
+        "Ability6"      "empty_3_2_fighter"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+        "AbilityLayout" "9"
+
+        "ArmorPhysical"     "5"
+        "MagicalResistance"     "20"
+
+        "ProjectileSpeed"       "6000"
+
+        "AbilityTalentStart" "10"
+
+        "StatusHealth" "200"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "50"
+        "StatusManaRegen"   "1"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"       "10"
+        "AttackDamageMax"       "10"
+        "AttackRate"        "1.5"
+        "AttackAnimationPoint"      "0.330000"
+        "AttackAcquisitionRange"        "600"
+        "AttackRange"       "125"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "20"
+        "AttributeStrengthGain"     "1.2"
+        "AttributeBaseIntelligence"     "0"
+        "AttributeIntelligenceGain"     "0.1"
+        "AttributeBaseAgility"      "20"
+        "AttributeAgilityGain"      "1"
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.600000"
+        "HasAggressiveStance"       "1"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "particle_folder"       "particles/units/heroes/hero_legion_commander"
+        "VoiceFile"     ""
+
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+    }
+
+"npc_dota_hero_phantom_assassin"
+    {
+        "BaseClass"     "npc_dota_hero"
+        "Model"     "models/heroes/phantom_assassin/phantom_assassin.vmdl"
+        "IdleExpression"        "scenes/phantom_assassin/phantom_assassin_exp_idle_01.vcd"
+        "SoundSet"      "Hero_PhantomAssassin"
+        "UnitLabel"                 "Assassin"
+        
+        "DisableWearables"              "0"
+
+        "Enabled"       "1"
+        "BotImplemented"        "1"
+        "HeroUnlockOrder"       "1"
+        "Role"          "Carry,Escape"
+        "Rolelevels"    "3,1"
+        "Complexity"    "1"
+        "Team"      "Bad"
+        "HeroID"        "44"
+        "ModelScale"                "1"
+        "VersusScale"       "0.930000"
+        "LoadoutScale"      "0.930000"
+        "SpectatorLoadoutScale" "0.95"
+        "HeroGlowColor"     "154 97 133"
+        "PickSound"     "phantom_assassin_phass_spawn_01"
+        "BanSound"      "phantom_assassin_phass_anger_08"
+        "NameAliases"       "pa;mortred"
+        "CMEnabled"     "1"
+        "workshop_guide_name"       "Phantom Assassin"
+        "new_player_enable"     "1"
+        "LastHitChallengeRival"     "npc_dota_hero_bounty_hunter"
+        "HeroSelectSoundEffect"     "Hero_PhantomAssassin.Pick"
+        "GibType"       "default"
+
+
+        "Ability1"      "assasin_1_weak_spot"
+        "Ability2"      "assasin_1_hidden_blade"
+        "Ability3"      "empty_2_1_assassin"
+        "Ability4"      "empty_2_2_assassin" 
+        "Ability5"      "empty_3_1_assassin" 
+        "Ability6"      "empty_3_2_assassin"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+        "AbilityLayout" "9"
+
+        "ArmorPhysical"     "2"
+        "MagicalResistance"     "5"
+
+        "AbilityTalentStart" "10"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+        "AttackRate"        "2.25"
+        "AttackAnimationPoint"      "0.330000"
+        "AttackAcquisitionRange"        "600"
+        "AttackRange"       "100"
+        "ProjectileModel"       "particles/neutral_fx/mud_golem_hurl_boulder.vpcf"
+        "ProjectileSpeed"       "6000"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
+        "AttributeBaseStrength"     "10"
+        "AttributeStrengthGain"     "0.5"
+        "AttributeBaseIntelligence"     "10"
+        "AttributeIntelligenceGain"     "0.5"
+        "AttributeBaseAgility"      "25"
+        "AttributeAgilityGain"      "1.5"
+
+        "StatusHealth" "100"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "75"
+        "StatusManaRegen"   "1"
+
+        "MovementSpeed"     "310"
+        "MovementTurnRate"      "0.600000"
+        "HasAggressiveStance"       "1"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "VoiceFile"     ""
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_phantom_assassin/phantom_assassin_loadout.vpcf"        "loadout"
+            }
+        }
+
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "particle_folder"       "particles/units/heroes/hero_phantom_assassin"
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+    }
+
+"npc_dota_hero_drow_ranger"
+    {
+        "BaseClass"     "npc_dota_hero"
+        "Model"     "models/heroes/drow/drow_base.vmdl"
+        "IdleExpression"        "scenes/drowranger/drowranger_exp_idle_01.vcd"
+        "SoundSet"      "Hero_DrowRanger"
+        "UnitLabel"                 "Ranger"
+        
+        "DisableWearables"              "0"
+
+        "PickSound"     "drowranger_dro_spawn_03"
+        "BanSound"      "drowranger_dro_anger_01"
+        "Enabled"       "1"
+        "BotImplemented"        "1"
+        "HeroPool1"     "1"
+        "HeroPool2"     "1"
+        "HeroUnlockOrder"       "0"
+        "Role"          "Carry,Disabler,Pusher"
+        "Rolelevels"    "2,1,1"
+        "Complexity"    "1"
+        "Team"      "Good"
+        "HeroID"        "6"
+        "ModelScale"                "1"
+        "LoadoutScale"      "1.100000"
+        "HeroGlowColor"     "1 60 246"
+        "CMEnabled"     "1"
+        "workshop_guide_name"       "Drow Ranger"
+        "LastHitChallengeRival"     "npc_dota_hero_windrunner"
+        "HeroSelectSoundEffect"     "Hero_DrowRanger.Pick"
+        "GibType"       "default"
+        "new_player_enable"     "1"
+
+        "Ability1"      "ranger_1_distance"
+        "Ability2"      "ranger_1_heavy_bolts"
+        "Ability3"      "empty_2_1_ranger"
+        "Ability4"      "empty_2_2_ranger" 
+        "Ability5"      "empty_3_1_ranger" 
+        "Ability6"      "empty_3_2_ranger"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        "AbilityLayout" "9"
+        
+        "ArmorPhysical"     "-4"
+        "MagicalResistance"     "0"
+
+        "AbilityTalentStart" "10"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+
+        "AttackRate"        "6.0"
+        "AttackAnimationPoint"      "0.330000"
+        "AttackAcquisitionRange"        "600"
+        "AttackRange"       "400"
+        "ProjectileModel"       "particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+        "ProjectileSpeed"       "1250"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
+        "AttributeBaseStrength"     "5"
+        "AttributeStrengthGain"     "0.2"
+        "AttributeBaseIntelligence"     "5"
+        "AttributeIntelligenceGain"     "0.1"
+        "AttributeBaseAgility"      "50"
+        "AttributeAgilityGain"      "2.5"
+
+        "StatusHealth"          "50"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "50"
+        "StatusManaRegen"   "1"
+
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.600000"
+        "HasAggressiveStance"       "1"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "HealthBarOffset"       "250"
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_drow/drow_loadout.vpcf"        "loadout"
+            }
+        }
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+    }
+
+"npc_dota_hero_oracle"
+    {
+        "Model"     "models/heroes/oracle/oracle.vmdl"
+        "BaseClass"     "npc_dota_hero"
+        "SoundSet"      "Hero_Oracle"
+        "IdleSoundLoop"     "Hero_Oracle.IdleLoop"
+        "UnitLabel"                 "Support"
+        
+        "DisableWearables"              "0"
+
+        "Enabled"       "1"
+        "BotImplemented"        "1"
+        "HeroUnlockOrder"       "1"
+        "Role"          "Support,Nuker,Disabler,Escape"
+        "Rolelevels"    "3,3,2,1"
+        "Complexity"    "3"
+        "Team"      "Good"
+        "IdleExpression"        "scenes/oracle/oracle_exp_idle_01.vcd"
+        "ModelScale"                "1"
+        "VersusScale"       "0.820000"
+        "LoadoutScale"      "1.000000"
+        "SpectatorLoadoutScale" "0.92"
+        "CMEnabled"     "1"
+        "NameAliases"       "ora"
+        "workshop_guide_name"       "Oracle"
+        "NoCombine"     "0"
+        "PickSound"     "oracle_orac_spawn_01"
+        "BanSound"      "oracle_orac_anger_08"
+        "HeroSelectSoundEffect"     "Hero_Oracle.Pick"
+        "GibType"       "default"
+
+        "Ability1"      "support_1_sustain"
+        "Ability2"      "support_1_heal"
+        "Ability3"      "empty_2_1_support"
+        "Ability4"      "empty_2_2_support" 
+        "Ability5"      "empty_3_1_support" 
+        "Ability6"      "empty_3_2_support"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        "StatusHealth"          "50"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "200"
+        "StatusManaRegen"   "1"
+
+        "ArmorPhysical"     "-2"
+        "MagicalResistance"     "15"
+
+        "AbilityTalentStart" "10"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+        "AttackRate"        "3.33"
+        "AttackAnimationPoint"      "0.300000"
+        "AttackAcquisitionRange"        "800"
+        "AttackRange"       "450"
+        "ProjectileModel"       "particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"
+        "ProjectileSpeed"       "900"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
+        "AttributeBaseStrength"     "20"
+        "AttributeStrengthGain"     "1.2"
+        "AttributeBaseIntelligence"     "30"
+        "AttributeIntelligenceGain"     "1.8"
+        "AttributeBaseAgility"      "5"
+        "AttributeAgilityGain"      "0.5"
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.700000"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "particle_folder"       "particles/units/heroes/hero_oracle"
+        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_oracle.vsndevts"
+        "VoiceFile"     "soundevents/voscripts/game_sounds_vo_oracle.vsndevts"
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_oracle/oracle_loadout.vpcf"        "loadout"
+            }
+        }
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+
+    }
+
+"npc_dota_hero_invoker"
+    {
+        "Model"     "models/heroes/invoker/invoker.vmdl"
+        "BaseClass"     "npc_dota_hero"
+        "IdleExpression"        "scenes/invoker/invoker_exp_idle_01.vcd"
+        "Persona"
+        {
+            "1"
+            {
+                "name"                  "npc_dota_hero_invoker_persona1"
+                "Model"                 "models/heroes/invoker_kid/invoker_kid.vmdl"    // For tools only
+            }
+        }
+        "SoundSet"      "Hero_Invoker"
+        "IdleSoundLoop"     "Hero_Invoker.IdleLoop"
+        "UnitLabel"                 "Mage"
+        
+        "DisableWearables"              "0"
+
+        "Enabled"       "1"
+        "HeroUnlockOrder"       "3"
+        "Role"          "Carry,Nuker,Disabler,Escape,Pusher"
+        "Rolelevels"    "1,3,2,1,1"
+        "Complexity"    "3"
+        "Team"      "Bad"
+        "ModelScale"                "1"
+        "LoadoutScale"      "0.800000"
+        "CMEnabled"     "1"
+        "PickSound"     "invoker_invo_spawn_02"
+        "BanSound"      "invoker_invo_anger_04"
+        "workshop_guide_name"       "Invoker"
+        "LastHitChallengeRival"     "npc_dota_hero_lina"
+        "ARDMDisabled"      "1"
+        "HeroSelectSoundEffect"     "Hero_Invoker.Pick"
+        "GibType"       "default"
+
+        "Ability1"      "mage_1_magic_missile"
+        "Ability2"      "mage_1_magic_area"
+        "Ability3"      "empty_2_1_mage"
+        "Ability4"      "empty_2_2_mage"
+        "Ability5"      "empty_3_1_mage"
+        "Ability6"      "empty_3_2_mage"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+
+
+        "Ability17"     "generic_hidden"
+        "Ability18"     "generic_hidden"
+        "Ability19"     "generic_hidden"
+        "Ability20"     "generic_hidden"
+        "Ability21"     "generic_hidden"
+        "Ability22"     "generic_hidden"
+        "Ability23"     "generic_hidden"
+        "Ability24"     "generic_hidden"
+
+        "StatusHealth"          "75"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "150"
+        "StatusManaRegen"   "1"
+
+        "ArmorPhysical"     "-6"
+        "MagicalResistance"     "10"
+
+        "AbilityTalentStart" "17"
+
+        "AbilityDraftDisabled"      "1"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+
+        "AttackRate"        "4.0"
+        "AttackAnimationPoint"      "0.400000"
+        "AttackAcquisitionRange"        "800"
+        "AttackRange"       "400"
+        "ProjectileModel"       "particles/units/heroes/hero_invoker/invoker_base_attack.vpcf"
+        "ProjectileSpeed"       "900"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
+
+        "AttributeBaseStrength"     "10"
+        "AttributeStrengthGain"     "0.5"
+        "AttributeBaseAgility"      "5"
+        "AttributeAgilityGain"      "0.2"
+        "AttributeBaseIntelligence"     "25"
+        "AttributeIntelligenceGain"     "2"
+
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.500000"
+        "VoiceFile"     "soundevents/voscripts/game_sounds_vo_invoker.vsndevts"
+        "particle_folder"       "particles/units/heroes/hero_invoker"
+        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_invoker.vsndevts"
+
+
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_invoker_kid/invoker_kid_loadout.vpcf"      "loadout"
+            }
+        }
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+    }
+
+"npc_dota_hero_void_spirit"
+    {
+        "BaseClass"                 "npc_dota_hero"
+        "Model"                     "models/heroes/void_spirit/void_spirit.vmdl"
+        "IdleExpression"            "scenes/void_spirit/void_spirit_exp_idle_01.vcd"
+        "SoundSet"                  "Hero_VoidSpirit"
+
+        "UnitLabel"                 "Magic warrior"
+        
+        "ProjectileSpeed"       "6000"
+        
+        "DisableWearables"              "0"
+
+        "Enabled"                   "1"
+        "CMEnabled"                 "0"
+        "Role"                      "Carry,Escape,Nuker,Disabler"
+        "Rolelevels"                "2,3,2,1"
+        "Complexity"                "2"
+        "Team"                      "Good"
+        "HeroID"                    "126"
+        "ModelScale"                "1"
+        "LoadoutScale"              "0.820000"
+        "NameAliases"               "Void,VS"
+        "workshop_guide_name"       "Void Spirit"
+        "NoCombine"                 "0"
+        "AbilityDraftDisabled"      "1"
+        "HeroSelectSoundEffect"     "Hero_VoidSpirit.Pick"
+        "GibType"                   "ethereal"
+        "PickSound"                 "void_spirit_voidspir_spawn_02"
+        "BanSound"                  "void_spirit_voidspir_anger_03"
+
+        "Ability1"      "magic_warrior_1_magic_attack"
+        "Ability2"      "magic_warrior_1_manashield"
+        "Ability3"      "empty_2_1_magic_warrior"
+        "Ability4"      "empty_2_2_magic_warrior" 
+        "Ability5"      "empty_3_1_magic_warrior" 
+        "Ability6"      "empty_3_2_magic_warrior"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        "StatusHealth"          "150"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "100"
+        "StatusManaRegen"   "1"
+
+        "ArmorPhysical"     "3"
+        "MagicalResistance"     "15"
+
+        "AbilityTalentStart" "10"
+
+        "AbilityLayout" "20"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"       "15"
+        "AttackDamageMax"       "15"
+        "AttackRate"        "3.0"
+        "AttackAnimationPoint"      "0.330000"
+        "AttackAcquisitionRange"        "600"
+        "AttackRange"       "120"
+
+        "AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
+        "AttributeBaseStrength"     "10"
+        "AttributeStrengthGain"     "0.5"
+        "AttributeBaseIntelligence"     "20"
+        "AttributeIntelligenceGain"     "1.5"
+        "AttributeBaseAgility"      "15"
+        "AttributeAgilityGain"      "1"
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.600000"
+        "HasAggressiveStance"       "1"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "VoiceFile"     ""
+        "HealthBarOffset"       "350"
+
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+    }
+
+"npc_dota_hero_dazzle"
+    {
+        "BaseClass"                 "npc_dota_hero"
+        "Model"     "models/heroes/dazzle/dazzle.vmdl"
+        "IdleExpression"        "scenes/dazzle/dazzle_exp_idle_01.vcd"
+        "SoundSet"      "Hero_Dazzle"
+
+        "UnitLabel"                 "Cultist"
+        
+        "DisableWearables"              "0"
+
+        "Enabled"       "1"
+        "BotImplemented"        "1"
+        "HeroUnlockOrder"       "3"
+        "Role"          "Support,Nuker,Disabler"
+        "Rolelevels"    "3,1,1"
+        "Complexity"    "1"
+        "Team"      "Bad"
+        "HeroID"        "50"
+        "ModelScale"                "1"
+        "VersusScale"       "0.790000"
+        "LoadoutScale"      "0.850000"
+        "HeroGlowColor"     "222 60 236"
+        "PickSound"     "dazzle_dazz_spawn_01"
+        "BanSound"      "dazzle_dazz_anger_05"
+        "CMEnabled"     "1"
+        "workshop_guide_name"       "Dazzle"
+        "new_player_enable"     "1"
+        "LastHitChallengeRival"     "npc_dota_hero_witch_doctor"
+        "HeroSelectSoundEffect"     "Hero_Dazzle.Pick"
+        "GibType"       "default"
+
+
+        "Ability1"      "cultist_1_decay"
+        "Ability2"      "cultist_1_decay_curse"
+        "Ability3"      "empty_2_1_cultist"
+        "Ability4"      "empty_2_2_cultist" 
+        "Ability5"      "empty_3_1_cultist" 
+        "Ability6"      "empty_3_2_cultist"
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        "StatusHealth"          "50"
+        "StatusHealthRegen"     "0.50000"
+        "StatusMana"                  "200"
+        "StatusManaRegen"   "1"
+
+        "ArmorPhysical"     "-4"
+        "MagicalResistance"     "15"
+
+        "AbilityTalentStart" "10"
+
+        "AttackCapabilities"        "DOTA_UNIT_CAP_RANGED_ATTACK"
+
+        "AttackDamageMin"       "0"
+        "AttackDamageMax"       "0"
+
+        "AttackRate"        "4.0"
+        "AttackAnimationPoint"      "0.300000"
+        "AttackAcquisitionRange"        "800"
+        "AttackRange"       "500"
+
+        "ProjectileModel"       "particles/units/heroes/hero_dazzle/dazzle_base_attack.vpcf"
+        "ProjectileSpeed"       "1200"
+        "AttributePrimary"      "DOTA_ATTRIBUTE_INTELLECT"
+
+        "AttributeBaseStrength"     "0"
+        "AttributeStrengthGain"     "0"
+        "AttributeBaseIntelligence"     "40"
+        "AttributeIntelligenceGain"     "4"
+        "AttributeBaseAgility"      "0"
+        "AttributeAgilityGain"      "0"
+
+        "MovementSpeed"     "300"
+        "MovementTurnRate"      "0.600000"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+
+        "particle_folder"       "particles/units/heroes/hero_dazzle"
+        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_dazzle.vsndevts"
+        "VoiceFile"     "soundevents/voscripts/game_sounds_vo_dazzle.vsndevts"
+        "RenderablePortrait"
+        {
+            "Particles"
+            {
+                "particles/units/heroes/hero_dazzle/dazzle_loadout.vpcf"        "loadout"
+            }
+        }
+
+
+        "VisionDaytimeRange"        "1000"
+        "VisionNighttimeRange"      "1000"
+
+    }
+
+
+
+
+    "npc_dota_hero_nevermore"
+    {
+        "Model"     "models/heroes/shadow_fiend/shadow_fiend_arcana.vmdl"
+        "DisableWearables"      "1"
+
+        "Ability1"      "donate_bonus_crit_sf"
+        "Ability2"      "donate_bonus_damage_sf"
+        "Ability3"      "rubick_bonus_damage"
+        "Ability4"      "medusa_split_shot_lua"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+   
+        "AttackRate"        "0.900000"
+        
+        "AttackRange"       "800"
+        "ProjectileModel"       "particles/econ/items/shadow_fiend/sf_desolation/sf_base_attack_desolation_fire_arcana.vpcf"
+        "ProjectileSpeed"       "2000"
+        
+        "MovementSpeed"     "5000"
+
+        "VisionDaytimeRange"        "1300"
+        "VisionNighttimeRange"      "1300"
+
+        
+
+    }
+
+
+
+    "npc_dota_hero_juggernaut"
+    {
+
+        "Ability1"      "donate_bonus_crit_sf"
+        "Ability2"      "donate_bonus_damage_sf"
+        "Ability3"      "rubick_bonus_damage"
+        "Ability4"      "medusa_split_shot_lua"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+     
+
+    }
+
+
+
+    "npc_dota_hero_crystal_maiden"
+    {
+        "AttackRange"       "800"
+        "AttackRate"        "1.850000"
+        "Ability1"          "crystal_maiden_crystal_nova_custom"
+        "Ability2"          "crystal_maiden_freezing_field_custom"
+        "Ability3"          "crystal_maiden_arcane_aura_custom"
+        "Ability4"          "crystal_maiden_frostbite_custom"
+        "Ability6"          "crystal_maiden_blizzard"
+        "Ability10"         "generic_hidden"
+        "Ability11"         "generic_hidden"
+        "Ability12"         "generic_hidden"
+        "Ability13"         "generic_hidden"
+        "Ability14"         "generic_hidden"
+        "Ability15"         "generic_hidden"
+        "Ability16"         "generic_hidden"
+        "Ability17"         "generic_hidden"
+    } 
+
+    "npc_dota_hero_terrorblade"
+    {
+        
+        "Ability1"      "donate_bruiser_tb"
+        "Ability2"      "donate_agi_to_atk"
+        "Ability3"      "slark_essence_shift_lua"
+        "Ability4"      "medusa_split_shot_lua"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        
+        "precache"
+        {
+            "model"     "models/heroes/terrorblade/demon.vmdl"
+        }
+        
+    }
+
+
+
+
+} //end

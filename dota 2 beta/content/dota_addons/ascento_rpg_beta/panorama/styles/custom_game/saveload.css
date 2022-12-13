@@ -1,0 +1,110 @@
+/* Если вкратце, то здесь описывают свойства элементов из XML файла
+	.Класс {
+		свойства
+	} 
+	#ИД {
+		свойства
+	} 
+ */
+.Main {
+	position: 0.1% 180px 0px;
+	border: 1px solid #EAD800;
+}
+
+#btnTest {	/*обычное состояние*/
+ 	background-image: url("s2r://panorama/images/saveload_tga.vtex");
+ 	width: 169px;
+ 	height: 54px;
+}
+
+#btnTest:hover {	/*при наведении*/
+ 	position: 0% 0px 0px;
+ 	background-image: url("s2r://panorama/images/saveloadtext_tga.vtex");
+ 	width: 400px;
+ 	height: 570px;
+ 	border: 1px solid #EAD800;	
+ 	
+}
+
+#btnTest:active   {	/*при нажатии*/
+ 	border: 3px solid #EAD800;	
+ 	
+
+}
+
+#SaveEntry
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#btnTest:hover #SaveEntry
+{
+    visibility: visible;
+    color: #FFFFFF;
+    position: 3% 175px 0px;
+    font-size: 23;
+}
+
+#DonationsDonationsBotBar
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#btnTest:hover #DonationsBotBar
+{
+ 	visibility: visible;
+ 	position: 15% 270px 0px;
+  background-image: url("s2r://panorama/images/donations_bot_bar_tga.vtex");
+ 	width: 260px;
+ 	height: 41px;
+ 	border: 1px solid #00E318;
+}
+
+#btnTest:hover #DonationsBotBar:active
+{
+    border: 3px solid #00E318;
+}
+
+#DonationsDemon
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#btnTest:hover #DonationsDemon
+{
+   	visibility: visible;
+   	position: 4% 322px 0px;
+    background-image: url("s2r://panorama/images/donations_demon_tga.vtex");
+ 	width: 173px;
+ 	height: 235px;
+ 	border: 1px solid #00E318;
+}
+
+#btnTest:hover #DonationsDemon:active
+{
+    border: 3px solid #00E318;
+}
+
+#DonationsPets
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#btnTest:hover #DonationsPets
+{
+ 	visibility: visible;
+ 	position: 52% 322px 0px;
+  background-image: url("s2r://panorama/images/donation_pets_tga.vtex");
+ 	width: 173px;
+ 	height: 235px;
+ 	border: 1px solid #00E318;
+}
+
+#btnTest:hover #DonationsPets:active
+{
+    border: 3px solid #00E318;
+}

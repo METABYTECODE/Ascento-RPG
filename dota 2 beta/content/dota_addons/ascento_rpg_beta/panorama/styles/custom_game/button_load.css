@@ -1,0 +1,163 @@
+.Main {
+	position: 2px 10.7% 0px;
+	width: 380px;
+ 	height: 300px;
+}
+
+#FastLoadBtn {
+ 	background-image: url("file://panorama/images/fastload_png.png");
+ 	background-size: 85%;
+ 	background-repeat: no-repeat;
+ 	background-position: center;
+ 	background-color: gradient( linear, 0% 0%, 0% 100%, from( #25282acc ), color-stop( .5, #25282acc), to( #000000dd ) );
+	transition-duration: .05s;
+	transition-property: background-image;
+	transition-timing-function: ease-in-out;
+	border: 1px solid #D6D6D6;
+	width: 172px;
+ 	height: 100px;
+}
+
+
+#FastloadText {
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	position: 8px 6px 0px;
+	width: 173px;
+ 	height: 100px;
+}
+
+#FastLoadBtn:hover {
+	border: 3px solid #D6D6D6;
+}
+
+#btnLoadEntry
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#FastLoadBtn:hover #btnLoadEntry {
+	visibility: visible;
+ 	background-color: #2b3239;
+	width: 174px;
+ 	height: 100px;
+}
+
+#LoadEntryText
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#FastLoadBtn:hover #LoadEntryText {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_text_png.png");
+ 	position: 15px 5px 0px;
+	width: 142px;
+ 	height: 23px;
+}
+
+#EntrySaveButton
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#EntryLoadButton
+{
+    visibility: collapse;
+    color: #00FF00;
+}
+
+#FastLoadBtn:hover #EntrySaveButton {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_save_png.png");
+ 	position: 16px 33px 0px;
+	width: 56px;
+ 	height: 56px;
+}
+
+#FastLoadBtn:hover #EntrySaveButton:active {
+	border: 1px solid #D6D6D6;
+}
+
+#FastLoadBtn:hover #EntryLoadButton {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_load_png.png");
+ 	position: 98px 33px 0px;
+	width: 57px;
+ 	height: 57px;
+}
+
+#FastLoadBtn:hover #EntryLoadButton:active {
+	border: 1px solid #D6D6D6;
+}
+
+.MainSaveApprove {
+
+}
+
+.MainLoadSnippet {
+	position: 0px 35% 0px;
+	width: 367px;	
+ 	height: 187px;
+}
+
+#SaveApprove {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastsave_approve_bg_png.png");
+	width: 367px;	
+ 	height: 187px;
+}
+
+#SaveApproveOk {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_approve_ok_png.png");
+ 	position: 5% 55.5% 0px;
+	width: 158px;	
+ 	height: 68px;
+}
+
+#SaveApproveNo {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_approve_no_png.png");
+ 	position: 51.5% 55.5% 0px;
+	width: 158px;	
+ 	height: 68px;
+}
+
+
+.MainLoadApprove {
+
+}
+
+.MainLoadSnippet {
+	position: 0px 35% 0px;
+	width: 367px;	
+ 	height: 187px;
+}
+
+#LoadApprove {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_approve_bg_png.png");
+	width: 367px;	
+ 	height: 187px;
+}
+
+#LoadApproveOk {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_approve_ok_png.png");
+ 	position: 5% 55.5% 0px;
+	width: 158px;	
+ 	height: 68px;
+}
+
+#LoadApproveNo {
+	visibility: visible;
+ 	background-image: url("file://panorama/images/fastload_approve_no_png.png");
+ 	position: 51.5% 55.5% 0px;
+	width: 158px;	
+ 	height: 68px;
+}

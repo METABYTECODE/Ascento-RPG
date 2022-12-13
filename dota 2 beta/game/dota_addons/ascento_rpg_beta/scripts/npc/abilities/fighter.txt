@@ -1,0 +1,475 @@
+"DOTAAbilities"
+{
+
+
+"fighter_1_bruiser"
+{
+
+//Using dual swords makes you fast and deadly. BAT: (1.45 1.4 1.35 1.3 1.25 1.2 1.15 1.1 1.05 1.0), Chance to parry(negate incoming damage): (3.5 7 10.5 14 17.5 21 24.5 28 31.5 35)%
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/fighter/fighter_1_bruiser.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "fighter_1_bruiser"
+
+    "AbilitySpecial"
+    {
+        "01"
+    	{
+    	  "var_type"        "FIELD_FLOAT"
+    	  "base_attack_time"    "1.45 1.4 1.35 1.3 1.25 1.2 1.15 1.1 1.05 1.0"
+    	}
+        "02"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "block_chance"         "5 7 9 12 15 20 25 30 35 40"
+        }
+    }
+}
+
+
+"fighter_1_warborn"
+{
+
+//The lower your health is, the stronger you are. Max bonuses are achieved when below: (30)% health. Max bonuses are: (150 175 200 225 250 275 300 325 350) attack speed, (1 2 3 4 5 6 7 8 9 10)% lifesteal, 
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/fighter/fighter_1_warborn.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "fighter_1_warborn"
+
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "hp_threshold_max"        "35"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "maximum_attack_speed"         "50 75 100 125 150 175 200 225 250"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "maximum_lifesteal"         "5 6 7 8 9 11 12 13 14 15"
+        }
+    }
+}
+
+
+"fighter_2_dual_strike"
+{
+
+//Attacks enemy 2(+2 per 100 attack speed) times during 1 second, dealing (80 85 90 95 100 105 110 115 120 125)% of attack damage with each strike. During this skill, fighter is immune to damage and her critical strike chance is doubled. Подсмотреть у джагера
+
+    "BaseClass"                     "ability_datadriven"
+    //"ScriptFile"                    "abilities/fighter/fighter_2_dual_strike.lua" 
+
+       "AbilityUnitDamageType"         "DAMAGE_TYPE_PHYSICAL"
+       "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+       "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+       "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+       "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE"
+       "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "30"
+
+    "AbilityTextureName"                "fighter_2_dual_strike"
+
+    "AbilityManaCost"                   "25"
+    "AbilityCooldown"                   "10"
+
+    "AbilityCastRange"        "125"
+    "AbilityCastPoint"        "1"
+
+    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_2"
+
+    "precache"
+       {
+          "particle"    "particles/econ/items/juggernaut/bladekeeper_omnislash/_dc_juggernaut_omni_slash_tgt.vpcf"
+          "particle"    "particles/econ/items/juggernaut/pw_blossom_sword/juggernaut_omni_slash_tgt.vpcf"
+          "soundfile"   "soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+       }
+
+            "AbilitySpecial"
+        {
+            "01"
+            {
+                 "var_type"                 "FIELD_INTEGER"
+                 "bounce_distance"          "500"
+            }
+            "02"
+            {
+                 "var_type"                 "FIELD_INTEGER"
+                 "count"                    "2"
+            }
+            "03"
+            {
+                 "var_type"                 "FIELD_FLOAT"
+                 "bounce_tick"              "0.1"
+            }
+            "04"
+            {
+                 "var_type"                 "FIELD_INTEGER"
+                 "damage_pct"              "-20 -15 -10 -5 0 5 10 15 20 25"
+                 "CalculateSpellDamageTooltip"   "0"
+            }
+            "05"
+            {
+                 "var_type"                 "FIELD_INTEGER"
+                 "damage_pct_tooltip"              "80 85 90 95 100 105 110 115 120 125"
+                 "CalculateSpellDamageTooltip"   "0"
+            }
+        }
+
+        "OnSpellStart"
+        {
+            "ApplyModifier"
+            {
+                 "ModifierName"   "blade_dance_state"
+                 "Target"         "CASTER"
+            }
+            "RunScript"
+            {
+                    "ScriptFile"        "abilities/fighter/fighter_2_dual_strike"
+                    "Function"          "initial"
+                    "particle_1"        "particles/econ/items/juggernaut/bladekeeper_omnislash/_dc_juggernaut_omni_slash_tgt.vpcf"
+                    "particle_2"        "particles/econ/items/juggernaut/pw_blossom_sword/juggernaut_omni_slash_tgt.vpcf"
+                    "sound_1"           "Hero_Juggernaut.OmniSlash"
+                    "sound_2"           "Hero_Juggernaut.OmniSlash.Damage"
+            }
+        }
+
+        "Modifiers"
+        {
+            "blade_dance_state"
+            {
+                "IsBuff"                "1"
+                "IsPurgble"             "0"
+                "IsHidden"              "1"
+                "ThinkInterval"         "%bounce_tick"
+                "OnIntervalThink"
+                {
+                    "RunScript"
+                    {
+                        "ScriptFile"        "abilities/fighter/fighter_2_dual_strike"
+                        "Function"          "nexttick"
+                        "particle_1"        "particles/econ/items/juggernaut/bladekeeper_omnislash/_dc_juggernaut_omni_slash_tgt.vpcf"
+                        "particle_2"        "particles/econ/items/juggernaut/pw_blossom_sword/juggernaut_omni_slash_tgt.vpcf"
+                        "sound_1"           "Hero_Juggernaut.OmniSlash"
+                        "sound_2"           "Hero_Juggernaut.OmniSlash.Damage"
+                        "modifier_name"     "blade_dance_state"
+                    }
+                }
+                "States"
+                {
+                    "MODIFIER_STATE_NO_HEALTH_BAR"          "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_FLYING"                 "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_INVULNERABLE"           "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NOT_ON_MINIMAP"         "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_NO_UNIT_COLLISION"      "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_UNSELECTABLE"           "MODIFIER_STATE_VALUE_ENABLED"
+                    "MODIFIER_STATE_SILENCED"               "MODIFIER_STATE_VALUE_ENABLED"
+                }
+
+                "Properties"
+                {
+                    "MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE" "%damage_pct"
+                }
+            }
+        }
+}
+
+
+
+
+
+"fighter_2_adrenaline_rush"
+{
+
+//Goes in rage, increasing attack damage, attack speed and movement speed by (33 36 39 42 45 48 51 54 57 60)%, but increasing damage received by 25% for 20sec
+
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/fighter/fighter_2_adrenaline_rush.lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+
+    "AbilityTextureName"            "fighter_2_adrenaline_rush"
+    "MaxLevel" "10"
+    "RequiredLevel" "30"
+    "LevelsBetweenUpgrades" "10"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"              "0.0"
+
+    // Time     
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"               "60"
+
+    // Cost
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityManaCost"               "0"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+        "01"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "duration"              "30"
+        }
+        "02"
+        {
+            "var_type"              "FIELD_FLOAT"
+            "transformation_time"   "0.1"
+        }
+        "03"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "bonus_percent"     "33 36 39 42 45 48 51 54 57 60"
+        }
+        "04"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "incoming_damage"     "20"
+        }
+        "05"
+        {
+            "var_type"              "FIELD_INTEGER"
+            "attack_speed_bonus"    "330 360 390 420 450 480 510 540 570 600"
+        }
+    }
+
+    "precache"
+    {
+        "particle"  "particles/status_fx/status_effect_chemical_rage.vpcf"
+        "particle"  "particles/units/heroes/hero_alchemist/alchemist_chemical_rage.vpcf"
+    }
+
+
+}
+
+
+
+"fighter_3_crit"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "ability_datadriven"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+  "AbilityTextureName"            "juggernaut_blade_dance"
+  
+    "MaxLevel"                      "20"
+    "LevelsBetweenUpgrades"         "100"
+    "RequiredLevel"                 "120"
+
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "crit_bonus"        "150 200 250 300 350 400 450 500 550 600 650 750 800 850 900 950 1000 1050 1100"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "crit_chance"       "20 20 20 20 20 25 25 25 25 25 30 30 30 30 30 35 35 35 35 35"
+    }
+  }
+
+  "Modifiers"
+  {
+    "modifier_fighter_3_crit"
+    {
+      "Attributes"       "MODIFIER_ATTRIBUTE_PERMANENT" 
+      "Passive"      "1"
+      "IsHidden"      "1"
+      "IsDebuff"      "0"
+      "TextureName" "fighter_3_crit"
+
+       "OnAttackStart"
+      {
+        "RemoveModifier"
+        {
+          "ModifierName"  "modifier_coup_de_grace_crit_datadriven"
+          "Target"    "CASTER"
+        }
+
+        "Random"
+        {
+          "Chance"    "%crit_chance"
+          "PseudoRandom"  "DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT"
+
+          "OnSuccess"
+          {
+            "ApplyModifier"
+            {
+              "ModifierName"  "modifier_coup_de_grace_crit_datadriven"
+              "Target"    "CASTER"
+            }
+          }
+        }
+      }
+    }
+    "modifier_coup_de_grace_crit_datadriven"
+    {
+      "IsHidden"  "1"
+
+      "Properties"
+      {
+        "MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_bonus"
+      }
+
+      "OnAttackLanded"
+      {
+        "RemoveModifier"
+        {
+          "ModifierName"  "modifier_coup_de_grace_crit_datadriven"
+          "Target"    "CASTER"
+        }
+
+        "FireEffect"
+        {
+          "EffectName"  "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact.vpcf"
+          "EffectAttachType"  "start_at_customorigin"
+          
+          "ControlPointEntities"
+          {
+            "TARGET"  "follow_origin"
+            "TARGET"  "follow_origin"
+          }
+        }
+
+        "FireSound"
+        {
+          "EffectName"  "Hero_PhantomAssassin.CoupDeGrace"
+          "Target"    "TARGET"
+        }
+      }
+    }
+  }
+}
+
+
+"fighter_3_rupture"
+    {
+        // Ability General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/fighter/fighter_3_rupture.lua"
+
+        "AbilityType"                   "DOTA_ABILITY_TYPE_BASIC"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+        "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE"   
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    
+        "AbilityTextureName"            "void_spirit_resonant_pulse"
+        "MaxLevel" "20"
+        "RequiredLevel" "120"
+        "LevelsBetweenUpgrades" "100"
+
+        "precache"
+        {
+            "soundfile" "soundevents/game_sounds_heroes/game_sounds_void_spirit.vsndevts"
+            "particle"  "particles/status_fx/status_effect_void_spirit_pulse_buff.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse_absorb.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse_buff.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse_impact.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse_shield.vpcf"
+            "particle"  "particles/units/heroes/hero_void_spirit/pulse/void_spirit_pulse_shield_deflect.vpcf"
+        }
+        
+        
+
+        // Ability Casting
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "0"
+        "AbilityCastPoint"              "0.25"
+
+
+        // Ability Resource
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCooldown"               "60"
+        "AbilityManaCost"               "500"
+
+        // Damage
+        //-------------------------------------------------------------------------------------------------------------
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "radius"                    "1000"
+            }
+            "02"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "speed"                     "1200"
+            }
+            "03"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "damage"                    "225 250 275 300 325 350 375 400 425 450 475 500 525 550 575 600 625 650 675 700"
+            }
+            "04"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "buff_duration"             "1"
+            }
+            "05"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "base_absorb_amount"        "0"
+            }
+            "06"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "absorb_per_hero_hit"       "0"
+            }
+            "07"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "return_projectile_speed"   "900"
+            }
+            "08"
+            {
+                "var_type"                  "FIELD_INTEGER"
+                "duration"                  "25"
+            }
+            "09"
+            {
+                "var_type"                  "FIELD_FLOAT"
+                "dot_damage_pct"            "0.2 0.4 0.6 0.8 1 1.2 1.4 1.6 1.8 2 2.2 2.4 2.6 2.8 3 3.2 3.4 3.6 3.8 4"
+                "CalculateSpellDamageTooltip"   "0"
+            }
+        }
+    }
+
+
+
+}
