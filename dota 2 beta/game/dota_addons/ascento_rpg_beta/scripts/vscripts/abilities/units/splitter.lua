@@ -35,8 +35,21 @@ function modifier_splitter:OnDeath(kv)
         return
     end
     
-    for i = 0, self.count, 1 do
-        unit = CreateUnitByName(self.parent:GetUnitName(), self.parent:GetAbsOrigin() + RandomVector(RandomFloat(0, 100)), true, nil, nil, DOTA_TEAM_BADGUYS)
+    for i = 0, 1 do
+        unit = CreateUnitByName("npc_ny_creep_1", self.parent:GetAbsOrigin() + RandomVector(RandomFloat(0, 100)), true, nil, nil, DOTA_TEAM_BADGUYS)
+        unit.clone = true
+        unit:SetModel(self.parent:GetModelName())
+        unit:SetOriginalModel(self.parent:GetModelName())
+
+        unit:SetBaseDamageMin(self.parent:GetBaseDamageMin()/2)
+        unit:SetBaseDamageMax(self.parent:GetBaseDamageMax()/2)
+        unit:SetBaseMaxHealth(self.parent:GetBaseMaxHealth()/2)
+        unit:SetHealth(unit:GetBaseMaxHealth())
+        unit:SetPhysicalArmorBaseValue(self.parent:GetPhysicalArmorBaseValue()/2)
+    
+        unit:SetDeathXP(self.parent:GetDeathXP()/2)
+        unit:SetMaximumGoldBounty(self.parent:GetMaximumGoldBounty()/2)
+        unit:SetMinimumGoldBounty(self.parent:GetMinimumGoldBounty()/2)
         unit.clone = true
     end;
 end

@@ -11,9 +11,7 @@ local version = "ascento_5"
 
 function WinEventDataWeb(data, callback)
   local req = CreateHTTPRequestScriptVM("GET", url)
-  local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
-  req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
   req:SetHTTPRequestGetOrPostParameter("gametime", tostring(GameRules:GetGameTime()))
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
   req:SetHTTPRequestGetOrPostParameter("action", "nyevent")
@@ -33,9 +31,7 @@ end
 
 function OnlineDataWeb(data, callback)
   local req = CreateHTTPRequestScriptVM("GET", url)
-  local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
-  req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
   req:SetHTTPRequestGetOrPostParameter("action", "online")
   req:SetHTTPRequestGetOrPostParameter("version", version)
   req:SetHTTPRequestGetOrPostParameter("gametime", tostring(GameRules:GetGameTime()))

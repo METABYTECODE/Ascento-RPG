@@ -89,17 +89,32 @@ function modifier_burning_of_allies_debuff:OnCreated()
     self.ability = self:GetAbility()
     self.parent = self:GetParent()
     self.caster = self:GetCaster()
+    self.timeToBash = self.ability:GetSpecialValueFor("time_to_bash")
+    self.bashDuration = self.ability:GetSpecialValueFor("bash_duration")
+    self.damage = self.ability:GetSpecialValueFor("damage")
+    if not IsServer then
+        return
+    end
     self:OnRefresh()
     self:StartIntervalThink(1)
 end
 
 function modifier_burning_of_allies_debuff:OnRefresh()
+    if not IsServer then
+        return
+    end
     self.timeToBash = self.ability:GetSpecialValueFor("time_to_bash")
     self.bashDuration = self.ability:GetSpecialValueFor("bash_duration")
     self.damage = self.ability:GetSpecialValueFor("damage")
 end
 
 function modifier_burning_of_allies_debuff:OnIntervalThink()
+    if not IsServer then
+        return
+    end
+    if not self.caster or not self.parent then
+        self:Destroy()
+    end
 	if self.parent:HasModifier("modifier_burning_of_allies") then
 		return
 	end

@@ -27,8 +27,8 @@ function unit_suicide:OnOwnerDied()
 
 	for _,unit in pairs(units) do
     ApplyDamage({attacker = caster, 
-        victim = unit,  
-        damage = damage,
+        victim = unit,
+        damage = unit:GetHealth() * 0.5,
         ability = self, 
         damage_type = DAMAGE_TYPE_MAGICAL})
 	end

@@ -23,7 +23,7 @@ function modifier_ny_over:GetModifierMoveSpeed_Max( params )
 end
 
 function modifier_ny_over:GetModifierMoveSpeedOverride( params )
-    return 400
+    return 350
 end
 
 

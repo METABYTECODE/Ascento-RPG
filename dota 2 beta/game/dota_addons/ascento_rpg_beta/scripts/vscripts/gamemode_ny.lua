@@ -77,7 +77,27 @@ function GameMode:OnAllPlayersLoaded()
 end 
 
 
+function GameMode:UpgradeJobTo2_ny(caster)
+    local heroProfsList = LoadKeyValues('scripts/vscripts/data/heroes.kv')
 
+    hero = caster:GetUnitName()
+    for k, v in pairs(heroProfsList) do
+    --print("KEY: " .. k)
+        if k == "Profession_2" then
+            for k1, v1 in pairs(v) do
+                if hero == k1 then
+                    for k2, v2 in pairs(v1) do
+                        local findSkill = caster:FindAbilityByName(k2)
+                        if findSkill ~= nil then
+                          caster:RemoveAbility(findSkill:GetName())
+                          caster:AddAbility(v2):SetLevel(1)
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
 
 function GameMode:OnHeroInGame(hero)
     DebugPrint("[BAREBONES] Hero spawned in game for first time -- " .. hero:GetUnitName())
@@ -89,8 +109,21 @@ function GameMode:OnHeroInGame(hero)
         local current_hero = hero:GetUnitName()
         local abil = hero:GetAbilityByIndex(1)
 
+        Timers:CreateTimer("hero_online_" .. playerID, {
+                    useGameTime = false,
+                    endTime = 1,
+                    callback = function()
+                        GameMode:SaveOnline(playerID)
+                        return 30
+                    end
+                })
+
         
         EmitAnnouncerSound("soundboard.ti3.kor_roshan")
+
+        GameMode:UpgradeJobTo2_ny(hero)
+        hero:GetAbilityByIndex(0):SetLevel(1)
+        hero:GetAbilityByIndex(1):SetLevel(1)
 
         local item_to_remove = hero:FindItemInInventory("item_tpscroll")
         local item_to_remove2 = hero:FindItemInInventory("item_tpscroll_fake")

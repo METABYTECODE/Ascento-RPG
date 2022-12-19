@@ -10,7 +10,7 @@ ENABLE_HERO_RESPAWN = true              -- Should the heroes automatically respa
 UNIVERSAL_SHOP_MODE = true             -- Should the main shop contain Secret Shop items as well as regular items
 ALLOW_SAME_HERO_SELECTION = false        -- Should we let people select the same hero as each other
 
-CUSTOM_GAME_SETUP_TIME = 20.0           -- How long should custom game setup last - the screen where players pick a team?
+CUSTOM_GAME_SETUP_TIME = 0.0           -- How long should custom game setup last - the screen where players pick a team?
 HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
 HERO_SELECTION_PENALTY_TIME = 30.0      -- How long should the penalty time for not picking a hero last? During this time player loses gold.
 STRATEGY_TIME = 0.0                    -- How long should strategy time last? Bug: You can buy items during strategy time and it will not be spent!
@@ -185,7 +185,7 @@ STARTING_GOLD = 500                     -- How much starting gold should we give
 DISABLE_DAY_NIGHT_CYCLE = false         -- Should we disable the day night cycle from naturally occurring? (Manual adjustment still possible)
 DISABLE_KILLING_SPREE_ANNOUNCER = true -- Shuold we disable the killing spree announcer?
 DISABLE_STICKY_ITEM = true             -- Should we disable the sticky item button in the quick buy area?
-SKIP_TEAM_SETUP = false                 -- Should we skip the team setup entirely?
+SKIP_TEAM_SETUP = true                 -- Should we skip the team setup entirely?
 ENABLE_AUTO_LAUNCH = true               -- Should we automatically have the game complete team setup after AUTO_LAUNCH_DELAY seconds?
 AUTO_LAUNCH_DELAY = 0                  -- How long should the default team selection launch timer be?  The default for custom games is 30.  Setting to 0 will skip team selection.
 LOCK_TEAM_SETUP = true                 -- Should we lock the teams initially?  Note that the host can still unlock the teams 
@@ -271,6 +271,9 @@ function GameMode:InitGameMode()
 
   GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops_ny.kv")
   GameRules.UnitsXPTable = LoadKeyValues("scripts/kv/xp_table_ny.kv")
+  
+  GameRules.theUnits = LoadKeyValues("scripts/kv/event_models.kv")
+  GameRules.theAbilities = LoadKeyValues("scripts/kv/abilities_ny.kv")
 
   GameRules:SetFirstBloodActive( ENABLE_FIRST_BLOOD )
   GameRules:SetHideKillMessageHeaders( HIDE_KILL_BANNERS )

@@ -9596,9 +9596,7 @@
 
     } 
 
-
-
-    "npc_ny_creep_1"
+"npc_ny_creep_test"
     {                                       
         // General
         //----------------------------------------------------------------
@@ -9610,7 +9608,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -9618,13 +9616,19 @@
         "Level"                     "1"
         
 
-        "Ability1"                  ""          // Ability 1
-        "Ability2"                  ""          // Ability 2
-        "Ability3"                  ""          // Ability 3
-        "Ability4"                  ""          // Ability 4
-
-        "Ability9"      ""
-        "Ability14"     ""
+        "Ability1"                    ""
+        "Ability2"                    ""
+        "Ability3"                    ""
+        "Ability4"                    ""
+        "Ability5"                    ""
+        "Ability6"                    ""
+        "Ability7"                    ""
+        "Ability8"                    ""
+        "Ability9"                    ""
+        "Ability10"                    ""
+        "Ability11"                    ""
+        "Ability12"                    ""
+        "Ability13"                    ""
 
         "AttackRate"                "1.5"      // Speed of attack.
         "BaseAttackSpeed"           "100"
@@ -9672,8 +9676,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
         
         // Vision
         //----------------------------------------------------------------
@@ -9701,6 +9705,110 @@
 
 
     }
+
+    "npc_ny_creep_1"
+    {                                       
+        // General
+        //----------------------------------------------------------------
+        "Model"                     "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"    // Model.
+        "BaseClass"                  "npc_dota_creature"
+        "SoundSet"                  "n_creep_Melee"
+        "ModelScale"                    "1.6"
+        //"IsNeutralUnitType"         "0"
+        "HasInventory" "1"
+
+        "UseNeutralCreepBehavior" "0"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
+
+        // Abilities
+        //----------------------------------------------------------------
+
+        "Level"                     "1"
+        
+
+        "Ability1"                  ""          // Ability 1
+        "Ability2"                  ""          // Ability 2
+        "Ability3"                  ""          // Ability 3
+        "Ability4"                  ""          // Ability 4
+
+        "Ability9"      ""
+        "Ability14"     ""
+
+        "AttackRate"                "1.5"      // Speed of attack.
+        "BaseAttackSpeed"           "100"
+
+        "AttackDamageMin"           "10"        // Damage range min.
+        "AttackDamageMax"           "10"        // Damage range max. 
+
+        "ArmorPhysical"             "2"
+        "MagicalResistance"         "10"         // Magical protection.
+
+        "StatusHealth"              "125"       // Base health.
+        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+
+        "BountyXP"                  "40"        // Experience earn.
+        "BountyGoldMin"             "15"         // Gold earned min.
+        "BountyGoldMax"             "20"         // Gold earned max.
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        
+           
+        
+        "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
+        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+
+        "AttackRange"               "150"       // Range within a target can be attacked.
+        "ProjectileModel"           ""          // Particle system model for projectile.
+        "ProjectileSpeed"           "0"         // Speed of projectile.        
+
+        // Bounds
+        //----------------------------------------------------------------
+        "RingRadius"                "40"
+        "HealthBarOffset"           "130"
+
+        // Bounty
+        //----------------------------------------------------------------
+        
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
+        "MovementSpeed"             "270"       // Speed.
+
+        // Status
+        //----------------------------------------------------------------
+        
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
+        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_BADGUYS"
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+
+        "Creature"
+        {
+            "HPGain"                    "110"
+            "DamageGain"                "7"
+            "ArmorGain"                 "1.5"
+            "MagicResistGain"           "1"
+            "MoveSpeedGain"             "10"
+            "BountyGain"                "8"
+            "XPGain"                    "30"
+        }
+
+
+
+    }
  
 
     "npc_ny_boss_10"
@@ -9715,7 +9823,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -9725,7 +9833,7 @@
 
         "Ability1"                  "kobold_disarm"         // Ability 1
         "Ability2"                  "true_sight_boss"           // Ability 2
-        "Ability3"                  ""          // Ability 3
+        "Ability3"                  "mars_bulwark"          // Ability 3
         "Ability4"                  ""          // Ability 4
 
         "Ability9"      ""
@@ -9779,8 +9887,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
         
         // Vision
         //----------------------------------------------------------------
@@ -9818,7 +9926,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -9882,8 +9990,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
         
         // Vision
         //----------------------------------------------------------------
@@ -9921,7 +10029,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -9932,7 +10040,7 @@
         "Ability1"                  "creature_summon_slither"          // Ability 1
         "Ability2"                  "creature_slithereen_crush"          // Ability 2
         "Ability3"                  "creature_bash"          // Ability 3
-        "Ability4"                  ""          // Ability 4
+        "Ability4"                  "abaddon_borrowed_time"          // Ability 4
 
         "Ability9"      ""
         "Ability14"     ""
@@ -9985,8 +10093,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.       
         
         // Vision
         //----------------------------------------------------------------
@@ -10024,7 +10132,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -10089,8 +10197,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
         
         // Vision
         //----------------------------------------------------------------
@@ -10128,7 +10236,7 @@
         "HasInventory" "1"
 
         "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_test.lua"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
 
         // Abilities
         //----------------------------------------------------------------
@@ -10189,8 +10297,8 @@
         // Status
         //----------------------------------------------------------------
         
-        "StatusMana"                "0"         // Base mana.
-        "StatusManaRegen"           "0.0"       // Mana regeneration rate.       
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
         
         // Vision
         //----------------------------------------------------------------
@@ -10233,6 +10341,9 @@
         "IdleSoundLoop"             "Hero_NagaSiren.IdleLoop"
         "ModelScale"                "0.7"
         "Level"                     "7"
+
+        "UseNeutralCreepBehavior" "0"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
         
         // Abilities
         //----------------------------------------------------------------
@@ -10286,8 +10397,8 @@
         //----------------------------------------------------------------
         "StatusHealth"              "2000"      // Base health.
         "StatusHealthRegen"         "20"        // Health regeneration rate.
-        "StatusMana"                "205"           // Base mana.
-        "StatusManaRegen"           "5"         // Mana regeneration rate.
+        "StatusMana"                "1000"         // Base mana.
+        "StatusManaRegen"           "50.0"       // Mana regeneration rate.
 
         // Team
         //----------------------------------------------------------------
@@ -10358,6 +10469,93 @@
             }
         }
     }
+
+
+
+"npc_dota_unit_undying_zombie_torso_tomstoun"
+    {
+        // General
+        //
+        "BaseClass"                 "npc_dota_unit_undying_zombie"  // Class of entity of link to.
+        "Model"                     "models/heroes/undying/undying_minion_torso.vmdl"   // Model.
+        "SoundSet"                  "Undying_Zombie"                    // Name of sound set.
+        "ModelScale"                "1.05"
+        "Level"                     "1"
+        "CanBeDominated"            "0"
+        "wearable"              "8630"
+        
+        "UseNeutralCreepBehavior" "0"
+        "vscripts"                    "ai/ai_neutral_ny.lua"
+                
+        // Abilities
+        //----------------------------------------------------------------
+        
+        "Ability1"                  "undying_tombstone_zombie_deathstrike"          // Ability 1.
+        "Ability2"                  "neutral_spell_immunity"            // Ability 2.
+        "Ability3"                  ""          // Ability 3.
+        "Ability4"                  ""          // Ability 4.
+        "Ability5"                  ""          // Ability 5.
+        "Ability6"                  ""          // Ability 6 - Extra.
+        "Ability7"                  ""          // Ability 7 - Extra.
+        "Ability8"                  ""          // Ability 8 - Extra.
+
+        // Armor
+        //----------------------------------------------------------------
+        "ArmorPhysical"             "0"         // Physical protection.
+        "MagicalResistance"             "33"        // Magical protection.
+
+        // Attack
+        //----------------------------------------------------------------
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "30"        // Damage range min.
+        "AttackDamageMax"           "36"        // Damage range max.
+        "AttackRate"                "1.6"       // Speed of attack.
+        "AttackAnimationPoint"      "0.3"       // Normalized time in animation cycle to attack.
+        "AttackAcquisitionRange"    "800"       // Range within a target can be acquired.
+        "AttackRange"               "128"       // Range within a target can be attacked.
+        "ProjectileModel"           ""          // Particle system model for projectile.
+        "ProjectileSpeed"           ""          // Speed of projectile.
+
+        // Bounty
+        //----------------------------------------------------------------
+        "BountyXP"                  "0"     // Experience earn.
+        "BountyGoldMin"             "0"     // Gold earned min.
+        "BountyGoldMax"             "0"     // Gold earned max.
+
+        // Bounds
+        //----------------------------------------------------------------
+        "RingRadius"                "70"
+        "HealthBarOffset"           "160"
+        "BoundsHullName"            "DOTA_HULL_SIZE_SMALLEST"   
+
+        // Movement
+        //----------------------------------------------------------------
+        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"         // Type of locomotion - ground, air
+        "MovementSpeed"             "375"       // Speed
+        "MovementTurnRate"          "0.5"       // Turning rate.
+
+        // Status
+        //----------------------------------------------------------------
+        "StatusHealth"              "2"     // Base health.
+        "StatusHealthRegen"         "0"     // Health regeneration rate.
+        "StatusMana"                "0"         // Base mana.
+        "StatusManaRegen"           "0"         // Mana regeneration rate.
+
+        // Team
+        //----------------------------------------------------------------
+        "TeamName"                  "DOTA_TEAM_BADGUYS"         // Team name.
+        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_PIERCE"
+        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
+        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
+        
+        // Vision
+        //----------------------------------------------------------------
+        "VisionDaytimeRange"        "1400"      // Range of vision during day light.
+        "VisionNighttimeRange"      "1400"      // Range of vision at night time.
+    }
+
+
+
 
 
 } //end

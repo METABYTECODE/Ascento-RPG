@@ -35,9 +35,9 @@ function Spawn:LineBossSpawner( keys )
     self.wave_number = self.wave_number + 1
     
 
-    if self.wave_number > 1 then
+    if self.wave_number > 50 then
         for k, hero in pairs(get_team_heroes(DOTA_TEAM_GOODGUYS)) do
-            if hero:IsConnected() then
+            if PlayerResource:GetConnectionState(hero:GetPlayerID()) == DOTA_CONNECTION_STATE_CONNECTED then
                 GameMode:FastWin(hero:GetPlayerID())
             end
         end
@@ -54,8 +54,6 @@ function Spawn:LineBossSpawner( keys )
 
 end
 
-theUnits = LoadKeyValues("scripts/kv/event_models.kv")
-
 function Spawn:SpawnLineUnits(index)
     local current_wave = index
     if current_wave == nil then
@@ -69,17 +67,60 @@ function Spawn:SpawnLineUnits(index)
     CustomGameEventManager:Send_ServerToAllClients( "item_has_spawned", {wave = current_wave} )
     EmitGlobalSound( "Overthrow.Item.Spawn" )
 
+    local theAbilitiesTable1 = {}
+    local theAbilitiesTable2 = {}
+        
+    for k, v in pairs(GameRules.theAbilities) do
+        if v == 1 then
+            table.insert(theAbilitiesTable1, k)
+        elseif v == 2 then
+            table.insert(theAbilitiesTable2, k)
+        end
+    end
+
+    local creep_ability_1 = GetRandomTableElement(theAbilitiesTable1)
+    local creep_ability_2 = GetRandomTableElement(theAbilitiesTable1)
+    local creep_ability_3 = GetRandomTableElement(theAbilitiesTable1)
+
+    while creep_ability_1 == creep_ability_2 or 
+        creep_ability_2 == creep_ability_3 or 
+        creep_ability_1 == creep_ability_3 or 
+        (creep_ability_1 == "physical_resistance" and creep_ability_2 == "neutral_spell_immunity") or 
+        (creep_ability_1 == "physical_resistance" and creep_ability_3 == "neutral_spell_immunity") or 
+        (creep_ability_2 == "physical_resistance" and creep_ability_3 == "neutral_spell_immunity") 
+    do
+        creep_ability_1 = GetRandomTableElement(theAbilitiesTable1)
+        creep_ability_2 = GetRandomTableElement(theAbilitiesTable1)
+        creep_ability_3 = GetRandomTableElement(theAbilitiesTable1)
+    end
+
+    local creep_ability_2_1 = GetRandomTableElement(theAbilitiesTable2)
+    local creep_ability_2_2 = GetRandomTableElement(theAbilitiesTable2)
+    local creep_ability_2_3 = GetRandomTableElement(theAbilitiesTable2)
+
+    while creep_ability_2_1 == creep_ability_2_2 or 
+        creep_ability_2_2 == creep_ability_2_3 or 
+        creep_ability_2_1 == creep_ability_2_3 or 
+        (creep_ability_2_1 == "physical_resistance" and creep_ability_2_2 == "neutral_spell_immunity") or 
+        (creep_ability_2_1 == "physical_resistance" and creep_ability_2_3 == "neutral_spell_immunity") or 
+        (creep_ability_2_2 == "physical_resistance" and creep_ability_2_3 == "neutral_spell_immunity") 
+    do
+        creep_ability_2_1 = GetRandomTableElement(theAbilitiesTable2)
+        creep_ability_2_2 = GetRandomTableElement(theAbilitiesTable2)
+        creep_ability_2_3 = GetRandomTableElement(theAbilitiesTable2)
+    end
+
     local point1 = Entities:FindByName( nil, "line_1_spawn"):GetAbsOrigin()
-    local waypoint1 = Entities:FindByName( nil, "path_corner_1_1")
-
+    --local waypoint1 = Entities:FindByName( nil, "path_corner_1_1")
+--
     local point2 = Entities:FindByName( nil, "line_2_spawn"):GetAbsOrigin() 
-    local waypoint2 = Entities:FindByName( nil, "path_corner_2_1") 
-
+    --local waypoint2 = Entities:FindByName( nil, "path_corner_2_1") 
+--
     local point3 = Entities:FindByName( nil, "line_3_spawn"):GetAbsOrigin() 
-    local waypoint3 = Entities:FindByName( nil, "path_corner_3_1")
-
+    --local waypoint3 = Entities:FindByName( nil, "path_corner_3_1")
+--
     local point4 = Entities:FindByName( nil, "line_4_spawn"):GetAbsOrigin() 
-    local waypoint4 = Entities:FindByName( nil, "path_corner_4_1")
+    --local waypoint4 = Entities:FindByName( nil, "path_corner_4_1")
 
 
     local unit_name = "npc_ny_creep_1"
@@ -88,12 +129,19 @@ function Spawn:SpawnLineUnits(index)
     Spawn.wave_kills = 0
     Spawn.need_kills = 0
 
-    for k, v in pairs(theUnits) do
+    for k, v in pairs(GameRules.theUnits) do
        if v == current_wave then
           currentmodel = k
        end
     end
 
+
+    --print("1 " .. creep_ability_1)
+    --print("2 " .. creep_ability_2)
+    --print("3 " .. creep_ability_3)
+    --print("4 " .. creep_ability_2_1)
+    --print("5 " .. creep_ability_2_2)
+    --print("6 " .. creep_ability_2_3)
 
     if current_wave == 10 or current_wave == 20 or current_wave == 30 or current_wave == 40 or current_wave == 50 then
         Spawn.need_kills = Spawn.need_kills + 1
@@ -105,7 +153,11 @@ function Spawn:SpawnLineUnits(index)
 
         unit:CreatureLevelUp(current_wave-1)
 
-        unit:SetInitialGoalEntity( waypoint3 )
+        unit:AddAbility(creep_ability_1):SetLevel(1)
+        
+        unit:AddAbility(creep_ability_2_1):SetLevel(1)
+
+        --unit:SetInitialGoalEntity( waypoint3 )
         unit.reward = true
         local ent_index = unit:entindex()
 --          table.insert(self.current_units, ent_index, unit)
@@ -119,30 +171,32 @@ function Spawn:SpawnLineUnits(index)
 
                 if point_num == 1 then
                     point = point1
-                    waypoint = waypoint1
+                    --waypoint = waypoint1
                 end
                 if point_num == 2 then
                     point = point2
-                    waypoint = waypoint2
+                    --waypoint = waypoint2
                 end
                 if point_num == 3 then
                     point = point3
-                    waypoint = waypoint3
+                    --waypoint = waypoint3
                 end
                 if point_num == 4 then
                     point = point4
-                    waypoint = waypoint4
+                    --waypoint = waypoint4
                 end
 
                 Spawn.need_kills = Spawn.need_kills + 1
 
                 local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
-                unit:SetInitialGoalEntity( waypoint )
+                unit.clone = false
+
+                --unit:SetInitialGoalEntity( waypoint )
+                --unit:SetInitialWaypoint("path_corner_1_12")
                 unit.reward = true
 
                 unit:SetModel(currentmodel)
                 unit:SetOriginalModel(currentmodel)
-                unit:SetModelScale(1)
 
                 unit:CreatureLevelUp(current_wave-1)
 
@@ -164,7 +218,41 @@ function Spawn:SpawnLineUnits(index)
 
                     unit:SetRenderColor(255, 165, 0)
 
+                    if self.wave_number > 30 then
+                        local ability1 = unit:AddAbility(creep_ability_2_1)
+                        ability1:SetLevel(ability1:GetMaxLevel())
+
+                        local ability2 = unit:AddAbility(creep_ability_2_2)
+                        ability2:SetLevel(ability2:GetMaxLevel())
+
+                        local ability3 = unit:AddAbility(creep_ability_2_3)
+                        ability3:SetLevel(ability3:GetMaxLevel())
+                    else
+                        unit:AddAbility(creep_ability_2_1):SetLevel(1)
+                        
+                        unit:AddAbility(creep_ability_2_2):SetLevel(1)
+                    end
+
                     ParticleManager:CreateParticle("particles/econ/items/ogre_magi/ogre_ti8_immortal_weapon/ogre_ti8_immortal_bloodlust_buff.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+
+                else
+
+                    unit:SetModelScale(1)
+
+                    if self.wave_number > 30 then
+                        local ability1 = unit:AddAbility(creep_ability_1)
+                        ability1:SetLevel(ability1:GetMaxLevel())
+                        
+                        local ability2 = unit:AddAbility(creep_ability_2)
+                        ability2:SetLevel(ability2:GetMaxLevel())
+
+                        local ability3 = unit:AddAbility(creep_ability_3)
+                        ability3:SetLevel(ability3:GetMaxLevel())
+                    else
+                        unit:AddAbility(creep_ability_1):SetLevel(1)
+                        
+                        unit:AddAbility(creep_ability_2):SetLevel(1)
+                    end
 
                 end
 
@@ -179,7 +267,6 @@ function Spawn:SpawnLineUnits(index)
                 local ent_index = unit:entindex()
                 --table.insert(self.current_units, ent_index, unit)
                 self.current_units[ent_index] = unit
-
 
             end
         end
@@ -255,16 +342,22 @@ function Spawn:OnEntityKilled( keys )
     end
 
     --item_tome_agi_3
-    if IsEventASCENTO(unit) then
-        Spawn.wave_kills = Spawn.wave_kills + 1
-        
-        local data={}
-        data["liveNum"]=Spawn.need_kills - Spawn.wave_kills
-        data["maxNum"]=Spawn.need_kills
-        CustomGameEventManager:Send_ServerToAllClients( "monster_number_changing",data)
+    if unit.clone == nil then
+        unit.clone = true
+    end
+    
+    if IsEventASCENTO(unit) and unit.clone ~= nil then
+        if unit.clone ~= true then
+            Spawn.wave_kills = Spawn.wave_kills + 1
+            
+            local data={}
+            data["liveNum"]=Spawn.need_kills - Spawn.wave_kills
+            data["maxNum"]=Spawn.need_kills
+            CustomGameEventManager:Send_ServerToAllClients( "monster_number_changing",data)
 
-        --CustomGameEventManager:Send_ServerToAllClients("on_player_kill_creeps", {playerKilledCreeps = tonumber(Spawn.wave_kills), need_kill_creeps = 100})
-        Spawn:RandomStatDrop(killer)
+            --CustomGameEventManager:Send_ServerToAllClients("on_player_kill_creeps", {playerKilledCreeps = tonumber(Spawn.wave_kills), need_kill_creeps = 100})
+            Spawn:RandomStatDrop(killer)
+        end
     end
 
 end

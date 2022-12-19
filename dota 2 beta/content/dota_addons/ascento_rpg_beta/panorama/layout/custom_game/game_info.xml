@@ -21,6 +21,9 @@
         	<DOTAAbilityImage id="TalentImage" abilityname="pet_helloween_buff"/>
    		</Panel>
    		!-->
+	<Panel>
+		<Label id="text5" html="true" text=""  style="height: 20px;"/>
+		</Panel>
 		<Panel>
 			<Label id="text4" html="true" text="#addon_game_author" />
 		</Panel>
@@ -29,6 +32,22 @@
 		</Panel>
 		<Panel>
 			<DOTAAvatarImage id="author" steamid="76561198290873082" style="height:80px;width:80px; margin-top:10px; margin-left:0px;"/>
+		</Panel>
+	<Panel>
+		<Label id="text5" html="true" text=""  style="height: 20px;"/>
+		</Panel>
+		<Panel>
+			<Label id="text5" html="true" text="#addon_game_thanks" />
+		</Panel>
+		<Panel>
+			<DOTAUserName id="author" steamid="76561198151521398" onmouseover="DOTAShowProfileCardTooltip(76561198151521398, false)" onmouseout="DOTAHideProfileCardTooltip()"/>
+		</Panel>
+		<Panel>
+			<DOTAAvatarImage id="author" steamid="76561198151521398" style="height:80px;width:80px; margin-top:10px; margin-left:0px;"/>
+		</Panel>
+
+	<Panel>
+		<Label id="text5" html="true" text=""  style="height: 150px;"/>
 		</Panel>
 	</Panel>
 </root>

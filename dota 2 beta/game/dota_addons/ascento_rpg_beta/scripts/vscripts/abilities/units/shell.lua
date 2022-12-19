@@ -36,7 +36,7 @@ function modifier_shell:OnCreated()
         return
     end
     self.abilityDamageType = self:GetAbility():GetAbilityDamageType()
-    self.abilityTargetType = self.ability:GetAbilityTargetType()
+    self.abilityTargetType = self:GetAbility():GetAbilityTargetType()
     self.abilityTargetFlags = self:GetAbility():GetAbilityTargetFlags()
 
     local damage = self:GetAbility():GetSpecialValueFor( "damage_per_second" )
@@ -86,7 +86,7 @@ function modifier_shell:OnIntervalThink()
         return
     end
     local enemies = FindUnitsInRadius(
-		self.team,
+		DOTA_TEAM_BADGUYS,
 		self.parent:GetOrigin(),
 		nil,
 		self.radius,

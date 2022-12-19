@@ -1022,7 +1022,7 @@ function GameMode:FirstLoad(event)
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
                     end
 
-                    Timers:CreateTimer("hero_gametime_" .. caster:GetPlayerID(), {
+                    Timers:CreateTimer("hero_gametime_" .. playerID, {
                         useGameTime = false,
                         endTime = 1,
                         callback = function()
@@ -1106,7 +1106,7 @@ function GameMode:FirstLoad(event)
                 end
 
 
-                Timers:CreateTimer("hero_online_" .. caster:GetPlayerID(), {
+                Timers:CreateTimer("hero_online_" .. playerID, {
                     useGameTime = false,
                     endTime = 1,
                     callback = function()

@@ -36,7 +36,7 @@ function modifier_doom_on_death:OnDeath(kv)
     end
     
     local killer = kv.attacker
-    killer:AddNewModifier(killer, self, "modifier_doom_on_death_debuff", {duration = self.duration})
+    killer:AddNewModifier(self.parent, nil, "modifier_doom_on_death_debuff", {duration = self.duration})
 end
 
 modifier_doom_on_death_debuff = class({
@@ -50,7 +50,7 @@ modifier_doom_on_death_debuff = class({
         return false
     end,
 	IsDebuff = function()
-		return false
+		return true
 	end,
 	CheckState = function()
 		return {

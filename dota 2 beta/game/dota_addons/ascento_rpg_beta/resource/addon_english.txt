@@ -13,9 +13,10 @@
 
 		"addon_game_description1"			"Having destroyed the citadel, you have 2 ways - to go to get infinity bonuses (the teleport is located in the location with the Citadel at the top center) or to reincarnate your hero. Bonuses from further actions are saved forever for all your heroes and will work on all difficulties. To perform reincarnation, you need to click on the button that will appear if all the requirements are successfully met and will be located above the portrait of your hero."
 
-		"addon_game_description2"			""
+		"addon_game_description2"			"<font color='red'>ATTENTION!</font> At the moment, the game is running a New Year's event. To take part in it, you need to select the New Year card when creating a lobby. You have only one goal - to survive. Gather a team of 5 players and survive 50 rounds. Every 10 rounds you will be attacked by a boss. After winning the game, a New Year's chest will be issued to your account, which you can open on the website <a href='https://ascento-rpg.ru'>Ascento-RPG.ru</a>"
 
 		"addon_game_author"	"Author:"
+		"addon_game_thanks"	"Thanks for help!"
 
 		 	"npc_dota_hero_dragon_knight"     "Tank"
   			"npc_dota_hero_legion_commander"  "Fighter"

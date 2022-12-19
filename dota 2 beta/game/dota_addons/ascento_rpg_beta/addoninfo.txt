@@ -4,13 +4,11 @@
     "maps"        "ascento_rpg newyear"
     "newyear"
     {
-        "MaxPlayers"        "4"
+        "MinPlayers"        "1"
+        "MaxPlayers"        "5"
+        "TeamCount"        "1"
+        "IsPlayable"        "1"
     }
-    "CheckAFKPlayers"        "1"
-    "PenaltiesEnabled"        "0"
-    "DefaultMap"        "ascento_rpg"
-    "EnablePickRules"        "0"
-    "HeroGuidesSupported"        "0"
     "ascento_rpg"
     {
         "MinPlayers"        "1"
@@ -21,4 +19,9 @@
     "IsPlayable"        "1"
     "EventGame"        "0"
     "ForceDefaultGuide"        "0"
+    "CheckAFKPlayers"        "1"
+    "PenaltiesEnabled"        "0"
+    "DefaultMap"        "ascento_rpg"
+    "EnablePickRules"        "0"
+    "HeroGuidesSupported"        "0"
 }

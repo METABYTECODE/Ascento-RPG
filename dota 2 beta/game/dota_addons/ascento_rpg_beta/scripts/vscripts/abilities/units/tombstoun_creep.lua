@@ -3,10 +3,11 @@ tombstoun_creep = class({})
 function tombstoun_creep:OnSpellStart()
 	local caster = self:GetCaster()
     local point = self:GetCursorPosition()
-    local unit = CreateUnitByName("npc_scythe_of_vyse", point, true, caster, caster, caster:GetTeamNumber())
+    local unit = CreateUnitByName("npc_dota_unit_tombstone1", point, true, caster, caster, caster:GetTeamNumber())
     unit:AddNewModifier(unit, self, "modifier_tombstoun_creep", { duration = -1 })
     unit:AddNewModifier(unit, self, "modifier_phased", { duration = 0.05 })
     unit:AddNewModifier(unit, self, "modifier_kill", { duration = self:GetSpecialValueFor("duration") })
+    unit.clone = true
 end
 
 modifier_tombstoun_creep = class({
@@ -54,6 +55,9 @@ function modifier_tombstoun_creep:OnCreated()
     if(not IsServer()) then
         return
     end
+
+    self.ownerHero = self.caster:GetOwner()
+
     self.ability = self:GetAbility()
     self.healthPerAttack = self.ability:GetSpecialValueFor("health_per_attack")
     local spawnInterval = self.ability:GetSpecialValueFor("spawn_interval")
@@ -66,8 +70,18 @@ function modifier_tombstoun_creep:OnCreated()
 end
 
 function modifier_tombstoun_creep:OnIntervalThink()
-    local unit = CreateUnitByName("npc_scythe_of_vyse", self.parent:GetAbsOrigin() + RandomVector(RandomFloat(15, 50)), true, self.caster, self.caster, self.caster:GetTeamNumber())
+    local unit = CreateUnitByName("npc_dota_unit_undying_zombie_torso_tomstoun", self.parent:GetAbsOrigin() + RandomVector(RandomFloat(15, 50)), true, self.caster, self.caster, self.caster:GetTeamNumber())
     unit:AddNewModifier(unit, self, "modifier_phased", { duration = 0.05 })
+    unit:SetBaseDamageMin(self.ownerHero:GetBaseDamageMin()/3)
+    unit:SetBaseDamageMax(self.ownerHero:GetBaseDamageMax()/3)
+    unit:SetBaseMaxHealth(self.ownerHero:GetBaseMaxHealth()/3)
+    unit:SetHealth(unit:GetBaseMaxHealth())
+    unit:SetPhysicalArmorBaseValue(self.ownerHero:GetPhysicalArmorBaseValue()/3)
+    
+    unit:SetDeathXP(self.ownerHero:GetDeathXP()/3)
+    unit:SetMaximumGoldBounty(self.ownerHero:GetMaximumGoldBounty()/3)
+    unit:SetMinimumGoldBounty(self.ownerHero:GetMinimumGoldBounty()/3)
+    unit.clone = true
 end
 
 function modifier_tombstoun_creep:OnAttackLanded(kv)

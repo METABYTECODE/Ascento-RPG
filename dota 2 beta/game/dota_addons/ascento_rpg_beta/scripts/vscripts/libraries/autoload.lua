@@ -47,5 +47,7 @@ require('libraries/autoload/pseudorng')
 --require('libraries/autoload/achievments') 
 if GetMapName() == "ascento_rpg" then
 	require('libraries/autoload/neutral_slot')
+else
+	--require('libraries/autoload/path')
 end
 

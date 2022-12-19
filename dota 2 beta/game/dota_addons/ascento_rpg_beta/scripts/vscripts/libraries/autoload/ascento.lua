@@ -855,6 +855,8 @@ function Ascento:DropDoubleItem(hero, item)
 end
 
 
+
+
 function Ascento:UpgradeJobTo2(caster)
   local heroProfsList = LoadKeyValues('scripts/vscripts/data/heroes.kv')
 

@@ -102,7 +102,7 @@ end
 
 function modifier_damage_reduction_aura_buff:OnIntervalThink()
     local newDamageReduction = self.totaDamageIncomingPct - self.damageReductionPerTick
-    if self.totaDamageIncomingPct ~= newDamageReduction and self.totaDamageIncomingPct > -90 then
+    if self.totaDamageIncomingPct ~= newDamageReduction and self.totaDamageIncomingPct > -60 then
         self.totaDamageIncomingPct = newDamageReduction
     end
 end
