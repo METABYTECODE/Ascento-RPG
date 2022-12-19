@@ -40,7 +40,7 @@ function modifier_template:GetAuraSearchTeam()
 end
 
 function modifier_template:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_XX + DOTA_UNIT_TARGET_YY + ...
+	return DOTA_UNIT_TARGET_XX + DOTA_UNIT_TARGET_YY
 end
 
 function modifier_template:GetAuraEntityReject( hEntity )

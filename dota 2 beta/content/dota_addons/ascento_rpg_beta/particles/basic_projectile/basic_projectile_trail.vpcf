@@ -2,7 +2,7 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_nMaxParticles = 32
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
@@ -31,7 +31,7 @@
 			m_flFadeOutTime = 0.200000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderSprites"
@@ -41,7 +41,7 @@
 			m_hTexture = resource:"materials/particle/basic_glow.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_RandomLifeTime"
@@ -60,13 +60,13 @@
 		},
 		{
 			_class = "C_INIT_InitialVelocityNoise"
-			m_vecOutputMin =
+			m_vecOutputMin = 
 			[
 				-34.000000,
 				-34.000000,
 				-34.000000,
 			]
-			m_vecOutputMax =
+			m_vecOutputMax = 
 			[
 				34.000000,
 				34.000000,
@@ -77,14 +77,14 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				193,
 				115,
 				10,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				255,
 				196,
@@ -93,7 +93,7 @@
 			]
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_ContinuousEmitter"

@@ -201,7 +201,7 @@
         "AttackRate"        "3.0"
         "AttackAnimationPoint"      "0.330000"
         "AttackAcquisitionRange"        "600"
-        "AttackRange"       "75"
+        "AttackRange"       "125"
         "AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
         "AttributeBaseStrength"     "35"
         "AttributeStrengthGain"     "2.0"

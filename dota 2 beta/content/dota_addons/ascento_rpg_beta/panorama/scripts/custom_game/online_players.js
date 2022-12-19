@@ -54,3 +54,12 @@ function ShowAllOnlinePlayers(event){
   }
   
 }
+
+
+GameEvents.Subscribe('hide_hero_stats_panel', function(data) {
+
+  var updateVisible = $("#OnlineTable");
+      updateVisible.visible = false
+    
+  })
+

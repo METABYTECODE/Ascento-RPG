@@ -168,7 +168,7 @@ function GameMode:OnHeroInGame(hero)
         end)
 
         
-        EmitAnnouncerSound("soundboard.ti10_truesight.snail_walks_into_a_bar")
+        EmitAnnouncerSound("soundboard.new_year_drums")
 
         local item_to_remove = hero:FindItemInInventory("item_tpscroll")
         local item_to_remove2 = hero:FindItemInInventory("item_tpscroll_fake")

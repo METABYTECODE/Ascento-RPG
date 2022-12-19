@@ -1,4 +1,5 @@
 LinkLuaModifier("modifier_movespeed_cap", 		"modifiers/movespeed_cap", 					LUA_MODIFIER_MOTION_NONE )
+LinkLuaModifier("modifier_ny_over", 		"modifiers/movespeed_ny_over", 					LUA_MODIFIER_MOTION_NONE )
 LinkLuaModifier("modifier_damage_increase_30", 	"modifiers/buffs/damage_increase_30.lua", 	LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_damage_increase_50", 	"modifiers/buffs/damage_increase_50.lua", 	LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_damage_increase_60", 	"modifiers/buffs/damage_increase_60.lua", 	LUA_MODIFIER_MOTION_NONE)

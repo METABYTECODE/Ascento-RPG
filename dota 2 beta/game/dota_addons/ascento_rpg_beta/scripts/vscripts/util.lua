@@ -371,15 +371,11 @@ function IsEventASCENTO(unit)
 
   local unitNames = {
     "npc_ny_creep_1",
-    "npc_ny_creep_2",
-    "npc_ny_creep_3",
-    "npc_ny_creep_4",
-    "npc_ny_creep_5",
-    "npc_ny_boss_1",
-    "npc_ny_boss_2",
-    "npc_ny_boss_3",
-    "npc_ny_boss_4",
-    "npc_ny_boss_5"
+    "npc_ny_boss_10",
+    "npc_ny_boss_20",
+    "npc_ny_boss_30",
+    "npc_ny_boss_40",
+    "npc_ny_boss_50"
   }
 
   for _,theUnit in ipairs(unitNames) do

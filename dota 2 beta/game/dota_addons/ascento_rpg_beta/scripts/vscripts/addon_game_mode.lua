@@ -2,6 +2,7 @@
 
 function Precache( context )
     PrecacheEveryThingFromKV(context)
+
     PrecacheUnitByNameSync("npc_dota_hero_dragon_knight", context)
     PrecacheUnitByNameSync("npc_dota_hero_legion_commander", context)
     PrecacheUnitByNameSync("npc_dota_hero_phantom_assassin", context)
@@ -13,6 +14,13 @@ function Precache( context )
     PrecacheUnitByNameSync("npc_dota_hero_nevermore", context)
     PrecacheUnitByNameSync("npc_dota_hero_juggernaut", context)
 
+    PrecacheUnitByNameSync("npc_ny_creep_1", context)
+    PrecacheUnitByNameSync("npc_ny_boss_10", context)
+    PrecacheUnitByNameSync("npc_ny_boss_20", context)
+    PrecacheUnitByNameSync("npc_ny_boss_30", context)
+    PrecacheUnitByNameSync("npc_ny_boss_40", context)
+    PrecacheUnitByNameSync("npc_ny_boss_50", context)
+
 
     --PrecacheResource( "particle",  "", context)
     PrecacheResource( "particle",  "particles/units/heroes/hero_terrorblade/terrorblade_weapon_blur.vpcf", context)
@@ -20,6 +28,7 @@ function Precache( context )
     PrecacheResource( "particle",  "particles/units/heroes/hero_terrorblade/terrorblade_weapon_blur_both.vpcf", context)
     PrecacheResource( "particle",  "particles/units/heroes/hero_undying/undying_tnt_wlk_golem.vpcf", context)
     PrecacheResource( "particle",  "particles/units/heroes/hero_shadow_demon/sd_w.vpcf", context)
+    PrecacheResource( "particle",  "particles/econ/items/ogre_magi/ogre_ti8_immortal_weapon/ogre_ti8_immortal_bloodlust_buff.vpcf", context)
 
     --PrecacheResource( "model",  "", context)
     PrecacheResource( "model",  "models/heroes/doom/doom.vmdl", context)
@@ -124,7 +133,6 @@ function Precache( context )
     PrecacheResource( "model",  "models/heroes/antimage_female/antimage_female.vmdl", context)
     PrecacheResource( "model",  "models/heroes/beastmaster/beastmaster.vmdl", context)
     PrecacheResource( "model",  "models/heroes/dark_seer/darkseer_sfm.vmdl", context)
-    PrecacheResource( "model",  "models/heroes/doom/doom.vmdl", context)
     PrecacheResource( "model",  "models/heroes/dragon_knight_persona/debut/dk_persona_debut_dragon.vmdl", context)
     PrecacheResource( "model",  "models/heroes/earthshaker/earthshaker.vmdl", context)
     PrecacheResource( "model",  "models/heroes/elder_titan/elder_titan.vmdl", context)
@@ -211,6 +219,32 @@ function Precache( context )
     PrecacheResource( "model",  "models/items/courier/mango_the_courier/mango_the_courier.vmdl", context)
     PrecacheResource( "model",  "models/items/courier/mlg_courier_wraith/mlg_courier_wraith.vmdl", context)
     PrecacheResource( "model",  "models/items/courier/supernova_rave_courier/supernova_rave_courier.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_radiant_melee_diretide/creep_radiant_melee_diretide.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/n_creep_ogre_med/n_creep_ogre_med.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_beast/n_creep_beast.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_bad_ranged_diretide/creep_bad_ranged_diretide.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_ogre_lrg/n_creep_ogre_lrg.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_centaur_med/n_creep_centaur_med.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_satyr_spawn_a/n_creep_satyr_spawn_a.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_satyr_c/n_creep_satyr_c.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_satyr_a/n_creep_satyr_a.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_worg_small/n_creep_worg_small.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_worg_large/n_creep_worg_large.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_vulture_b/n_creep_vulture_b.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/neutral_creeps/n_creep_kobold/kobold_a/n_creep_kobold_a.vmdl", context)
+    PrecacheResource( "model",  "models/items/lone_druid/viciouskraitpanda/viciouskrait_panda.vmdl", context)
+    PrecacheResource( "model",  "models/items/beastmaster/boar/legacy_of_the_nords_battle_boar/legacy_of_the_nords_battle_boar.vmdl", context)
+    PrecacheResource( "model",  "models/items/lone_druid/true_form/wolf_hunter_true_form/wolf_hunter_true_form.vmdl", context)
+    PrecacheResource( "model",  "models/items/wraith_king/wk_ti8_creep/wk_ti8_creep_crimson.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_2021_dire/creep_2021_dire_flagbearer_melee.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_2021_dire/creep_2021_dire_melee_mega.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_animgraph.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_flagbearer_crystal.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/creep_radiant_melee/radiant_melee_mega_crystal_flagbearer.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/nemestice_crystal_creeps/creep_bad_melee/creep_crystal_bad_melee.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/ti9_chameleon_radiant/ti9_chameleon_radiant_melee_mega.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/lane_creeps/ti9_crocodilian_dire/ti9_crocodilian_dire_melee_mega.vmdl", context)
+    PrecacheResource( "model",  "models/creeps/mega_greevil/mega_greevil.vmdl", context)
 end
 
 function PrecacheEveryThingFromKV( context )
@@ -290,8 +324,12 @@ function Activate()
 
     _G.lootDrop               = {}
 
-    Timers:CreateTimer(15.0, function()
-        ClearItems(true)
-        return 15.0
-    end)
+    if GetMapName() == "ascento_rpg" then
+
+        Timers:CreateTimer(15.0, function()
+            ClearItems(true)
+            return 15.0
+        end)
+
+    end
 end

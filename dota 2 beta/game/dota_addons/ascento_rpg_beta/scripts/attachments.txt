@@ -1,5 +1,23 @@
 "Attachments"
 {
+
+	"models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"
+	{
+		"attach_hitloc"
+		{
+			"models/creeps/roshan/roshan_hat_fx.vmdl"
+			{
+				"scale"		"1"
+				"pitch"		"20"
+				"roll"		"105"
+				"ZPos"		"-159"
+				"YPos"		"-150"
+				"yaw"		"-35"
+				"XPos"		"19"
+			}
+		}
+	}
+
 	"models/heroes/juggernaut/juggernaut.vmdl"
 	{
 		"attach_hitloc"

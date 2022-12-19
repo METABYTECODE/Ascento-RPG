@@ -8,9 +8,9 @@ generic_unit_target.data = {
 }
 
 function generic_unit_target:Init( spell )
-	self.data.spell = spell,
-	self.data.caster = spell:GetCaster(),
-	self.data.target = spell:GetCursorTarget(),
+	self.data.spell = spell
+	self.data.caster = spell:GetCaster()
+	self.data.target = spell:GetCursorTarget()
 end
 
 

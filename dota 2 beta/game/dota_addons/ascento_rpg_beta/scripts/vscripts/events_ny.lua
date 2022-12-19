@@ -248,6 +248,11 @@ function GameMode:OnHeroPick(event)
 
     CustomGameEventManager:Send_ServerToPlayer(player, 'on_connect_full', {})
 
+    CustomGameEventManager:Send_ServerToAllClients('hide_hero_stats_panel', {})
+
+
+    CustomGameEventManager:Send_ServerToAllClients( "GameBegin", nil )
+
 end
 
 
@@ -329,104 +334,8 @@ function GameMode:OnNPCSpawned(keys)
         return
     end
 
-    if IsEventASCENTO(npc) and KILL_VOTE_RESULT:upper() ~= nil then
-
-        local mode = KILL_VOTE_RESULT:upper()
-
-
-        local givedXP = GameRules.UnitsXPTable[npc:GetUnitName()]
-
-        if givedXP ~= nil then
-            if givedXP <= 0 then
-                givedXP = 10
-            end
-            
-        else
-            givedXP = 10
-        end
-
-        local hpScale = 1
-        local dmgScale = 1
-
-
-        if mode == "EASY" then
-            if not npc:HasModifier("modifier_damage_increase_30") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_30", {})
-            end
-            givedXP = givedXP * 0.75
-    
-        elseif mode == "NORMAL" then
-            givedXP = givedXP * 1
-            hpScale = 2.25
-            dmgScale = 2
-    
-        elseif mode == "HARD" then
-            if not npc:HasModifier("modifier_damage_reduction_30") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_30", {})
-            end
-            givedXP = givedXP * 1.25
-            hpScale = 5
-            dmgScale = 4
-
-        elseif mode == "UNFAIR" then
-            if not npc:HasModifier("modifier_damage_reduction_50") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_50", {})
-            end
-            givedXP = givedXP * 1.5
-            hpScale = 11
-            dmgScale = 8
-
-        elseif mode == "IMPOSSIBLE" then
-            if not npc:HasModifier("modifier_damage_reduction_60") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_60", {})
-            end
-            givedXP = givedXP * 1.75
-            hpScale = 23
-            dmgScale = 16
-
-        elseif mode == "HELL" then
-            if not npc:HasModifier("modifier_damage_reduction_70") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_70", {})
-            end
-            givedXP = givedXP * 2.0
-            hpScale = 48
-            dmgScale = 32
-
-        elseif mode == "HARDCORE" then
-            if not npc:HasModifier("modifier_damage_reduction_80") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_80", {})
-            end
-            givedXP = givedXP * 2.25
-            hpScale = 100
-            dmgScale = 64
-
-        end
-
-        
-        givedXP = math.floor(givedXP)
-
-        npc:SetDeathXP(givedXP)
-
-
-        local giveHP = npc:GetMaxHealth() * hpScale
-        if giveHP > INT_MAX_LIMIT then
-            giveHP = INT_MAX_LIMIT
-        end
-
-        npc:SetBaseMaxHealth(giveHP)
-        npc:SetMaxHealth(giveHP)
-        npc:SetHealth(giveHP)
-
-        npc:Heal(giveHP, npc)
-
-        local giveDMG = npc:GetBaseDamageMax() * dmgScale
-        if giveDMG > INT_MAX_LIMIT then
-            giveDMG = INT_MAX_LIMIT
-        end
-
-        npc:SetBaseDamageMin(giveDMG)
-        npc:SetBaseDamageMax(giveDMG)
-            
+    if IsEventASCENTO(npc) then
+ 
     end
 
     if npc:IsRealHero() and npc.bFirstSpawned == nil then
@@ -451,36 +360,7 @@ function GameMode:OnNPCSpawned(keys)
         if npc:HasModifier("modifier_fountain_invulnerability") then
             modifier = npc:RemoveModifierByName("modifier_fountain_invulnerability")
         end
-        
 
-        local mode = KILL_VOTE_RESULT:upper()
-
-        if mode == "EASY" then
-            if not npc:HasModifier("modifier_damage_reduction_30") then
-                modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_30", {})
-            end
-            elseif mode == "NORMAL" then
-            elseif mode == "HARD" then
-            if not npc:HasModifier("modifier_damage_increase_30") then
-                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_30", {})
-            end
-            elseif mode == "UNFAIR" then
-            if not npc:HasModifier("modifier_damage_increase_50") then
-                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_50", {})
-            end
-            elseif mode == "IMPOSSIBLE" then
-            if not npc:HasModifier("modifier_damage_increase_60") then
-                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_60", {})
-            end
-            elseif mode == "HELL" then
-            if not npc:HasModifier("modifier_damage_increase_70") then
-                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_70", {})
-            end
-            elseif mode == "HARDCORE" then
-            if not npc:HasModifier("modifier_damage_increase_80") then
-                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_80", {})
-            end
-        end
     end
 end
 

@@ -4,7 +4,7 @@
 	m_flConstantRadius = 160.000000
 	m_flConstantLifespan = 0.120000
 	m_nMaxParticles = 4
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
@@ -21,25 +21,25 @@
 			m_flFadeOutTime = 0.900000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderSprites"
 			m_hTexture = resource:"materials/particle/basic_glow.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				255,
 				236,
 				147,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				255,
 				178,
@@ -51,7 +51,7 @@
 			_class = "C_INIT_CreateWithinSphere"
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_InstantaneousEmitter"

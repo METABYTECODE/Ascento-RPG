@@ -1,0 +1,214 @@
+.InfoPannel{
+     width: fit-children;
+     height: fit-children;
+     horizontal-align: center;
+
+     flow-children: down;
+}
+
+ .MonsterInfoPannel{
+     flow-children: right;
+     visibility: collapse;
+     margin-top: 7px;
+     margin-left: 100px;
+ }
+
+ .MonsterRoundTitle{
+     width: 50px;
+     height: 50px;
+     background-image: url("file://panorama/images/custom_game/home_page/round_num_txt_png.png");
+     background-size: 100%;
+
+     margin-top: -5px;
+ }
+
+ .MonsterInfoPannel .MonsterRoundTitle #MonsterRound{
+     width: 100%;
+     height: 100%;
+     margin-top: 10px;
+     font-size: 25;
+     text-align: center;
+     color: white;
+ }
+
+ #MonsterInfo{
+     width: fit-children;
+     height: fit-children;
+     flow-children: down;
+ }
+
+ #DiffandTimeTips{
+     width: 100%;
+     height: 30px;
+     flow-children: right;
+ }
+
+ #Difficult,
+#Time{
+
+     width: 300px;
+     height: 100%;
+     font-size: 20;
+     flow-children: right;
+     text-align: center;
+     vertical-align: bottom;
+ }
+
+ #DifficultLevelTips{
+     margin-left: 50px;
+     color: white;
+     font-size: 25px;
+ }
+
+ #Difficultlevel{
+     color: white;
+     font-size: 25px;
+     margin-left: 10px;
+ }
+
+ #TimeTips,
+#seconds{
+
+     color: white;
+     font-size: 25px;
+ }
+
+ .MonsterProgress{
+     width: 614px;
+     height: 50px;
+ }
+
+ #MonsterProgressImage{
+     width: 604px;
+     height: 40px;
+ }
+
+ #MonsterProgressBarDangerous{
+     opacity: 0;
+     width: 100%;
+     height: 40px;
+ }
+
+ #MonsterProgressBarContainer{
+     width: 604px;
+     height: 16px;
+     margin-top: 11px;
+     margin-left: 17px;
+     border-radius: 10px;
+ }
+
+ #MonsterProgressBar{
+     height: 30px;
+     background-repeat: no-repeat;
+     background-image: url("file://panorama/images/custom_game/home_page/progress_red_png.png");
+ }
+
+ #ProgressEndImg_s_fire,
+#ProgressEndImg_b_fire{
+
+     opacity: 0;
+ }
+
+ #ProgressEnd{
+     width: 30px;
+     height: 30px;
+ }
+
+ .MonsterBossTips{
+     width: 604px;
+     height: 54px;
+     flow-children: right;
+ }
+
+ #BossImage{
+     width: 51px;
+     height: 51px;
+ }
+
+ #BossNameContainer{
+     width: 150px;
+     height: 40px;
+ }
+
+ #BossName{
+     height: 100%;
+     color: white;
+     font-size: 25;
+     margin-left: 5px;
+     font-weight: bold;
+     text-shadow: 3px 3px 1;
+ }
+
+ #MonsterCount{
+     width: fit-children;
+     height: 40px;
+     horizontal-align: left;
+     background-repeat: no-repeat;
+     margin-top: 5px;
+ }
+
+ #MaxNum{
+     width: fit-children;
+     height: 100%;
+     color: white;
+     font-size: 25;
+     text-align: center;
+     font-weight: bold;
+     text-shadow: 3px 3px 3;
+ }
+
+ #MonsterCountTipsContainer{
+     horizontal-align: center;
+     height: 100%;
+ }
+
+ #MonsterCountTips{
+     color: red;
+     font-size: 20;
+     text-align: center;
+     font-weight: bold;
+     text-shadow: 1px 1px 1;
+     background-color: gradient( linear, 0% 0%, 0% 100%, from( #780000aa), to( #590000aa));
+     border-radius: 5px;
+ }
+
+ .Onfire{
+
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     animation-fill-mode: forwards;
+     animation-delay: 0s;
+ }
+
+ @keyframes 'onfire'{
+     0%{
+         box-shadow: 10px 5px 2px red;
+     }
+     25%{
+         box-shadow: 10px 5px 10px red;
+     }
+     50%{
+         box-shadow: 10px 5px 20px red;
+     }
+     75%{
+         box-shadow: 10px 5px 30px red;
+     }
+     100%{
+         box-shadow: 10px 5px 40px red;
+     }
+ }
+
+ @keyframes 'onfire1'{
+     0%{
+         transform: translateY(0px);
+     }
+     33%{
+         transform: translateY(100px);
+     }
+     100%{
+         transform: translateY(200px);
+     }
+     100%{
+         transform: translateY(-200px);
+     }
+}

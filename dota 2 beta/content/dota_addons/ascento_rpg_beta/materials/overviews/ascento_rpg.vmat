@@ -2,5 +2,5 @@
 {
 	"Shader"	"ui.vfx"
 	"F_TRANSLUCENT"	"0"
-	"Texture"	"materials/overviews/boss_fight.tga"
+	"Texture"	"materials/overviews/ascento_rpg.tga"
 }

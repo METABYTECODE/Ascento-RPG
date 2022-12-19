@@ -5,11 +5,11 @@
 	m_flConstantLifespan = 0.100000
 	m_nConstantSequenceNumber = 7
 	m_nMaxParticles = 64
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
-			m_Gravity =
+			m_Gravity = 
 			[
 				0.000000,
 				0.000000,
@@ -30,7 +30,7 @@
 			m_flFadeOutTime = 0.500000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderTrails"
@@ -41,13 +41,13 @@
 			m_hTexture = resource:"materials/particle/sparks/sparks.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_CreateWithinSphere"
 			m_fSpeedMin = 600.000000
 			m_fSpeedMax = 900.000000
-			m_LocalCoordinateSystemSpeedMax =
+			m_LocalCoordinateSystemSpeedMax = 
 			[
 				0.000000,
 				0.000000,
@@ -56,14 +56,14 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				242,
 				140,
 				0,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				195,
 				33,
@@ -82,7 +82,7 @@
 			m_flMaxLength = 0.060000
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_InstantaneousEmitter"

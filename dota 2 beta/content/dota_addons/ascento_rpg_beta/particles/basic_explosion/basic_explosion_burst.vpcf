@@ -4,7 +4,7 @@
 	m_flConstantRadius = 10.000000
 	m_flConstantLifespan = 0.200000
 	m_nMaxParticles = 4
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
@@ -22,7 +22,7 @@
 			m_flFadeOutTime = 0.800000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderSprites"
@@ -36,7 +36,7 @@
 			m_flRadiusScale = 2.000000
 			m_flAlphaScale = 4.000000
 			m_flStartFalloff = 0.500000
-			m_ColorScale =
+			m_ColorScale = 
 			[
 				255,
 				215,
@@ -45,17 +45,17 @@
 			m_hTexture = resource:"materials/particle/particle_ring_wave_8.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_CreateWithinBox"
-			m_vecMin =
+			m_vecMin = 
 			[
 				-8.000000,
 				-8.000000,
 				0.000000,
 			]
-			m_vecMax =
+			m_vecMax = 
 			[
 				8.000000,
 				8.000000,
@@ -64,14 +64,14 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				248,
 				205,
 				23,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				249,
 				117,
@@ -101,7 +101,7 @@
 			m_fLifetimeMax = 0.240000
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_InstantaneousEmitter"

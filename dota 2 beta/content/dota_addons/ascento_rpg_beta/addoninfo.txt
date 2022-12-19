@@ -1,10 +1,24 @@
-	"AddonInfo"
+"AddonInfo"
 {
-  "maps"  "ascento_rpg"
-  "IsPlayable" "1"
-  
-  "ascento_rpg"
-  {
-      "MaxPlayers" "6"
-  }
+    "version"        "1.86.0"
+    "maps"        "ascento_rpg newyear"
+    "newyear"
+    {
+        "MaxPlayers"        "4"
+    }
+    "CheckAFKPlayers"        "1"
+    "PenaltiesEnabled"        "0"
+    "DefaultMap"        "ascento_rpg"
+    "EnablePickRules"        "0"
+    "HeroGuidesSupported"        "0"
+    "ascento_rpg"
+    {
+        "MinPlayers"        "1"
+        "MaxPlayers"        "8"
+        "TeamCount"        "1"
+        "IsPlayable"        "1"
+    }
+    "IsPlayable"        "1"
+    "EventGame"        "0"
+    "ForceDefaultGuide"        "0"
 }

@@ -25,9 +25,7 @@ require('libraries/player_load_data_ny')
 
 
 function GameMode:OnFirstPlayerLoaded()
-    CustomGameEventManager:RegisterListener("killvote", function(userId, event)
-        table.insert(KILL_VOTE_RESULT, tostring(event.option):upper())
-      end)
+
 end
 
 function GameMode:OnAllPlayersLoaded()
@@ -53,50 +51,27 @@ function GameMode:OnAllPlayersLoaded()
       end)
 
       
-GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
+--GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
 
-    
-    Timers:CreateTimer(function()
-        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>New Year's event will be launched soon, follow the events in our Discord channel</font>", 0, 0)
-        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>Available commands:</font>", 0, 0)
-        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>-spawn: Teleport to Spawn</font>", 0, 0)
-        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>00: Suicide</font>", 0, 0)
-            return 600
-          end
-        )
-
-    Timers:CreateTimer(function()
-        local count_items_on_ground = Entities:FindAllByClassname("dota_item_drop")
-        GameRules:SendCustomMessage("<font color='blue'>Items on ground: </font><font color='#ff0000'>" .. #count_items_on_ground .. "</font>", 0, 0)
-            return 60
-          end
-        )
-
-    
-
-
-    if tablelength(KILL_VOTE_RESULT) <= 0 then
-        KILL_VOTE_RESULT = {tostring(KILL_VOTE_DEFAULT)} 
+    if GetMapName() == "ascento_rpg" then
+        Timers:CreateTimer(function()
+            GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>New Year's event will be launched soon, follow the events in our Discord channel</font>", 0, 0)
+            GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>Available commands:</font>", 0, 0)
+            GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>-spawn: Teleport to Spawn</font>", 0, 0)
+            GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>00: Suicide</font>", 0, 0)
+                return 600
+              end
+            )
+        
+        Timers:CreateTimer(function()
+            local count_items_on_ground = Entities:FindAllByClassname("dota_item_drop")
+            GameRules:SendCustomMessage("<font color='blue'>Items on ground: </font><font color='#ff0000'>" .. #count_items_on_ground .. "</font>", 0, 0)
+                return 60
+              end
+            )
     end
 
-    local killCountToEnd = maxFreq(KILL_VOTE_RESULT, tablelength(KILL_VOTE_RESULT), KILL_VOTE_DEFAULT)
-    KILL_VOTE_RESULT = killCountToEnd
-
-  --
-
-  local mode = KILL_VOTE_RESULT:upper()
-
-
-
-  Timers:CreateTimer(1.0, function()
-    if mode == "EASY" or mode == "NORMAL" then
-      GameRules:SendCustomMessage("<font color='yellow'>=== СЛОЖНОСТЬ [<b color='lightgreen'>"..mode.."</b>] ===</font>", 0, 0)
-    else
-      GameRules:SendCustomMessage("<font color='yellow'>=== СЛОЖНОСТЬ [<b color='red'>"..mode.."</b>] ===</font>", 0, 0)
-    end
-
-  end)
-
+    
     
 
 end 
@@ -115,7 +90,7 @@ function GameMode:OnHeroInGame(hero)
         local abil = hero:GetAbilityByIndex(1)
 
         
-        EmitAnnouncerSound("soundboard.ti10_truesight.snail_walks_into_a_bar")
+        EmitAnnouncerSound("soundboard.ti3.kor_roshan")
 
         local item_to_remove = hero:FindItemInInventory("item_tpscroll")
         local item_to_remove2 = hero:FindItemInInventory("item_tpscroll_fake")

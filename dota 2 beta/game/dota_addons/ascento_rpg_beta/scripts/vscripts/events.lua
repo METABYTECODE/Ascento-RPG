@@ -353,6 +353,17 @@ function GameMode:DamageFilter(filterDamage)
             --typeDamage = DAMAGE_TYPE_MAGICAL
         end
 
+
+        if attacker:HasModifier("modifier_donate_bruiser_tb") then
+            --Nalis#0489
+            if IsServer() then
+                if RollPercentage(35) then
+                    damageIncoming = damageIncoming * 4.5
+                    EmitSoundOn( "Hero_Juggernaut.BladeDance", attacker )
+                end
+            end
+        end
+
         
 
 
@@ -858,6 +869,8 @@ function GameMode:OnHeroPick(event)
     local steamId   = PlayerResource:GetSteamAccountID(playerId)
 
     CustomGameEventManager:Send_ServerToPlayer(player, 'on_connect_full', {})
+
+    CustomGameEventManager:Send_ServerToPlayer(player, 'event_hide_shop', {})
 
     --if hero:FindAbilityByName("special_bonus_attributes") then hero:RemoveAbility("special_bonus_attributes") end
 

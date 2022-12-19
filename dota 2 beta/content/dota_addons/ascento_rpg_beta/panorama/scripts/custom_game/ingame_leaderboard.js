@@ -42,3 +42,11 @@ var InGameLeaderboardUI = /** @class */ (function () {
     return InGameLeaderboardUI;
 }());
 var ui = new InGameLeaderboardUI($.GetContextPanel());
+
+
+GameEvents.Subscribe('hide_hero_stats_panel', function(data) {
+
+  var updateVisible = $("#Activator");
+      updateVisible.visible = false
+    
+  })

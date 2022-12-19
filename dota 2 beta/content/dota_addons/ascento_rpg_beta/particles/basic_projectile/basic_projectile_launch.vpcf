@@ -3,7 +3,7 @@
 	_class = "CParticleSystemDefinition"
 	m_nInitialParticles = 16
 	m_nMaxParticles = 16
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
@@ -15,19 +15,19 @@
 		},
 		{
 			_class = "C_OP_OscillateVector"
-			m_RateMin =
+			m_RateMin = 
 			[
 				-3.000000,
 				-3.000000,
 				-3.000000,
 			]
-			m_RateMax =
+			m_RateMax = 
 			[
 				3.000000,
 				3.000000,
 				3.000000,
 			]
-			m_FrequencyMax =
+			m_FrequencyMax = 
 			[
 				3.000000,
 				3.000000,
@@ -42,7 +42,7 @@
 			m_flFadeOutTime = 0.300000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderSprites"
@@ -52,7 +52,7 @@
 			m_hTexture = resource:"materials/particle/basic_glow.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_CreateWithinSphere"
@@ -72,14 +72,14 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				244,
 				232,
 				90,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				255,
 				196,
@@ -88,14 +88,14 @@
 			]
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_InstantaneousEmitter"
 			m_nParticlesToEmit = 8
 		},
 	]
-	m_ForceGenerators =
+	m_ForceGenerators = 
 	[
 		{
 			_class = "C_OP_AttractToControlPoint"

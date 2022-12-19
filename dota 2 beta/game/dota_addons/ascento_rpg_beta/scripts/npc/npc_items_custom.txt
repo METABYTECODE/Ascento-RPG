@@ -1,4 +1,5 @@
 //#base "npc_items_fake.txt"
+#base "items/base_dota_items.txt"
 
 #base "items/agility/agility.txt"
 #base "items/agility/recipes_agility.txt"
@@ -35,6 +36,8 @@
 #base "items/potion.txt"
 #base "items/holy_shit.txt"
 
+#base "items/thunder_items.txt"
+
 // Dota Heroes File
 "DOTAAbilities"
 {
@@ -66,6 +69,18 @@
 "item_giants_ring"              "REMOVED"
 "item_flicker"                "REMOVED"
 "item_tumblers_toy"             "REMOVED"
+"item_aghanims_shard"             "REMOVED"
+"item_shadow_amulet"             "REMOVED"
+"item_hand_of_midas"             "REMOVED"
+"item_travel_boots"             "REMOVED"
+"item_glimmer_cape"             "REMOVED"
+"item_cyclone"             "REMOVED"
+"item_ultimate_scepter"       "REMOVED"
+"item_scythe_of_vyse_custom"       "REMOVED"
+"item_blade_mail"       "REMOVED"
+"item_invis_sword"       "REMOVED"
+"item_rapier_custom"       "REMOVED"
+"item_wraith_pact"       "REMOVED"
 
 "item_tpscroll"
 {

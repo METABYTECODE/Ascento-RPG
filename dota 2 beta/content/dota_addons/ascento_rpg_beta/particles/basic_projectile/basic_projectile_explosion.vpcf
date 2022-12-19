@@ -2,11 +2,11 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_nMaxParticles = 32
-	m_Operators =
+	m_Operators = 
 	[
 		{
 			_class = "C_OP_BasicMovement"
-			m_Gravity =
+			m_Gravity = 
 			[
 				0.000000,
 				0.000000,
@@ -26,7 +26,7 @@
 			m_flFadeOutTime = 0.500000
 		},
 	]
-	m_Renderers =
+	m_Renderers = 
 	[
 		{
 			_class = "C_OP_RenderSprites"
@@ -37,7 +37,7 @@
 			m_hTexture = resource:"materials/particle/basic_glow.vtex"
 		},
 	]
-	m_Initializers =
+	m_Initializers = 
 	[
 		{
 			_class = "C_INIT_RandomLifeTime"
@@ -49,13 +49,13 @@
 			m_nControlPointNumber = 3
 			m_fSpeedMin = 60.000000
 			m_fSpeedMax = 90.000000
-			m_LocalCoordinateSystemSpeedMin =
+			m_LocalCoordinateSystemSpeedMin = 
 			[
 				0.000000,
 				0.000000,
 				32.000000,
 			]
-			m_LocalCoordinateSystemSpeedMax =
+			m_LocalCoordinateSystemSpeedMax = 
 			[
 				0.000000,
 				0.000000,
@@ -69,14 +69,14 @@
 		},
 		{
 			_class = "C_INIT_RandomColor"
-			m_ColorMin =
+			m_ColorMin = 
 			[
 				255,
 				196,
 				0,
 				255,
 			]
-			m_ColorMax =
+			m_ColorMax = 
 			[
 				193,
 				115,
@@ -85,14 +85,14 @@
 			]
 		},
 	]
-	m_Emitters =
+	m_Emitters = 
 	[
 		{
 			_class = "C_OP_InstantaneousEmitter"
 			m_nParticlesToEmit = 32
 		},
 	]
-	m_Children =
+	m_Children = 
 	[
 		{
 			m_ChildRef = resource:"particles/basic_projectile/basic_projectile_explosion_flash.vpcf"

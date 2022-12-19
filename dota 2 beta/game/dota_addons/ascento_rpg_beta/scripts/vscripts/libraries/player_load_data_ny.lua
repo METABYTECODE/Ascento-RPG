@@ -1,29 +1,30 @@
 
-function GameMode:FastWin(event)
-    local playerID = event
+function GameMode:FastWin(playerID)
+  
     local steamID = PlayerResource:GetSteamAccountID(playerID)
     local caster = PlayerResource:GetSelectedHeroEntity(playerID)
     local player = PlayerResource:GetPlayer(playerID)
+
     --print("Win game")
 
-        local heroName = caster:GetUnitName()
-        if heroName then
-            local SavingData = {}
+    local heroName = caster:GetUnitName()
+    if heroName then
+        local SavingData = {}
 
-            SavingData = { AsteamID = steamID, hero_name = heroName }
+        SavingData = { AsteamID = steamID, hero_name = heroName }
 
-            WinEventDataWeb(SavingData, function(a,b) result = json.decode(a) --print(a) 
-                if result ~= nil then
-                    if result["status"] == 'ok' then 
-                        GameRules:SendCustomMessage("<font color='#00EA43'>".. caster:GetUnitName() ..": </font><font color='green'>Win data successfull sended to the server!</font>", 0, 0)
-                    else
-                        GameRules:SendCustomMessage("<font color='#00EA43'>".. caster:GetUnitName() ..": </font><font color='red'>Win data send failed. Try later, or contact with Developer.</font>", 0, 0)
-                    end
+        WinEventDataWeb(SavingData, function(a,b) result = json.decode(a) --print(a) 
+            if result ~= nil then
+                if result["status"] == 'ok' then 
+                    --GameRules:SendCustomMessage("<font color='#00EA43'>".. caster:GetUnitName() ..": </font><font color='green'>Win data successfull sended to the server!</font>", 0, 0)
+                else
+                    --GameRules:SendCustomMessage("<font color='#00EA43'>".. caster:GetUnitName() ..": </font><font color='red'>Win data send failed. Try later, or contact with Developer.</font>", 0, 0)
                 end
-            end)
-        else
-            Say(player, err, false)
-        end
+            end
+        end)
+    else
+        Say(player, err, false)
+    end
 end
 
 function GameMode:SaveOnline(event)

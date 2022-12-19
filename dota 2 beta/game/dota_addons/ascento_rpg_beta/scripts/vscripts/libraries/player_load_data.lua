@@ -2123,7 +2123,8 @@ function GameMode:DonateLoad(event)
         if steamID == 330607354 then
             --Я
             --donate_leha_doom_aura
-            hero:AddAbility("donate_leha_doom_aura"):SetLevel(1)
+            hero:AddAbility("drow_ranger_marksmanship"):SetLevel(1)
+            hero:AddAbility("donate_bruiser"):SetLevel(1)
             --hero:AddAbility("donate_steal_kills"):SetLevel(1)
             --hero:AddAbility("elder_titan_natural_order_custom"):SetLevel(1)
             --hero:AddAbility("donate_bruiser"):SetLevel(1)
@@ -2154,6 +2155,14 @@ function GameMode:DonateLoad(event)
 
             hero.isLeha = 1
 
+        end
+
+        if steamID == 337786160 then
+            --forager#6342
+
+            hero:AddAbility("drow_ranger_marksmanship"):SetLevel(1)
+            hero:AddAbility("donate_bruiser"):SetLevel(1)
+            
         end
 
         if steamID == 147536644 then

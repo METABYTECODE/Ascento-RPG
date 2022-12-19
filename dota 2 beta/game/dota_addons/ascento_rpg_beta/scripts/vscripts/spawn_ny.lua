@@ -6,6 +6,9 @@ end
 Spawn.current_units = {}
 Spawn.line_interval = {}
 Spawn.wave_number = 0
+Spawn.drop_chance = 10
+Spawn.wave_kills = 0
+Spawn.need_kills = 0
 
 function Spawn:InitGameMode()
 	ListenToGameEvent('game_rules_state_change', Dynamic_Wrap(Spawn, 'OnGameRulesStateChange'), self)
@@ -32,20 +35,39 @@ function Spawn:LineBossSpawner( keys )
     self.wave_number = self.wave_number + 1
     
 
-    if self.wave_number > 50 then
+    if self.wave_number > 1 then
+        for k, hero in pairs(get_team_heroes(DOTA_TEAM_GOODGUYS)) do
+            if hero:IsConnected() then
+                GameMode:FastWin(hero:GetPlayerID())
+            end
+        end
+
         GameRules:SetGameWinner(DOTA_TEAM_GOODGUYS)
         return
     end
 
-    Spawn:SpawnLineUnits(self.wave_number) 
+    Timers:CreateTimer(5, function()
+                              
+        Spawn:SpawnLineUnits(self.wave_number) 
+
+    end)
 
 end
+
+theUnits = LoadKeyValues("scripts/kv/event_models.kv")
 
 function Spawn:SpawnLineUnits(index)
     local current_wave = index
     if current_wave == nil then
         return
     end
+
+    CustomGameEventManager:Send_ServerToAllClients( "monster_round", {str=tostring(current_wave)} )
+
+    
+
+    CustomGameEventManager:Send_ServerToAllClients( "item_has_spawned", {wave = current_wave} )
+    EmitGlobalSound( "Overthrow.Item.Spawn" )
 
     local point1 = Entities:FindByName( nil, "line_1_spawn"):GetAbsOrigin()
     local waypoint1 = Entities:FindByName( nil, "path_corner_1_1")
@@ -60,82 +82,153 @@ function Spawn:SpawnLineUnits(index)
     local waypoint4 = Entities:FindByName( nil, "path_corner_4_1")
 
 
-    local unit_name = "npc_ny_creep_"
+    local unit_name = "npc_ny_creep_1"
     local boss = "npc_ny_boss_"
+    local currentmodel = nil
+    Spawn.wave_kills = 0
+    Spawn.need_kills = 0
 
-    if current_wave > 0 and current_wave <= 10 then
-        unit_name = unit_name .. "1"
-    elseif current_wave > 10 and current_wave <= 20 then
-        unit_name = unit_name .. "2"
-    elseif current_wave > 20 and current_wave <= 30 then
-        unit_name = unit_name .. "3"
-    elseif current_wave > 30 and current_wave <= 40 then
-        unit_name = unit_name .. "4"
-    elseif current_wave > 40 and current_wave <= 50 then
-        unit_name = unit_name .. "5"
+    for k, v in pairs(theUnits) do
+       if v == current_wave then
+          currentmodel = k
+       end
     end
 
+
     if current_wave == 10 or current_wave == 20 or current_wave == 30 or current_wave == 40 or current_wave == 50 then
+        Spawn.need_kills = Spawn.need_kills + 1
         local unit = CreateUnitByName( boss .. current_wave , point3 + RandomVector( RandomFloat( 0, 100 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+
+        unit:SetModel(currentmodel)
+        unit:SetOriginalModel(currentmodel)
+        unit:SetModelScale(2)
+
+        unit:CreatureLevelUp(current_wave-1)
+
         unit:SetInitialGoalEntity( waypoint3 )
         unit.reward = true
         local ent_index = unit:entindex()
 --          table.insert(self.current_units, ent_index, unit)
         self.current_units[ent_index] = unit
+    else
+
+        for point_num=1, 4 do
+            for i=1, 10 do
+
+                
+
+                if point_num == 1 then
+                    point = point1
+                    waypoint = waypoint1
+                end
+                if point_num == 2 then
+                    point = point2
+                    waypoint = waypoint2
+                end
+                if point_num == 3 then
+                    point = point3
+                    waypoint = waypoint3
+                end
+                if point_num == 4 then
+                    point = point4
+                    waypoint = waypoint4
+                end
+
+                Spawn.need_kills = Spawn.need_kills + 1
+
+                local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
+                unit:SetInitialGoalEntity( waypoint )
+                unit.reward = true
+
+                unit:SetModel(currentmodel)
+                unit:SetOriginalModel(currentmodel)
+                unit:SetModelScale(1)
+
+                unit:CreatureLevelUp(current_wave-1)
+
+                if i == 5 then
+                    --Крип чемпион
+
+                    unit:SetModelScale(1.8)
+
+                    unit:SetBaseDamageMin(unit:GetBaseDamageMin() * 2)
+                    unit:SetBaseDamageMax(unit:GetBaseDamageMax() * 2)
+
+                    unit:SetBaseMaxHealth(unit:GetBaseMaxHealth() * 2)
+                    unit:SetHealth(unit:GetMaxHealth())
+                    unit:SetDeathXP(unit:GetDeathXP() * 2)
+                    unit:SetMinimumGoldBounty(unit:GetMinimumGoldBounty() * 2)
+                    unit:SetMaximumGoldBounty(unit:GetMaximumGoldBounty() * 2)
+
+                    unit:SetPhysicalArmorBaseValue(unit:GetPhysicalArmorBaseValue() * 2)
+
+                    unit:SetRenderColor(255, 165, 0)
+
+                    ParticleManager:CreateParticle("particles/econ/items/ogre_magi/ogre_ti8_immortal_weapon/ogre_ti8_immortal_bloodlust_buff.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+
+                end
+
+                if not unit:HasModifier("modifier_ny_over") then
+                    unit:AddNewModifier (unit, nil, "modifier_ny_over", {duration = -1})
+                end
+
+                --local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/creeps/roshan/roshan_hat_fx.vmdl"})
+                --item:FollowEntity(unit, true)
+                --unit.roshan_hat = item
+
+                local ent_index = unit:entindex()
+                --table.insert(self.current_units, ent_index, unit)
+                self.current_units[ent_index] = unit
+
+
+            end
+        end
     end
-    timer_time = 0
 
---  GameRules:SendCustomMessage("#Game_notification_boss_spawn_"..boss_name,0,0)
-    for point_num=1, 4 do
-        for i=1, 10 do
+    local data={}
+    data["liveNum"]=Spawn.need_kills - Spawn.wave_kills
+    data["maxNum"]=Spawn.need_kills
+    CustomGameEventManager:Send_ServerToAllClients( "monster_number_changing",data)
 
+    --CustomGameEventManager:Send_ServerToAllClients("on_player_kill_creeps", {playerKilledCreeps = tonumber(Spawn.wave_kills), need_kill_creeps = tonumber(Spawn.need_kills)})
 
-            if point_num == 1 then
-                point = point1
-                waypoint = waypoint1
+    --CustomGameEventManager:Send_ServerToAllClients("on_player_kill_boss", {playerKilledBoss = tonumber(Spawn.need_kills), need_kill_boss = 100})
+
+end
+
+function Spawn:RandomStatDrop( hero )
+    if RollPercentage(20) then
+        local bookRnd = RandomInt(1, 3)
+        local givebook = nil
+        if bookRnd == 1 then 
+            givebook = "item_tome_str_3"
+        elseif bookRnd == 2 then 
+            givebook = "item_tome_agi_3"
+        elseif bookRnd == 3 then 
+            givebook = "item_tome_int_3"
+        end
+
+        if givebook ~= nil then 
+            local item = CreateItem(givebook, nil, nil)
+            local pos = hero:GetAbsOrigin()
+            local drop = CreateItemOnPositionSync(pos, item)
+            local pos_launch = pos + RandomVector(RandomFloat(50, 100))
+            if item ~= nil then
+                item:LaunchLoot(false, 200, 0.75, pos_launch)
             end
-            if point_num == 2 then
-                point = point2
-                waypoint = waypoint2
-            end
-            if point_num == 3 then
-                point = point3
-                waypoint = waypoint3
-            end
-            if point_num == 4 then
-                point = point4
-                waypoint = waypoint4
-            end
-
-            local unit = CreateUnitByName( unit_name , point + RandomVector( RandomFloat( 0, 200 ) ), true, nil, nil, DOTA_TEAM_BADGUYS ) 
-            unit:SetInitialGoalEntity( waypoint )
-            unit.reward = true
-
-            if not unit:HasModifier("modifier_movespeed_cap") then
-                unit:AddNewModifier (unit, nil, "modifier_movespeed_cap", {duration = -1})
-            end
-
-            local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/creeps/roshan/roshan_hat_fx.vmdl"})
-            item:FollowEntity(unit, true)
-            unit.roshan_hat = item
-
-            local ent_index = unit:entindex()
-            --table.insert(self.current_units, ent_index, unit)
-            self.current_units[ent_index] = unit
-
-
         end
     end
 end
+
 
 function Spawn:OnEntityKilled( keys )
 	local unit = EntIndexToHScript( keys.entindex_killed )
 	local killer = EntIndexToHScript( keys.entindex_attacker )
 	local name = unit:GetUnitName()
 
-    if unit.roshan_hat ~= nil then
-        UTIL_Remove(unit.roshan_hat)
-    end
+    --if unit.roshan_hat ~= nil then
+    --    UTIL_Remove(unit.roshan_hat)
+    --end
 
     if name == "npc_roshan_def_ny" then
         GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)      
@@ -161,12 +254,17 @@ function Spawn:OnEntityKilled( keys )
         end
     end
 
-    
-    if killer:IsRealHero() then 
-        if IsEventASCENTO(killedUnit) then
-            CREEP_TEAM_KILLS = CREEP_TEAM_KILLS + 1
-            CustomGameEventManager:Send_ServerToAllClients("on_player_kill_event", {KilledEvents = tonumber(CREEP_TEAM_KILLS)})
-        end
+    --item_tome_agi_3
+    if IsEventASCENTO(unit) then
+        Spawn.wave_kills = Spawn.wave_kills + 1
+        
+        local data={}
+        data["liveNum"]=Spawn.need_kills - Spawn.wave_kills
+        data["maxNum"]=Spawn.need_kills
+        CustomGameEventManager:Send_ServerToAllClients( "monster_number_changing",data)
+
+        --CustomGameEventManager:Send_ServerToAllClients("on_player_kill_creeps", {playerKilledCreeps = tonumber(Spawn.wave_kills), need_kill_creeps = 100})
+        Spawn:RandomStatDrop(killer)
     end
 
 end

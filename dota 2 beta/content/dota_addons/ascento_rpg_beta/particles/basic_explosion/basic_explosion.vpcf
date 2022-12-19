@@ -2,7 +2,7 @@
 {
 	_class = "CParticleSystemDefinition"
 	m_nMaxParticles = 4
-	m_Children =
+	m_Children = 
 	[
 		{
 			m_ChildRef = resource:"particles/basic_explosion/basic_explosion_burst.vpcf"

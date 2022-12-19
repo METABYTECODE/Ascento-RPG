@@ -38,6 +38,16 @@ function modifier_donate_leha_doom_aura:GetModifierAura()
 	return "modifier_donate_leha_doom_aura_effect"
 end
 
+ function modifier_donate_leha_doom_aura:GetEffectName()
+ 	return "particles/units/heroes/hero_doom_bringer/doom_bringer_doom_aura.vpcf"
+ end
+
+ function modifier_donate_leha_doom_aura:GetEffectAttachType()
+ 	return PATTACH_ABSORIGIN_FOLLOW
+ end
+
+
+
 function modifier_donate_leha_doom_aura:GetAuraRadius()
 	return self:GetAbility():GetSpecialValueFor( "radius" )
 end

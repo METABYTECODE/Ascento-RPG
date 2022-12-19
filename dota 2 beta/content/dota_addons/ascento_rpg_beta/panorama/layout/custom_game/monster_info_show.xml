@@ -1,0 +1,33 @@
+<root>
+	<styles>
+		<include src="file://panorama/styles/custom_game/monster_info_show.css" />
+		<include src="s2r://panorama/styles/custom_game/dotastyles.vcss_c" />
+	</styles>
+	<scripts>
+		<include src="file://panorama/scripts/custom_game/monster_info_show.js" />
+	</scripts>
+	<Panel class="InfoPannel" hittest="false">
+		<Panel id="MonsterRoot" class="MonsterInfoPannel" hittest="false">
+			<Panel class="MonsterRoundTitle" hittest="false">
+				<Label id="MonsterRound" text="1" />
+			</Panel>
+			<Panel id="MonsterInfo" hittest="false">
+				<Panel class="MonsterProgress" hittest="false">
+					<Image id="MonsterProgressImage" src="file://panorama/images/custom_game/home_page/monster_warn_line_png.png" />
+					<Image id="MonsterProgressBarDangerous" src="file://panorama/images/custom_game/home_page/progress_light_png.png" />
+					<Panel id="MonsterProgressBarContainer">
+						<Label id="MonsterProgressBar" />
+					</Panel>
+					<Panel id="ProgressEnd" hittest="false">
+						<Image id="ProgressEndImg_nofire" class="ProgressEndImgCls" src="file://panorama/images/custom_game/home_page/skull_bg_red_png.png" />
+						<Image id="ProgressEndImg_s_fire" class="ProgressEndImgCls" src="file://panorama/images/custom_game/home_page/skull_bg_red_s_fire_png.png" />
+						<Image id="ProgressEndImg_b_fire" class="ProgressEndImgCls" src="file://panorama/images/custom_game/home_page/skull_bg_red_b_fire_png.png" />
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel id="MonsterCount" hittest="false">
+				<Label id="MaxNum" text="0/0" />
+			</Panel>
+		</Panel>
+	</Panel>
+</root>

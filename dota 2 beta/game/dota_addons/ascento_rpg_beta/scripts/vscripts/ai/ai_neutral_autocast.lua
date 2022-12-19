@@ -46,9 +46,9 @@ function NeutralAutoCasterThink()
 
     local search_radius                             -- радиус поиска зависит от того, имеет ли юнит агр
     if npc.agro then
-        search_radius = npc.fMaxDist * 1.5            -- расшираяется
+        search_radius = npc.fMaxDist * 5            -- расшираяется
     else
-        search_radius = npc.fMaxDist                -- становится обычным
+        search_radius = npc.fMaxDist / 5                -- становится обычным
     end
   
     -- Как далеко юнит находится от своей точки спавна ?
@@ -62,7 +62,7 @@ function NeutralAutoCasterThink()
                         npc:GetTeamNumber(),        --команда юнита
                         npc.vInitialSpawnPos,        --местоположение юнита
                         nil,    --айди юнита (необязательно)
-                        search_radius + 50,    --радиус поиска
+                        search_radius + 250,    --радиус поиска
                         DOTA_UNIT_TARGET_TEAM_ENEMY,    -- юнитов чьей команды ищем вражеской/дружественной
                         DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC,    --юнитов какого типа ищем
                         DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE,    --поиск по флагам
@@ -114,7 +114,6 @@ end
 
 function FindAbility(unit, index)
     local ability = unit:GetAbilityByIndex(index)
-  
     if ability then
         local ability_behavior = ability:GetBehavior()
       
@@ -126,9 +125,11 @@ function FindAbility(unit, index)
             ability.behavior = "no_target"    -- способность без цели
         elseif bit.band( ability_behavior, DOTA_ABILITY_BEHAVIOR_POINT ) == DOTA_ABILITY_BEHAVIOR_POINT then
             ability.behavior = "point"        -- способность направлена на точку
+        elseif bit.band( ability_behavior, DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING ) == DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING then
+            ability.behavior = "backswing"        -- способность направлена на точку
         end
---        print("ability #"..index.." name = "..ability:GetAbilityName())
---        print("ability behavior = "..ability.behavior)
+        --print("ability #"..index.." name = "..ability:GetAbilityName())
+        --print("ability behavior = "..ability.behavior)
       
         return ability
     else

@@ -101,7 +101,7 @@ var updateString = $("#PlayerCreepsCurrent");
   }else{
     updateString.style.color = "white"
   }
-  })
+})
 
 GameEvents.Subscribe('on_player_kill_boss', function(data) {
 
@@ -358,20 +358,38 @@ var DataForUpdate = data.player_reincarnation;
 
 
 
+GameEvents.Subscribe('hide_hero_stats_panel', function(data) {
+
+  var updateVisible = $("#PlayerEndlessShowTable");
+      updateVisible.visible = false
+
+  var updateVisible = $("#PlayerStatsShowTable");
+      updateVisible.visible = false
+
+  var updateVisible = $("#PlayerReincShowTable");
+      updateVisible.visible = false
+
+  var updateVisible = $("#PlayerStatsCurrentCreeps");
+      updateVisible.visible = false
+
+  var updateVisible = $("#PlayerStatsCurrentBoss");
+      updateVisible.visible = false
+    
+  })
 
 
 
 
 GameEvents.Subscribe('on_player_reinc_success', function(data) {
 
-var updateVisible = $("#PlayerReincDoIt");
-    updateVisible.visible = false
+  var updateVisible = $("#PlayerReincDoIt");
+      updateVisible.visible = false
   })
 
 GameEvents.Subscribe('on_player_reinc_can_reinc', function(data) {
 
-var updateVisible = $("#PlayerReincDoIt");
-    updateVisible.visible = true
+  var updateVisible = $("#PlayerReincDoIt");
+      updateVisible.visible = true
   })
 
 
