@@ -18,7 +18,6 @@ function mage_2_magic_horizont:OnSpellStart()
 		local tmdf = target:FindModifierByName("modifier_mage_2_magic_horizont")
 		damage = damage * ( 1 + (damagePerStack * tmdf:GetStackCount()) )
 	end
-	print(damage)
 
 	local debuffDuration = self:GetSpecialValueFor("duration_debuff")
 
@@ -41,6 +40,20 @@ function mage_2_magic_horizont:OnSpellStart()
 		local targetModifier = target:FindModifierByName("modifier_mage_2_magic_horizont")
 		targetModifier:IncrementStackCount()
 	end
+
+	if caster:HasModifier("modifier_mage_3_magic_crit") then
+        if IsServer() then
+            local ability = caster:FindAbilityByName("mage_3_magic_crit")
+            local chance = ability:GetSpecialValueFor("critical_chance")
+
+            if RollPercentage(chance) then
+                damage = damage * (ability:GetSpecialValueFor("critical_damage") / 100)
+                EmitSoundOn( "Ability.static.start", caster )
+
+    
+            end
+        end
+    end
 
 
 	self.damageTable = {

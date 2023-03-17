@@ -58,6 +58,15 @@ function modifier_tombstoun_creep:OnCreated()
 
     self.ownerHero = self.caster:GetOwner()
 
+    self.creepDamageMin = self.ownerHero:GetBaseDamageMin()/3
+    self.creepDamageMax = self.ownerHero:GetBaseDamageMax()/3
+
+    self.creepHealth = self.ownerHero:GetBaseMaxHealth()/3
+    self.creepArmor = self.ownerHero:GetPhysicalArmorBaseValue()/3
+    self.creepXp = self.ownerHero:GetDeathXP()/3
+    self.creepGoldMin = self.ownerHero:GetMinimumGoldBounty()/3
+    self.creepGoldMax = self.ownerHero:GetMaximumGoldBounty()/3
+
     self.ability = self:GetAbility()
     self.healthPerAttack = self.ability:GetSpecialValueFor("health_per_attack")
     local spawnInterval = self.ability:GetSpecialValueFor("spawn_interval")
@@ -72,15 +81,15 @@ end
 function modifier_tombstoun_creep:OnIntervalThink()
     local unit = CreateUnitByName("npc_dota_unit_undying_zombie_torso_tomstoun", self.parent:GetAbsOrigin() + RandomVector(RandomFloat(15, 50)), true, self.caster, self.caster, self.caster:GetTeamNumber())
     unit:AddNewModifier(unit, self, "modifier_phased", { duration = 0.05 })
-    unit:SetBaseDamageMin(self.ownerHero:GetBaseDamageMin()/3)
-    unit:SetBaseDamageMax(self.ownerHero:GetBaseDamageMax()/3)
-    unit:SetBaseMaxHealth(self.ownerHero:GetBaseMaxHealth()/3)
-    unit:SetHealth(unit:GetBaseMaxHealth())
-    unit:SetPhysicalArmorBaseValue(self.ownerHero:GetPhysicalArmorBaseValue()/3)
+    unit:SetBaseDamageMin(self.creepDamageMin)
+    unit:SetBaseDamageMax(self.creepDamageMax)
+    unit:SetBaseMaxHealth(self.creepHealth)
+    unit:SetHealth(self.creepHealth)
+    unit:SetPhysicalArmorBaseValue(self.creepArmor)
     
-    unit:SetDeathXP(self.ownerHero:GetDeathXP()/3)
-    unit:SetMaximumGoldBounty(self.ownerHero:GetMaximumGoldBounty()/3)
-    unit:SetMinimumGoldBounty(self.ownerHero:GetMinimumGoldBounty()/3)
+    unit:SetDeathXP(self.creepXp)
+    unit:SetMinimumGoldBounty(self.creepGoldMin)
+    unit:SetMaximumGoldBounty(self.creepGoldMax)
     unit.clone = true
 end
 

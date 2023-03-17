@@ -86,9 +86,22 @@ GameEvents.Subscribe('on_player_get_endless', function(data) {
 
 var modifierNumber = data.modifierNumber;
 var modifierValue = data.modifierValue;
+var AllModifiers = data.AllModifiers;
 var updateString = $("#Endless_Modifier_" + modifierNumber);
   updateString.text = modifierValue;
   })
+
+
+
+GameEvents.Subscribe('on_player_update_all_endless', function(data) {
+
+var AllModifiers = data.AllModifiers;
+
+
+var updateString = $("#Endless_text_top");
+  updateString.text = AllModifiers;
+
+    })
 
 
 GameEvents.Subscribe('on_player_kill_creeps', function(data) {
@@ -121,6 +134,10 @@ GameEvents.Subscribe('on_player_reinc_update', function(data) {
 
 
 var DataForUpdate = data.player_reincarnation;
+
+var updateString = $("#Reinc_text_top");
+  updateString.text = DataForUpdate;
+
 
 
   if (DataForUpdate > 0){

@@ -1,0 +1,907 @@
+"DOTAAbilities"
+{
+//=================================================================================================================
+	// Recipe: Battle Fury2
+	//=================================================================================================================
+
+        "item_recipe_bfury2"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4014"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"5000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury2"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury;item_spider_soul"
+	}
+}	
+	/=================================================================================================================
+	// Battlefury2
+	//=================================================================================================================
+	"item_bfury2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4015"		
+        "BaseClass"						"item_bfury"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+        "AbilityTextureName"	        "fury2"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+        "ItemBaseLevel"					"2"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+
+
+	"item_bfury"
+	{
+		"ItemBaseLevel"					"1"
+		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+
+
+        //=================================================================================================================
+	// Recipe: Battle Fury3
+	//=================================================================================================================
+        "item_recipe_bfury3"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4016"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury3"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury2;"
+	}
+}
+	//=================================================================================================================
+	// Battlefury
+	//=================================================================================================================
+	"item_bfury3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4017"	
+                "BaseClass"						"item_bfury"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"	        "Fury3"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"3"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+  "item_recipe_bfury4"
+{
+    "ID"               "4018"
+        "AbilityTextureName"                "recipe"
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "Model"                         "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                     "item_datadriven"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                      "15000"  
+    "ItemShopTags"                  "artifacts"
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"                    "1"
+    "ItemResult"                    "item_bfury4"
+    "ItemRequirements"
+    {
+        "01"                        "item_bfury3;"
+    }
+}
+    //=================================================================================================================
+    // Battlefury
+    //=================================================================================================================
+    "item_bfury4"
+    {
+    "ID"               "4019"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+                "BaseClass"                     "item_bfury"                                                    // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityTextureName"            "Fury4"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+        "AbilityCastRange"              "350"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCooldown"               "4.0"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "4400"
+        "ItemShopTags"                  "damage;health_regen;mana_regen;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "bf;battle fury"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ShouldBeSuggested"             "1"
+    "ItemBaseLevel"                 "4"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+    }
+    "item_recipe_bfury5"
+{
+"ID"               "4020"
+        "AbilityTextureName"                "recipe"
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "Model"                         "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                     "item_datadriven"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"                      "20000"  
+    "ItemShopTags"                  "artifacts"
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"                    "1"
+    "ItemResult"                    "item_bfury5"
+    "ItemRequirements"
+    {
+        "01"                        "item_bfury4;"
+    }
+}
+    //=================================================================================================================
+    // Battlefury
+    //=================================================================================================================
+    "item_bfury5"
+    {
+    "ID"               "4021"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+                "BaseClass"                     "item_bfury"                                                    // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityTextureName"            "Fury5"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+        "AbilityCastRange"              "350"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCooldown"               "4.0"
+
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "4400"
+        "ItemShopTags"                  "damage;health_regen;mana_regen;hard_to_tag"
+        "ItemQuality"                   "epic"
+        "ItemAliases"                   "bf;battle fury"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "ShouldBeSuggested"             "1"
+    "ItemBaseLevel"                 "5"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+    }
+
+    "item_recipe_bfury6"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4022"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"30000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury6"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury5;"
+	}
+}
+	//=================================================================================================================
+	// Battlefury
+	//=================================================================================================================
+	"item_bfury6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4023"	
+                "BaseClass"						"item_bfury"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"	        "Fury6"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"6"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+	"item_recipe_bfury7"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4024"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"35000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury7"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury6;"
+	}
+}
+
+	"item_bfury7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4025"	
+                "BaseClass"						"item_bfury"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"	        "Fury7"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"7"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+
+	"item_recipe_bfury8"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4026"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"40000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_bfury8"
+	"ItemRequirements"
+	{
+		"01"						"item_bfury7;"
+	}
+}
+
+	"item_bfury8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4027"	
+                "BaseClass"						"item_bfury"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+	"AbilityTextureName"	        "Fury8"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_TREE | DOTA_UNIT_TARGET_CUSTOM"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_CUSTOM"
+
+		"AbilityCastRange"				"350"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"4400"
+		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bf;battle fury"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"8"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_damage"          "45 135 225 315 405 495 585 675"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "6 12 20 28 36 44 52 60"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_mana_regen"      "2.25 5 10 20 40 60 80 100"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent" "40 60 100 140 280 420 560 700"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_damage_percent_creep"   "40 60 100 140 280 420 560 700"
+            }
+            "06"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus"            "150 300 450 600 750 900 1050 1200"
+            }
+            "07"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "quelling_bonus_ranged"         "150 300 450 600 750 900 1050 1200"
+            }           
+            "08"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_starting_width"         "150"
+            }           
+            "09"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_ending_width"           "330"
+            }           
+            "10"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "cleave_distance"           "625"
+            }
+            "11"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_cleave_bonus"         "25"
+            }
+            "12"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "upgraded_damage_bonus"         "60"
+            }
+		}
+	}
+}

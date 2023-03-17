@@ -4,9 +4,29 @@ LinkLuaModifier( "modifier_cultist_2_decay_aura_effect", "abilities/cultist/cult
 
 --------------------------------------------------------------------------------
 -- Passive Modifier
-function cultist_2_decay_aura:GetIntrinsicModifierName()
-	return "modifier_cultist_2_decay_aura"
+function cultist_2_decay_aura:OnToggle(  )
+	-- unit identifier
+	local caster = self:GetCaster()
+
+	-- load data
+	local toggle = self:GetToggleState()
+
+	if toggle then
+		-- add modifier
+		self.modifier = caster:AddNewModifier(
+			caster, -- player source
+			self, -- ability source
+			"modifier_cultist_2_decay_aura", -- modifier name
+			{  } -- kv
+		)
+	else
+		if self.modifier and not self.modifier:IsNull() then
+			self.modifier:Destroy()
+		end
+		self.modifier = nil
+	end
 end
+
 
 modifier_cultist_2_decay_aura = class({})
 
@@ -81,7 +101,7 @@ function modifier_cultist_2_decay_aura_effect:OnCreated( kv )
 		attacker = self:GetCaster(),
 		damage = self.dps,
 		damage_type = DAMAGE_TYPE_PURE,
-		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
+		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION, DOTA_DAMAGE_FLAG_NO_DAMAGE_MULTIPLIERS,
 		ability = self:GetAbility(), --Optional.
 	}
 
@@ -108,7 +128,7 @@ function modifier_cultist_2_decay_aura_effect:OnIntervalThink()
 		attacker = self:GetCaster(),
 		damage = self.dps,
 		damage_type = DAMAGE_TYPE_PURE,
-		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
+		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION, DOTA_DAMAGE_FLAG_NO_DAMAGE_MULTIPLIERS,
 		ability = self:GetAbility(), --Optional.
 	}
 

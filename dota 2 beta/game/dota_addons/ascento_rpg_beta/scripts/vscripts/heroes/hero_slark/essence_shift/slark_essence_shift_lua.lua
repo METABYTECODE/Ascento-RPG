@@ -25,7 +25,7 @@ end
 -- Modifier Effects
 function modifier_slark_essence_shift_lua:DeclareFunctions()
 	local funcs = {
-		MODIFIER_PROPERTY_PROCATTACK_FEEDBACK,
+		MODIFIER_EVENT_ON_ATTACK_LANDED,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
@@ -33,15 +33,15 @@ function modifier_slark_essence_shift_lua:DeclareFunctions()
 
 	return funcs
 end
+
+
 function modifier_slark_essence_shift_lua:GetModifierProcAttack_Feedback( params )
 	local target = params.target
 	if IsServer() and (not self:GetParent():PassivesDisabled()) then
 		-- filter enemy
-		if target:IsHero() or target:IsIllusion() or target == self:GetParent() then
+		if target:IsHero() or target:IsIllusion() or target == self:GetParent() or target:GetTeam() == self:GetParent():GetTeam() or not target:IsAlive() then
 			return
-		end
-
-		if self:GetStackCount() < 20000 then
+		else
 			self:IncrementStackCount()
 		end
 

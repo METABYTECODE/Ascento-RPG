@@ -1,0 +1,486 @@
+"DOTAAbilities"
+{
+	"item_desolator"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "3500"
+        "ItemShopTags"                  "damage;unique"
+        "ItemQuality"                   "artifact"
+        "ItemAliases"                   "desolator"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+        "SpellDispellableType"          "SPELL_DISPELLABLE_YES"
+        "ShouldBeSuggested"             "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+    }
+        //=================================================================================================================
+	// Recipe: Desolator 2
+	//=================================================================================================================
+
+        "item_recipe_desolator2"
+        {
+        		"AbilityTextureName" 				"recipe"
+        	// General
+        	//-------------------------------------------------------------------------------------------------------------
+        	"ID"							"4000"						
+        	"Model"							"models/props_gameplay/recipe.vmdl"
+        	"BaseClass"                     "item_datadriven"
+        	
+        	// Item Info
+        	//-------------------------------------------------------------------------------------------------------------
+        	"ItemCost"						"5000"	
+        	"ItemShopTags"					"artifacts"
+        	
+        	// Recipe
+        	//-------------------------------------------------------------------------------------------------------------
+        	"ItemRecipe"					"1"
+        	"ItemResult"					"item_desolator2"
+        	"ItemRequirements"
+        	{
+        		"01"						"item_desolator;"
+        	}
+        }
+        //=================================================================================================================
+	// Item: Desolator 2
+	//=================================================================================================================
+        "item_desolator2"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4001"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator2"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"2"
+	
+
+	//special
+        "AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+
+        //=================================================================================================================
+	// Recipe: Desolator 3
+	//=================================================================================================================
+
+        "item_recipe_desolator3"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4002"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"10000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator3"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator2;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 3
+	//=================================================================================================================
+        "item_desolator3"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4003"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator3"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"3"
+	
+	//special
+        "AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+        //=================================================================================================================
+	// Recipe: Desolator 4
+	//=================================================================================================================
+
+        "item_recipe_desolator4"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4004"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"15000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator4"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator3;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 4
+	//=================================================================================================================
+        "item_desolator4"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4005"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator4"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"4"
+	
+	//special
+        "AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+        //=================================================================================================================
+	// Recipe: Desolator 5
+	//=================================================================================================================
+
+        "item_recipe_desolator5"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4006"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"20000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator5"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator4;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 5
+	//=================================================================================================================
+        "item_desolator5"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4007"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator5"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"5"
+	
+	//special
+        "AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+        //=================================================================================================================
+	// Recipe: Desolator 6
+	//=================================================================================================================
+
+        "item_recipe_desolator6"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4008"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"25000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator6"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator5;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 6
+	//=================================================================================================================
+        "item_desolator6"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4009"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator6"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"6"
+	
+	//special
+	"AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+"item_recipe_desolator7"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4010"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"30000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator7"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator6;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 6
+	//=================================================================================================================
+        "item_desolator7"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4011"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator7"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"7"
+	
+	//special
+	"AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+
+"item_recipe_desolator8"
+{
+		"AbilityTextureName" 				"recipe"
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"ID"							"4012"						
+	"Model"							"models/props_gameplay/recipe.vmdl"
+	"BaseClass"                     "item_datadriven"
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"35000"	
+	"ItemShopTags"					"artifacts"
+	
+	// Recipe
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemRecipe"					"1"
+	"ItemResult"					"item_desolator8"
+	"ItemRequirements"
+	{
+		"01"						"item_desolator7;"
+	}
+}
+        //=================================================================================================================
+	// Item: Desolator 6
+	//=================================================================================================================
+        "item_desolator8"
+{       
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+    "BaseClass"						"item_desolator"
+	"ID"							"4013"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	"AbilityTextureName"	        "desolator8"
+	
+	// Stats
+	//-------------------------------------------------------------------------------------------------------------
+	
+	// Item Info
+	//-------------------------------------------------------------------------------------------------------------
+	"ItemCost"						"9500"
+	"ItemStackable"					"0"
+	
+	"ItemPermanent"					"0"
+	"ItemKillable"                  "1"
+	"ItemSellable"                  "1"
+	"ItemDroppable"                 "1"
+	"ItemPurchasable"				"1"
+	"ItemBaseLevel"					"8"
+	
+	//special
+	"AbilityValues"
+        {
+                "bonus_damage"          "50 100 200 400 800 1600 2400 3200"
+                "corruption_armor"      "-4 -8 -16 -32 -64 -128 -196 -256"
+                "corruption_duration"   "15.0"
+                "bonus_damage_per_kill" "50"
+                "bonus_damage_per_assist"   "50"
+                "max_damage"            "20"
+        }
+}
+}

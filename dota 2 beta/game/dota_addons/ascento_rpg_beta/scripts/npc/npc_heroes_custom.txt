@@ -166,10 +166,10 @@
         "GibType"       "default"
         "Ability1"      "tank_1_tough"
         "Ability2"      "tank_1_shielded"
-        "Ability3"      "empty_2_1_tank"
-        "Ability4"      "empty_2_2_tank" 
-        "Ability5"      "empty_3_1_tank" 
-        "Ability6"      "empty_3_2_tank"
+        "Ability3"      "tank_2_last_chance"
+        "Ability4"      "tank_2_shield_bash" 
+        "Ability5"      "tank_3_armored_attack" 
+        "Ability6"      "tank_3_armored_soul"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -254,10 +254,10 @@
         "HeroSelectSoundEffect"     "Hero_LegionCommander.Pick"
         "Ability1"      "fighter_1_bruiser"
         "Ability2"      "fighter_1_warborn"
-        "Ability3"      "empty_2_1_fighter"
-        "Ability4"      "empty_2_2_fighter" 
-        "Ability5"      "empty_3_1_fighter" 
-        "Ability6"      "empty_3_2_fighter"
+        "Ability3"      "fighter_2_dual_strike"
+        "Ability4"      "fighter_2_adrenaline_rush" 
+        "Ability5"      "fighter_3_crit" 
+        "Ability6"      "fighter_3_rupture"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -280,7 +280,7 @@
 
         "StatusHealth" "200"
         "StatusHealthRegen"     "0.50000"
-        "StatusMana"                  "50"
+        "StatusMana"                  "200"
         "StatusManaRegen"   "1"
 
         "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -289,7 +289,7 @@
         "AttackRate"        "1.5"
         "AttackAnimationPoint"      "0.330000"
         "AttackAcquisitionRange"        "600"
-        "AttackRange"       "125"
+        "AttackRange"       "150"
         "AttributePrimary"      "DOTA_ATTRIBUTE_STRENGTH"
         "AttributeBaseStrength"     "20"
         "AttributeStrengthGain"     "1.2"
@@ -345,10 +345,10 @@
 
         "Ability1"      "assasin_1_weak_spot"
         "Ability2"      "assasin_1_hidden_blade"
-        "Ability3"      "empty_2_1_assassin"
-        "Ability4"      "empty_2_2_assassin" 
-        "Ability5"      "empty_3_1_assassin" 
-        "Ability6"      "empty_3_2_assassin"
+        "Ability3"      "assasin_2_poison"
+        "Ability4"      "assasin_2_darkness" 
+        "Ability5"      "fighter_3_rupture" 
+        "Ability6"      "assasin_3_execute"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -443,10 +443,10 @@
 
         "Ability1"      "ranger_1_distance"
         "Ability2"      "ranger_1_heavy_bolts"
-        "Ability3"      "empty_2_1_ranger"
-        "Ability4"      "empty_2_2_ranger" 
-        "Ability5"      "empty_3_1_ranger" 
-        "Ability6"      "empty_3_2_ranger"
+        "Ability3"      "ranger_2_piercing_shot"
+        "Ability4"      "ranger_2_crossbow_mastery" 
+        "Ability5"      "fighter_3_crit" 
+        "Ability6"      "ranger_3_mobility_aura"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -541,10 +541,10 @@
 
         "Ability1"      "support_1_sustain"
         "Ability2"      "support_1_heal"
-        "Ability3"      "empty_2_1_support"
-        "Ability4"      "empty_2_2_support" 
-        "Ability5"      "empty_3_1_support" 
-        "Ability6"      "empty_3_2_support"
+        "Ability3"      "support_2_dot_heal"
+        "Ability4"      "support_2_stat_buff" 
+        "Ability5"      "support_3_chosen" 
+        "Ability6"      "support_3_beg_of_life"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -641,10 +641,10 @@
 
         "Ability1"      "mage_1_magic_missile"
         "Ability2"      "mage_1_magic_area"
-        "Ability3"      "empty_2_1_mage"
-        "Ability4"      "empty_2_2_mage"
-        "Ability5"      "empty_3_1_mage"
-        "Ability6"      "empty_3_2_mage"
+        "Ability3"      "mage_2_magic_shower"
+        "Ability4"      "mage_2_magic_horizont"
+        "Ability5"      "mage_3_magic_crit"
+        "Ability6"      "mage_3_elemental_boom"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -750,10 +750,10 @@
 
         "Ability1"      "magic_warrior_1_magic_attack"
         "Ability2"      "magic_warrior_1_manashield"
-        "Ability3"      "empty_2_1_magic_warrior"
-        "Ability4"      "empty_2_2_magic_warrior" 
-        "Ability5"      "empty_3_1_magic_warrior" 
-        "Ability6"      "empty_3_2_magic_warrior"
+        "Ability3"      "magic_warrior_2_manablood"
+        "Ability4"      "magic_warrior_2_magic_penetration" 
+        "Ability5"      "magic_warrior_3_from_the_void" 
+        "Ability6"      "magic_warrior_3_void"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -841,10 +841,10 @@
 
         "Ability1"      "cultist_1_decay"
         "Ability2"      "cultist_1_decay_curse"
-        "Ability3"      "empty_2_1_cultist"
-        "Ability4"      "empty_2_2_cultist" 
-        "Ability5"      "empty_3_1_cultist" 
-        "Ability6"      "empty_3_2_cultist"
+        "Ability3"      "cultist_2_decay_aura"
+        "Ability4"      "cultist_2_magic_health" 
+        "Ability5"      "cultist_3_undead" 
+        "Ability6"      "cultist_3_demon_form"
         "Ability7"      "generic_hidden"
         "Ability8"      "generic_hidden"
         "Ability9"      "generic_hidden"
@@ -1017,6 +1017,158 @@
         }
         
     }
+
+
+
+
+
+
+
+    "npc_dota_hero_marci"
+    {
+        "Model"             "models/heroes/marci/marci_base.vmdl"
+        "IdleExpression"    "scenes/marci/marci_exp_idle_01.vcd"
+        "SoundSet"          "Hero_Marci"
+        "PickSound"         "marci_pick"
+        "BanSound"          "marci_ban"
+        "Enabled"           "1"
+        "HeroUnlockOrder"   "0"
+        "Role"              "Support,Carry,Initiator,Disabler,Escape"
+        "Rolelevels"        "1,1,2,1,1"
+        "Complexity"        "2"
+        "Team"              "Good"
+        "HeroID"            "136"
+        "HeroOrderID"           "122"
+        "BotImplemented"        "0"
+        "ModelScale"            "1"
+        "VersusScale"           "1"
+        "LoadoutScale"          "0.8"
+        "SpectatorLoadoutScale" "1"
+        "HeroGlowColor"         "0 50 247"
+        "CMEnabled"             "1"
+        "workshop_guide_name"       "Marci"
+        "new_player_enable"         "1"
+        "LastHitChallengeRival"     "npc_dota_hero_mirana"
+        "HeroSelectSoundEffect"     "Hero_Marci.Pick"
+        "GibType"       "default"
+        "Ability1"      "marci_grapple"
+        "Ability2"      "marci_companion_run"
+        "Ability3"      "marci_guardian"
+        "Ability4"      "generic_hidden"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "marci_unleash"
+        
+        "AbilityDraftAbilities"
+        {
+            "Ability1"      "marci_grapple"
+            "Ability2"      "marci_companion_run"
+            "Ability3"      "marci_guardian"
+            "Ability6"      "marci_unleash"
+        }   
+
+        "Ability10"     "special_bonus_unique_marci_lunge_range"
+        "Ability11"     "special_bonus_unique_marci_grapple_damage"
+        "Ability12"     "special_bonus_unique_marci_guardian_lifesteal"
+        "Ability13"     "special_bonus_unique_marci_lunge_cooldown"
+        "Ability14"     "special_bonus_unique_marci_grapple_stun_duration"
+        "Ability15"     "special_bonus_unique_marci_unleash_speed"
+        "Ability16"     "special_bonus_unique_marci_unleash_silence"
+        "Ability17"     "special_bonus_unique_marci_guardian_magic_immune"
+        "ArmorPhysical"             "0"
+        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
+        "AttackDamageMin"           "33"
+        "AttackDamageMax"           "37"
+        "AttackRate"                "1.700000"
+        "AttackAnimationPoint"      "0.300000"
+        "AttackAcquisitionRange"    "600"
+        "AttackRange"               "150"
+        "ProjectileSpeed"           "0"
+        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
+        "AttributeBaseStrength"     "23"
+        "AttributeStrengthGain"     "3.600000"
+        "AttributeBaseIntelligence" "19"
+        "AttributeIntelligenceGain" "1.900000"
+        "AttributeBaseAgility"      "20"
+        "AttributeAgilityGain"      "2.40000"
+        "StatusManaRegen"           "0.0"
+        "MovementSpeed"         "315"
+        "MovementTurnRate"      "0.900000"
+        "animation_transitions"
+        {
+        //  "ACT_DOTA_RUN"
+        //  {
+        //      "regular"       "0.300000"
+        //  }
+            "ACT_DOTA_IDLE"
+            {
+                "regular"       "0.5000"
+                "unleash"       "0.3000"
+                "injured"       "0.2000"
+            }
+        }   
+        "AttackSpeedActivityModifiers"
+        {
+            "fast"      "180"
+            "faster"    "250"
+        }
+        "HealthBarOffset"       "200"
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "ItemSlots"
+        {
+            "0"
+            {
+                "SlotIndex"     "0"
+                "SlotName"      "head"
+                "SlotText"      "#LoadoutSlot_Head"
+                "TextureWidth"      "512"
+                "TextureHeight"     "512"
+                "MaxPolygonsLOD0"       "2500"
+                "MaxPolygonsLOD1"       "1250"
+            }
+            "1"
+            {
+                "SlotIndex"     "1"
+                "SlotName"      "armor"
+                "SlotText"      "#LoadoutSlot_Armor"
+                "TextureWidth"      "512"
+                "TextureHeight"     "512"
+                "MaxPolygonsLOD0"       "4000"
+                "MaxPolygonsLOD1"       "2000"
+            }
+            "2"
+            {
+                "SlotIndex"     "2"
+                "SlotName"      "shoulder"
+                "SlotText"      "#LoadoutSlot_shoulder"
+                "TextureWidth"      "512"
+                "TextureHeight"     "512"
+                "MaxPolygonsLOD0"       "3000"
+                "MaxPolygonsLOD1"       "1500"
+            }
+            "3"
+            {
+                "SlotIndex"     "3"
+                "SlotName"      "back"
+                "SlotText"      "#LoadoutSlot_Back"
+                "TextureWidth"      "512"
+                "TextureHeight"     "256"
+                "MaxPolygonsLOD0"       "2500"
+                "MaxPolygonsLOD1"       "1250"
+            }
+            "4"
+            {
+                "SlotIndex"     "4"
+                "SlotName"      "taunt"
+                "SlotText"      "#LoadoutSlot_Taunt"
+            }
+        }
+        "particle_folder"       "particles/units/heroes/hero_marci"
+        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_marci.vsndevts"
+        "VoiceFile"             "soundevents/voscripts/game_sounds_vo_marci.vsndevts"
+    }
+
+
+    
 
 
 

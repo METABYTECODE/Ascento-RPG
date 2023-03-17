@@ -240,7 +240,7 @@ function RetreatHome()
 
     ExecuteOrderFromTable({
         UnitIndex = thisEntity:entindex(),
-        OrderType = DOTA_UNIT_ORDER_MOVE_TO_POSITION,
+        OrderType = DOTA_UNIT_ORDER_ATTACK_MOVE,
         Position = Vector(-4520.886230, -4692.832031, 5.000000)    
     })
 end

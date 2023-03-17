@@ -29,61 +29,66 @@ end
 
 
 function GameMode:OnOrder(event)
-    -- event.entindex_target
-    -- event.order_type
-    -- event.issuer_player_id_const
+    --event.entindex_target
+    --event.order_type
+    --event.issuer_player_id_const
    
-    --if not EntIndexToHScript(event.units["0"]):IsHero() then return true end
+    if not EntIndexToHScript(event.units["0"]):IsHero() then return true end
+
     if event.units["0"] ~= nil then
         local hero          = EntIndexToHScript(event.units["0"])
-        
-   
+
         if hero ~= nil then
             if not hero:IsHero() then return true end
         end
 
-        
-
         if event.order_type then
-
-            if event.order_type == 29 then
-                return true
-            end
-
-            local playerID = hero:GetPlayerID()
-
-            hero.order_timer = 600
-
-            if hero:HasModifier("modifier_left_the_game") then
-                hero:RemoveModifierByName("modifier_left_the_game")
-            end
-
-            Timers:RemoveTimer("order_timer_"..playerID)
-
-            Timers:CreateTimer("order_timer_"..playerID, {
-                useOldStyle = true,
-                endTime = GameRules:GetGameTime() + 1,
-                callback = function()
-
-                    hero.order_timer = hero.order_timer - 1
-                    if hero.order_timer <= 0 then
-                        if not hero:HasModifier("modifier_left_the_game") then
-                            hero:AddNewModifier(hero, nil, "modifier_left_the_game", {duration = -1})
-                        end
-                    end
-
-                    if hero.order_timer <= -3600 then
-                        GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
-                    end
-
-                  return GameRules:GetGameTime() + 1
-            end})
-
+                --print(event.order_type)
+                --PrintTable(event)
         end
     end
-
+    
     return true
 end
+--
+    --        if event.order_type == 29 then
+    --            return true
+    --        end
+--
+    --        local playerID = hero:GetPlayerID()
+--
+    --        hero.order_timer = 600
+--
+    --        if hero:HasModifier("modifier_left_the_game") then
+    --            hero:RemoveModifierByName("modifier_left_the_game")
+    --        end
+--
+    --        Timers:RemoveTimer("order_timer_"..playerID)
+--
+    --        Timers:CreateTimer("order_timer_"..playerID, {
+    --            useOldStyle = true,
+    --            endTime = GameRules:GetGameTime() + 1,
+    --            callback = function()
+--
+    --                hero.order_timer = hero.order_timer - 1
+    --                if hero.order_timer <= 0 then
+    --                    if not hero:HasModifier("modifier_left_the_game") then
+    --                        hero:AddNewModifier(hero, nil, "modifier_left_the_game", {duration = -1})
+    --                    end
+    --                end
+--
+    --                if hero.order_timer <= -3600 then
+    --                    GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
+    --                end
+--
+    --              return GameRules:GetGameTime() + 1
+    --        end})
+--
+
+
+
+
+
 
 --       if event.order_type == DOTA_UNIT_ORDER_ATTACK_TARGET then return true end
 --
@@ -293,6 +298,7 @@ function GameMode:DamageFilter(filterDamage)
     local ability,abilityName
     local victim = EntIndexToHScript(filterDamage.entindex_victim_const)
     local typeDamage = filterDamage.damagetype_const
+
     if filterDamage.entindex_inflictor_const then
         ability = EntIndexToHScript(filterDamage.entindex_inflictor_const )
         if ability and ability.GetAbilityName and ability:GetAbilityName() then
@@ -383,7 +389,7 @@ function GameMode:DamageFilter(filterDamage)
             end
         end
 
-        if attacker:HasModifier("modifier_ranger_1_heavy_bolts") then
+        if attacker:HasModifier("modifier_ranger_1_heavy_bolts") and typeDamage == DAMAGE_TYPE_PHYSICAL then
             if IsServer() then
                 local ability = attacker:FindAbilityByName("ranger_1_heavy_bolts")
                 if ability ~= nil then
@@ -750,12 +756,6 @@ function GameMode:ExperienceFilter(keys)
         return false
     end
 
-
-
-
-    -- Start Share XP
-    --local team_heroes = get_team_heroes(PlayerResource:GetTeam(player_id))
-
     local shareUnits = FindUnitsInRadius(PlayerResource:GetTeam(player_id), heroAbs, nil, 1000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
     local count = #shareUnits
 
@@ -794,44 +794,14 @@ function GameMode:ExperienceFilter(keys)
         if hero:HasModifier("modifier_profession") and hero:IsRealHero() then
             local modProf = hero:FindModifierByName("modifier_profession")
             local modProfLvl = modProf:GetStackCount()
-            if modProfLvl == 1 and hero:GetLevel() > 29 then
-
-                if hero:IsRealHero() then
-                    if hero:GetLevel() > 29 then
-                        Ascento:UpgradeJobTo2(hero)
-                    end
-                end
-
-                experience = 0
-                return false
-    
-            elseif modProfLvl == 2 and hero:GetLevel() > 119 then
-
-                if hero:IsRealHero() then
-                    if hero:GetLevel() > 119 then
-                        Ascento:UpgradeJobTo2(hero)
-                        Ascento:UpgradeJobTo3(hero)
-                    end
-                end
-
-                experience = 0
-                return false
-
-
-            end
 
             if hero ~= nil then
                 if hero:HasModifier("modifier_incarnation") then
                     local CurrentInc = hero:FindModifierByName("modifier_incarnation")
                     if CurrentInc ~= nil then
                         local CurrentIncId = CurrentInc:GetStackCount()
-                        if ( hero:GetLevel() < 120 + ( math.floor(CurrentIncId / 5) ) ) then
+                        if ( hero:GetLevel() < 120 + ( math.floor(CurrentIncId / 10) ) ) then
                             if experience > 0 then
-                                --if killedUnit:GetLevel() < killerUnit:GetLevel() then
-                                --    experience = experience / 5
-                                --else
-                                --    experience = experience
-                                --end
     
                                 hero:AddExperience( experience, DOTA_ModifyXP_Unspecified, false, true)
                                 if hero.host ~= nil and hero.host ~= hero then
@@ -858,9 +828,6 @@ end
 
 
 function GameMode:OnHeroPick(event)                           
---  event.player
---  event.heroindex
---  event.hero
 
     local hero      = EntIndexToHScript(event.heroindex)
     local player    = EntIndexToHScript(event.player)
@@ -872,15 +839,8 @@ function GameMode:OnHeroPick(event)
 
     CustomGameEventManager:Send_ServerToPlayer(player, 'event_hide_shop', {})
 
-    --if hero:FindAbilityByName("special_bonus_attributes") then hero:RemoveAbility("special_bonus_attributes") end
-
     hero.damageDone = 0
-    --hero.Quests     = Quests(hero)
-    --hero.Achievments = Achievments(hero)
 
-    --Stats:Update(hero)
-
-    --GameRules:SendCustomMessage('If you have trouble with taking quest. Please disable Right Click to Force Attack in settings/opiton menu!', 0, 0)
 end
 
 
@@ -902,19 +862,6 @@ function GameMode:OnGameRulesStateChange(keys)
         GameRules:SetCustomGameSetupAutoLaunchDelay(CUSTOM_GAME_SETUP_TIME)
         GameMode:OnFirstPlayerLoaded()
 
-        if IsServer() then
-            --Npcs:Init()
-            --Quests:Init()
-            --Achievments:Init()
-        end
-
-        --Timers:CreateTimer(function()
---
-        --    GameMode:ConsoleTest(tostring(GameRules:Script_GetMatchID()))
---
-        --    return 20
-        --end)
-
     elseif new_state == DOTA_GAMERULES_STATE_HERO_SELECTION then
         if USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS then
           for i=0,9 do
@@ -932,8 +879,6 @@ function GameMode:OnGameRulesStateChange(keys)
         --GameMode:PostLoadPrecache()
         GameMode:OnAllPlayersLoaded()
 
-
-        
 
         
     elseif new_state == DOTA_GAMERULES_STATE_STRATEGY_TIME then

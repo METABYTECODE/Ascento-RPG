@@ -36,7 +36,26 @@
 #base "items/potion.txt"
 #base "items/holy_shit.txt"
 
-#base "items/thunder_items.txt"
+//#base "items/thunder_items.txt"
+
+#base "items/bubich/item_heart.txt"
+#base "items/bubich/item_shivas_guard.txt"
+#base "items/bubich/item_kaya.txt"
+#base "items/bubich/item_mjollnir.txt"
+#base "items/bubich/item_greater_crit.txt"
+#base "items/bubich/item_desolator.txt"
+#base "items/bubich/item_bloodstone.txt"
+#base "items/bubich/item_bow.txt"
+#base "items/bubich/item_butterfly.txt"
+#base "items/bubich/item_octarine_core.txt"
+#base "items/bubich/item_radiance.txt"
+#base "items/bubich/item_sange_and_yasha.txt"
+#base "items/bubich/item_satanic.txt"
+#base "items/bubich/item_skadi.txt"
+//#base "items/bubich/item_silver_edge.txt"
+#base "items/bubich/item_assault_cuirass.txt"
+#base "items/bubich/item_teleport_key.txt"
+#base "items/bubich/item_dota.txt"
 
 // Dota Heroes File
 "DOTAAbilities"
@@ -390,94 +409,827 @@
 
 }
 
-"item_grade_profession"
-{
-  // General
-  //-------------------------------------------------------------------------------------------------------------
-  "BaseClass"           "item_datadriven"
-  "ItemSellable"                "0"
-  "AllowedInBackpack" "1"
-  "ItemKillable" "1"
-  "ItemShareability" "ITEM_NOT_SHAREABLE"
-  "ItemPurchasable" "0"
-  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
-  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  "Model"             "models/props_gameplay/gem01.vmdl" 
-  "Effect"            "particles/generic_gameplay/dropped_refresher_shard.vpcf"
-  "AbilityTextureName"      "upgrade_prof"
 
-  
-  // Item Info
-  //-------------------------------------------------------------------------------------------------------------
-  "ItemCost" "0"
-  "ItemShopTags"          ""
-  "ItemQuality"         epic
-  "ItemAliases"         ""
-  "SideShop"            "1"
-  "AllowedInBackpack" "1"
-
-
-  // Special  
-  //-------------------------------------------------------------------------------------------------------------
-    "OnEquip"
+"item_recipe_vampire_claw"
   {
-    "RunScript"
+    "AbilityTextureName"        "item_recipe_vampire_claw"
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "ID"              "4070"            
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_arcane_boots"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "100"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_vampire_claw"
+    "ItemRequirements"
     {
-      "ScriptFile"      "libraries/autoload/second_job/second_job.lua"
-      "Function"        "UpgradeJobTo2"
+      "01"            "item_lifesteal"
     }
   }
 
-  "AbilitySpecial"
-  {
+  "item_vampire_claw"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "ID"              "4095"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+    "AbilityTextureName"          "vampire_claw_1"
+    "ScriptFile"          "items/vampire_claw/vampire_claw"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"      "14"
 
-  }
-}
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "700"
+    "ItemStackable"       "0"
+    
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+    "ItemPurchasable"     "1"
+    "ItemInitialCharges"    "0"
+    "ItemDisplayCharges"    "1"
+    "ItemRequiresCharges"   "1"
 
-"item_grade_profession_3"
-{
-  // General
-  //-------------------------------------------------------------------------------------------------------------
-  "BaseClass"           "item_datadriven"
-  "ItemSellable"                "0"
-  "AllowedInBackpack" "1"
-  "ItemKillable" "1"
-  "ItemShareability" "ITEM_NOT_SHAREABLE"
-  "ItemPurchasable" "0"
-  "ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
-  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  "Model"             "models/props_gameplay/gem01.vmdl" 
-  "Effect"            "particles/generic_gameplay/dropped_refresher_shard.vpcf"
-  "AbilityTextureName"      "upgrade_prof"
+    "ItemQuality"        "common"
 
-  
-  // Item Info
-  //-------------------------------------------------------------------------------------------------------------
-  "ItemCost" "0"
-  "ItemShopTags"          ""
-  "ItemQuality"         epic
-  "ItemAliases"         ""
-  "SideShop"            "1"
-  "AllowedInBackpack" "1"
-
-
-  // Special  
-  //-------------------------------------------------------------------------------------------------------------
-    "OnEquip"
-  {
-    "RunScript"
+    "AbilitySpecial"
     {
-      "ScriptFile"      "libraries/autoload/second_job/second_job.lua"
-      "Function"        "UpgradeJobTo3"
+      //Passive
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_damage"      "20"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "bonus_str"      "2"
+      }
+      "04"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "lifesteal"      "20"
+      }
+      //Active
+      "05"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "charges_for_attack_creep"  "1"
+      }
+      "06"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "charges_for_attack_hero" "2"
+      }
+      "07"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "max_charges"      "25"
+      }
+      "08"
+      {
+        "var_type"          "FIELD_INTEGER"
+        "heal_per_charge"    "8"
+      }
+    }
+  } 
+
+
+  //=================================================================================================================
+  // Recipe: Null Talisman
+  //=================================================================================================================
+  "item_recipe_null_talisman_custom"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_null_talisman"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "210"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_null_talisman_custom"
+    "ItemRequirements"
+    {
+      "01"            "item_circlet;item_mantle"
+    }
+  }
+  
+  //=================================================================================================================
+  // Null Talisman
+  //=================================================================================================================
+  "item_null_talisman_custom"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------                         // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "null_talisman_custom"
+    "ScriptFile"          "items/item_null_talisman_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "MaxUpgradeLevel"       "2"
+    "ItemBaseLevel"         "1"
+    "ItemLevelByGameTime"     "25"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+    
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityValues"
+    {
+      "bonus_int"       "5"
+      "bonus_str"       "2"
+      "bonus_agi"       "2"
+      "bonus_mana_regen"    "0.75"
     }
   }
 
-  "AbilitySpecial"
+  "item_recipe_magician_talisman"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_null_talisman"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_magician_talisman"
+    "ItemRequirements"
+    {
+      "01"            "item_robe;item_energy_booster;item_null_talisman_custom"
+    }
+  }
+
+  "item_magician_talisman"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "magician_talisman"
+    "ScriptFile"          "items/item_null_talisman_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"     "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+        "bonus_int"       "12"
+        "bonus_str"       "6"
+        "bonus_agi"       "6"
+        "bonus_mana_regen"    "1.5"
+        "bonus_mana"      "200"
+        
+    }
+  } 
+
+  "item_recipe_archmagician_talisman"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_null_talisman"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "500"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_archmagician_talisman"
+    "ItemRequirements"
+    {
+      "01"            "item_staff_of_wizardry;item_magician_talisman"
+    }
+  }
+
+  "item_archmagician_talisman"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "archmagician_talisman"
+    "ScriptFile"          "items/item_null_talisman_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"      "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+        "bonus_int"       "25"
+        "bonus_str"       "12"
+        "bonus_agi"       "12"
+        "bonus_mana_regen"    "4"
+        "bonus_mana"      "400"
+        
+    }
+  }
+
+  "item_recipe_bracer_custom"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_bracer"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "210"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_bracer_custom"
+    "ItemRequirements"
+    {
+      "01"            "item_circlet;item_gauntlets"
+    }
+  }
+  
+  //=================================================================================================================
+  // Null Talisman
+  //=================================================================================================================
+  "item_bracer_custom"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------                         // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "bracer_custom"
+    "ScriptFile"          "items/item_bracer_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "MaxUpgradeLevel"       "2"
+    "ItemBaseLevel"         "1"
+    "ItemLevelByGameTime"     "25"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+    
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityValues"
+    {
+      "bonus_int"       "2"
+      "bonus_str"       "5"
+      "bonus_agi"       "2"
+      "bonus_hp_regen"    "0.75"
+    }
+  }
+
+  "item_recipe_ogres_bracer"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_bracer"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_ogres_bracer"
+    "ItemRequirements"
+    {
+      "01"            "item_belt_of_strength;item_vitality_booster;item_bracer_custom"
+    }
+  }
+
+  "item_ogres_bracer"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "ogres_bracer"
+    "ScriptFile"          "items/item_bracer_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"     "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+        "bonus_int"       "6"
+        "bonus_str"       "12"
+        "bonus_agi"       "6"
+        "bonus_hp_regen"    "3"
+        "bonus_health"      "200"
+        
+    }
+  } 
+
+  "item_recipe_giants_bracer"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_bracer"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "500"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_giants_bracer"
+    "ItemRequirements"
+    {
+      "01"            "item_ogre_axe;item_ogres_bracer"
+    }
+  }
+
+  "item_giants_bracer"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "giants_bracer"
+    "ScriptFile"          "items/item_bracer_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"      "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+        "bonus_int"       "12"
+        "bonus_str"       "25"
+        "bonus_agi"       "12"
+        "bonus_hp_regen"    "8"
+        "bonus_health"      "400"
+        
+    }
+  }
+
+  //=================================================================================================================
+  // Vitality Booster
+  //=================================================================================================================
+  "item_winde_booster"
   {
 
+    "BaseClass"           "item_lua"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"      "winde_booster"
+    "ScriptFile"          "items/item_winde_booster"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "800"
+    "SecretShop"          "1"
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityValues"
+    {
+        "bonus_attack_speed"      "30"
+    }
+  }
+
+  "item_recipe_wraith_band_custom"
+  {
+
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_wraith_band"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "210"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_wraith_band_custom"
+    "ItemRequirements"
+    {
+      "01"            "item_circlet;item_slippers"
+    }
+  }
+  
+  "item_wraith_band_custom"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------                         // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "wraith_band_custom"
+    "ScriptFile"          "items/item_wraith_band_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "MaxUpgradeLevel"       "2"
+    "ItemBaseLevel"         "1"
+    "ItemLevelByGameTime"     "25"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+    
+
+    // Special  
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityValues"
+    {
+      "bonus_int"       "2"
+      "bonus_str"       "2"
+      "bonus_agi"       "5"
+      "bonus_attack"      "12"
+      "bonus_armor"     "3"
+    }
+  }
+
+  "item_recipe_assassins_mask"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_wraith_band"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "0"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_assassins_mask"
+    "ItemRequirements"
+    {
+      "01"            "item_boots_of_elves;item_winde_booster;item_wraith_band_custom"
+    }
+  }
+
+  "item_assassins_mask"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "assassins_mask"
+    "ScriptFile"          "items/item_wraith_band_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"     "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+      "bonus_int"       "6"
+      "bonus_str"       "6"
+      "bonus_agi"       "12"
+      "bonus_attack"      "25"
+      "bonus_armor"     "6"
+        
+    }
+  } 
+
+  "item_recipe_ghost_mask"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------         
+    "Model"            "models/props_gameplay/recipe.vmdl"
+    "BaseClass"                    "item_recipe_wraith_band"
+    
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"            "500"
+    "ItemShopTags"          ""
+    
+    // Recipe
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemRecipe"          "1"
+    "ItemResult"          "item_ghost_mask"
+    "ItemRequirements"
+    {
+      "01"            "item_blade_of_alacrity;item_assassins_mask"
+    }
+  }
+
+  "item_ghost_mask"
+  {      
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"          "item_lua"
+    "AbilityBehavior"      "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"          "ghost_mask"
+    "ScriptFile"          "items/item_wraith_band_custom"
+    
+    // Stats
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"      "0"
+
+    // Item Info
+    //-------------------------------------------------------------------------------------------------------------
+    "ItemCost"          "0"
+    "ItemStackable"       "0" 
+    "ItemKillable"        "1"
+    "ItemSellable"        "1"
+    "ItemDroppable"       "1"
+    "ItemPurchasable"     "1"
+
+    "ItemQuality"        "common"
+
+    "AbilityValues"
+    {
+
+      "bonus_int"       "12"
+      "bonus_str"       "12"
+      "bonus_agi"       "25"
+      "bonus_attack"      "50"
+      "bonus_armor"     "8"
+        
+    }
+  }
+
+
+    //=================================================================================================================
+  // Book Agility
+  //=================================================================================================================
+        "item_tome_agi_3"
+{       
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "3300"
+  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+  
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+  "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityTextureName"          "tome_agi"
+  "Model"             "models/props_gameplay/halloween_cupcakes001_spider.vmdl"
+
+
+  // Stats
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.0"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "1666"
+  "ItemQuality"         "component"
+  "ItemStackable"         "1"
+  "ItemShareability"        "ITEM_NOT_SHAREABLE"
+  "ItemAliases"         "agi;book;tome;stats"
+  "ItemPermanent"         "0"
+  "ItemInitialCharges"      "1"
+  "ItemKillable"                  "1"
+  "ItemSellable"                  "0"
+  "ItemDroppable"                 "1"
+  "ItemPurchasable"       "0"
+
+  "ItemStockMax"          ""
+  "ItemStockInitial"        ""
+  "ItemStockTime"         ""
+
+
+  "OnEquip"
+  {
+    "RunScript"
+    {
+      "Target"      "CASTER"
+      "ScriptFile"    "tome.lua"
+      "Function"      "UpgradeStats"
+      "Agi"       "5"
+    }
+    "SpendCharge"
+    {
+    }        
+  }
+  //special
+}
+
+
+"item_tome_int_3"
+{       
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "3301"
+  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+  
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+  "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityTextureName"          "tome_int"
+  "Model"             "models/props_gameplay/halloween_cupcakes001_bat.vmdl"
+
+
+  // Stats
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.0"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "1666"
+  "ItemQuality"         "component"
+  "ItemStackable"         "1"
+  "ItemShareability"        "ITEM_NOT_SHAREABLE"
+  "ItemAliases"         "int;book;tome;stats;èíòåëëåêò"
+  "ItemPermanent"         "0"
+  "ItemInitialCharges"      "1"
+  "ItemKillable"                  "1"
+  "ItemSellable"                  "0"
+  "ItemDroppable"                 "1"
+  "ItemPurchasable"       "0"
+
+  "ItemStockMax"          ""
+  "ItemStockInitial"        ""
+  "ItemStockTime"         ""
+
+  
+  "OnEquip"
+  {
+    "RunScript"
+    {
+      "Target"      "CASTER"
+      "ScriptFile"    "tome.lua"
+      "Function"      "UpgradeStats"
+      "Int"       "5"
+    }
+    "SpendCharge"
+    {
+    }        
   }
 }
 
+
+"item_tome_str_3"
+{       
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"           "item_datadriven"
+  "ID"              "3303"
+  "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+  
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+  "ItemDisassembleRule"       "DOTA_ITEM_DISASSEMBLE_NEVER"
+  "AbilityTextureName"          "tome_str"
+  "Model"             "models/props_gameplay/halloween_candy.vmdl"
+
+
+  // Stats
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0.0"
+  
+  // Item Info
+  //-------------------------------------------------------------------------------------------------------------
+  "ItemCost"            "1666"
+  "ItemQuality"         "component"
+  "ItemStackable"         "1"
+  "ItemShareability"       "ITEM_NOT_SHAREABLE"
+  "ItemAliases"         "str;book;tome;stats;ñèëû;ñèëà"
+  "ItemPermanent"         "0"
+  "ItemInitialCharges"      "1"
+  "ItemKillable"                  "1"
+  "ItemSellable"                  "0"
+  "ItemDroppable"                 "1"
+  "ItemPurchasable"       "0"
+
+  "ItemStockMax"          ""
+  "ItemStockInitial"        ""
+  "ItemStockTime"         ""
+
+  
+  "OnEquip"
+  {
+    "RunScript"
+    {
+      "Target"      "CASTER"
+      "ScriptFile"    "tome.lua"
+      "Function"      "UpgradeStats"
+      "Str"       "5"
+    }
+    "SpendCharge"
+    {
+    }        
+  }
+  //special
+}
 
 
 

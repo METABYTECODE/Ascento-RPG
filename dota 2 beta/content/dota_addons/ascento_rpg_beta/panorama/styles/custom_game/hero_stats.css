@@ -16,7 +16,52 @@
 	flow-children:down;
 }
 
+.Reinc_text_top{
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
 
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	opacity: 1;
+    width: 80px;
+    height: 20px;
+	text-align: center;
+	horizontal-align: right;
+	vertical-align: bottom;
+	border-radius: 2px;
+
+	margin-right: 5.55%;
+  	margin-bottom: 9.4%;
+
+	padding: 2px 2px 2px 2px;
+	box-shadow: 0px 0px 5px 2px #0000005b;
+}
+
+.Endless_text_top{
+	color: white;
+	font-weight: bold;
+	font-size: 17px;
+
+	background-size: 100%;
+	background-position: 50% 50%;
+
+	opacity: 1;
+    width: 80px;
+    height: 20px;
+	text-align: center;
+	horizontal-align: right;
+	vertical-align: bottom;
+	border-radius: 2px;
+
+	margin-right: 10.1%;
+  	margin-bottom: 9.4%;
+
+	padding: 2px 2px 2px 2px;
+	box-shadow: 0px 0px 5px 2px #0000005b;
+	
+}
 
 .PlayerStatsCurrentCreeps {
 	background-image: url("s2r://panorama/images/hud/reborn/top_bar_team_bg_psd.vtex");
@@ -136,7 +181,7 @@
 	vertical-align: bottom;
 	border-radius: 2px;
   	margin-right: 1%;
-  	margin-bottom: 9.5%;
+  	margin-bottom: 12%;
 	padding: 10px;
 	box-shadow: 0px 0px 5px 2px #0000009b;
 }
@@ -167,7 +212,7 @@
 	vertical-align: bottom;
 	border-radius: 2px;
   	margin-right: 1%;
-  	margin-bottom: 9.5%;
+  	margin-bottom: 12%;
 	padding: 10px;
 	box-shadow: 0px 0px 5px 2px #0000009b;
 }
@@ -309,7 +354,7 @@
 	vertical-align: bottom;
 	border-radius: 2px;
   	margin-right: 1%;
-  	margin-bottom: 9.5%;
+  	margin-bottom: 12%;
 	padding: 0px 10px 10px 10px;
 	box-shadow: 0px 0px 5px 2px #0000009b;
 }

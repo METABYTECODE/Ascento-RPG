@@ -1,14 +1,7 @@
 "AddonInfo"
 {
-    "version"        "1.86.0"
-    "maps"        "ascento_rpg newyear"
-    "newyear"
-    {
-        "MinPlayers"        "1"
-        "MaxPlayers"        "5"
-        "TeamCount"        "1"
-        "IsPlayable"        "1"
-    }
+    "version"        "1.89.0"
+    "maps"        "ascento_rpg"
     "ascento_rpg"
     {
         "MinPlayers"        "1"

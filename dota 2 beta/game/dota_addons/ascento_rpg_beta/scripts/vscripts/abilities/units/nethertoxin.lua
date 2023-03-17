@@ -130,19 +130,21 @@ modifier_nethertoxin = class({
 
 function modifier_nethertoxin:OnCreated( kv )
 	self.ability = self:GetAbility()
-	self.parent = self:GetParent()
-	self.caster = self:GetCaster()
-	if not IsServer() then return end
+	if self.ability then
+		self.parent = self:GetParent()
+		self.caster = self:GetCaster()
+		if not IsServer() then return end
+		
+		self.targetTeam = self.ability:GetAbilityTargetTeam()
+    	self.targetType = self.ability:GetAbilityTargetType()
+		
 	
-	self.targetTeam = self.ability:GetAbilityTargetTeam()
-    self.targetType = self.ability:GetAbilityTargetType()
+		self.owner = kv.isProvidedByAura~=1
 	
-
-	self.owner = kv.isProvidedByAura~=1
-
+		
 	
-
-	self:OnRefresh()
+		self:OnRefresh()
+	end
 end
 
 function modifier_nethertoxin:OnRefresh( kv )

@@ -1,0 +1,317 @@
+"DOTAAbilities"
+{
+	"item_recipe_satanic_lua1"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"0"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua1"
+		"ItemRequirements"
+		{
+			"01"							"item_vampire_claw;item_claymore;item_reaver"
+		}
+	}
+
+"item_recipe_satanic_lua2"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"5000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua2"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua1;item_forest_soul"
+		}
+	}	
+	
+"item_recipe_satanic_lua3"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"10000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua3"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua2;item_village_soul"
+		}
+	}
+
+"item_recipe_satanic_lua4"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"15000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua4"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua3;item_mines_soul"
+		}
+	}
+
+"item_recipe_satanic_lua5"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"20000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua5"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua4;item_dust_soul"
+		}
+	}
+
+"item_recipe_satanic_lua6"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"25000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua6"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua5;item_swamp_soul"
+		}
+	}	
+	
+"item_recipe_satanic_lua7"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"30000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua7"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua6;item_snow_soul"
+		}
+	}	
+"item_recipe_satanic_lua8"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"35000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_satanic_lua8"
+		"ItemRequirements"
+		{
+			"01"							"item_satanic_lua7;item_divine_soul"
+		}
+	}	
+//===================================================	
+
+"item_satanic_lua1"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"1"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"25"
+
+		"AbilityValues"
+		{
+			"damage_bonus"					"50 100 150 200 250 300 350 400"
+			"strength_bonus"				"50 100 150 200 250 300 350 400"
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+	
+"item_satanic_lua2"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_2"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"2"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"23"
+
+		"AbilityValues"
+		{
+			"damage_bonus"					"50 100 150 200 250 300 350 400"
+			"strength_bonus"				"50 100 150 200 250 300 350 400"
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+
+"item_satanic_lua3"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_3"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"3"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"21"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+
+"item_satanic_lua4"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_4"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"4"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"19"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+	
+"item_satanic_lua5"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_5"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"5"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"17"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+
+"item_satanic_lua6"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_6"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"6"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"15"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+
+"item_satanic_lua7"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_7"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"7"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"13"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+    "item_satanic_lua8"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityTextureName"			"satanic_8"
+		"ScriptFile"					"items/custom_items/item_satanic"
+
+		"ItemCost" 						"5300"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemBaseLevel"					"8"
+
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"10"
+
+		"AbilityValues"
+		{
+			"lifesteal_pct"					"8 9 10 11 12 13 14 15"
+			"duration"						"5.0"
+			"lifesteal_bonus"				"65 70 75 80 85 90 95 100"
+			
+		}
+	}
+}

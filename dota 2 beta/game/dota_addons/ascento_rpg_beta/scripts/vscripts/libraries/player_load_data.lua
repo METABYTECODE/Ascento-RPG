@@ -131,16 +131,6 @@ function GameMode:FastSave(event)
             --    halloween_pet = 1
             --end
 
-            local prof_id = 0
-            if caster:HasModifier("modifier_profession") then
-                local CurrentProf = caster:FindModifierByName("modifier_profession")
-                if CurrentProf ~= nil then
-                    local CurrentProfId = CurrentProf:GetStackCount()
-                    if CurrentProfId ~= nil and CurrentProfId > 0 then
-                        prof_id = CurrentProfId
-                    end
-                end
-            end
 
             local checkpointNUM = 0
             if caster.RespawnPos ~= nil then
@@ -153,7 +143,7 @@ function GameMode:FastSave(event)
             local heroName = caster:GetUnitName()
 
             local SavingData = {}
-            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, prof_id = prof_id, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
+            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
             SaveDataWeb(SavingData, function(a,b) print(a) 
                 if a == '{"status":"ok"}' then 
                     Say(player, "Game is Saved", false)
@@ -307,17 +297,6 @@ function GameMode:FastSaveNoReq(event)
             --    halloween_pet = 1
             --end
 
-            local prof_id = 0
-            if caster:HasModifier("modifier_profession") then
-                local CurrentProf = caster:FindModifierByName("modifier_profession")
-                if CurrentProf ~= nil then
-                    local CurrentProfId = CurrentProf:GetStackCount()
-                    if CurrentProfId ~= nil and CurrentProfId > 0 then
-                        prof_id = CurrentProfId
-                    end
-                end
-            end
-
             local checkpointNUM = 0
             if caster.RespawnPos ~= nil then
                 checkpointNUM = caster.RespawnPos
@@ -329,7 +308,7 @@ function GameMode:FastSaveNoReq(event)
             local heroName = caster:GetUnitName()
 
             local SavingData = {}
-            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, prof_id = prof_id, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
+            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
             SaveDataWeb(SavingData, function(a,b) print(a) 
                 if a == '{"status":"ok"}' then 
                     Say(player, "Game is Saved", false)
@@ -361,42 +340,11 @@ function GameMode:FastLoad(event)
 
                     
 
-
-                    --modifier_profession
-                    if result["prof_id"] ~= nil then
-                        local ProfId = math.floor(result["prof_id"])
-                        if ProfId > 0 then
-                            if caster:HasModifier("modifier_profession") then
-                                local CurrentProf = caster:FindModifierByName("modifier_profession")
-                                local CurrentProfId = CurrentProf:GetStackCount()
-                                if ProfId > CurrentProfId then
-                                    if ProfId == 2 then
-                                        Ascento:UpgradeJobTo2(caster)
-                                        --caster:AddItemByName("item_grade_profession")
-                                    end
-                                    if ProfId == 3 then
-                                        Ascento:UpgradeJobTo2(caster)
-                                        Ascento:UpgradeJobTo3(caster)
-                                    end
-                                end
-                            end
-                        end
-                    end
-
-
                     if result["hero_lvl"] ~= nil then
                         local lvl = math.floor(result["hero_lvl"])
                         if lvl == 0 or lvl > MAX_LEVEL then
                             Say(player, "Level is missing", false)
-                        elseif caster:HasModifier("modifier_profession") then
-                            local CurrentProf = caster:FindModifierByName("modifier_profession")
-                            local CurrentProfId = CurrentProf:GetStackCount()
-
-                            if CurrentProfId == 1 and lvl > 30 then
-                                lvl = 30
-                            elseif CurrentProfId == 2 and lvl > 120 then
-                                lvl = 120
-                            end
+                        else
 
                             caster:AddExperience(XP_PER_LEVEL_TABLE[lvl] - caster:GetCurrentXP(), 0, false, false)
                         end
@@ -963,6 +911,9 @@ function GameMode:FirstLoad(event)
                                 end
                             end
                         end
+                        
+                        caster.allEndless = caster.endless_1 + caster.endless_2 + caster.endless_3 + caster.endless_4 + caster.endless_5 + caster.endless_6 + caster.endless_7 + caster.endless_8 + caster.endless_9 + caster.endless_10 + caster.endless_11 + caster.endless_12 + caster.endless_13 + caster.endless_14 + caster.endless_15
+                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_update_all_endless", {AllModifiers = tonumber(caster.allEndless)})
 
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_get_endless", {modifierNumber = 1, modifierValue = caster.endless_1})
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_get_endless", {modifierNumber = 2, modifierValue = caster.endless_2})
@@ -2123,8 +2074,9 @@ function GameMode:DonateLoad(event)
         if steamID == 330607354 then
             --Я
             --donate_leha_doom_aura
-            hero:AddAbility("drow_ranger_marksmanship"):SetLevel(1)
-            hero:AddAbility("donate_bruiser"):SetLevel(1)
+
+            --hero:AddAbility("drow_ranger_marksmanship"):SetLevel(1)
+            --hero:AddAbility("donate_bruiser"):SetLevel(1)
             --hero:AddAbility("donate_steal_kills"):SetLevel(1)
             --hero:AddAbility("elder_titan_natural_order_custom"):SetLevel(1)
             --hero:AddAbility("donate_bruiser"):SetLevel(1)
@@ -2153,8 +2105,16 @@ function GameMode:DonateLoad(event)
             --    local added = hero:AddItemByName("item_hero_change_to_nevermore")
             --end
 
-            hero.isLeha = 1
+            --hero.isLeha = 1
 
+        end
+
+
+        if steamID == 78095023 then
+            --Макар#7232
+
+            hero:AddAbility("slark_essence_shift_lua_damage"):SetLevel(1)
+            
         end
 
         if steamID == 337786160 then
@@ -2248,6 +2208,14 @@ function GameMode:DonateLoad(event)
             end
 
         end
+
+        if steamID == 133606041 then
+            --AMKK Discord
+            hero:AddAbility("donate_leha_doom_aura"):SetLevel(1)
+            
+        end
+
+
 
         if steamID == 130569575 or steamID == 158686274 then
             if caster:GetUnitName() ~= "npc_dota_hero_nevermore" then

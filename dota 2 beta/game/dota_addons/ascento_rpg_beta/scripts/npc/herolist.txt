@@ -12,6 +12,7 @@
     "npc_dota_hero_invoker"        "1"
     "npc_dota_hero_void_spirit"        "1"
     "npc_dota_hero_dazzle"        "1"
+    "npc_dota_hero_marci"           "0"
     "npc_dota_hero_pangolier"        "0"
     "npc_dota_hero_ancient_apparition"        "0"
     "npc_dota_hero_antimage"        "0"

@@ -222,7 +222,7 @@ function modifier_cultist_1_decay_curse:OnCreated( kv )
 		attacker = self:GetCaster(),
 		damage = damage,
 		damage_type = self:GetAbility():GetAbilityDamageType(),
-		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
+		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION, DOTA_DAMAGE_FLAG_NO_DAMAGE_MULTIPLIERS,
 		ability = self, --Optional.
 	}
 	-- ApplyDamage(damageTable)
@@ -255,7 +255,7 @@ function modifier_cultist_1_decay_curse:OnIntervalThink()
 		attacker = self:GetCaster(),
 		damage = damage,
 		damage_type = self:GetAbility():GetAbilityDamageType(),
-		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
+		damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION, DOTA_DAMAGE_FLAG_NO_DAMAGE_MULTIPLIERS,
 		ability = self, --Optional.
 	}
 

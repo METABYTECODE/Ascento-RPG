@@ -12,8 +12,27 @@ local ItemBaseClass = {
 cultist_2_magic_health = class(ItemBaseClass)
 modifier_cultist_2_magic_health = class(ItemBaseClass)
 -------------
-function cultist_2_magic_health:GetIntrinsicModifierName()
-    return "modifier_cultist_2_magic_health"
+function cultist_2_magic_health:OnToggle(  )
+    -- unit identifier
+    local caster = self:GetCaster()
+
+    -- load data
+    local toggle = self:GetToggleState()
+
+    if toggle then
+        -- add modifier
+        self.modifier = caster:AddNewModifier(
+            caster, -- player source
+            self, -- ability source
+            "modifier_cultist_2_magic_health", -- modifier name
+            {  } -- kv
+        )
+    else
+        if self.modifier and not self.modifier:IsNull() then
+            self.modifier:Destroy()
+        end
+        self.modifier = nil
+    end
 end
 
 function modifier_cultist_2_magic_health:OnCreated( kv )
@@ -22,6 +41,12 @@ function modifier_cultist_2_magic_health:OnCreated( kv )
 
     self.giveMANA = self:GetCaster():GetIntellect() * self:GetAbility():GetLevelSpecialValueFor("extra_mana", self:GetAbility():GetLevel() - 1)
     self.giveHP = self:GetCaster():GetMaxMana() * self:GetAbility():GetLevelSpecialValueFor("hp_from_mana", self:GetAbility():GetLevel() - 1) / 100
+
+    if self:GetCaster():HasModifier("modifier_cultist_3_undead") then
+        self.hp_lose = self.hp_lose * 2
+        self.giveMANA = self.giveMANA * 2
+        self.giveHP = self.giveHP * 2
+    end
 
     self:StartIntervalThink( 1 )
     self:OnIntervalThink()
@@ -37,7 +62,11 @@ function modifier_cultist_2_magic_health:OnIntervalThink()
     self.giveMANA = self:GetCaster():GetIntellect() * self:GetAbility():GetLevelSpecialValueFor("extra_mana", self:GetAbility():GetLevel() - 1)
     self.giveHP = self:GetCaster():GetMaxMana() * self:GetAbility():GetLevelSpecialValueFor("hp_from_mana", self:GetAbility():GetLevel() - 1) / 100
 
-
+    if self:GetCaster():HasModifier("modifier_cultist_3_undead") then
+        self.hp_lose = self.hp_lose * 2
+        self.giveMANA = self.giveMANA * 2
+        self.giveHP = self.giveHP * 2
+    end
     
 
     local curHealth = self:GetCaster():GetHealth()
@@ -67,10 +96,10 @@ end
 
 
 function modifier_cultist_2_magic_health:GetModifierHealthBonus()
-    return self:GetCaster():GetMaxMana() * self:GetAbility():GetLevelSpecialValueFor("hp_from_mana", self:GetAbility():GetLevel() - 1) / 100 --self.giveHP
+    return self.giveHP
 end
 
 
 function modifier_cultist_2_magic_health:GetModifierManaBonus()
-    return self:GetCaster():GetIntellect() * self:GetAbility():GetLevelSpecialValueFor("extra_mana", self:GetAbility():GetLevel() - 1) --self.giveMANA
+    return self.giveMANA
 end

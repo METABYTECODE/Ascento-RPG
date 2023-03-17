@@ -14,7 +14,19 @@
 			<Label id="text1" html="true" text="#addon_game_description1" />
 		</Panel>
 		<Panel>
-			<Label id="text3" html="true" text="#addon_game_description2" />
+			<Label id="text1" html="true" text="#addon_game_description2" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description3" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description4" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description5" />
+		</Panel>
+		<Panel>
+			<Label id="text1" html="true" text="#addon_game_description6" />
 		</Panel>
 		<!--
 		<Panel hittest="true" onmouseover="DOTAShowAbilityTooltip(item_hallowen_legendary_pet_datadriven)" onmouseout="DOTAHideAbilityTooltip()">
@@ -36,18 +48,7 @@
 	<Panel>
 		<Label id="text5" html="true" text=""  style="height: 20px;"/>
 		</Panel>
-		<Panel>
-			<Label id="text5" html="true" text="#addon_game_thanks" />
-		</Panel>
-		<Panel>
-			<DOTAUserName id="author" steamid="76561198151521398" onmouseover="DOTAShowProfileCardTooltip(76561198151521398, false)" onmouseout="DOTAHideProfileCardTooltip()"/>
-		</Panel>
-		<Panel>
-			<DOTAAvatarImage id="author" steamid="76561198151521398" style="height:80px;width:80px; margin-top:10px; margin-left:0px;"/>
-		</Panel>
+		
 
-	<Panel>
-		<Label id="text5" html="true" text=""  style="height: 150px;"/>
-		</Panel>
 	</Panel>
 </root>

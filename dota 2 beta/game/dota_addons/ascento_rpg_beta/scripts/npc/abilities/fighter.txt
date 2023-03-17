@@ -90,7 +90,7 @@
 
     "AbilityTextureName"                "fighter_2_dual_strike"
 
-    "AbilityManaCost"                   "25"
+    "AbilityManaCost"                   "75"
     "AbilityCooldown"                   "10"
 
     "AbilityCastRange"        "125"
@@ -224,7 +224,7 @@
 
     // Cost
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"               "0"
+    "AbilityManaCost"               "150"
 
     // Special  
     //-------------------------------------------------------------------------------------------------------------

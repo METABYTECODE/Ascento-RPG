@@ -9574,7 +9574,7 @@
 
         // Team
         //----------------------------------------------------------------
-        "TeamName"                  "DOTA_TEAM_NEUTRALS"            // Team name.
+        "TeamName"                  "DOTA_TEAM_GOODGUYS"            // Team name.
         "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_HERO"
         "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
         "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
@@ -9596,115 +9596,7 @@
 
     } 
 
-"npc_ny_creep_test"
-    {                                       
-        // General
-        //----------------------------------------------------------------
-        "Model"                     "models/creeps/neutral_creeps/n_creep_kobold/kobold_c/n_creep_kobold_c.vmdl"    // Model.
-        "BaseClass"                  "npc_dota_creature"
-        "SoundSet"                  "n_creep_Melee"
-        "ModelScale"                    "1.6"
-        //"IsNeutralUnitType"         "0"
-        "HasInventory" "1"
 
-        "UseNeutralCreepBehavior" "0"
-        "vscripts"                    "ai/ai_neutral_ny.lua"
-
-        // Abilities
-        //----------------------------------------------------------------
-
-        "Level"                     "1"
-        
-
-        "Ability1"                    ""
-        "Ability2"                    ""
-        "Ability3"                    ""
-        "Ability4"                    ""
-        "Ability5"                    ""
-        "Ability6"                    ""
-        "Ability7"                    ""
-        "Ability8"                    ""
-        "Ability9"                    ""
-        "Ability10"                    ""
-        "Ability11"                    ""
-        "Ability12"                    ""
-        "Ability13"                    ""
-
-        "AttackRate"                "1.5"      // Speed of attack.
-        "BaseAttackSpeed"           "100"
-
-        "AttackDamageMin"           "10"        // Damage range min.
-        "AttackDamageMax"           "10"        // Damage range max. 
-
-        "ArmorPhysical"             "5"
-        "MagicalResistance"         "25"         // Magical protection.
-
-        "StatusHealth"              "150"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
-
-        "BountyXP"                  "40"        // Experience earn.
-        "BountyGoldMin"             "15"         // Gold earned min.
-        "BountyGoldMax"             "20"         // Gold earned max.
-
-        // Attack
-        //----------------------------------------------------------------
-        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-        
-           
-        
-        "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
-
-        "AttackRange"               "150"       // Range within a target can be attacked.
-        "ProjectileModel"           ""          // Particle system model for projectile.
-        "ProjectileSpeed"           "0"         // Speed of projectile.        
-
-        // Bounds
-        //----------------------------------------------------------------
-        "RingRadius"                "40"
-        "HealthBarOffset"           "130"
-
-        // Bounty
-        //----------------------------------------------------------------
-        
-
-        // Movement
-        //----------------------------------------------------------------
-        "MovementCapabilities"      "DOTA_UNIT_CAP_MOVE_GROUND"
-        "MovementSpeed"             "270"       // Speed.
-
-        // Status
-        //----------------------------------------------------------------
-        
-        "StatusMana"                "1000"         // Base mana.
-        "StatusManaRegen"           "50.0"       // Mana regeneration rate.      
-        
-        // Vision
-        //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
-        
-        // Team
-        //----------------------------------------------------------------
-        "TeamName"                  "DOTA_TEAM_BADGUYS"
-        "CombatClassAttack"         "DOTA_COMBAT_CLASS_ATTACK_BASIC"
-        "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
-        "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
-
-        "Creature"
-        {
-            "HPGain"                    "110"
-            "DamageGain"                "7"
-            "ArmorGain"                 "2"
-            "MagicResistGain"           "2"
-            "MoveSpeedGain"             "10"
-            "BountyGain"                "8"
-            "XPGain"                    "30"
-        }
-
-
-
-    }
 
     "npc_ny_creep_1"
     {                                       
@@ -9731,8 +9623,8 @@
         "Ability3"                  ""          // Ability 3
         "Ability4"                  ""          // Ability 4
 
-        "Ability9"      ""
-        "Ability14"     ""
+        "Ability9"                  ""
+        "Ability14"                 ""
 
         "AttackRate"                "1.5"      // Speed of attack.
         "BaseAttackSpeed"           "100"
@@ -9743,10 +9635,10 @@
         "ArmorPhysical"             "2"
         "MagicalResistance"         "10"         // Magical protection.
 
-        "StatusHealth"              "125"       // Base health.
+        "StatusHealth"              "150"       // Base health.
         "StatusHealthRegen"         "0.5"       // Health regeneration rate.
 
-        "BountyXP"                  "40"        // Experience earn.
+        "BountyXP"                  "30"        // Experience earn.
         "BountyGoldMin"             "15"         // Gold earned min.
         "BountyGoldMax"             "20"         // Gold earned max.
 
@@ -9757,7 +9649,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -9785,8 +9677,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -9797,13 +9689,13 @@
 
         "Creature"
         {
-            "HPGain"                    "110"
-            "DamageGain"                "7"
-            "ArmorGain"                 "1.5"
-            "MagicResistGain"           "1"
-            "MoveSpeedGain"             "10"
-            "BountyGain"                "8"
-            "XPGain"                    "30"
+            "HPGain"                    "300"
+            "DamageGain"                "25"
+            "ArmorGain"                 "2"
+            "MagicResistGain"           "1.2"
+            "MoveSpeedGain"             "15"
+            "BountyGain"                "15"
+            "XPGain"                    "20"
         }
 
 
@@ -9835,6 +9727,7 @@
         "Ability2"                  "true_sight_boss"           // Ability 2
         "Ability3"                  "mars_bulwark"          // Ability 3
         "Ability4"                  ""          // Ability 4
+        "Ability5"                  ""                  // Ability 5
 
         "Ability9"      ""
         "Ability14"     ""
@@ -9849,12 +9742,8 @@
         "ArmorPhysical"             "5"
         "MagicalResistance"         "25"         // Magical protection.
 
-        "StatusHealth"              "500"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
-
-        "BountyXP"                  "50"        // Experience earn.
-        "BountyGoldMin"             "10"         // Gold earned min.
-        "BountyGoldMax"             "12"         // Gold earned max.
+        "StatusHealth"              "1000"       // Base health.
+        "StatusHealthRegen"         "10"       // Health regeneration rate.
 
         // Attack
         //----------------------------------------------------------------
@@ -9864,7 +9753,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -9877,6 +9766,10 @@
 
         // Bounty
         //----------------------------------------------------------------
+
+        "BountyXP"                  "300"        // Experience earn.
+        "BountyGoldMin"             "80"         // Gold earned min.
+        "BountyGoldMax"             "100"         // Gold earned max.
         
 
         // Movement
@@ -9892,8 +9785,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -9904,13 +9797,14 @@
 
         "Creature"
         {
-            "HPGain"                    "200"
-            "DamageGain"                "30"
-            "ArmorGain"                 "3"
-            "MagicResistGain"           "3"
+            "HPGain"                    "600"
+            "DamageGain"                "55"
+            "ArmorGain"                 "5"
+            "MagicResistGain"           "2"
             "MoveSpeedGain"             "20"
-            "BountyGain"                "10"
-            "XPGain"                    "100"
+
+            "BountyGain"                "30"
+            "XPGain"                    "30"
         }
     }
 
@@ -9938,6 +9832,7 @@
         "Ability2"                  "boss_spear"           // Ability 2.
         "Ability3"                  ""          // Ability 3
         "Ability4"                  ""          // Ability 4
+        "Ability5"                  ""                  // Ability 5
 
         "Ability9"      ""
         "Ability14"     ""
@@ -9952,12 +9847,12 @@
         "ArmorPhysical"             "5"
         "MagicalResistance"         "25"         // Magical protection.
 
-        "StatusHealth"              "150"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+        "StatusHealth"              "1000"       // Base health.
+        "StatusHealthRegen"         "10"       // Health regeneration rate.
 
-        "BountyXP"                  "50"        // Experience earn.
-        "BountyGoldMin"             "10"         // Gold earned min.
-        "BountyGoldMax"             "12"         // Gold earned max.
+        "BountyXP"                  "300"        // Experience earn.
+        "BountyGoldMin"             "80"         // Gold earned min.
+        "BountyGoldMax"             "100"         // Gold earned max.
 
         // Attack
         //----------------------------------------------------------------
@@ -9967,7 +9862,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -9995,8 +9890,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -10007,13 +9902,14 @@
 
         "Creature"
         {
-            "HPGain"                    "200"
-            "DamageGain"                "30"
-            "ArmorGain"                 "3"
-            "MagicResistGain"           "3"
+            "HPGain"                    "650"
+            "DamageGain"                "60"
+            "ArmorGain"                 "6"
+            "MagicResistGain"           "2"
             "MoveSpeedGain"             "20"
-            "BountyGain"                "10"
-            "XPGain"                    "100"
+
+            "BountyGain"                "40"
+            "XPGain"                    "40"
         }
     }
 
@@ -10041,6 +9937,7 @@
         "Ability2"                  "creature_slithereen_crush"          // Ability 2
         "Ability3"                  "creature_bash"          // Ability 3
         "Ability4"                  "abaddon_borrowed_time"          // Ability 4
+        "Ability5"                  ""                  // Ability 5
 
         "Ability9"      ""
         "Ability14"     ""
@@ -10055,12 +9952,12 @@
         "ArmorPhysical"             "5"
         "MagicalResistance"         "25"         // Magical protection.
 
-        "StatusHealth"              "150"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+        "StatusHealth"              "1000"       // Base health.
+        "StatusHealthRegen"         "10"       // Health regeneration rate.
 
-        "BountyXP"                  "50"        // Experience earn.
-        "BountyGoldMin"             "10"         // Gold earned min.
-        "BountyGoldMax"             "12"         // Gold earned max.
+        "BountyXP"                  "300"        // Experience earn.
+        "BountyGoldMin"             "80"         // Gold earned min.
+        "BountyGoldMax"             "100"         // Gold earned max.
 
         // Attack
         //----------------------------------------------------------------
@@ -10070,7 +9967,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -10098,8 +9995,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -10108,15 +10005,17 @@
         "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
         "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
+        
         "Creature"
         {
-            "HPGain"                    "200"
-            "DamageGain"                "30"
-            "ArmorGain"                 "3"
-            "MagicResistGain"           "3"
+            "HPGain"                    "700"
+            "DamageGain"                "65"
+            "ArmorGain"                 "7"
+            "MagicResistGain"           "2"
             "MoveSpeedGain"             "20"
-            "BountyGain"                "10"
-            "XPGain"                    "100"
+
+            "BountyGain"                "50"
+            "XPGain"                    "50"
         }
     }
 
@@ -10144,7 +10043,7 @@
         "Ability2"                  "roshan_bash"                   // Ability 1.
         "Ability3"                  "roshan_slam"                   // Ability 3.
         "Ability4"                  "roshan_spell_block"            // Ability 4.
-        "Ability5"                  ""                              // Ability 5.
+        "Ability5"                  ""                  // Ability 5
         "Ability6"                  ""                              // Ability 6 - Extra.
         "Ability7"                  ""                              // Ability 7 - Extra.
         "Ability8"                  "true_sight_boss"               // Ability 8 - Extra.
@@ -10159,12 +10058,12 @@
         "ArmorPhysical"             "5"
         "MagicalResistance"         "25"         // Magical protection.
 
-        "StatusHealth"              "150"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+        "StatusHealth"              "1000"       // Base health.
+        "StatusHealthRegen"         "10"       // Health regeneration rate.
 
-        "BountyXP"                  "50"        // Experience earn.
-        "BountyGoldMin"             "10"         // Gold earned min.
-        "BountyGoldMax"             "12"         // Gold earned max.
+        "BountyXP"                  "300"        // Experience earn.
+        "BountyGoldMin"             "80"         // Gold earned min.
+        "BountyGoldMax"             "100"         // Gold earned max.
 
         // Attack
         //----------------------------------------------------------------
@@ -10174,7 +10073,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -10202,8 +10101,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -10212,15 +10111,17 @@
         "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
         "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
+        
         "Creature"
         {
-            "HPGain"                    "200"
-            "DamageGain"                "30"
-            "ArmorGain"                 "3"
-            "MagicResistGain"           "3"
+            "HPGain"                    "750"
+            "DamageGain"                "70"
+            "ArmorGain"                 "8"
+            "MagicResistGain"           "2"
             "MoveSpeedGain"             "20"
-            "BountyGain"                "10"
-            "XPGain"                    "100"
+
+            "BountyGain"                "60"
+            "XPGain"                    "60"
         }
     }
 
@@ -10249,6 +10150,7 @@
         "Ability2"                  "boss_ogre_magi_bloodlust_champ"        // Ability 2
         "Ability3"                  "troll_warlord_fervor"                  // Ability 3
         "Ability4"                  "cny_beast_force_attack"                  // Ability 4
+        "Ability5"                  ""                  // Ability 5
         
 
         "AttackRate"                "1.5"      // Speed of attack.
@@ -10260,12 +10162,12 @@
         "ArmorPhysical"             "10"
         "MagicalResistance"         "25"         // Magical protection.
 
-        "StatusHealth"              "150"       // Base health.
-        "StatusHealthRegen"         "0.5"       // Health regeneration rate.
+        "StatusHealth"              "1000"       // Base health.
+        "StatusHealthRegen"         "10"       // Health regeneration rate.
 
-        "BountyXP"                  "500"        // Experience earn.
-        "BountyGoldMin"             "100"         // Gold earned min.
-        "BountyGoldMax"             "150"         // Gold earned max.
+        "BountyXP"                  "300"        // Experience earn.
+        "BountyGoldMin"             "80"         // Gold earned min.
+        "BountyGoldMax"             "100"         // Gold earned max.
 
         // Attack
         //----------------------------------------------------------------
@@ -10274,7 +10176,7 @@
            
         
         "AttackAnimationPoint"      "0.38"      // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "250"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
 
         "AttackRange"               "150"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
@@ -10302,8 +10204,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1500"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1000"       // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"       // Range of vision at night time.
         
         // Team
         //----------------------------------------------------------------
@@ -10312,15 +10214,17 @@
         "CombatClassDefend"         "DOTA_COMBAT_CLASS_DEFEND_BASIC"
         "UnitRelationshipClass"     "DOTA_NPC_UNIT_RELATIONSHIP_TYPE_DEFAULT"
 
+        
         "Creature"
         {
-            "HPGain"                    "125"
-            "DamageGain"                "30"
-            "ArmorGain"                 "1.5"
-            "MagicResistGain"           "1"
-            "MoveSpeedGain"             "5"
-            "BountyGain"                "40"
-            "XPGain"                    "50"
+            "HPGain"                    "800"
+            "DamageGain"                "75"
+            "ArmorGain"                 "10"
+            "MagicResistGain"           "2"
+            "MoveSpeedGain"             "20"
+
+            "BountyGain"                "70"
+            "XPGain"                    "70"
         }
     }
 
@@ -10359,25 +10263,25 @@
 
         // Armor
         //----------------------------------------------------------------
-        "ArmorPhysical"             "0"         // Physical protection.
-        "MagicalResistance"         "60"        // Magical protection.
+        "ArmorPhysical"             "30"         // Physical protection.
+        "MagicalResistance"         "80"        // Magical protection.
 
         // Attack
         //----------------------------------------------------------------
         "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-        "AttackDamageMin"           "1200"      // Damage range min.
-        "AttackDamageMax"           "2400"      // Damage range max.
+        "AttackDamageMin"           "2000"      // Damage range min.
+        "AttackDamageMax"           "3000"      // Damage range max.
         "BaseAttackSpeed"           "300"
         "AttackRate"                "4.0"       // Speed of attack.
         "AttackAnimationPoint"      "0.3"       // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "18000"     // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"     // Range within a target can be acquired.
         "AttackRange"               "128"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
         "ProjectileSpeed"           ""          // Speed of projectile.
 
         // Bounty
         //----------------------------------------------------------------
-        "BountyXP"                  "200"       // Experience earn.
+        "BountyXP"                  "0"       // Experience earn.
         "BountyGoldMin"             "0"     // Gold earned min.
         "BountyGoldMax"             "0"     // Gold earned max.
 
@@ -10395,8 +10299,8 @@
         
         // Status
         //----------------------------------------------------------------
-        "StatusHealth"              "2000"      // Base health.
-        "StatusHealthRegen"         "20"        // Health regeneration rate.
+        "StatusHealth"              "15000"      // Base health.
+        "StatusHealthRegen"         "50"        // Health regeneration rate.
         "StatusMana"                "1000"         // Base mana.
         "StatusManaRegen"           "50.0"       // Mana regeneration rate.
 
@@ -10409,8 +10313,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1400"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1400"      // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"      // Range of vision at night time.
 
         // Creature Data
         //----------------------------------------------------------------------------------------------------------------------
@@ -10445,8 +10349,8 @@
             "ArmorGain"                 "5"
             "MagicResistGain"           "1"
             "MoveSpeedGain"             "10"
-            "BountyGain"                "200"
-            "XPGain"                    "200"
+            "BountyGain"                "0"
+            "XPGain"                    "0"
 
             "AttachWearables"
             {
@@ -10511,7 +10415,7 @@
         "AttackDamageMax"           "36"        // Damage range max.
         "AttackRate"                "1.6"       // Speed of attack.
         "AttackAnimationPoint"      "0.3"       // Normalized time in animation cycle to attack.
-        "AttackAcquisitionRange"    "800"       // Range within a target can be acquired.
+        "AttackAcquisitionRange"    "150000"       // Range within a target can be acquired.
         "AttackRange"               "128"       // Range within a target can be attacked.
         "ProjectileModel"           ""          // Particle system model for projectile.
         "ProjectileSpeed"           ""          // Speed of projectile.
@@ -10550,8 +10454,8 @@
         
         // Vision
         //----------------------------------------------------------------
-        "VisionDaytimeRange"        "1400"      // Range of vision during day light.
-        "VisionNighttimeRange"      "1400"      // Range of vision at night time.
+        "VisionDaytimeRange"        "150000"      // Range of vision during day light.
+        "VisionNighttimeRange"      "150000"      // Range of vision at night time.
     }
 
 

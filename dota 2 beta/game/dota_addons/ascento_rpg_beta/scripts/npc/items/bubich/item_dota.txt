@@ -1,0 +1,750 @@
+"DOTAAbilities"
+{
+
+   
+    //=================================================================================================================
+	// Recipe: Kaya and Sange
+	//=================================================================================================================
+	"item_recipe_kaya_and_sange"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"272"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_kaya_and_sange"
+		"ItemRequirements"
+		{
+			"01"						"item_sange;item_kaya_lua1"
+		}
+	}
+
+	"item_recipe_yasha_and_kaya"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"274"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_yasha_and_kaya"
+		"ItemRequirements"
+		{
+			"01"						"item_kaya_lua1;item_yasha"
+		}
+	}
+
+    "item_ward_observer"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "42"                                                        // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+        "Model"                         "models/props_gameplay/observer_ward_bundle.vmdl"
+        
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "800"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCooldown"               "1.0"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"            "10"
+        "ItemShopTags"          "consumable"
+        "ItemQuality"         "consumable"
+        "ItemAliases"         "observer ward"
+        "ItemStackable"         "1"
+        "ItemShareability"        "ITEM_FULLY_SHAREABLE_STACKING"
+        "ItemPermanent"         "0"
+        "ItemInitialCharges"      "1"
+        "ItemStockMax"          "1"
+        "ItemStockInitial"        "1"
+        "ItemStockTime"         "1.0"
+        "ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES"
+        "ItemSupport"         "1"
+        "IsTempestDoubleClonable"   "0"
+        "ShouldBeInitiallySuggested"  "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lifetime"              "1800"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "vision_range_tooltip"  "2000"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "health"                "200"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "duration_minutes_tooltip"              "30"
+            }
+        }
+    }
+
+    "item_ward_sentry"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "43"                                                        // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_OPTIONAL_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
+        "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+        "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO"
+        "AbilityUnitTargetFlags"        "DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+        "Model"                         "models/props_gameplay/sentry_ward_bundle.vmdl"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityCastRange"              "500"
+        "AbilityCastPoint"              "0.0"
+        "AbilityCooldown"               "1.0"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "100"
+        "ItemShopTags"                  "consumable"
+        "ItemQuality"                   "consumable"
+        "ItemAliases"                   "sentry ward"
+        "ItemStackable"                 "1"
+        "ItemShareability"              "ITEM_FULLY_SHAREABLE"
+        "ItemPermanent"                 "0"
+        "ItemInitialCharges"            "1"
+        "ItemStockMax"                  "10"
+        "ItemStockInitial"              "2"
+        "ItemStockTime"                 "1.0"
+        "ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES"
+        "ItemSupport"                   "1"
+        "IsTempestDoubleClonable"       "0"
+        "ShouldBeInitiallySuggested"    "1"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "lifetime"              "600"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "vision_range"          "0"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "true_sight_range"      "1000"
+            }
+            "04"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "health"                "200"
+            }
+            "05"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "duration_minutes_tooltip"              "10"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Hyperstone
+    //=================================================================================================================
+    "item_recipe_hyperstone"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "400"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_hyperstone"
+        "ItemRequirements"
+        {
+            "01"                        "item_winde_booster;item_winde_booster"
+        }
+    }
+
+    //=================================================================================================================
+    // Ring of Tarrasque
+    //=================================================================================================================
+    "item_ring_of_tarrasque"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "279"                                                       // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "850"
+        "ItemShopTags"                  "regen_health"
+        "ItemQuality"                   "component"
+        "ItemAliases"                   "rot"
+        "ShouldBeInitiallySuggested"    "1"
+
+        "ItemPurchasable"               "1"
+        "IsObsolete"                    "1"
+
+        // Sound
+        //-------------------------------------------------------------------------------------------------------------         
+        "UIPickupSound"                 "Item.PickUpRingShop"
+        "UIDropSound"                   "Item.DropRingShop"
+        "WorldDropSound"                "Item.DropRingWorld"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_health"          "250"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_FLOAT"
+                "bonus_health_regen"    "4"
+            }
+        }
+        
+    }
+
+    "item_recipe_platemail"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "650"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_platemail"
+        "ItemRequirements"
+        {
+            "01"                        "item_chainmail;item_stout_shield"
+        }
+    }
+
+    "item_recipe_vanguard"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "124"                                                       // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0" 
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_vanguard"
+        "ItemRequirements"
+        {
+            "01"                        "item_ring_of_health;item_vitality_booster;item_stout_shield"
+        }
+    }
+
+    "item_stout_shield"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "182"                                                       // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "Model"                         "models/props_gameplay/stout_shield.vmdl"
+
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "200"
+        "ItemShopTags"                  "block"
+        "ItemQuality"                   "component"
+        "ItemAliases"                   "stout shield"
+        "ItemStackable"             "0"
+        
+        "ItemKillable"              "1"
+        "ItemSellable"              "1"
+        "ItemDroppable"             "1"
+        "ItemPurchasable"           "1"
+        "ItemInitialCharges"        "0"
+        "ItemDisplayCharges"        "1"
+        "ItemRequiresCharges"       "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_melee"    "10"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_block_ranged"   "5"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "block_chance"          "50"
+            }
+        }
+    }
+
+    //=================================================================================================================
+    // Gloves
+    //=================================================================================================================
+    "item_gloves"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "25"                                                        // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "450"
+        "ItemShopTags"                  "attack_speed"
+        "ItemQuality"                   "component"
+        "ItemAliases"                   "gloves of haste"
+        //"SideShop"                        "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_attack_speed"    "10"
+                }
+            }
+    }
+
+    //=================================================================================================================
+    // Vitality Booster
+    //=================================================================================================================
+    "item_vitality_booster"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"                            "61"                                                        // unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "800"
+        "ItemShopTags"                  "health_pool"
+        "ItemQuality"                   "secret_shop"
+        "ItemAliases"                   "vitality booster"
+        "SecretShop"                    "1"
+        //"SideShop"                        "1"
+
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "bonus_health"          "250"
+            }
+        }
+    }
+
+    "item_recipe_broadsword"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "450"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_broadsword"
+        "ItemRequirements"
+        {
+            "01"                        "item_quelling_blade;item_blades_of_attack"
+        }
+    }
+
+    "item_recipe_quarterstaff"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_quarterstaff"
+        "ItemRequirements"
+        {
+            "01"                        "item_blades_of_attack;item_gloves"
+        }
+    }
+
+    //=================================================================================================================
+    // Ogre Axe
+    //=================================================================================================================
+    "item_recipe_ogre_axe"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "720"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_ogre_axe"
+        "ItemRequirements"
+        {
+            "01"                        "item_gauntlets;item_gauntlets"
+        }
+    }
+
+    "item_recipe_claymore"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_claymore"
+        "ItemRequirements"
+        {
+            "01"                        "item_broadsword;item_blight_stone"
+        }
+    }
+
+    "item_recipe_blade_of_alacrity"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "720"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_blade_of_alacrity"
+        "ItemRequirements"
+        {
+            "01"                        "item_slippers;item_slippers"
+        }
+    }
+
+    "item_recipe_staff_of_wizardry"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "720"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_staff_of_wizardry"
+        "ItemRequirements"
+        {
+            "01"                        "item_mantle;item_mantle"
+        }
+    }
+    
+    "item_recipe_blitz_knuckles"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "100"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_blitz_knuckles"
+        "ItemRequirements"
+        {
+            "01"                        "item_gloves;item_boots_of_elves"
+        }
+    }
+
+    "item_recipe_mithril_hammer"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "250"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_mithril_hammer"
+        "ItemRequirements"
+        {
+            "01"                        "item_blades_of_attack;item_blades_of_attack;item_blades_of_attack"
+        }
+    }
+
+    "item_recipe_talisman_of_evasion"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_talisman_of_evasion"
+        "ItemRequirements"
+        {
+            "01"                        "item_blade_of_alacrity;item_wind_lace"
+        }
+    }
+
+    "item_recipe_ultimate_orb"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "250"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_ultimate_orb"
+        "ItemRequirements"
+        {
+            "01"                        "item_boots_of_elves;item_belt_of_strength;item_robe;item_crown"
+        }
+    }
+
+    "item_recipe_demon_edge"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_demon_edge"
+        "ItemRequirements"
+        {
+            "01"                        "item_claymore;item_claymore"
+        }
+    }
+
+    "item_recipe_mystic_staff"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_mystic_staff"
+        "ItemRequirements"
+        {
+            "01"                        "item_robe;item_magician_talisman;item_robe"
+        }
+    }
+
+    "item_recipe_reaver"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_reaver"
+        "ItemRequirements"
+        {
+            "01"                        "item_belt_of_strength;item_ogres_bracer;item_belt_of_strength"
+        }
+    }
+
+    "item_recipe_eagle"
+    {
+       "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_eagle"
+        "ItemRequirements"
+        {
+            "01"                        "item_boots_of_elves;item_assassins_mask;item_boots_of_elves"
+        }
+    }
+
+    "item_recipe_relic"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------                  
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "750"
+        "ItemShopTags"                  ""
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_relic"
+        "ItemRequirements"
+        {
+            "01"                        "item_claymore;item_mithril_hammer"
+        }    
+    }
+}

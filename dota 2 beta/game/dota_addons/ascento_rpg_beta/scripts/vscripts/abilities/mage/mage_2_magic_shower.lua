@@ -1,215 +1,172 @@
--- Created by Elfansoer
---[[
-Ability checklist (erase if done/checked):
-- Scepter Upgrade
-- Break behavior
-- Linken/Reflect behavior
-- Spell Immune/Invulnerable/Invisible behavior
-- Illusion behavior
-- Stolen behavior
-]]
---------------------------------------------------------------------------------
-mage_2_magic_shower = class({})
-LinkLuaModifier( "modifier_mage_2_magic_shower", "abilities/mage/mage_2_magic_shower", LUA_MODIFIER_MOTION_NONE )
 
---------------------------------------------------------------------------------
--- Custom KV
--- AOE Radius
-function mage_2_magic_shower:GetAOERadius()
-	return self:GetSpecialValueFor( "radius" )
-end
 
---------------------------------------------------------------------------------
--- Ability Start
+
+mage_2_magic_shower = class({
+	GetCastRange = function(self)
+		return self:GetSpecialValueFor("radius")
+	end
+})
+
 function mage_2_magic_shower:OnSpellStart()
-	-- unit identifier
-	local caster = self:GetCaster()
-	local point = self:GetAbsOrigin()
+	self.caster = self:GetCaster()
+	local point = self.caster:GetAbsOrigin()
+	
+	self.duration = self:GetSpecialValueFor( "duration" )
 
-	-- load data
-	local duration = self:GetSpecialValueFor( "duration" )
-
-	-- create thinker
 	CreateModifierThinker(
-		caster, -- player source
-		self, -- ability source
-		"modifier_mage_2_magic_shower", -- modifier name
-		{ duration = duration }, -- kv
+		self.caster,
+		self,
+		"modifier_mage_2_magic_shower",
+		{ duration = self.duration },
 		point,
-		caster:GetTeamNumber(),
+		self.caster:GetTeamNumber(),
 		false
 	)
+
 end
 
--- Created by Elfansoer
---[[
-Ability checklist (erase if done/checked):
-- Scepter Upgrade
-- Break behavior
-- Linken/Reflect behavior
-- Spell Immune/Invulnerable/Invisible behavior
-- Illusion behavior
-- Stolen behavior
-]]
---------------------------------------------------------------------------------
-modifier_mage_2_magic_shower = class({})
 
---------------------------------------------------------------------------------
--- Classifications
-function modifier_mage_2_magic_shower:IsHidden()
-	return false
-end
+modifier_mage_2_magic_shower = class({
+    IsHidden = function()
+        return false
+    end,
+    IsPurgable = function()
+        return false
+    end,
+    IsPurgeException = function()
+        return false
+    end,
+	IsDebuff = function()
+		return false
+	end,
+	IsAura = function(self)
+		return self.owner
+	end,
+	GetModifierAura = function()
+		return "modifier_mage_2_magic_shower"
+	end,
+	GetAuraRadius = function(self) 
+        return self.radius
+    end,
+	GetAuraDuration = function()
+		return 0.5
+	end,
+	GetAuraSearchTeam = function(self) 
+        return self.targetTeam
+    end,
+    GetAuraSearchType = function(self) 
+        return self.targetType
+    end,
+	GetEffectAttachType = function()
+		return 1
+	end,
+    DeclareFunctions = function()
+        return {
+            MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS
+            
+        }
+    end,
+    GetModifierMagicalResistanceBonus = function(self)
+        return self.magic_resist
+    end
+})
 
-function modifier_mage_2_magic_shower:IsDebuff()
-	return true
-end
 
-function modifier_mage_2_magic_shower:IsStunDebuff()
-	return false
-end
 
-function modifier_mage_2_magic_shower:IsPurgable()
-	return false
-end
-
-function modifier_mage_2_magic_shower:IsPurgeException()
-	return false
-end
-
---------------------------------------------------------------------------------
--- Initializations
 function modifier_mage_2_magic_shower:OnCreated( kv )
-	if not IsServer() then return end
-	-- references
-	self.magic_resistance_debuff = self:GetAbility():GetSpecialValueFor( "magic_resistance_debuff" )
-	self.tickrate = self:GetAbility():GetSpecialValueFor( "tickrate" )
-	self.magic_damage = self:GetAbility():GetSpecialValueFor( "magic_damage" ) / 100
-	self.radius = self:GetAbility():GetSpecialValueFor( "radius" )
-	self.duration = self:GetAbility():GetSpecialValueFor( "duration" )
-
-	self.thinker = kv.isProvidedByAura~=1
-
+	self.ability = self:GetAbility()
+	if self.ability then
+		self.parent = self:GetParent()
+		self.caster = self:GetCaster()
+		if not IsServer() then return end
+		
+		self.targetTeam = self.ability:GetAbilityTargetTeam()
+    	self.targetType = self.ability:GetAbilityTargetType()
+		
 	
-	--if not self.thinker then return end
-
-
-
-	-- precache effects
-	--self.sound_cast = "Hero_Alchemist.AcidSpray.Damage"
-
-	-- Play effects
-	self:PlayEffects()
-
-	self.dps = self:GetCaster():GetAverageTrueAttackDamage(self:GetCaster()) * self.magic_damage
-
-	self.damageTable = {
-		victim = self:GetParent(),
-		attacker = self:GetCaster(),
-		damage = self.dps,
-		damage_type = DAMAGE_TYPE_MAGICAL,
-		ability = self:GetAbility(), --Optional.
-	}
-
-	self:StartIntervalThink( self.tickrate )
-	self:OnIntervalThink()
-end
-
-function modifier_mage_2_magic_shower:OnIntervalThink()
-	if not IsServer() then return end
-	if self:GetParent() == self:GetCaster() then return end
-	-- apply damage
-
-	ApplyDamage( self.damageTable )
-
+		self.owner = kv.isProvidedByAura~=1
+	
+		
+	
+		self:OnRefresh()
+	end
 end
 
 function modifier_mage_2_magic_shower:OnRefresh( kv )
+	self.damage = self.ability:GetSpecialValueFor( "magic_damage" ) / 100
+	self.magic_resist = self.ability:GetSpecialValueFor( "magic_resistance_debuff" )
+	self.radius = self.ability:GetCastRange()
+	self.tickrate = self:GetAbility():GetSpecialValueFor( "tickrate" )
 
-end
 
-function modifier_mage_2_magic_shower:OnRemoved()
+	self.dps = self.caster:GetAverageTrueAttackDamage(self.caster) * self.damage
+
+	if self.caster:HasModifier("modifier_mage_3_magic_crit") then
+        if IsServer() then
+            local ability = self.caster:FindAbilityByName("mage_3_magic_crit")
+            local chance = ability:GetSpecialValueFor("critical_chance")
+
+            if RollPercentage(chance) then
+                self.dps = self.dps * (ability:GetSpecialValueFor("critical_damage") / 100)
+                EmitSoundOn( "Ability.static.start", self.caster )
+
+    
+            end
+        end
+    end
+
+	if not self.owner then
+		self.damageTable = {
+			victim = self.parent,
+			attacker = self.caster,
+			damage = self.dps,
+			damage_type = self.ability:GetAbilityDamageType(),
+			ability = self.ability,
+		}
+		self:StartIntervalThink( self.tickrate )
+	else
+		self:PlayEffects()
+	end
 end
 
 function modifier_mage_2_magic_shower:OnDestroy()
 	if not IsServer() then return end
-	if not self.thinker then return end
-
-	UTIL_Remove( self:GetParent() )
+	if not self.owner then return end
+	UTIL_Remove( self.parent )
 end
 
 
 
---------------------------------------------------------------------------------
--- Modifier Effects
-function modifier_mage_2_magic_shower:DeclareFunctions()
-	local funcs = {
-		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
-	}
-
-	return funcs
+function modifier_mage_2_magic_shower:OnIntervalThink()
+	ApplyDamage( self.damageTable )
+	--local sound_cast = "Hero_Viper.mage_2_magic_shower.Damage"
+	--EmitSoundOn( sound_cast, self.parent )
 end
 
-function modifier_mage_2_magic_shower:GetModifierMagicalResistanceBonus( params )
-	return self:GetAbility():GetSpecialValueFor( "magic_resistance_debuff" )
-end
-
-
---------------------------------------------------------------------------------
--- Aura Effects
-function modifier_mage_2_magic_shower:IsAura()
-	return self.thinker
-end
-
-function modifier_mage_2_magic_shower:GetModifierAura()
-	return "modifier_mage_2_magic_shower"
-end
-
-function modifier_mage_2_magic_shower:GetAuraRadius()
-	return self.radius
-end
-
-function modifier_mage_2_magic_shower:GetAuraDuration()
-	return self.duration
-end
-
-function modifier_mage_2_magic_shower:GetAuraSearchTeam()
-	return DOTA_UNIT_TARGET_TEAM_ENEMY
-end
-
-function modifier_mage_2_magic_shower:GetAuraSearchType()
-	return DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC
-end
-
---------------------------------------------------------------------------------
--- Graphics & Animations
 function modifier_mage_2_magic_shower:GetEffectName()
-	return "particles/econ/items/necrolyte/necro_sullen_harvest/necro_ti7_immortal_scythe_cage_tickle.vpcf"
-end
-
-function modifier_mage_2_magic_shower:GetEffectAttachType()
-	return PATTACH_ABSORIGIN_FOLLOW
+	if not self.owner then
+		return "particles/econ/items/necrolyte/necro_sullen_harvest/necro_ti7_immortal_scythe_cage_tickle.vpcf"
+	end
 end
 
 function modifier_mage_2_magic_shower:PlayEffects()
-	-- Get Resources
 	local particle_cast = "particles/units/heroes/hero_doom_bringer/doom_bringer_doom_aura.vpcf"
-	local sound_cast = "Hero_Alchemist.AcidSpray"
+	--local sound_cast = "Hero_Viper.mage_2_magic_shower"
 
-	-- Create Particle
-	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, self:GetParent() )
-	ParticleManager:SetParticleControl( effect_cast, 0, self:GetParent():GetOrigin() )
+	local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_WORLDORIGIN, nil )
+	ParticleManager:SetParticleControl( effect_cast, 0, self.parent:GetOrigin() )
 	ParticleManager:SetParticleControl( effect_cast, 1, Vector( self.radius, 1, 1 ) )
 
-	-- buff particle
 	self:AddParticle(
 		effect_cast,
-		false, -- bDestroyImmediately
-		false, -- bStatusEffect
-		-1, -- iPriority
-		false, -- bHeroEffect
-		false -- bOverheadEffect
+		false,
+		false,
+		-1,
+		false,
+		false
 	)
 
-	-- Create Sound
-	--EmitSoundOn( sound_cast, self:GetParent() )
+	--EmitSoundOn( sound_cast, self.parent )
 end
+
+LinkLuaModifier("modifier_mage_2_magic_shower", "abilities/mage/mage_2_magic_shower", LUA_MODIFIER_MOTION_NONE)

@@ -1,0 +1,610 @@
+"DOTAAbilities"
+{
+	//=================================================================================================================
+	// Recipe: Heart
+	//=================================================================================================================
+	"item_recipe_heart"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"113"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"1200"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart"
+		"ItemRequirements"
+		{
+			"01"						"item_vitality_booster;item_ogres_bracer;item_ring_of_tarrasque"
+		}
+	}
+
+        "item_recipe_heart2"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4042"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"2950"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart2"
+		"ItemRequirements"
+		{
+			"01"					"item_heart;item_sange"
+		}
+	}
+
+	 "item_recipe_heart3"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4044"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"7200"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart3"
+		"ItemRequirements"
+		{
+			"01"					"item_heart2;item_reaver"
+		}
+	}
+	 "item_recipe_heart4"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4046"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"11195"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart4"
+		"ItemRequirements"
+		{
+			"01"					"item_heart3;item_ogres_bracer;item_sange"
+		}
+	}
+	 "item_recipe_heart5"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4048"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"13975"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart5"
+		"ItemRequirements"
+		{
+			"01"					"item_heart4;item_giants_bracer;item_reaver"
+		}
+	}
+	"item_recipe_heart6"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4050"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"25000"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart6"
+		"ItemRequirements"
+		{
+			"01"					"item_heart5;"
+		}
+	}
+	"item_recipe_heart7"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4052"						
+		"Model"						"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"30000"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart7"
+		"ItemRequirements"
+		{
+			"01"					"item_heart6;"
+		}
+	}
+	"item_recipe_heart8"
+        	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"4054"						
+		"Model"					        "models/props_gameplay/recipe.vmdl"
+		"BaseClass"                                     "item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"					"35000"	
+		"ItemShopTags"					"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_heart8"
+		"ItemRequirements"
+		{
+			"01"					"item_heart7;"
+		}
+        }
+
+        "item_heart"
+  	{
+    		"ItemBaseLevel"         "1"
+    
+    		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+  	}
+        "item_heart2"
+        {       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+        	"BaseClass"						"item_heart"
+		"ID"							"4043"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	       				"heart2"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10400"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                 				"1"
+		"ItemSellable"                 				"1"
+		"ItemDroppable"                				"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"2"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart3"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+   		"BaseClass"						"item_heart"
+		"ID"							"4045"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        			"heart3"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"20800"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  			"1"
+		"ItemSellable"                  			"1"
+		"ItemDroppable"                				"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"3"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart4"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    		"BaseClass"						"item_heart"
+		"ID"							"4047"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	       				"heart4"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"41600"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"               				"1"
+		"ItemSellable"               				"1"
+		"ItemDroppable"              				"1"	
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"4"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart5"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_heart"
+		"ID"							"4049"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        			"heart5"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"41600"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  			"1"
+		"ItemSellable"                  			"1"
+		"ItemDroppable"                 			"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"5"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart6"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_heart"
+		"ID"							"4051"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        			"heart6"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"41600"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  			"1"
+		"ItemSellable"                  			"1"
+		"ItemDroppable"                 			"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"6"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart7"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_heart"
+		"ID"							"4053"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        			"heart7"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"41600"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  			"1"
+		"ItemSellable"                  			"1"
+		"ItemDroppable"                 			"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"7"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+        "item_heart8"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+   		"BaseClass"						"item_heart"
+		"ID"							"4055"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"	        			"heart8"
+	
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"41600"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  			"1"
+		"ItemSellable"                 				"1"
+		"ItemDroppable"                 			"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"8"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"50 100 200 400 600 800 1000 1200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"				"1000 2500 6000 14000 28000 42000 56000 70000"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"health_regen_pct"      		"1.0 2.0 3.0 4.0 5.0 6.0 7.0 8.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_melee"			"5 0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cooldown_ranged_tooltip"		"7 0"
+			}
+		}
+	}
+}

@@ -1,0 +1,647 @@
+"DOTAAbilities"
+{
+
+	"item_recipe_butterfly2"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4056"	
+	        "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2950"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly2"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly;item_yasha"
+		}
+	}
+	
+"item_recipe_butterfly3"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4058"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"7200"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly3"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly2;item_eagle"
+		}
+	}
+	
+"item_recipe_butterfly4"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4060"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"11195"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly4"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly3;item_yasha;item_assassins_mask"
+		}
+	}
+
+"item_recipe_butterfly5"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4062"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"13975"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly5"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly4;item_eagle;item_ghost_mask"
+		}
+	}
+
+"item_recipe_butterfly6"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4064"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly6"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly5;item_spider_soul;"
+		}
+	}
+
+"item_recipe_butterfly7"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4066"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"30000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly7"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly6;item_spider_soul;"
+		}
+	}
+
+"item_recipe_butterfly8"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4068"	
+                "Model"							"models/props_gameplay/recipe.vmdl"
+	        "BaseClass"                     "item_datadriven"													// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly8"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly7;item_spider_soul;"
+		}
+	}
+
+
+	"item_butterfly"
+	{
+
+		
+		"ItemBaseLevel"					"1"
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	"item_butterfly2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4057"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly2"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemBaseLevel"					"2"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4059"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly3"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"3"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4061"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly4"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"4"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4063"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly5"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"5"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4065"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly6"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"6"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4067"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly7"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"7"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+
+	
+	"item_butterfly8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"4069"		
+                "BaseClass"						"item_butterfly"												// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+               	"AbilityTextureName"	                        "butterfly8"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5475"
+		"ItemShopTags"					"agi;damage;evasion;attack_speed"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bfly;butterfly"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+	"ItemBaseLevel"					"8"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"50 100 150 200 250 300 350 400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"25 50 75 100 125 150 175 200"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"40 45 50 55 60 65 70 75"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"50 100 150 200 250 300 350 400"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_move_speed"		"25 50 75 100 125 150 175 200"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"2 3 4 5 6 7 8 9"
+			}
+		}
+	}
+}

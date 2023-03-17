@@ -27,16 +27,20 @@ modifier_doom_on_death = class({
 function modifier_doom_on_death:OnCreated()
     self.ability = self:GetAbility()
     self.parent = self:GetParent()
+    self.caster = self:GetCaster()
+    if not IsServer then
+        return
+    end
     self.duration = self.ability:GetSpecialValueFor("duration")
 end
 
-function modifier_doom_on_death:OnDeath(kv)
-    if kv.unit ~= self.parent then
-        return
+function modifier_doom_on_death:OnDeath(data)
+    local attacker = data.attacker
+    local unit = data.unit
+
+    if self.parent == unit or self.caster == unit  then 
+        attacker:AddNewModifier(self.caster, self.ability, "modifier_doom_on_death_debuff", {duration = self.duration})
     end
-    
-    local killer = kv.attacker
-    killer:AddNewModifier(self.parent, nil, "modifier_doom_on_death_debuff", {duration = self.duration})
 end
 
 modifier_doom_on_death_debuff = class({
@@ -51,12 +55,6 @@ modifier_doom_on_death_debuff = class({
     end,
 	IsDebuff = function()
 		return true
-	end,
-	CheckState = function()
-		return {
-			[MODIFIER_STATE_MUTED] = true,
-            [MODIFIER_STATE_SILENCED] = true
-		}
 	end
 })
 

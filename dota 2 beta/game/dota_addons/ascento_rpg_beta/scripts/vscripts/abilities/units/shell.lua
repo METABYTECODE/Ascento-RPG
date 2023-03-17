@@ -8,7 +8,7 @@ shell = class({
 })
 
 function shell:Precache( context )
-	PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts", context )
+	--PrecacheResource( "soundfile", "soundevents/game_sounds_heroes/game_sounds_dark_seer.vsndevts", context )
 	PrecacheResource( "particle", "particles/units/heroes/hero_dark_seer/dark_seer_ion_shell.vpcf", context )
 end
 
@@ -32,6 +32,11 @@ modifier_shell = class({
 
 function modifier_shell:OnCreated()
 	self:OnRefresh()
+    self.ability = self:GetAbility()
+    self.parent = self:GetParent()
+    self.caster = self:GetCaster()
+    self.team = self.caster:GetTeamNumber()
+
     if(not IsServer()) then
         return
     end
@@ -43,9 +48,9 @@ function modifier_shell:OnCreated()
 	local tick = self:GetAbility():GetSpecialValueFor( "tick_interval" )
 
 	self.damageTable = {
-		attacker = self:GetCaster(),
+		attacker = self.caster,
 		damage = damage*tick,
-		damage_type = self.abilityDamageType,
+		damage_type = DAMAGE_TYPE_MAGICAL,
 		ability = self:GetAbility(),
 	}
 
@@ -66,6 +71,13 @@ function modifier_shell:OnRefresh()
         return
     end
     self.radius = self.ability:GetCastRange()
+
+    self.abilityDamageType = self:GetAbility():GetAbilityDamageType()
+    self.abilityTargetType = self:GetAbility():GetAbilityTargetType()
+    self.abilityTargetFlags = self:GetAbility():GetAbilityTargetFlags()
+
+    local damage = self:GetAbility():GetSpecialValueFor( "damage_per_second" )
+	local tick = self:GetAbility():GetSpecialValueFor( "tick_interval" )
 end
 
 function modifier_shell:OnRemoved()
@@ -75,19 +87,19 @@ function modifier_shell:OnDestroy()
 	if not IsServer() then return end
 
 	-- Play effects
-	local sound_loop = "Hero_Dark_Seer.Ion_Shield_lp"
-	local sound_end = "Hero_Dark_Seer.Ion_Shield_end"
-	StopSoundOn( sound_loop, self.parent )
-	EmitSoundOn( sound_end, self.parent )
+	--local sound_loop = "Hero_Dark_Seer.Ion_Shield_lp"
+	--local sound_end = "Hero_Dark_Seer.Ion_Shield_end"
+	--StopSoundOn( sound_loop, self.parent )
+	--EmitSoundOn( sound_end, self.parent )
 end
 
 function modifier_shell:OnIntervalThink()
-    if not self.parent:IsAlive() then
+    if not self.caster:IsAlive() then
         return
     end
     local enemies = FindUnitsInRadius(
 		DOTA_TEAM_BADGUYS,
-		self.parent:GetOrigin(),
+		self.caster:GetOrigin(),
 		nil,
 		self.radius,
 		DOTA_UNIT_TARGET_TEAM_ENEMY,
@@ -98,8 +110,12 @@ function modifier_shell:OnIntervalThink()
 	)
 
 	for _,enemy in pairs(enemies) do
-		if enemy~=self.parent then
+		if enemy~=self.caster then
 			self.damageTable.victim = enemy
+
+			--PrintTable(self.damageTable.victim)
+			--print(self.damageTable.damage)
+
 			ApplyDamage( self.damageTable )
 			self:PlayEffects2( enemy )
 		end
@@ -140,8 +156,8 @@ function modifier_shell:PlayEffects1()
 	)
 
 	-- Create Sound
-	EmitSoundOn( sound_cast, self.parent )
-	EmitSoundOn( sound_loop, self.parent )
+	--EmitSoundOn( sound_cast, self.parent )
+	--EmitSoundOn( sound_loop, self.parent )
 end
 
 function modifier_shell:PlayEffects2( target )

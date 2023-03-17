@@ -1,0 +1,474 @@
+"DOTAAbilities"
+{
+	"item_bloodstone_lua1"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"1"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"item_bloodstone"
+
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDroppable"                 "1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+
+"item_recipe_bloodstone_lua1"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"0"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua1"
+		"ItemRequirements"
+		{
+			"01"							"item_voodoo_mask;item_soul_booster;item_kaya_lua1"
+		}
+	}
+
+"item_recipe_bloodstone_lua2"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"5000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua2"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua1;item_forest_soul"
+		}
+	}
+	
+"item_bloodstone_lua2"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"2"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone2"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	
+"item_recipe_bloodstone_lua3"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"10000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua3"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua2;item_village_soul"
+		}
+	}
+	
+"item_bloodstone_lua3"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"3"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone3"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	
+"item_recipe_bloodstone_lua4"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"15000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua4"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua3;item_mines_soul"
+		}
+	}	
+	
+"item_bloodstone_lua4"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"4"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone4"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	
+"item_recipe_bloodstone_lua5"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"20000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua5"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua4;item_dust_soul"
+		}
+	}	
+
+"item_bloodstone_lua5"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"5"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone5"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	
+"item_recipe_bloodstone_lua6"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"25000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua6"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua5;item_swamp_soul"
+		}
+	}	
+
+"item_bloodstone_lua6"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"6"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone6"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	
+"item_recipe_bloodstone_lua7"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"30000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua7"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua6;item_snow_soul"
+		}
+	}		
+
+"item_bloodstone_lua7"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"7"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone7"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}	
+"item_bloodstone_lua8"
+	{
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"ItemBaseLevel"					"8"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+		"AbilityTextureName" 			"bloodstone8"	
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "1"
+		"ScriptFile"					"items/custom_items/item_bloodstone_lua"
+		
+		"AbilityValues"
+		{
+			"bonus_health"			"100 150 200 250 500 1000 1500 2000"
+			"bonus_mana"			"200 300 400 500 1000 2000 3000 4000"
+			"bonus_intellect"			"10 20 40 75 150 200 350 500"
+			"mana_regen_multiplier"		"100"
+			"spell_amp"				"10 20 40 75 150 200 350 500"
+			"spell_lifesteal_amp"			"30"
+			"spell_lifesteal"		"3 4 5 6 7 8 9 10"
+			"regen_per_charge"		"14"
+			"amp_per_charge"		"0.35"
+			"death_charges"				"0"
+			"kill_charges"			"1"
+			"charge_range"			"1600"
+			"initial_charges_tooltip" "70"
+			"restore_duration" "2.0"
+			"mana_cost_percentage" "50"
+			
+		}
+	}
+	"item_recipe_bloodstone_lua8"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"35000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_bloodstone_lua8"
+		"ItemRequirements"
+		{
+			"01"							"item_bloodstone_lua7;item_divine_soul"
+		}
+	}
+}

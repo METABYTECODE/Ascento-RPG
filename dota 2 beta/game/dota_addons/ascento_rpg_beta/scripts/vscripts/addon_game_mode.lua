@@ -29,6 +29,17 @@ function Precache( context )
     PrecacheResource( "particle",  "particles/units/heroes/hero_undying/undying_tnt_wlk_golem.vpcf", context)
     PrecacheResource( "particle",  "particles/units/heroes/hero_shadow_demon/sd_w.vpcf", context)
     PrecacheResource( "particle",  "particles/econ/items/ogre_magi/ogre_ti8_immortal_weapon/ogre_ti8_immortal_bloodlust_buff.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_heartpiercer_delay.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_heartpiercer_debuff.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_heartpiercer_debuff_model.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_heartpiercer_cast.vpcf", context)
+
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_luckyshot_disarm_debuff.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_luckyshot_disarm_hit_hearts.vpcf", context)
+    PrecacheResource( "particle",  "particles/units/heroes/hero_pangolier/pangolier_luckyshot_silence_debuff.vpcf", context)
+
+    PrecacheResource( "particle",  "particles/units/heroes/hero_axe/axe_culling_blade_kill.vpcf", context)
+
 
     --PrecacheResource( "model",  "", context)
     PrecacheResource( "model",  "models/heroes/doom/doom.vmdl", context)
@@ -326,9 +337,9 @@ function Activate()
 
     if GetMapName() == "ascento_rpg" then
 
-        Timers:CreateTimer(15.0, function()
+        Timers:CreateTimer(5.0, function()
             ClearItems(true)
-            return 15.0
+            return 5.0
         end)
 
     end

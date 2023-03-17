@@ -1,0 +1,792 @@
+"DOTAAbilities"
+{
+	"item_recipe_shivas_guard2"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4071"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"5000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard2"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard;item_roshan_soul"
+		}
+	}
+	"item_recipe_shivas_guard3"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4073"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"10000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard3"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard2;item_spider_soul"
+		}
+	}
+	"item_recipe_shivas_guard4"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4075"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                    		"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"15000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard4"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard3;item_reef_soul"
+		}
+	}
+	"item_recipe_shivas_guard5"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4078"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                    		 "item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"20000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard5"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard4;item_warlock_soul"
+		}
+	}
+	"item_recipe_shivas_guard6"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4080"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                    	 	"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"25000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard6"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard5;item_elder_soul;"
+		}
+	}
+	"item_recipe_shivas_guard7"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4082"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                    	 	"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"30000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard7"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard6;item_elder_soul;"
+		}
+	}
+	"item_recipe_shivas_guard8"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"								"4084"						
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+	
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"35000"	
+		"ItemShopTags"						"artifacts"
+	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_shivas_guard8"
+		"ItemRequirements"
+		{
+			"01"							"item_shivas_guard7;item_elder_soul;"
+		}
+	}
+	"item_shivas_guard"
+	{
+		"ItemBaseLevel"						"1"
+		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard2"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"							"item_shivas_guard"
+		"ID"								"4072"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	       		"shivas2"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                		"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"2"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard3"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+   		"BaseClass"							"item_shivas_guard"
+		"ID"								"4074"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas3"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                 	 	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"3"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard4"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+   		"BaseClass"							"item_shivas_guard"
+		"ID"								"4076"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas4"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"4"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard5"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+   		"BaseClass"							"item_shivas_guard"
+		"ID"								"4079"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas5"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"5"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+
+        "item_shivas_guard6"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"							"item_shivas_guard"
+		"ID"								"4081"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas6"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"6"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard7"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"							"item_shivas_guard"
+		"ID"								"4083"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas7"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"7"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+    "item_shivas_guard8"
+	{       
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+    	"BaseClass"							"item_shivas_guard"
+		"ID"								"4085"
+		"AbilityBehavior"					"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"	        	"shivas8"
+	
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"					"30 29 28 27 26 25"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"							"9500"
+		"ItemStackable"						"0"
+	
+		"ItemPermanent"						"0"
+		"ItemKillable"                  	"1"
+		"ItemSellable"                  	"1"
+		"ItemDroppable"                 	"1"
+		"ItemPurchasable"					"1"
+		"ItemBaseLevel"						"8"
+	
+
+		//special
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intellect"			"30 60 90 120 150 180 210 240"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_armor"				"20 40 60 80 100 120 140 160"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"aura_attack_speed"   		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 400 600 800 1000 1200 1400 1600"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_movement_speed"		"-5 -10 -15 -20 -25 -30 -35 -40"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"blast_debuff_duration"		"4.0"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_radius"				"900 1000 1100 1200 1300 1400 1500 1600"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_speed"				"350"
+			}
+      		"10"
+      		{
+        		"var_type"        			"FIELD_INTEGER"
+        		"hp_regen_degen_aura" 		"5 10 15 20 25 30 35 40"
+      		}
+		}
+	}
+}

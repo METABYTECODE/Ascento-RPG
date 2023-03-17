@@ -34,10 +34,10 @@ require('libraries/autoload/pathgraph')
 --Сохры
 --require("libraries/autoload/saveload")
 
-if GetMapName() == "ascento_rpg" then
+--if GetMapName() == "ascento_rpg" then
 	-- Удобные штуки для меня.
 	require('libraries/autoload/ascento') 
-end
+--end
 
 require('libraries/autoload/player_resource')             -- Core lua library
 --require('libraries/autoload/player')             -- Core lua library

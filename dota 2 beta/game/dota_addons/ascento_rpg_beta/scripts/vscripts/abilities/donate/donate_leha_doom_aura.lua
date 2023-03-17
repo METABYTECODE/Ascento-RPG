@@ -121,13 +121,8 @@ function modifier_donate_leha_doom_aura_effect:OnIntervalThink()
 		ability = self:GetAbility(), --Optional.
 	}
 
-	if victim:GetUnitName() == "npc_creep_endless_1" then
-		if victim.pack == "pack9" then
-			ApplyDamage( self.damageTable )
-		end
-	else
-		ApplyDamage( self.damageTable )
-	end
+	
+	ApplyDamage( self.damageTable )
 
 	
 

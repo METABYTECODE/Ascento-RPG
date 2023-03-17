@@ -1,0 +1,358 @@
+"DOTAAbilities"
+{
+	"item_kaya_lua1"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"1"
+		"AbilityTextureName"	        "item_kaya"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}
+
+"item_recipe_kaya_lua1"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"600"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua1"
+		"ItemRequirements"
+		{
+			"01"							"item_staff_of_wizardry;item_robe;"
+		}
+	}
+	
+"item_recipe_kaya_lua2"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"5000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua2"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua1;item_forest_soul;"
+		}
+	}
+
+"item_kaya_lua2"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"2"
+		"AbilityTextureName"	        "kaya_2"
+
+		"ItemCost"						"10000"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}	
+	
+"item_recipe_kaya_lua3"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"10000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua3"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua2;item_village_soul;"
+		}
+	}
+	
+
+"item_kaya_lua3"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"3"
+		"AbilityTextureName"	        "kaya_3"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}
+
+	
+"item_recipe_kaya_lua4"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"15000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua4"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua3;item_mines_soul;"
+		}
+	}
+	
+
+"item_kaya_lua4"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"4"
+		"AbilityTextureName"	        "kaya_4"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}	
+
+"item_recipe_kaya_lua5"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"20000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua5"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua4;item_dust_soul;"
+		}
+	}
+	
+
+"item_kaya_lua5"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"5"
+		"AbilityTextureName"	        "kaya_5"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}		
+
+"item_recipe_kaya_lua6"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"25000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua6"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua5;item_swamp_soul;"
+		}
+	}
+	
+
+"item_kaya_lua6"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"6"
+		"AbilityTextureName"	        "kaya_6"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}
+	
+"item_recipe_kaya_lua7"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"30000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua7"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua6;item_snow_soul;"
+		}
+	}
+	
+
+"item_kaya_lua7"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"7"
+		"AbilityTextureName"	        "kaya_7"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}
+    "item_recipe_kaya_lua8"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"35000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_kaya_lua8"
+		"ItemRequirements"
+		{
+			"01"							"item_kaya_lua7;item_divine_soul;"
+		}
+	}
+    "item_kaya_lua8"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_kaya_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemBaseLevel"					"8"
+		"AbilityTextureName"	        "kaya_8"
+
+		"ItemCost"						"9500"
+		"ItemStackable"					"0"
+		
+		"ItemPermanent"					"0"
+		"ItemKillable"                  "1"
+		"ItemSellable"                  "1"
+		"ItemDroppable"                 "1"
+		
+
+		"AbilityValues"
+		{
+			"bonus_intellect"			"16 32 64 128 256 512 768 1024"
+			"spell_amp"					"16 32 64 128 256 512 768 1024"
+			"mana_regen_multiplier"		"24 40 60 80 100 120 140 160"
+			"spell_lifesteal_amp"		"12 14 16 18 20 22 24 26"
+				
+		}
+	}
+}

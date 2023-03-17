@@ -39,9 +39,7 @@ LinkLuaModifier("modifier_custom_attribute_strength", "modifiers/attributes/stre
 
 LinkLuaModifier("modifier_disable_healing", "modifiers/disable_healing", LUA_MODIFIER_MOTION_NONE)
 
-
 LinkLuaModifier("modifier_no_collision_custom", "modifiers/no_collision", LUA_MODIFIER_MOTION_NONE)
 
-
-
+LinkLuaModifier("modifier_fow_vision", "modifiers/fow_vision", LUA_MODIFIER_MOTION_NONE)
 

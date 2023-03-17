@@ -46,12 +46,29 @@ function arcane_bolt_hit( keys )
 		caster.arcane_bolt_list_head = nil
 	end
 	
+	local damageDeal = base_damage * multiplier
+
+    if caster:HasModifier("modifier_mage_3_magic_crit") then
+        if IsServer() then
+            local ability = caster:FindAbilityByName("mage_3_magic_crit")
+            local chance = ability:GetSpecialValueFor("critical_chance")
+
+            if RollPercentage(chance) then
+                damageDeal = damageDeal * (ability:GetSpecialValueFor("critical_damage") / 100)
+                EmitSoundOn( "Ability.static.start", caster )
+
+    
+            end
+        end
+    end
+	
 	-- Deal damage
 	local damageTable = {
 		victim = target,
 		attacker = caster,
-		damage = base_damage * multiplier,
+		damage = damageDeal,
 		damage_type = damageType,
+		ability = self, --Optional.
 	}
 	ApplyDamage( damageTable )
 	

@@ -29,13 +29,13 @@ function modifier_profession:OnCreated( kv )
     self.move_speed_pct = 10
 
     self.great_cleave_damage = 15
-    if self:GetStackCount() == 1 then
+    if self:GetCaster():GetLevel() < 30 then
         self.great_cleave_damage = 15
         self.move_speed_pct = 10
-    elseif self:GetStackCount() == 2 then
+    elseif self:GetCaster():GetLevel() > 29 and self:GetCaster():GetLevel() < 120 then
         self.great_cleave_damage = 20
         self.move_speed_pct = 25
-    elseif self:GetStackCount() == 3 then
+    elseif self:GetCaster():GetLevel() > 119 then
         self.great_cleave_damage = 30
         self.move_speed_pct = 50
     end
@@ -90,13 +90,13 @@ end
 function modifier_profession:OnRefresh( kv )
     self.great_cleave_damage = 15
     self.move_speed_pct = 10
-    if self:GetStackCount() == 1 then
+    if self:GetCaster():GetLevel() < 30 then
         self.great_cleave_damage = 15
         self.move_speed_pct = 10
-    elseif self:GetStackCount() == 2 then
+    elseif self:GetCaster():GetLevel() > 29 and self:GetCaster():GetLevel() < 120 then
         self.great_cleave_damage = 20
         self.move_speed_pct = 25
-    elseif self:GetStackCount() == 3 then
+    elseif self:GetCaster():GetLevel() > 119 then
         self.great_cleave_damage = 30
         self.move_speed_pct = 50
     end
@@ -166,16 +166,7 @@ function modifier_profession:OnAttackLanded( params )
 
 
         self:PlayEffects( target )
-        --DoCleaveAttack(
-        --    self:GetParent(),
-        --    target,
-        --    self:GetAbility(),
-        --    cleaveDamage,
-        --    150,
-        --    360,
-        --    self.great_cleave_radius,
-        --    "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-        --)
+
     end
 
     --return 0
@@ -186,10 +177,7 @@ function modifier_profession:PlayEffects( target )
     -- Load effects
     local particle_cast = "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
 
-    -- if target:IsMechanical() then
-    --  particle_cast = "particles/units/heroes/hero_phantom_assassin/phantom_assassin_crit_impact_mechanical.vpcf"
-    --  sound_cast = "Hero_PhantomAssassin.CoupDeGrace.Mech"
-    -- end
+
 
     -- Create Particle
     local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, target )

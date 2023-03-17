@@ -206,13 +206,10 @@
 
 "slark_essence_shift_lua"
   {
-    // Ability Technical Aspect
-    // base script folder : scripts/vscripts
-    // base texture folder  : resource/flash3/images/spellicons
-    //-------------------------------------------------------------------------------------------------------------
+
     "BaseClass"           "ability_lua"
     "ScriptFile"          "heroes/hero_slark/essence_shift/slark_essence_shift_lua"
-    "AbilityTextureName"      "slark_essence_shift_lua"
+    "AbilityTextureName"      "slark_essence_shift"
     "FightRecapLevel"       "1"
 
     "MaxLevel"            "3"
@@ -253,6 +250,62 @@
       {
         "var_type"        "FIELD_INTEGER"
         "stat_loss"       "1"
+      }
+      "03"
+      {
+        "var_type"        "FIELD_FLOAT"
+        "duration"        "-1"
+      }
+    }
+  }
+
+
+  "slark_essence_shift_lua_damage"
+  {
+ 
+    "BaseClass"           "ability_lua"
+    "ScriptFile"          "heroes/hero_slark/essence_shift_damage/slark_essence_shift_lua_damage"
+    "AbilityTextureName"      "slark_essence_shift"
+    "FightRecapLevel"       "1"
+
+    "MaxLevel"            "7"
+    "RequiredLevel" "1"
+    "LevelsBetweenUpgrades" "10"
+
+    "precache"
+    {
+      "particle"  "particles/units/heroes/hero_slark/slark_essence_shift.vpcf"
+    }
+    
+    // Ability General
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+
+    // Ability Casting
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Ability Resource
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Damage
+    //-------------------------------------------------------------------------------------------------------------
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "dmg_gain"        "3.12 6.25 12.5 25 50 100 175"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "dmg_loss"       "10 20 35 80 200 300 450"
       }
       "03"
       {

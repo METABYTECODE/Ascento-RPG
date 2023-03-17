@@ -272,13 +272,52 @@
         {
           "var_type"        "FIELD_INTEGER"
           "bonus_damage_pct"    "15 30 45 60 75 90 105 120 135 150"
+          "CalculateSpellDamageTooltip"   "0"
         }
         "02"
         {
             "var_type"        "FIELD_FLOAT"
             "base_attack_time"    "5.9 5.8 5.7 5.6 5.5 5.4 5.3 5.2 5.1 5.0"
+          "CalculateSpellDamageTooltip"   "0"
         }
     }
+
+}
+
+
+
+"ranger_3_mobility_aura"
+{
+
+//Gives all allies 25% movespeed and (50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000) attack speed
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/ranger/ranger_3_mobility_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+    "MaxLevel" "20"
+    "RequiredLevel" "120"
+    "LevelsBetweenUpgrades" "100"
+
+    "AbilityTextureName"                            "drow_ranger_trueshot"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "attack_speed"    "50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000"
+        "CalculateSpellDamageTooltip"   "0"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "movespeed_pct"    "25"
+        "CalculateSpellDamageTooltip"   "0"
+      }
+    }
+
 
 }
 

@@ -1,0 +1,450 @@
+"DOTAAbilities"
+{
+	"item_recipe_assault_cuirass_custom"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+				
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1300"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom"
+		"ItemRequirements"
+		{
+			"01"						"item_platemail;item_hyperstone;item_buckler"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom2"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------					
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom2"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom3"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------					
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"10000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom3"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom2;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom4"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------				
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"15000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom4"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom3;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom5"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------			
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"20000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom5"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom4;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom6"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------				
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"25000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom6"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom5;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom7"
+	{
+		"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------			
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"30000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom7"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom6;"
+		}
+	}
+
+	"item_recipe_assault_cuirass_custom8"
+	{
+			"AbilityTextureName" 				"recipe"
+		// General
+		//-------------------------------------------------------------------------------------------------------------	
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"										 "item_datadriven"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"35000"	
+		"ItemShopTags"					"artifacts"
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_cuirass_custom8"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_cuirass_custom7;"
+		}
+	}
+
+	"item_assault_cuirass_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"								"item_lua"
+		"AbilityBehavior"				 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"cuirass"
+		"ScriptFile"							"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"1"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"		 
+		}
+	}
+
+	"item_assault_cuirass_custom2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"								"item_lua"
+		"AbilityBehavior"				 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"			"cuirass2"
+		"ScriptFile"							"items/item_assault_cuirass"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"2"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"		 
+		}
+	}
+
+	"item_assault_cuirass_custom3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"					"cuirass3"
+		"ScriptFile"										"items/item_assault_cuirass"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"3"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"		 
+		}
+	}
+
+	"item_assault_cuirass_custom4"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"					"cuirass4"
+		"ScriptFile"										"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"4"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"	 
+		}
+	}
+
+	"item_assault_cuirass_custom5"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"					"cuirass5"
+		"ScriptFile"										"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"5"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"	 
+		}
+	}
+
+	"item_assault_cuirass_custom6"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"AbilityTextureName"					"cuirass6"
+		"ScriptFile"										"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"6"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"	
+		}
+	}
+
+	"item_assault_cuirass_custom7"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"					"cuirass7"
+		"ScriptFile"					"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"7"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"	 
+		}
+	}
+
+	"item_assault_cuirass_custom8"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"			 "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"					"cuirass8"
+		"ScriptFile"							"items/item_assault_cuirass"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5125"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"				 "epic"
+		"ItemAliases"				 "ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"			 "1"
+		"MaxUpgradeLevel"				"8"
+		"ItemBaseLevel"					"8"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"30 40 80 80 100 120 140 160"
+			"bonus_armor"		 "10 25 50 100 200 300 400 500"
+			"aura_radius"		 "1200"
+			"aura_attack_speed"	 "30 60 90 120 150 180 210 250"
+			"aura_positive_armor" "5 10 20 40 80 160 190 210"
+			"aura_negative_armor" "-3 -6 -12 -20 -40 -80 -160 -200"	
+		}
+	}
+}

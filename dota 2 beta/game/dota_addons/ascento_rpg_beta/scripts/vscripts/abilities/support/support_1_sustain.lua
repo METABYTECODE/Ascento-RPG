@@ -4,8 +4,28 @@ LinkLuaModifier( "modifier_support_1_sustain_effect", "abilities/support/support
 
 --------------------------------------------------------------------------------
 -- Passive Modifier
-function support_1_sustain:GetIntrinsicModifierName()
-	return "modifier_support_1_sustain"
+
+function support_1_sustain:OnToggle(  )
+    -- unit identifier
+    local caster = self:GetCaster()
+
+    -- load data
+    local toggle = self:GetToggleState()
+
+    if toggle then
+        -- add modifier
+        self.modifier = caster:AddNewModifier(
+            caster, -- player source
+            self, -- ability source
+            "modifier_support_1_sustain", -- modifier name
+            {  } -- kv
+        )
+    else
+        if self.modifier and not self.modifier:IsNull() then
+            self.modifier:Destroy()
+        end
+        self.modifier = nil
+    end
 end
 
 modifier_support_1_sustain = class({})

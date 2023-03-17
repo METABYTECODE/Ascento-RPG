@@ -113,16 +113,18 @@ function modifier_burning_of_allies_debuff:OnIntervalThink()
         return
     end
     if not self.caster or not self.parent then
-        self:Destroy()
+        return
     end
 	if self.parent:HasModifier("modifier_burning_of_allies") then
 		return
 	end
-    ApplyDamage({attacker = self.caster, 
-		victim = self.parent,  
-		damage = self.damage,
-		ability = self.ability, 
-		damage_type = DAMAGE_TYPE_MAGICAL})
+    if self.caster and self.parent and self.damage and self.ability then
+        ApplyDamage({attacker = self.caster, 
+    		victim = self.parent,  
+    		damage = self.damage,
+    		ability = self.ability, 
+    		damage_type = DAMAGE_TYPE_MAGICAL})
+    end
 end
 
 LinkLuaModifier("modifier_burning_of_allies", "abilities/units/burning_of_allies", LUA_MODIFIER_MOTION_NONE)

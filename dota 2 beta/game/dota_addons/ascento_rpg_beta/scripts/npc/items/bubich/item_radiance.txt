@@ -1,0 +1,303 @@
+"DOTAAbilities"
+{
+	"item_recipe_radiance_lua1"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"0"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua1"
+		"ItemRequirements"
+		{
+			"01"							"item_relic;item_talisman_of_evasion"
+		}
+	}
+
+	"item_recipe_radiance_lua2"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"5000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua2"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua1;item_forest_soul"
+		}
+	}
+
+	"item_recipe_radiance_lua3"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"10000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua3"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua2;item_village_soul"
+		}
+	}
+	
+	"item_recipe_radiance_lua4"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"15000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua4"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua3;item_mines_soul"
+		}
+	}	
+	
+	"item_recipe_radiance_lua5"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"20000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua5"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua4;item_dust_soul"
+		}
+	}	
+
+	"item_recipe_radiance_lua6"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"25000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua6"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua5;item_swamp_soul"
+		}
+	}	
+
+	"item_recipe_radiance_lua7"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"30000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua7"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua6;item_snow_soul"
+		}
+	}		
+
+	"item_recipe_radiance_lua8"
+	{
+		"AbilityTextureName" 				"recipe"				
+		"Model"								"models/props_gameplay/recipe.vmdl"
+		"BaseClass"                     	"item_datadriven"
+		
+		"ItemCost"							"35000"	
+		"ItemShopTags"						"artifacts"
+		
+		"ItemRecipe"						"1"
+		"ItemResult"						"item_radiance_lua8"
+		"ItemRequirements"
+		{
+			"01"							"item_radiance_lua7;item_divine_soul"
+		}
+	}
+
+	"item_radiance_lua1"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityTextureName"			"item_radiance"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"1"
+
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+"item_radiance_lua2"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"2"
+		"AbilityTextureName" 			"rad_2"	
+			
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+
+"item_radiance_lua3"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"3"
+		"AbilityTextureName" 			"rad_3"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+
+"item_radiance_lua4"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"4"
+		"AbilityTextureName" 			"rad_4"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+
+"item_radiance_lua5"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"		
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"5"
+		"AbilityTextureName" 			"rad_5"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+
+"item_radiance_lua6"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"6"
+		"AbilityTextureName" 			"rad_6"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}
+	
+
+"item_radiance_lua7"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"7"
+		"AbilityTextureName" 			"rad_7"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}	
+"item_radiance_lua8"
+	{
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/custom_items/item_radiance_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityCastRange" 				"700"
+		"ItemBaseLevel"					"8"
+		"AbilityTextureName" 			"rad_8"	
+		
+		"AbilityValues"
+		{
+			"bonus_damage"			"60 180 300 600 1200 1600 1800 2000"
+			"aura_damage"			"100 200 250 300 350 400 450 500"
+			"aura_damage_illusions"	"10"
+			"blind_pct"				"5 10 15 20 23 25 27 30"
+			"aura_radius"			"600"
+			
+		}
+	}	
+
+}

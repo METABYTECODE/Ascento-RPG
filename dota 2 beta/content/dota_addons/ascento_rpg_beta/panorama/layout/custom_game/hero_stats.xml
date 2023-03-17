@@ -21,8 +21,9 @@
 
   </Panel>
 
-
+<Label id="Endless_text_top" class="Endless_text_top" text="0"/>
     <Panel class="PlayerEndlessShowTable" id="PlayerEndlessShowTable" onactivate="ShowPlayerEndlessTable()">
+      
 
     </Panel>
 
@@ -351,12 +352,15 @@
 
 
 
+<Label id="Reinc_text_top" class="Reinc_text_top" text="0"/>
 
     <Panel class="PlayerReincShowTable" id="PlayerReincShowTable" onactivate="ShowPlayerReincTable()">
 
+
       <Panel class="row">
 
-        <Label class="PlayerReincShow" id="PlayerReincCountShow" text="0"/> 
+        
+      
 
       </Panel>
 

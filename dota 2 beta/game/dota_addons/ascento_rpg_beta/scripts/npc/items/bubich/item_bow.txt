@@ -1,0 +1,545 @@
+"DOTAAbilities"
+{
+    "item_recipe_bow"
+    {
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "0" 
+        "ItemShopTags"                  ""
+        "BaseClass"                     "item_datadriven"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow"
+        "ItemRequirements"
+        {
+            "01"                        "item_broadsword;item_claymore;item_pers;item_quelling_blade"
+        }
+    }   
+        
+	"item_bow"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"	        "bow"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"						"3600"
+        "ItemStackable"					"0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"					"1"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"				"1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+    "item_recipe_bow2"
+    {
+        "AbilityTextureName" 				"recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "ID"							"3065"						
+        "Model"							"models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"						"5000"	
+        "ItemShopTags"					"artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"					"1"
+        "ItemResult"					"item_bow2"
+        "ItemRequirements"
+        {
+            "01"						"item_bow;item_forest_soul"
+        }
+    }
+
+    "item_bow2"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"	        "bow2"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"						"10000"
+        "ItemStackable"					"0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"					"2"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"				"1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+    "item_recipe_bow3"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow3"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow2;item_spider_soul"
+        }
+    }
+
+    "item_bow3"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow3"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "3"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+    "item_recipe_bow4"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "15000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow4"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow3;item_warlock_soul"
+        }
+    }
+
+    "item_bow4"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow4"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "4"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+    "item_recipe_bow5"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "20000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow5"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow4;item_elder_soul"
+        }
+    }
+
+    "item_bow5"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow5"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "5"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+   "item_recipe_bow6"
+    {
+            "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "25000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow6"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow5;item_elder_soul"
+        }
+    }
+
+    "item_bow6"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow6"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "6"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+   "item_recipe_bow7"
+    {
+        "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "30000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow7"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow6;item_elder_soul"
+        }
+    }
+
+    "item_bow7"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow7"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "7"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+
+   "item_recipe_bow8"
+    {
+            "AbilityTextureName"                "recipe"
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "Model"                         "models/props_gameplay/recipe.vmdl"
+        "BaseClass"                     "item_datadriven"
+        
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "35000"  
+        "ItemShopTags"                  "artifacts"
+        
+        // Recipe
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemRecipe"                    "1"
+        "ItemResult"                    "item_bow8"
+        "ItemRequirements"
+        {
+            "01"                        "item_bow7;item_elder_soul"
+        }
+    }
+
+    "item_bow8"
+    {       
+        // General
+        //-------------------------------------------------------------------------------------------------------------
+        "BaseClass"                     "item_lua"
+        "ScriptFile"                    "items/item_bow"
+        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+        "AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+        "AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+        "AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+        "AbilityTextureName"            "bow8"
+        
+        // Stats
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemShopTags"					"int;attack;str;armor;attack;speed;agility;cleave;splash"
+        "ItemAliases"					"holy;book"
+        // Item Info
+        //-------------------------------------------------------------------------------------------------------------
+        "ItemCost"                      "10000"
+        "ItemStackable"                 "0"
+        "MaxUpgradeLevel"				"8"
+        "ItemBaseLevel"                 "8"
+        
+        "ItemKillable"                  "1"
+        "ItemSellable"                  "1"
+        "ItemDroppable"                 "1"
+        "ItemPurchasable"               "1"
+
+        //special
+        "AbilityValues"
+        {
+            "bonus_int"             "30 45 55 65 75 85 95 105"
+            "bonus_attack"			"55 135 225 315 405 495 585 675"
+            "bonus_strength"        "12 24 36 48 60 80 100 120"
+            "bonus_armor"           "10 15 20 25 35 55 75 95"
+            "bonus_attackspeed"     "45 70 95 110 135 165 190 215"
+            "bonus_manaregen"       "10.0 15.0 20.0 25.0 30.0 35.0 40.0 45.0"
+            "radius"                "500"
+            "damage_percent"        "20 40 60 80 100 120 140 160"
+            "bonus_speed"           "12 24 36 48 60 65 70 75"
+            "bonus_agility"         "16 32 64 96 128 160 192 224"
+        }
+    }
+}

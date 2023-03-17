@@ -693,7 +693,7 @@ function ClearItems(mustHaveOwner)
         
       end
 
-      if containedItem and (mustHaveOwner and owner ~= nil and ((gameTime - creationTime) > 90)) then
+      if containedItem and (mustHaveOwner and owner ~= nil and ((gameTime - creationTime) > 5)) then
 
         local nFXIndex = ParticleManager:CreateParticle( "particles/items2_fx/veil_of_discord.vpcf", PATTACH_CUSTOMORIGIN, item )
         ParticleManager:SetParticleControl( nFXIndex, 0, item:GetOrigin() )
