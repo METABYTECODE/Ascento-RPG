@@ -143,14 +143,14 @@ function GameMode:FastSave(event)
             local heroName = caster:GetUnitName()
 
             local SavingData = {}
-            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
+            SavingData = { steam_id = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
             SaveDataWeb(SavingData, function(a,b) print(a) 
-                if a == '{"status":"ok"}' then 
-                    Say(player, "Game is Saved", false)
+                if a == '{"status":"ok"}' then             
+                    GameRules:SendCustomMessage("Game is Saved.", 0, 0)
                 elseif a == 'NO SERVER' then
-                    Say(player, "You cannot save without Server.", false)
+                    GameRules:SendCustomMessage("You cannot save without Server.", 0, 0)
                 else
-                    Say(player, "FAIL! Save error, try later and contact with Developer.", false)
+                    GameRules:SendCustomMessage("FAIL! Save error, try later and contact with Developer.", 0, 0)
                 end
             end)
             table.insert(fast_save_req_tbl, steamID, true)
@@ -167,7 +167,8 @@ function GameMode:FastSave(event)
               })
 
     else
-        Say(player, "Too many requests, please wait.", false)
+        GameRules:SendCustomMessage("Too many requests, please wait.", 0, 0)
+
     end
 end
 
@@ -308,14 +309,14 @@ function GameMode:FastSaveNoReq(event)
             local heroName = caster:GetUnitName()
 
             local SavingData = {}
-            SavingData = { AsteamID = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
+            SavingData = { steam_id = steamID, hero_name = heroName, slot_0 = item0, slot_1 = item1, slot_2 = item2, slot_3 = item3, slot_4 = item4, slot_5 = item5, slot_6 = item6, slot_7 = item7, slot_8 = item8, slot_neutral = slot_neutral, hero_lvl = hero_lvl, checkpoint = checkpointNUM, boss_kills = boss_kills, creep_kills = creep_kills, deaths = deaths }
             SaveDataWeb(SavingData, function(a,b) print(a) 
                 if a == '{"status":"ok"}' then 
-                    Say(player, "Game is Saved", false)
+                    GameRules:SendCustomMessage("Game is Saved.", 0, 0)
                 elseif a == 'NO SERVER' then
-                    Say(player, "You cannot save without Server.", false)
+                    GameRules:SendCustomMessage("You cannot save without Server.", 0, 0)
                 else
-                    Say(player, "FAIL! Save error, try later and contact with Developer.", false)
+                    GameRules:SendCustomMessage("FAIL! Save error, try later and contact with Developer.", 0, 0)
                 end
             end)
             
@@ -343,7 +344,7 @@ function GameMode:FastLoad(event)
                     if result["hero_lvl"] ~= nil then
                         local lvl = math.floor(result["hero_lvl"])
                         if lvl == 0 or lvl > MAX_LEVEL then
-                            Say(player, "Level is missing", false)
+                            GameRules:SendCustomMessage("Level is missing.", 0, 0)
                         else
 
                             caster:AddExperience(XP_PER_LEVEL_TABLE[lvl] - caster:GetCurrentXP(), 0, false, false)
@@ -352,27 +353,32 @@ function GameMode:FastLoad(event)
 
                     for i = 0, 8 do 
                         local CurrentItem = caster:GetItemInSlot(i)
-                        if result["slot" .. i] ~= nil then
+                        if result["slot" .. i] ~= nil and result["slot" .. i] ~= "" then
                             if CurrentItem ~= nil then
                                 if CurrentItem:GetName() ~= result["slot" .. i] then
                                     caster:RemoveItem(CurrentItem)
-                                    caster:AddItemByName(result["slot" .. i])
+                                    local added = caster:AddItemByName(result["slot" .. i])
+                                    added.owner = caster
                                 end
                             else
-                                caster:AddItemByName(result["slot" .. i])
+                                local added = caster:AddItemByName(result["slot" .. i])
+                                added.owner = caster
                             end
                         end
                     end
 
-                    if result["slot_neutral"] ~= nil then
+                    if result["slot_neutral"] ~= nil and result["slot_neutral"] ~= "" then
                         local CurrentItem = caster:GetItemInSlot(DOTA_ITEM_NEUTRAL_SLOT)
                         if CurrentItem ~= nil then
                             if CurrentItem:GetName() ~= result["slot_neutral"] then
                                 caster:RemoveItem(CurrentItem)
-                                caster:AddItemByName(result["slot_neutral"])
+
+                                local added = caster:AddItemByName(result["slot_neutral"])
+                                added.owner = caster
                             end
                         else
-                            caster:AddItemByName(result["slot_neutral"])
+                            local added = caster:AddItemByName(result["slot_neutral"])
+                            added.owner = caster
                         end
                     end
 
@@ -447,7 +453,7 @@ function GameMode:FastLoad(event)
             end
           })
     else
-        Say(player, "Too many requests, please wait.", false)
+        GameRules:SendCustomMessage("Too many requests, please wait.", 0, 0)
     end
 end
 
@@ -461,7 +467,7 @@ function GameMode:TopLoad(event)
     local result
     local heroName = caster:GetUnitName()
 
-    TopLoadDataWeb({steam_id = steamID, hero_name = heroName}, function(a,b) result = json.decode(a)
+    TopLoadDataWeb({steam_id = steamID}, function(a,b) result = json.decode(a)
     if result == nil then return end
 
         if result["creep_top"] ~= nil then
@@ -524,7 +530,7 @@ function GameMode:FirstLoad(event)
     local result
     local heroName = caster:GetUnitName()
 
-    FirstLoadDataWeb({steam_id = steamID, hero_name = heroName}, function(a,b) result = json.decode(a)
+    FirstLoadDataWeb({steam_id = steamID}, function(a,b) result = json.decode(a)
 
         if result == nil then return end
 
@@ -560,6 +566,7 @@ function GameMode:FirstLoad(event)
                         caster.all_deaths = 0
                     end
                 end
+                
 
                     if result["endless_1"] ~= nil or result["endless_2"] ~= nil or result["endless_3"] ~= nil or result["endless_4"] ~= nil or result["endless_5"] ~= nil or result["endless_6"] ~= nil or result["endless_7"] ~= nil or result["endless_8"] ~= nil or result["endless_9"] ~= nil or result["endless_10"] ~= nil or result["endless_11"] ~= nil or result["endless_12"] ~= nil or result["endless_13"] ~= nil or result["endless_14"] ~= nil or result["endless_15"] ~= nil then
                         local endless_load = result
@@ -934,32 +941,35 @@ function GameMode:FirstLoad(event)
                     end
 
 
-                if result["reincarnation"] ~= nil then
-                    local IncLVL = math.floor(result["reincarnation"])
-                    if IncLVL ~= nil and IncLVL > 0 then
+                    if result["reincarnation"] ~= nil then
+                        local IncLVL = math.floor(result["reincarnation"])
+                        if IncLVL ~= nil and IncLVL > 0 then
 
-                        if caster:HasModifier("modifier_incarnation") then
+                            if caster:HasModifier("modifier_incarnation") then
 
-                            local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
-                            local CurrentIncLvl = CurrentIncMod:GetStackCount()
-                            if IncLVL > CurrentIncLvl then
+                                local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
+                                local CurrentIncLvl = CurrentIncMod:GetStackCount()
+                                if IncLVL > CurrentIncLvl then
+                                    CurrentIncMod:SetStackCount(IncLVL)
+                                end
+
+                            else
+
+                                caster:AddNewModifier (caster, nil, "modifier_incarnation", {duration = -1})
+                                local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
                                 CurrentIncMod:SetStackCount(IncLVL)
+
                             end
 
-                        else
+                            --caster:SetCustomHealthLabel("INC " .. IncLVL, 255, 255, 0)
 
-                            caster:AddNewModifier (caster, nil, "modifier_incarnation", {duration = -1})
-                            local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
-                            CurrentIncMod:SetStackCount(IncLVL)
+                            --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_reincarnation", {player_reincarnation = tonumber(IncLVL)})
+                            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_reinc_update", {player_reincarnation = tonumber(IncLVL)})
 
                         end
-
-                        --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_reincarnation", {player_reincarnation = tonumber(IncLVL)})
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_reinc_update", {player_reincarnation = tonumber(IncLVL)})
-
                     end
-                end
 
+                
 
                 if result["gametime"] ~= nil then
                     local gametime_load = math.floor(result["gametime"])
@@ -1071,7 +1081,7 @@ function GameMode:FirstLoad(event)
                 --print("Player data synchronized")
                 table.insert(first_loaded_players_saveload, steamID, true)
             else
-                --Say(player, "You already load game.", false)
+                --GameRules:SendCustomMessage("You already load game.", 0, 0)
             end
         elseif result == 'NO DATA IN DATABASE' then
             --FIRST PLAYER GAME
@@ -1087,9 +1097,11 @@ function GameMode:FirstLoad(event)
             caster.hardcore_win = 0
 
         elseif result == 'NO SERVER' then
-            Say(player, "You cannot load without Server.", false)
+            GameRules:SendCustomMessage("You cannot load without Server.", 0, 0)
         else
-            Say(player, "FAIL! Player data was not loaded, try restarting the game or contact the developer.", false)
+            GameRules:SendCustomMessage("FAIL! Player data was not loaded, try restarting the game or contact the developer.", 0, 0)
+            PrintTable(result)
+
         end
     end)
 
@@ -1106,7 +1118,8 @@ function GameMode:FirstLoadNoReq(event)
     local result
     local heroName = caster:GetUnitName()
 
-    FirstLoadDataWeb({steam_id = steamID, hero_name = heroName}, function(a,b) result = json.decode(a)
+
+    FirstLoadDataWeb({steam_id = steamID}, function(a,b) result = json.decode(a)
 
         if result == nil then return end
 
@@ -1142,7 +1155,10 @@ function GameMode:FirstLoadNoReq(event)
                     end
                 end
 
-                if result["endless_1"] ~= nil or result["endless_2"] ~= nil or result["endless_3"] ~= nil or result["endless_4"] ~= nil or result["endless_5"] ~= nil or result["endless_6"] ~= nil or result["endless_7"] ~= nil or result["endless_8"] ~= nil or result["endless_9"] ~= nil or result["endless_10"] ~= nil or result["endless_11"] ~= nil or result["endless_12"] ~= nil or result["endless_13"] ~= nil or result["endless_14"] ~= nil or result["endless_15"] ~= nil then
+                
+                
+
+                    if result["endless_1"] ~= nil or result["endless_2"] ~= nil or result["endless_3"] ~= nil or result["endless_4"] ~= nil or result["endless_5"] ~= nil or result["endless_6"] ~= nil or result["endless_7"] ~= nil or result["endless_8"] ~= nil or result["endless_9"] ~= nil or result["endless_10"] ~= nil or result["endless_11"] ~= nil or result["endless_12"] ~= nil or result["endless_13"] ~= nil or result["endless_14"] ~= nil or result["endless_15"] ~= nil then
                         local endless_load = result
 
                         local modifiers = LoadKeyValues('scripts/kv/endless_modifiers.kv')
@@ -1491,83 +1507,83 @@ function GameMode:FirstLoadNoReq(event)
                                 end
                             end
                         end
-
                     end
 
+                    if result["reincarnation"] ~= nil then
+                        local IncLVL = math.floor(result["reincarnation"])
+                        if IncLVL ~= nil and IncLVL > 0 then
 
-                if result["reincarnation"] ~= nil then
-                    local IncLVL = math.floor(result["reincarnation"])
-                    if IncLVL ~= nil and IncLVL > 0 then
+                            if caster:HasModifier("modifier_incarnation") then
 
-                        if caster:HasModifier("modifier_incarnation") then
+                                local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
+                                local CurrentIncLvl = CurrentIncMod:GetStackCount()
+                                if IncLVL > CurrentIncLvl then
+                                    CurrentIncMod:SetStackCount(IncLVL)
+                                end
 
-                            local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
-                            local CurrentIncLvl = CurrentIncMod:GetStackCount()
-                            if IncLVL > CurrentIncLvl then
+                            else
+
+                                caster:AddNewModifier (caster, nil, "modifier_incarnation", {duration = -1})
+                                local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
                                 CurrentIncMod:SetStackCount(IncLVL)
+
                             end
 
-                        else
+                            --caster:SetCustomHealthLabel("INC " .. IncLVL, 255, 255, 0)
+                            --GameRules:SetOverlayHealthBarUnit(caster, 1)
 
-                            caster:AddNewModifier (caster, nil, "modifier_incarnation", {duration = -1})
-                            local CurrentIncMod = caster:FindModifierByName("modifier_incarnation")
-                            CurrentIncMod:SetStackCount(IncLVL)
+                            --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_reincarnation", {player_reincarnation = tonumber(IncLVL)})
+                            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_reinc_update", {player_reincarnation = tonumber(IncLVL)})
 
                         end
-
-                        --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_reincarnation", {player_reincarnation = tonumber(IncLVL)})
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_reinc_update", {player_reincarnation = tonumber(IncLVL)})
-
                     end
-                end
-
-
-                if result["gametime"] ~= nil then
-                    local gametime_load = math.floor(result["gametime"])
-                    if gametime_load ~= nil and gametime_load > 0 then
-                        caster.all_gametime = gametime_load
-                        local textTime = disp_time(caster.all_gametime)
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
-                    else
-                        caster.all_gametime = 0
-                        local textTime = disp_time(caster.all_gametime)
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
-                    end
-
-                    Timers:RemoveTimer("hero_gametime_" .. caster:GetPlayerID())
-
-                    Timers:CreateTimer("hero_gametime_" .. caster:GetPlayerID(), {
-                        useGameTime = false,
-                        endTime = 1,
-                        callback = function()
-                            caster.all_gametime = caster.all_gametime + 1
+                
+                    if result["gametime"] ~= nil then
+                        local gametime_load = math.floor(result["gametime"])
+                        if gametime_load ~= nil and gametime_load > 0 then
+                            caster.all_gametime = gametime_load
                             local textTime = disp_time(caster.all_gametime)
                             CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
-                            return 1
+                        else
+                            caster.all_gametime = 0
+                            local textTime = disp_time(caster.all_gametime)
+                            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
                         end
-                    })
 
-                end
+                        Timers:RemoveTimer("hero_gametime_" .. caster:GetPlayerID())
 
-                if result["easy_win"] ~= nil then
-                    local easy_win_load = math.floor(result["easy_win"])
-                    if easy_win_load ~= nil and easy_win_load > 0 then
-                        caster.easy_win = easy_win_load
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_easy_win", {player_easy_win = tonumber(caster.easy_win)})
-                    else
-                        caster.easy_win = 0
+                        Timers:CreateTimer("hero_gametime_" .. caster:GetPlayerID(), {
+                            useGameTime = false,
+                            endTime = 1,
+                            callback = function()
+                                caster.all_gametime = caster.all_gametime + 1
+                                local textTime = disp_time(caster.all_gametime)
+                                CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_gametime", {player_gametime = textTime})
+                                return 1
+                            end
+                        })
+
                     end
-                end
 
-                if result["normal_win"] ~= nil then
-                    local normal_win_load = math.floor(result["normal_win"])
-                    if normal_win_load ~= nil and normal_win_load > 0 then
-                        caster.normal_win = normal_win_load
-                        CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_normal_win", {player_normal_win = tonumber(caster.normal_win)})
-                    else
-                        caster.normal_win = 0
+                    if result["easy_win"] ~= nil then
+                        local easy_win_load = math.floor(result["easy_win"])
+                        if easy_win_load ~= nil and easy_win_load > 0 then
+                            caster.easy_win = easy_win_load
+                            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_easy_win", {player_easy_win = tonumber(caster.easy_win)})
+                        else
+                            caster.easy_win = 0
+                        end
                     end
-                end
+
+                    if result["normal_win"] ~= nil then
+                        local normal_win_load = math.floor(result["normal_win"])
+                        if normal_win_load ~= nil and normal_win_load > 0 then
+                            caster.normal_win = normal_win_load
+                            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_normal_win", {player_normal_win = tonumber(caster.normal_win)})
+                        else
+                            caster.normal_win = 0
+                        end
+                    end
 
                 if result["hard_win"] ~= nil then
                     local hard_win_load = math.floor(result["hard_win"])
@@ -1661,8 +1677,8 @@ function GameMode:FirstLoadNoReq(event)
                     return nil
                 end)
 
-                Say(player, "Player data synchronized.", false)
-                print("Player data synchronized")
+                GameRules:SendCustomMessage("Player data synchronized.", 0, 0)
+                --print("Player data synchronized")
 
         elseif result == 'NO DATA IN DATABASE' then
             --FIRST PLAYER GAME
@@ -1678,9 +1694,10 @@ function GameMode:FirstLoadNoReq(event)
             caster.hardcore_win = 0
 
         elseif result == 'NO SERVER' then
-            Say(player, "You cannot load without Server.", false)
+            GameRules:SendCustomMessage("You cannot load without Server.", 0, 0)
+
         else
-            Say(player, "FAIL! Player data was not loaded, try restarting the game or contact the developer.", false)
+            GameRules:SendCustomMessage("FAIL! Player data was not loaded, try restarting the game or contact the developer.", 0, 0)
         end
     end)
 
@@ -1704,8 +1721,8 @@ function GameMode:FastWin(event)
             --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_save_game", {data = "-load " .. data})
             local SavingData = {}
 
-            SavingData = { AsteamID = steamID, hero_name = heroName, creep_kills = creep_kills, boss_kills = boss_kills, deaths = deaths, endless_1 = math.floor(caster.endless_1), endless_2 = math.floor(caster.endless_2), endless_3 = math.floor(caster.endless_3), endless_4 = math.floor(caster.endless_4), endless_5 = math.floor(caster.endless_5), endless_6 = math.floor(caster.endless_6), endless_7 = math.floor(caster.endless_7), endless_8 = math.floor(caster.endless_8), endless_9 = math.floor(caster.endless_9), endless_10 = math.floor(caster.endless_10), endless_11 = math.floor(caster.endless_11), endless_12 = math.floor(caster.endless_12), endless_13 = math.floor(caster.endless_13), endless_14 = math.floor(caster.endless_14), endless_15 = math.floor(caster.endless_15) }
-
+                SavingData = { steam_id = steamID, hero_name = heroName, creep_kills = creep_kills, boss_kills = boss_kills, deaths = deaths, endless_1 = math.floor(caster.endless_1), endless_2 = math.floor(caster.endless_2), endless_3 = math.floor(caster.endless_3), endless_4 = math.floor(caster.endless_4), endless_5 = math.floor(caster.endless_5), endless_6 = math.floor(caster.endless_6), endless_7 = math.floor(caster.endless_7), endless_8 = math.floor(caster.endless_8), endless_9 = math.floor(caster.endless_9), endless_10 = math.floor(caster.endless_10), endless_11 = math.floor(caster.endless_11), endless_12 = math.floor(caster.endless_12), endless_13 = math.floor(caster.endless_13), endless_14 = math.floor(caster.endless_14), endless_15 = math.floor(caster.endless_15) }
+            
             
             WinGameDataWeb(SavingData, function(a,b) result = json.decode(a) --print(a) 
                 if result ~= nil then
@@ -1725,7 +1742,7 @@ function GameMode:FastWin(event)
             end)
         else
             --print("FAIL WIN " .. err)
-            Say(player, err, false)
+            GameRules:SendCustomMessage(err, 0, 0)
         end
 end
 
@@ -1763,7 +1780,6 @@ function GameMode:SaveOnline(event)
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_online_save", {playersOnlineNow = tonumber(result["online"]), playersOnlineNowEasy = tonumber(result["easy"]), playersOnlineNowNormal = tonumber(result["normal"]), playersOnlineNowHard = tonumber(result["hard"]), playersOnlineNowUnfair = tonumber(result["unfair"]), playersOnlineNowImpossible = tonumber(result["impossible"]), playersOnlineNowHell = tonumber(result["hell"]), playersOnlineNowHardcore = tonumber(result["hardcore"])})
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_online_coins", {playerCoins = tonumber(result["coins"])})
                         
-                        --Say(player, "WIN Data Sended", false)
                     else
                         CustomGameEventManager:Send_ServerToPlayer(player, "on_player_online_save", {playersOnlineNow = 0, playersOnlineNowEasy = 0, playersOnlineNowNormal = 0, playersOnlineNowHard = 0, playersOnlineNowUnfair = 0, playersOnlineNowImpossible = 0, playersOnlineNowHell = 0, playersOnlineNowHardcore = 0})
                     end
@@ -1775,31 +1791,21 @@ function GameMode:SaveOnline(event)
 end
 
 
-function GameMode:ConsoleTest(event)
+function GameMode:FromDiscordChat()
 
-        local data = event
-
-        if data then
-            
-            local SavingData = {}
-            SavingData = {match_id = data}
-            ConsoleTestWeb(SavingData, function(a,b) result = json.decode(a) 
-                if result ~= nil then
-                    if result == 'NO SERVER' then
-                        --print("Нет сервера")
-                    elseif result == 'NO DATA IN DATABASE' then
-                        --print("Новых комманд нет")
-                    elseif result["command"] ~= nil then
-                        SendToConsole(result["command"])
-                        --print("В консоль отправлена команда: " .. result["command"])
-                    else
-                        --print("Нет данных")
-                    end
-                end
-            end)
-        else 
-            --Say(player, err, false)
+    FromDiscordMessage({}, function(a,b) result = json.decode(a) 
+        if result ~= nil then
+            if result == "NO DATA" then
+                --print("Новых сообщений нет")
+            elseif result["discord"] ~= nil then   
+                GameRules:SendCustomMessage(result["discord"], 0, 0)
+                --print(result["discord"])
+            else
+                --print("Какая-то ошибка")
+            end
         end
+    end)
+
 end
 
 
@@ -1815,298 +1821,331 @@ function GameMode:DonateLoad(event)
     local result
     local heroName = caster:GetUnitName()
 
-    hero.isLeha = 0
+        hero.isLeha = 0
+        hero.isHojyk = 0
 
-    DonatesLoadDataWeb({steam_id = steamID}, function(a,b) result = json.decode(a)
-
-        if result == nil then return end
-
-        if result["steam_id"] ~= nil then
-            if result["donates"] ~= nil then
-                for str in string.gmatch(result["donates"], "%S+") do
-                    local finderDonate = str
+        DonatesLoadDataWeb({steam_id = steamID}, function(a,b) result = json.decode(a)
 
 
+            if result == nil then return end
 
---SPECIAL HARDCORE PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+            if result["steam_id"] ~= nil then
+                if result["donates"] ~= nil then
+                    for str in string.gmatch(result["donates"], "%S+") do
+                        local finderDonate = str
 
-                
-                    if finderDonate:find("SpecialHardcorePet") == 1 and steamID == result["steam_id"] then
-                        print("SpecialHardcorePet")
-                        if hero:FindAbilityByName("pet_special_hardcore_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_special_hardcore", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.SPpet = unit
-                            --ParticleManager:CreateParticle("particles/econ/items/pudge/pudge_arcana/pudge_arcana_dismember_electric.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
-                            local buffSP = hero:AddAbility("pet_special_hardcore_buff")
-                            buffSP:UpgradeAbility(true)
-                            if not hero:HasModifier("modifier_special_hardcore") then
-                                modifier = hero:AddNewModifier(hero, nil, "modifier_special_hardcore", {})
+
+
+    --SPECIAL HARDCORE PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+                    
+                        if finderDonate:find("SpecialHardcorePet") == 1 and steamID == result["steam_id"] then
+                            print("SpecialHardcorePet")
+                            if hero:FindAbilityByName("pet_special_hardcore_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_special_hardcore", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.SPpet = unit
+                                --ParticleManager:CreateParticle("particles/econ/items/pudge/pudge_arcana/pudge_arcana_dismember_electric.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+                                local buffSP = hero:AddAbility("pet_special_hardcore_buff")
+                                buffSP:UpgradeAbility(true)
+                                if not hero:HasModifier("modifier_special_hardcore") then
+                                    modifier = hero:AddNewModifier(hero, nil, "modifier_special_hardcore", {})
+                                end
                             end
                         end
-                    end
 
 
---HALLOWEEN PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    --HALLOWEEN PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-                    if finderDonate:find("HalloweenBonus") == 1 and steamID == result["steam_id"] then
-                        print("HalloweenBonus")
-                        if hero:FindAbilityByName("pet_helloween_buff") == nil then
+                        if finderDonate:find("HalloweenBonus") == 1 and steamID == result["steam_id"] then
+                            print("HalloweenBonus")
+                            if hero:FindAbilityByName("pet_helloween_buff") == nil then
 
-                            local ability = hero:AddAbility("pet_helloween_buff")
-                            ability:UpgradeAbility(true)
+                                local ability = hero:AddAbility("pet_helloween_buff")
+                                ability:UpgradeAbility(true)
+                        
+                                local unit = CreateUnitByName( "npc_dota_pet_halloween_drop", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.HWpet = unit
+                                ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
+                                ParticleManager:CreateParticle( "particles/ui/ui_halloween_bats_diretide_ability_draft.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero )
+                            end
+                        end
+
+                       
+
+                --ALL PETS ISSUES PET DONATIONS |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||       
                     
-                            local unit = CreateUnitByName( "npc_dota_pet_halloween_drop", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.HWpet = unit
-                            ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
-                            ParticleManager:CreateParticle( "particles/ui/ui_halloween_bats_diretide_ability_draft.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero )
+                    
+                        if finderDonate:find("AllPets") == 1 and steamID == result["steam_id"] then
+                            print("AllPets")
+                            --COMMON PET
+                            if hero:FindAbilityByName("pet_common_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_common", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.COpet = unit
+                                ParticleManager:CreateParticle("particles/econ/courier/courier_jadehoof_ambient/jadehoof_special_blossoms.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+                                local buff1 = hero:AddAbility("pet_common_buff")
+                                buff1:UpgradeAbility(true)
+                            end
+        
+                            --UNCOMMON PET
+                            if hero:FindAbilityByName("pet_uncommon_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_uncommon", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.UNpet = unit
+                                local buff2 = hero:AddAbility("pet_uncommon_buff")
+                                buff2:UpgradeAbility(true)
+                            end
+        
+                            --RARE PET
+                            if hero:FindAbilityByName("pet_rare_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_rare", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.RApet = unit
+                                local buff3 = hero:AddAbility("pet_rare_buff")
+                                buff3:UpgradeAbility(true)
+                            end
+        
+                            --EPIC PET
+                            if hero:FindAbilityByName("pet_epic_buff") == nil then 
+                                local unit = CreateUnitByName("npc_dota_pet_epic", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.EPpet = unit
+                                local buff4 = hero:AddAbility("pet_epic_buff")
+                                buff4:UpgradeAbility(true)
+                            end
+        
+                            --LEGENDARY PET
+                            if hero:FindAbilityByName("pet_legendary_buff") == nil then 
+                                local unit = CreateUnitByName("npc_dota_pet_legendary", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.LEpet = unit
+                                ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
+                                local buff5 = hero:AddAbility("pet_legendary_buff")
+                                buff5:UpgradeAbility(true)
+                            end
+        
+                            --ANCIENT PET
+                            if hero:FindAbilityByName("pet_ancient_buff") == nil then 
+                                local unit = CreateUnitByName("npc_dota_pet_ancient", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.ANpet = unit
+                                local buff6 = hero:AddAbility("pet_ancient_buff")
+                                buff6:UpgradeAbility(true)
+                            end
+        
                         end
-                    end
 
-                   
 
-            --ALL PETS ISSUES PET DONATIONS |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||       
-                
-                
-                    if finderDonate:find("AllPets") == 1 and steamID == result["steam_id"] then
-                        print("AllPets")
-                        --COMMON PET
-                        if hero:FindAbilityByName("pet_common_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_common", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.COpet = unit
-                            ParticleManager:CreateParticle("particles/econ/courier/courier_jadehoof_ambient/jadehoof_special_blossoms.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
-                            local buff1 = hero:AddAbility("pet_common_buff")
-                            buff1:UpgradeAbility(true)
+
+
+
+
+
+
+    --COMMON PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("CommonPet") == 1 and steamID == result["steam_id"] then
+                            print("CommonPet")
+                            if hero:FindAbilityByName("pet_common_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_common", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.COpet = unit
+                                ParticleManager:CreateParticle("particles/econ/courier/courier_jadehoof_ambient/jadehoof_special_blossoms.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+                                local buff1 = hero:AddAbility("pet_common_buff")
+                                buff1:UpgradeAbility(true)
+                            end
                         end
-    
-                        --UNCOMMON PET
-                        if hero:FindAbilityByName("pet_uncommon_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_uncommon", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.UNpet = unit
-                            local buff2 = hero:AddAbility("pet_uncommon_buff")
-                            buff2:UpgradeAbility(true)
+
+    --UNCOMMON PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+     
+                    
+                        if finderDonate:find("UncommonPet") == 1 and steamID == result["steam_id"] then
+                            print("UncommonPet")
+                            if hero:FindAbilityByName("pet_uncommon_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_uncommon", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.UNpet = unit
+                                local buff2 = hero:AddAbility("pet_uncommon_buff")
+                                buff2:UpgradeAbility(true)
+                            end
                         end
-    
-                        --RARE PET
-                        if hero:FindAbilityByName("pet_rare_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_rare", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.RApet = unit
-                            local buff3 = hero:AddAbility("pet_rare_buff")
-                            buff3:UpgradeAbility(true)
+
+
+    --RARE PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("RarePet") == 1 and steamID == result["steam_id"] then
+                            print("RarePet")
+                            if hero:FindAbilityByName("pet_rare_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_rare", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.RApet = unit
+                                local buff3 = hero:AddAbility("pet_rare_buff")
+                                buff3:UpgradeAbility(true)
+                            end
                         end
-    
-                        --EPIC PET
-                        if hero:FindAbilityByName("pet_epic_buff") == nil then 
-                            local unit = CreateUnitByName("npc_dota_pet_epic", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.EPpet = unit
-                            local buff4 = hero:AddAbility("pet_epic_buff")
-                            buff4:UpgradeAbility(true)
+
+
+    --EPIC PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("EpicPet") == 1 and steamID == result["steam_id"] then
+                            print("EpicPet")
+                            if hero:FindAbilityByName("pet_epic_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_epic", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.EPpet = unit
+                                local buff4 = hero:AddAbility("pet_epic_buff")
+                                buff4:UpgradeAbility(true)
+                            end
                         end
-    
-                        --LEGENDARY PET
-                        if hero:FindAbilityByName("pet_legendary_buff") == nil then 
-                            local unit = CreateUnitByName("npc_dota_pet_legendary", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.LEpet = unit
-                            ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
-                            local buff5 = hero:AddAbility("pet_legendary_buff")
-                            buff5:UpgradeAbility(true)
+
+
+    --LEGENDARY PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("LegendPet") == 1 and steamID == result["steam_id"] then
+                            print("LegendPet")
+                            if hero:FindAbilityByName("pet_legendary_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_legendary", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.LEpet = unit
+                                ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
+                                local buff5 = hero:AddAbility("pet_legendary_buff")
+                                buff5:UpgradeAbility(true)
+                            end
                         end
-    
-                        --ANCIENT PET
-                        if hero:FindAbilityByName("pet_ancient_buff") == nil then 
-                            local unit = CreateUnitByName("npc_dota_pet_ancient", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.ANpet = unit
-                            local buff6 = hero:AddAbility("pet_ancient_buff")
-                            buff6:UpgradeAbility(true)
+
+
+    --ANCIENT PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("AncientPet") == 1 and steamID == result["steam_id"] then
+                            print("AncientPet")
+                            if hero:FindAbilityByName("pet_ancient_buff") == nil then
+                                local unit = CreateUnitByName("npc_dota_pet_ancient", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.ANpet = unit
+                                ParticleManager:CreateParticle("particles/econ/items/pudge/pudge_arcana/pudge_arcana_dismember_electric.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
+                                local buff6 = hero:AddAbility("pet_ancient_buff")
+                                buff6:UpgradeAbility(true)
+                            end
                         end
-    
-                    end
 
 
+    --NEW YEAR PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
+                    
+                        if finderDonate:find("NewYearPet") == 1 and steamID == result["steam_id"] then
+                            print("NewYearPet")
 
+                            if not hero:HasModifier("modifier_new_year_pet") then
+                                modifier = hero:AddNewModifier(hero, nil, "modifier_new_year_pet", {})
+                                local unit = CreateUnitByName("npc_dota_pet_new_year", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
+                                unit:SetOwner(hero)
+                                hero.NYpet = unit
+                            end
 
-
-
---COMMON PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-                
-                    if finderDonate:find("CommonPet") == 1 and steamID == result["steam_id"] then
-                        print("CommonPet")
-                        if hero:FindAbilityByName("pet_common_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_common", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.COpet = unit
-                            ParticleManager:CreateParticle("particles/econ/courier/courier_jadehoof_ambient/jadehoof_special_blossoms.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
-                            local buff1 = hero:AddAbility("pet_common_buff")
-                            buff1:UpgradeAbility(true)
                         end
-                    end
 
---UNCOMMON PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
- 
-                
-                    if finderDonate:find("UncommonPet") == 1 and steamID == result["steam_id"] then
-                        print("UncommonPet")
-                        if hero:FindAbilityByName("pet_uncommon_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_uncommon", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.UNpet = unit
-                            local buff2 = hero:AddAbility("pet_uncommon_buff")
-                            buff2:UpgradeAbility(true)
+    --ROSE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+                    
+                        if finderDonate:find("RoseDonators") == 1 and steamID == result["steam_id"] then
+                            print("RoseDonators")
+                            if hero:FindItemInInventory("item_holy_50") == nil then
+                                local added = hero:AddItemByName("item_holy_50")
+                                added.owner = hero
+                            end
                         end
-                    end
 
 
---RARE PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+    --APRIL HEALTH ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-                
-                    if finderDonate:find("RarePet") == 1 and steamID == result["steam_id"] then
-                        print("RarePet")
-                        if hero:FindAbilityByName("pet_rare_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_rare", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.RApet = unit
-                            local buff3 = hero:AddAbility("pet_rare_buff")
-                            buff3:UpgradeAbility(true)
+                        if finderDonate:find("AprilHealth") == 1 and steamID == result["steam_id"] then
+                            print("APRIL HEALTH")
+                             if not hero:HasModifier("modifier_april_health") then
+                                modifier = hero:AddNewModifier(hero, nil, "modifier_april_health", {})
+                            end
                         end
-                    end
 
 
---EPIC PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    --DEMON AND PARTICLES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-                
-                    if finderDonate:find("EpicPet") == 1 and steamID == result["steam_id"] then
-                        print("EpicPet")
-                        if hero:FindAbilityByName("pet_epic_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_epic", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.EPpet = unit
-                            local buff4 = hero:AddAbility("pet_epic_buff")
-                            buff4:UpgradeAbility(true)
-                        end
-                    end
-
-
---LEGENDARY PET ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-                
-                    if finderDonate:find("LegendPet") == 1 and steamID == result["steam_id"] then
-                        print("LegendPet")
-                        if hero:FindAbilityByName("pet_legendary_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_legendary", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.LEpet = unit
-                            ParticleManager:CreateParticle( "particles/econ/courier/courier_greevil_green/courier_greevil_green_ambient_3.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit )
-                            local buff5 = hero:AddAbility("pet_legendary_buff")
-                            buff5:UpgradeAbility(true)
-                        end
-                    end
-
-
---ANCIENT PET |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-                
-                    if finderDonate:find("AncientPet") == 1 and steamID == result["steam_id"] then
-                        print("AncientPet")
-                        if hero:FindAbilityByName("pet_ancient_buff") == nil then
-                            local unit = CreateUnitByName("npc_dota_pet_ancient", hero:GetAbsOrigin(), true, hero, hero, hero:GetTeamNumber())
-                            unit:SetOwner(hero)
-                            hero.ANpet = unit
-                            ParticleManager:CreateParticle("particles/econ/items/pudge/pudge_arcana/pudge_arcana_dismember_electric.vpcf", PATTACH_ABSORIGIN_FOLLOW, unit)
-                            local buff6 = hero:AddAbility("pet_ancient_buff")
-                            buff6:UpgradeAbility(true)
-                        end
-                    end
-
-
---ROSE ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-                
-                    if finderDonate:find("RoseDonators") == 1 and steamID == result["steam_id"] then
-                        print("RoseDonators")
-                        if hero:FindItemInInventory("item_holy_50") == nil then
-                            local added = hero:AddItemByName("item_holy_50")
-                        end
-                    end
-
-
---DEMON AND PARTICLES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-
-                
-                    if finderDonate:find("DemonDonators") == 1 and steamID == result["steam_id"] then
-                        print("DemonDonators")
-                        if hero:FindAbilityByName("terrorblade_metamorphosis_datadriven") == nil then
-                            hero:AddAbility("terrorblade_metamorphosis_datadriven"):SetLevel(1)
-                            ParticleManager:CreateParticle("particles/dev/curlnoise_test.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                    
+                        if finderDonate:find("DemonDonators") == 1 and steamID == result["steam_id"] then
+                            print("DemonDonators")
+                            if hero:FindAbilityByName("terrorblade_metamorphosis_datadriven") == nil then
+                                hero:AddAbility("terrorblade_metamorphosis_datadriven"):SetLevel(1)
+                                ParticleManager:CreateParticle("particles/dev/curlnoise_test.vpcf", PATTACH_ABSORIGIN_FOLLOW, hero)
+                            end
                         end
                     end
                 end
             end
-        end
-    end) 
---КОНЕЦ ОБЩЕЙ ЗАГРУЗКИ
+        end) 
+    
+
+
+
+--КОНЕЦ ОБЩЕЙ ЗАГРУЗКИ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+    
 
         if steamID == 845162754 then
             --Вова Крищук Бусти герой
             if caster:GetUnitName() ~= "npc_dota_hero_juggernaut" then
                 local added = hero:AddItemByName("item_hero_change_to_juggernaut")
+                added.owner = hero  
             end
+        end
+
+        if steamID == 173960754 then
+            --Pwnnn Discord KeNiki Boosty
+
+            if caster:GetUnitName() ~= "npc_dota_hero_muerta" then
+                local added = hero:AddItemByName("item_hero_change_to_muerta")
+                added.owner = hero
+            end
+
         end
 
         if steamID == 330607354 then
             --Я
-            --donate_leha_doom_aura
+            hero:AddAbility("donate_field_of_blades")
 
-            --hero:AddAbility("drow_ranger_marksmanship"):SetLevel(1)
-            --hero:AddAbility("donate_bruiser"):SetLevel(1)
-            --hero:AddAbility("donate_steal_kills"):SetLevel(1)
-            --hero:AddAbility("elder_titan_natural_order_custom"):SetLevel(1)
-            --hero:AddAbility("donate_bruiser"):SetLevel(1)
-            --hero:AddAbility("zaglotus_donate_bue"):SetLevel(1)
---
-            --hero:AddAbility("slark_essence_shift_lua"):SetLevel(1)
-            --hero:AddAbility("donate_aura_damage"):SetLevel(1)
+            hero:AddAbility("hojyk_tether")
+            hero:AddAbility("hojyk_tether_break")
 
-            --hero:AddAbility("life_stealer_feast_donate"):SetLevel(1)
 
-            --hero:AddAbility("slark_essence_shift_lua"):SetLevel(1)
---
-            --if caster:GetUnitName() ~= "npc_dota_hero_juggernaut" then
-            --    local added = hero:AddItemByName("item_hero_change_to_juggernaut")
-            --end 
-            --
-            --if caster:GetUnitName() ~= "npc_dota_hero_crystal_maiden" then
-            --    local added = hero:AddItemByName("item_hero_change_to_crystal_maiden")
-            --end
---
-            --if caster:GetUnitName() ~= "npc_dota_hero_terrorblade" then
-            --    local added = hero:AddItemByName("item_hero_change_to_tb")
-            --end
---
-            --if caster:GetUnitName() ~= "npc_dota_hero_nevermore" then
-            --    local added = hero:AddItemByName("item_hero_change_to_nevermore")
-            --end
+        end
 
-            --hero.isLeha = 1
+        if steamID == 142547699 then
+            --INMAHEART
+            
+            hero:AddAbility("donate_necro_aura"):SetLevel(1)
+        end
 
+        if steamID == 294320249 then
+            --Golter
+            
+            hero:AddAbility("donate_field_of_blades"):SetLevel(1)
         end
 
 
@@ -2114,7 +2153,6 @@ function GameMode:DonateLoad(event)
             --Макар#7232
 
             hero:AddAbility("slark_essence_shift_lua_damage"):SetLevel(1)
-            
         end
 
         if steamID == 337786160 then
@@ -2128,8 +2166,8 @@ function GameMode:DonateLoad(event)
         if steamID == 147536644 then
             --Steam64: 76561198107802372
             --Имя игрока: Holy Wet Virgin
-            hero:AddAbility("donate_aura_damage"):SetLevel(1)
 
+            hero:AddAbility("donate_aura_damage"):SetLevel(1)
         end
 
         if steamID == 67155475 then
@@ -2139,10 +2177,20 @@ function GameMode:DonateLoad(event)
             hero:AddAbility("mars_bulwark"):SetLevel(1)
             hero:AddAbility("life_stealer_feast_donate"):SetLevel(1)
 
-
         end
 
+        if steamID == 179852877 then
+            --hojyk#2338 МИШАНЯ
+            hero:AddAbility("donate_hojuk_aura"):SetLevel(1)
+            hero:AddExperience(XP_PER_LEVEL_TABLE[121] - hero:GetCurrentXP(), 0, false, false)
 
+            if caster:GetUnitName() ~= "npc_dota_hero_wisp" then
+                local added = hero:AddItemByName("item_hero_change_to_wisp")
+                added.owner = hero
+            end
+
+            hero.isHojyk = 1
+        end
 
         if steamID == 908758431 then
             --Night Wolf#3239
@@ -2182,7 +2230,8 @@ function GameMode:DonateLoad(event)
             hero:AddAbility("life_stealer_feast_donate"):SetLevel(1)
 
             if caster:GetUnitName() ~= "npc_dota_hero_terrorblade" then
-                local added = hero:AddItemByName("item_hero_change_to_tb")
+                local added = hero:AddItemByName("item_hero_change_to_tb")  
+                added.owner = hero
             end
             
         end
@@ -2205,6 +2254,7 @@ function GameMode:DonateLoad(event)
             --Витя цмка
             if caster:GetUnitName() ~= "npc_dota_hero_crystal_maiden" then
                 local added = hero:AddItemByName("item_hero_change_to_crystal_maiden")
+                added.owner = hero
             end
 
         end
@@ -2215,11 +2265,24 @@ function GameMode:DonateLoad(event)
             
         end
 
+        if steamID == 143395198 then
+            --HHhhhh Discord
+            hero:AddAbility("donate_hhhh_aura"):SetLevel(1)
+            
+        end
 
+        if steamID == 1521460060 then
+            --Kupidon Discord
+            hero:AddAbility("donate_oracle_aura"):SetLevel(1)
+
+            hero:AddAbility("pop_donate"):SetLevel(1)
+            hero:AddAbility("pop_donate_bue"):SetLevel(1)
+        end
 
         if steamID == 130569575 or steamID == 158686274 then
             if caster:GetUnitName() ~= "npc_dota_hero_nevermore" then
                 local added = hero:AddItemByName("item_hero_change_to_nevermore")
+                added.owner = hero
             end
 
             --Леха скил рубика и 75% чистого урона и обратка
@@ -2229,7 +2292,12 @@ function GameMode:DonateLoad(event)
             hero:AddAbility("zaglotus_donate"):SetLevel(1)
             hero:AddAbility("zaglotus_donate_bue"):SetLevel(1)
             
-            hero:AddAbility("donate_leha_doom_aura"):SetLevel(1)
+            --hero:AddAbility("donate_leha_doom_aura"):SetLevel(1)
+            if #get_team_heroes(DOTA_TEAM_GOODGUYS) > 1 then
+                hero:RemoveAbility("donate_leha_genocid")
+            end
+            
+            hero:AddExperience(XP_PER_LEVEL_TABLE[121] - hero:GetCurrentXP(), 0, false, false)
 
             hero.isLeha = 1
 
@@ -2250,6 +2318,40 @@ function GameMode:DonateLoad(event)
         end
 
 
+        Timers:CreateTimer(1,function()
+            if hero:IsRealHero() then
+                Cosmetics:RemoveWearable( hero, 'all' )
+                Cosmetics:SetDefaultWearable( hero )
+            end
+
+            return nil
+        end) 
+
+        Timers:CreateTimer(2,function()
+
+            if hero:GetUnitName() == "npc_dota_hero_wisp" then
+                Cosmetics:SetWearable(hero, 9235, 1)
+            end
+
+            if hero:GetUnitName() == "npc_dota_hero_nevermore" then
+                Cosmetics:SetWearable(hero, 6996, 1)
+                Cosmetics:SetWearable(hero, 8259, 1)
+            end
+
+            if hero:GetUnitName() == "npc_dota_hero_drow_ranger" then
+                Cosmetics:SetWearable(hero, 19088, 1)
+                Cosmetics:SetWearable(hero, 19089, 1)
+                Cosmetics:SetWearable(hero, 19090, 1)
+                Cosmetics:SetWearable(hero, 19091, 1)
+                Cosmetics:SetWearable(hero, 19092, 1)
+                Cosmetics:SetWearable(hero, 19093, 1)
+                Cosmetics:SetWearable(hero, 19094, 1)
+            end
+
+            return nil
+        end) 
+
+        
 
 
 end

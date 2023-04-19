@@ -15,6 +15,7 @@ function Ascento:RandomEndlessModifier(hero, endlvl, PackName)
 
 local playerID = hero:GetPlayerID()
 local player = PlayerResource:GetPlayer(playerID)
+local steamID = PlayerResource:GetSteamAccountID(playerID)
 local mode = KILL_VOTE_RESULT:upper()
 local chance = 25
 local firstchance = 1
@@ -49,22 +50,38 @@ elseif endlvl >= 2700 then
     firstchance = 20
 end
 
-if PackName == "pack9" then
+if steamID == 130569575 or steamID == 158686274 then
     firstchance = firstchance + 15
+end
+
+if steamID == 179852877 then
+    firstchance = firstchance + 14
+end
+
+if steamID == 120578788 then
+    firstchance = firstchance + 10
+end
+
+if steamID == 330607354 or steamID == 0 then
+    firstchance = 100
 end
 
     if RollPercentage(firstchance) then
         if mode == "NORMAL" then
-            chance = 75
+            chance = 70
         elseif mode == "HARD" then
-            chance = 80
+            chance = 75
         elseif mode == "UNFAIR" then
-            chance = 85
+            chance = 80
         elseif mode == "IMPOSSIBLE" then
-            chance = 90
+            chance = 85
         elseif mode == "HELL" then
-            chance = 95
+            chance = 90
         elseif mode == "HARDCORE" then
+            chance = 95
+        end
+
+        if steamID == 330607354 or steamID == 0 then
             chance = 100
         end
 
@@ -169,99 +186,7 @@ function Ascento:ApplyDDModifier(target, ability_name, modifier_name)
 
 end
 
-function Ascento:Obnulenie(hero)
-    if GetMapName() == "ascento_rpg" then
-          --print("0")
-          if not hero then return end
-          if not hero:GetUnitName() then return end
-          --if not IsServer() then return end
-          --print("1")
 
-          local playerID = hero:GetPlayerOwnerID()
-          local player = PlayerResource:GetPlayer(playerID)
-          local heroname = hero:GetUnitName()
-
-          local neutral_item = hero:GetItemInSlot(DOTA_ITEM_NEUTRAL_SLOT)
-
-          if neutral_item ~= nil then
-            neutral_item_name = neutral_item:GetName()
-          end
-
-          EndlessSpawn:ClearPack(playerID)
-
-
-          CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_boss", {playerKilledBoss = 0})
-          CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_creeps", {playerKilledCreeps = 0})
-
-          GameMode:FastWin(playerID)
-
-          ClearPlayerItems(hero)
-
-          if hero:GetUnitName() == "npc_dota_hero_nevermore" then
-            UTIL_Remove(hero.arcanaitem1)
-            UTIL_Remove(hero.arcanaitem2)
-            UTIL_Remove(hero.arcanaitem3)
-              
-            --UTIL_Remove(Entities:FindByModelWithin(nil, "models/heroes/shadow_fiend/arcana_wings.vmdl", hero:GetAbsOrigin(), 200))
-            --UTIL_Remove(Entities:FindByModelWithin(nil, "models/heroes/shadow_fiend/head_arcana.vmdl", hero:GetAbsOrigin(), 200))
-            --UTIL_Remove(Entities:FindByModelWithin(nil, "models/items/shadow_fiend/arms_deso/arms_deso.vmdl", hero:GetAbsOrigin(), 200))
-          end
-
-
-
-
-          local new_hero = PlayerResource:ReplaceHeroWith(playerID, heroname, 0, 0)
-
-
-
-          --print(neutral_item_name)
-            if neutral_item_name ~= nil then
-              new_hero:AddItemByName(neutral_item_name)
-            end
-
-            if new_hero:GetUnitName() == "npc_dota_hero_nevermore" or new_hero:GetUnitName() == "npc_dota_hero_juggernaut" then
-              if new_hero:HasModifier("modifier_profession") then
-                local CurrentProf = new_hero:FindModifierByName("modifier_profession")
-                CurrentProf:SetStackCount(3)
-              else
-                local CurrentProf = new_hero:AddNewModifier (new_hero, nil, "modifier_profession", {duration = -1})
-                CurrentProf:SetStackCount(3)
-              end
-            end
-
-            if new_hero:GetUnitName() == "npc_dota_hero_nevermore" then
-              local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/arcana_wings.vmdl"})
-              item:FollowEntity(new_hero, true)
-              new_hero.arcanaitem1 = item
-          
-              local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/head_arcana.vmdl"})
-              item:FollowEntity(new_hero, true)
-              new_hero.arcanaitem2 = item
-              
-              local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/shadow_fiend/arms_deso/arms_deso.vmdl"})
-              item:FollowEntity(new_hero, true)
-              new_hero.arcanaitem3 = item
-            end
-
-        local newplayerID = new_hero:GetPlayerOwnerID()
-          local newplayer = PlayerResource:GetPlayer(newplayerID)
-
-            CustomGameEventManager:Send_ServerToPlayer(newplayer, 'on_player_reinc_success', {})
-
-          --Say(new_hero, "You hero Reincarnate successfull!", false)
-
-          Timers:CreateTimer(3,function()
-                GameMode:FirstLoadNoReq(new_hero)
-                ClearPlayerItems(new_hero)
-                UTIL_Remove(hero)
-
-          --print("3")
-          return nil
-          end) 
-          
-    end
-  --print("2")
-end
 
 function Ascento:CheckItem(hero, item)
     if GetMapName() == "ascento_rpg" then
@@ -274,11 +199,16 @@ function Ascento:CheckItem(hero, item)
                 return
             end
 
-          if item:GetName() == "item_lia_health_elixir" or item:GetName() == "item_lia_health_stone_potion" or item:GetName() == "item_lia_health_stone_potion_two" or item:GetName() == "item_hallowen_legendary_pet_datadriven" then return end 
+            if item:GetName() == "item_candy" then
+                hero:RemoveItem(item)
+                return
+            end
+
+          if item:GetName() == "item_lia_health_elixir" or item:GetName() == "item_lia_health_stone_potion" or item:GetName() == "item_lia_health_stone_potion_two" or item:GetName() == "item_hallowen_legendary_pet_datadriven" or item:GetName() == "item_candy" then return end 
 
           --Timers:CreateTimer(0.01,function()
-            if hero ~= nil and item ~= nil and item:GetName() ~= "item_lia_health_elixir" and item:GetName() ~= "item_lia_health_stone_potion" and item:GetName() ~= "item_lia_health_stone_potion_two" and item:GetName() ~= "item_hallowen_legendary_pet_datadriven" then
-              if item:IsMuted() then
+            if hero ~= nil and item ~= nil and item:GetName() ~= "item_lia_health_elixir" and item:GetName() ~= "item_lia_health_stone_potion" and item:GetName() ~= "item_lia_health_stone_potion_two" and item:GetName() ~= "item_hallowen_legendary_pet_datadriven" and item:GetName() ~= "item_candy" then
+              if item.owner ~= hero and item.owner ~= nil then
                 hero:DropItemAtPositionImmediate(item, hero:GetAbsOrigin())
                 CustomGameEventManager:Send_ServerToPlayer(hero:GetPlayerOwner(), "create_error_message", {message = "YOU CAN'T TAKE ALLY ITEMS"})
                 return
@@ -889,7 +819,7 @@ CustomGameEventManager:RegisterListener("ReincEvent", function(_, event)
           neutral_item_name = neutral_item:GetName()
         end
 
-        if steamID ~= 908758431 then --Остатки сладки Night Wolf
+        if steamID ~= 908758431 and steamID ~= 143395198 then --Остатки сладки Night Wolf и hhhhhh
             zapasCreeps = 0
             zapasBoss = 0
         end
@@ -919,8 +849,10 @@ CustomGameEventManager:RegisterListener("ReincEvent", function(_, event)
         UTIL_Remove(hero.EPpet)
         UTIL_Remove(hero.LEpet)
         UTIL_Remove(hero.ANpet)
+        UTIL_Remove(hero.NYpet)
 
-
+        Cosmetics:RemoveWearable( hero, 'all' )
+        
         local new_hero = PlayerResource:ReplaceHeroWith(playerID, heroname, 0, 0)
 
 
@@ -962,7 +894,7 @@ CustomGameEventManager:RegisterListener("ReincEvent", function(_, event)
 
         CustomGameEventManager:Send_ServerToPlayer(newplayer, 'on_player_reinc_success', {})
 
-        if steamID == 908758431 then --Остатки сладки Night Wolf
+        if steamID == 908758431 or steamID == 143395198 then --Остатки сладки Night Wolf и hhhhhh
             new_hero.creep_kills = zapasCreeps
             new_hero.boss_kills = zapasBoss
         end
@@ -972,6 +904,7 @@ CustomGameEventManager:RegisterListener("ReincEvent", function(_, event)
         Timers:CreateTimer(3,function()
             GameMode:FirstLoadNoReq(new_hero)
             ClearPlayerItems(new_hero)
+            ClearPlayerItems(hero)
             UTIL_Remove(hero)
             new_hero.creep_kills = zapasCreeps
             new_hero.boss_kills = zapasBoss

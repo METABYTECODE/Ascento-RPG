@@ -38,6 +38,7 @@ end
 
 function modifier_ny_over:CheckState() 
   local state = {
+    [MODIFIER_STATE_NO_UNIT_COLLISION] = true,
     [MODIFIER_STATE_NO_HEALTH_BAR] = true
   }
   return state

@@ -39,6 +39,9 @@ function ChangeHero ( keys )
     UTIL_Remove(caster.EPpet)
     UTIL_Remove(caster.LEpet)
     UTIL_Remove(caster.ANpet)
+    UTIL_Remove(caster.NYpet)
+
+    Cosmetics:RemoveWearable( caster, 'all' )
 
 	if caster:GetUnitName() ~= "npc_dota_hero_terrorblade" then
         new_hero = PlayerResource:ReplaceHeroWith(caster:GetPlayerOwnerID(), "npc_dota_hero_terrorblade", PlayerResource:GetGold(caster:GetPlayerOwnerID()), 0)
@@ -57,7 +60,7 @@ function ChangeHero ( keys )
     end
       
 
-    Timers:CreateTimer(3,function()
+    Timers:CreateTimer(1,function()
       GameMode:FirstLoadNoReq(new_hero)
 
         return nil

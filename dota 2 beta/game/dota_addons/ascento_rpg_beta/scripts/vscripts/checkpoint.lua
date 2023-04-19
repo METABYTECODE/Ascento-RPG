@@ -39,6 +39,11 @@ function check_reinc(event)
           wws = "teleport_endless_leha"
      end
 
+     if unit.isHojyk == 1 then
+          wws = "teleport_endless_hojyk"
+     end
+
+
      local ent = Entities:FindByName( nil, wws) --строка ищет как раз таки нашу точку pnt1
      local point = ent:GetAbsOrigin() --эта строка выясняет где находится pnt1 и получает её координаты
 

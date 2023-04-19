@@ -4,8 +4,27 @@ LinkLuaModifier( "modifier_donate_leha_doom_aura_effect", "abilities/donate/dona
 
 --------------------------------------------------------------------------------
 -- Passive Modifier
-function donate_leha_doom_aura:GetIntrinsicModifierName()
-	return "modifier_donate_leha_doom_aura"
+function donate_leha_doom_aura:OnToggle(  )
+	-- unit identifier
+	local caster = self:GetCaster()
+
+	-- load data
+	local toggle = self:GetToggleState()
+
+	if toggle then
+		-- add modifier
+		self.modifier = caster:AddNewModifier(
+			caster, -- player source
+			self, -- ability source
+			"modifier_donate_leha_doom_aura", -- modifier name
+			{  } -- kv
+		)
+	else
+		if self.modifier and not self.modifier:IsNull() then
+			self.modifier:Destroy()
+		end
+		self.modifier = nil
+	end
 end
 
 modifier_donate_leha_doom_aura = class({})

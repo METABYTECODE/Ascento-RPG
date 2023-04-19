@@ -1,4 +1,5 @@
-local url = "http://ascento.tk/api/"
+local newApi = "https://ascento.tk/api2/discord"
+local onlineApi = "https://ascento.tk/api2/"
 
 local webkey = GetDedicatedServerKeyV2("web")
 if webkey == "Invalid_NotOnDedicatedServer" then
@@ -7,8 +8,8 @@ end
 
 local version = "ascento_5"
 
-function LoadDataWeb(IDList, callback)    
-  local req = CreateHTTPRequestScriptVM("GET", url)
+function LoadDataWeb(data, callback)    
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -16,10 +17,10 @@ function LoadDataWeb(IDList, callback)
   req:SetHTTPRequestGetOrPostParameter("gametime", tostring(GameRules:GetGameTime()))
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
   req:SetHTTPRequestGetOrPostParameter("version", version)
-  req:SetHTTPRequestGetOrPostParameter("list", json.encode(IDList))
+  req:SetHTTPRequestGetOrPostParameter("data", json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
+          callback(res.Body)
           --print(res.StatusCode)
       else
           callback(res.Body)
@@ -27,8 +28,8 @@ function LoadDataWeb(IDList, callback)
   end)
 end
 
-function FirstLoadDataWeb(IDList, callback)    
-  local req = CreateHTTPRequestScriptVM("GET", url)
+function FirstLoadDataWeb(data, callback)    
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -36,20 +37,20 @@ function FirstLoadDataWeb(IDList, callback)
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
   req:SetHTTPRequestGetOrPostParameter("action", "firstload")
   req:SetHTTPRequestGetOrPostParameter("version", version)
-  req:SetHTTPRequestGetOrPostParameter("list", json.encode(IDList))
+  req:SetHTTPRequestGetOrPostParameter("data", json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
-          --print(res.StatusCode)
-      else
-          callback(res.Body)
           --PrintTable(res.Body)
+          callback(res.Body)
+      else
+          --PrintTable(res.Body)
+          callback(res.Body)
       end
   end)
 end
 
-function TopLoadDataWeb(IDList, callback)    
-  local req = CreateHTTPRequestScriptVM("GET", url)
+function TopLoadDataWeb(data, callback)    
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -57,20 +58,20 @@ function TopLoadDataWeb(IDList, callback)
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
   req:SetHTTPRequestGetOrPostParameter("action", "topload")
   req:SetHTTPRequestGetOrPostParameter("version", version)
-  req:SetHTTPRequestGetOrPostParameter("list", json.encode(IDList))
+  req:SetHTTPRequestGetOrPostParameter("data", json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
-          --print(res.StatusCode)
-      else
-          callback(res.Body)
           --PrintTable(res.Body)
+          callback(res.Body)
+      else
+          --PrintTable(res.Body)
+          callback(res.Body)
       end
   end)
 end
 
-function DonatesLoadDataWeb(IDList, callback)    
-  local req = CreateHTTPRequestScriptVM("GET", url)
+function DonatesLoadDataWeb(data, callback)    
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -78,10 +79,10 @@ function DonatesLoadDataWeb(IDList, callback)
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
   req:SetHTTPRequestGetOrPostParameter("action", "donates")
   req:SetHTTPRequestGetOrPostParameter("version", version)
-  req:SetHTTPRequestGetOrPostParameter("list", json.encode(IDList))
+  req:SetHTTPRequestGetOrPostParameter("data", json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
+          callback(res.Body)
           --print(res.StatusCode)
       else
           callback(res.Body)
@@ -91,7 +92,7 @@ function DonatesLoadDataWeb(IDList, callback)
 end
 
 function SaveDataWeb(data, callback)
-  local req = CreateHTTPRequestScriptVM("GET", url)
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -103,7 +104,7 @@ function SaveDataWeb(data, callback)
   --print("Encode data: "..json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
+          callback(res.Body)
           --print(res.StatusCode)
       else
           callback(res.Body)
@@ -113,7 +114,7 @@ end
 
 
 function WinGameDataWeb(data, callback)
-  local req = CreateHTTPRequestScriptVM("GET", url)
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -125,7 +126,7 @@ function WinGameDataWeb(data, callback)
   --print("Encode data: "..json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
+          callback(res.Body)
           --print(res.StatusCode)
       else
           callback(res.Body)
@@ -135,7 +136,7 @@ end
 
 
 function OnlineDataWeb(data, callback)
-  local req = CreateHTTPRequestScriptVM("GET", url)
+  local req = CreateHTTPRequestScriptVM("GET", onlineApi)
   local mode = KILL_VOTE_RESULT:upper()
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
   req:SetHTTPRequestGetOrPostParameter("difficulty", mode)
@@ -147,7 +148,7 @@ function OnlineDataWeb(data, callback)
   --print("Encode data: "..json.encode(data))
   req:Send(function(res)
       if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
+          callback(res.Body)
           --print(res.StatusCode)
       else
           callback(res.Body)
@@ -156,21 +157,33 @@ function OnlineDataWeb(data, callback)
 end
 
 
-function ConsoleTestWeb(data, callback)
-  local req = CreateHTTPRequestScriptVM("GET", url)
+function FromDiscordMessage(data, callback)
+  local req = CreateHTTPRequestScriptVM("GET", newApi)
   req:SetHTTPRequestGetOrPostParameter("key", webkey)
-  req:SetHTTPRequestGetOrPostParameter("action", "console")
+  req:SetHTTPRequestGetOrPostParameter("action", "discord")
   req:SetHTTPRequestGetOrPostParameter("version", version)
-  req:SetHTTPRequestGetOrPostParameter("gametime", tostring(GameRules:GetGameTime()))
   req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
-  req:SetHTTPRequestGetOrPostParameter("data", json.encode(data))
   --print("Encode data: "..json.encode(data))
   req:Send(function(res)
-      if res.StatusCode ~= 200 then
-          callback(nil, res.StatusCode)
-          --print(res.StatusCode)
-      else
+      if res.StatusCode == 200 then
           callback(res.Body)
+          --print(res.Body)
+      else
+        callback(res.Body)
+        --print(res.Body)
+        --print(res.Body)
       end
   end)
+end
+
+
+function ToDiscordMessage(steamid, text)
+  local req = CreateHTTPRequestScriptVM("GET", newApi)
+  req:SetHTTPRequestGetOrPostParameter("key", webkey)
+  req:SetHTTPRequestGetOrPostParameter("action", "todiscord")
+  req:SetHTTPRequestGetOrPostParameter("version", version)
+  req:SetHTTPRequestGetOrPostParameter("match_id", tostring(GameRules:Script_GetMatchID()))
+  req:SetHTTPRequestGetOrPostParameter("steamid", steamid)
+  req:SetHTTPRequestGetOrPostParameter("text", text)
+  req:Send(nil)
 end

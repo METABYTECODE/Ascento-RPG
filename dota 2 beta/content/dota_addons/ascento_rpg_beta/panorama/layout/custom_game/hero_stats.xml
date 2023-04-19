@@ -376,7 +376,7 @@
 
         <Label class="PlayerReinc" text="Every: "/> 
 
-        <Label class="PlayerReincCount" id="Reinc_Every_1" text="+0.2% Damage"/>
+        <Label class="PlayerReincCount" id="Reinc_Every_1" text="+0.15% Damage"/>
 
       </Panel>
 
@@ -384,13 +384,13 @@
 
         <Label class="PlayerReinc" text="Every: "/> 
 
-        <Label class="PlayerReincCount" id="Reinc_Every_2" text="+0.3% HP"/>
+        <Label class="PlayerReincCount" id="Reinc_Every_2" text="+0.2% HP"/>
 
       </Panel>
 
       <Panel class="row">
 
-        <Label class="PlayerReinc" text="Every 5: "/> 
+        <Label class="PlayerReinc" text="Every 10: "/> 
 
         <Label class="PlayerReincCount" id="Reinc_Every_3" text="+1 Max LVL"/>
 
@@ -850,6 +850,86 @@
         <Label class="PlayerReinc" text="100000: "/> 
 
         <Label class="PlayerReincCount" id="Reinc_100000" text="+100% Spell Amplify"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="150000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_150000" text="+100 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="200000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_200000" text="+200 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="250000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_250000" text="+300 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="300000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_300000" text="+400 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="350000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_350000" text="+500 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="400000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_400000" text="+600 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="450000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_450000" text="+700 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="500000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_500000" text="+800 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="750000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_750000" text="+900 Karma"/>
+
+      </Panel>
+
+      <Panel class="row">
+
+        <Label class="PlayerReinc" text="1000000: "/> 
+
+        <Label class="PlayerReincCount" id="Reinc_1000000" text="+1000 Karma"/>
 
       </Panel>
 

@@ -18,7 +18,7 @@
 
 			<Panel hittest="false" id="Divider" class="Divider" />
 
-			<Label class="Discord" text="Discord" onactivate="ExternalBrowserGoToURL('https://discord.gg/A9G9qpYWWF');" onmouseover="UIShowTextTooltip(Join the Community at Discord)"  onmouseout="UIHideTextTooltip()"/>	
+			<Label class="Discord" text="Discord" onactivate="ExternalBrowserGoToURL('https://discord.gg/DXSh4Snhgm');" onmouseover="UIShowTextTooltip(Join the Community at Discord)"  onmouseout="UIHideTextTooltip()"/>	
 
 			<Label class="VK" text="WEB" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Open Ascento-RPG.ru site with your stats and saves)"  onmouseout="UIHideTextTooltip()"/>	
 
@@ -32,9 +32,9 @@
 
 			<Panel hittest="false" id="Divider3" class="Divider" />
 			
-			<Button id="CoinButton" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
+			<Button id="CoinButton" class="TopLeftMenuButton" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Later can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
 
-			<Label id="CoinLabel" class="TopLeftMenuButton" text="0" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
+			<Label id="CoinLabel" class="TopLeftMenuButton" text="0" onactivate="ExternalBrowserGoToURL('https://ascento-rpg.ru');" onmouseover="UIShowTextTooltip(Your current coins. Later can exchange on Ascento-RPG.ru)"  onmouseout="UIHideTextTooltip()" />
 
 
 			
@@ -47,8 +47,9 @@
 			<Panel hittest="false" class="CreditsMain">
 				<Label class="CreditsLabel" text="Credits" />
 				<Button id="CloseRoot" onactivate="OnCreditsCloseButtonPressed()"/>
-				<Label text="UI for Reincarnating game" class="Credits1" onmouseover="DOTAShowProfileCardTooltip(76561198290873082, false)" onmouseout="DOTAHideProfileCardTooltip()" />
-				<Label text="Andr3mar for BONK UI" class="Credits2" onmouseover="DOTAShowProfileCardTooltip(76561198083843808, false)" onmouseout="DOTAHideProfileCardTooltip()" />
+				<Label text="UI - General Developer" class="Credits1" onactivate="ExternalBrowserGoToURL('https://steamcommunity.com/profiles/76561198290873082');" onmouseover="DOTAShowProfileCardTooltip(76561198290873082, false)" onmouseout="DOTAHideProfileCardTooltip()" />
+				<Label text="QueenDekim - Map Design" class="Credits2" onactivate="ExternalBrowserGoToURL('https://steamcommunity.com/profiles/76561198376130254');" onmouseover="DOTAShowProfileCardTooltip(76561198376130254, false)" onmouseout="DOTAHideProfileCardTooltip()" />
+				<Label text="Andr3mar - Balance, Skills" class="Credits3" onactivate="ExternalBrowserGoToURL('https://steamcommunity.com/profiles/76561198083843808');" onmouseover="DOTAShowProfileCardTooltip(76561198083843808, false)" onmouseout="DOTAHideProfileCardTooltip()" />
 				<Panel id="BonkImage" class="BonkImage" />
 				
 			</Panel>

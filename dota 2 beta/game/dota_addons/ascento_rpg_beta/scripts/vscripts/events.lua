@@ -29,11 +29,13 @@ end
 
 
 function GameMode:OnOrder(event)
-    --event.entindex_target
-    --event.order_type
-    --event.issuer_player_id_const
-   
-    if not EntIndexToHScript(event.units["0"]):IsHero() then return true end
+
+    if event.units then
+        if event.units["0"] then
+            if not EntIndexToHScript(event.units["0"]):IsHero() then return true end
+        end
+
+    end
 
     if event.units["0"] ~= nil then
         local hero          = EntIndexToHScript(event.units["0"])
@@ -43,94 +45,29 @@ function GameMode:OnOrder(event)
         end
 
         if event.order_type then
-                --print(event.order_type)
-                --PrintTable(event)
+            --print(event.order_type)
+            --PrintTable(event)
+            if event.order_type == 13 then
+                return false
+            end
+
+            if event.order_type == 14 then
+                if event.entindex_target then
+                    if EntIndexToHScript(event.entindex_target) then
+                        local item = EntIndexToHScript(event.entindex_target):GetContainedItem()
+                        if item then
+                            if item.owner ~= hero and item.owner ~= nil then
+                                return false
+                            end
+                        end
+                    end
+                end
+            end
         end
     end
     
     return true
 end
---
-    --        if event.order_type == 29 then
-    --            return true
-    --        end
---
-    --        local playerID = hero:GetPlayerID()
---
-    --        hero.order_timer = 600
---
-    --        if hero:HasModifier("modifier_left_the_game") then
-    --            hero:RemoveModifierByName("modifier_left_the_game")
-    --        end
---
-    --        Timers:RemoveTimer("order_timer_"..playerID)
---
-    --        Timers:CreateTimer("order_timer_"..playerID, {
-    --            useOldStyle = true,
-    --            endTime = GameRules:GetGameTime() + 1,
-    --            callback = function()
---
-    --                hero.order_timer = hero.order_timer - 1
-    --                if hero.order_timer <= 0 then
-    --                    if not hero:HasModifier("modifier_left_the_game") then
-    --                        hero:AddNewModifier(hero, nil, "modifier_left_the_game", {duration = -1})
-    --                    end
-    --                end
---
-    --                if hero.order_timer <= -3600 then
-    --                    GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
-    --                end
---
-    --              return GameRules:GetGameTime() + 1
-    --        end})
---
-
-
-
-
-
-
---       if event.order_type == DOTA_UNIT_ORDER_ATTACK_TARGET then return true end
---
---        local target        = EntIndexToHScript(event.entindex_target)
---        if target == nil then return true end    
---        
---        
---
---        if event.order_type == DOTA_UNIT_ORDER_MOVE_TO_TARGET or event.order_type == DOTA_UNIT_ORDER_ATTACK_TARGET then
---            if not target then return false end
---            --if target then return true end
---            if target:IsHero() or not IsValidEntity(target) then return true end
---
---            local targetType = Npcs:GetNpcType(target:GetUnitName())
---            if targetType ~= nil then
---                Timers:CreateTimer(function()
---                    local rSquared  = 150 * 150
---                    local diff      = hero:GetAbsOrigin() - target:GetAbsOrigin()
---                    if diff:Length2D()>2000 then return end                                     -- Çok uzaksa geri döndürüyor.
---                    local rCurrent  = diff.x * diff.x + diff.y * diff.y
---                    if rCurrent <= rSquared then                                                -- Yeteri kadar yaklaşınca aşağıdakileri yapıyor.
---                        if targetType ~= nil and targetType == "quest" then
---                            Quests:StartInteraction(hero, target)
---                            hero:Stop()
---                        return end
---                        --if targetType == "shop" then
---                        --    Shops:StartInteraction(hero, target)
---                        --    hero:Stop()
---                        --return end
---                        --if targetType == "stat" then
---                        --return end
---                    end
---                    return 0.1
---                end)
---            end
---        end
---    end
---
---
---
---    return true
---end
 
 
 function GameMode:InventoryFilter(event)
@@ -306,8 +243,6 @@ function GameMode:DamageFilter(filterDamage)
         end
     end
 
-   
-
     local damageIncoming = filterDamage.damage
 
     if attacker:IsRealHero() then
@@ -343,6 +278,7 @@ function GameMode:DamageFilter(filterDamage)
         local buff_16 = 0
 
         local tank_3_armored_soul = 0
+        local donate_bonus_reduction_hojyk = 0
 
         local debuff_1 = 0
         local debuff_2 = 0
@@ -405,7 +341,18 @@ function GameMode:DamageFilter(filterDamage)
                 local ability = attacker:FindAbilityByName("donate_bonus_damage_sf")
                 if ability ~= nil then
                     if ability:GetSpecialValueFor("bonus_damage_pct") > 0 then
-                        damageIncoming = damageIncoming * (ability:GetSpecialValueFor("bonus_damage_pct") / 100)
+                        damageIncoming = damageIncoming * (1+(ability:GetSpecialValueFor("bonus_damage_pct") / 100))
+                    end
+                end
+            end
+        end
+
+        if attacker:HasModifier("modifier_donate_bonus_damage_hojyk") then
+            if IsServer() then
+                local ability = attacker:FindAbilityByName("donate_bonus_damage_hojyk")
+                if ability ~= nil then
+                    if ability:GetSpecialValueFor("bonus_damage_pct") > 0 then
+                        damageIncoming = damageIncoming * (1+(ability:GetSpecialValueFor("bonus_damage_pct") / 100))
                     end
                 end
             end
@@ -488,6 +435,18 @@ function GameMode:DamageFilter(filterDamage)
                     tank_3_armored_soul = tank_3_armored_soul * -1
                 else
                     tank_3_armored_soul = 0
+                end
+            end
+        end
+
+        if victim:HasModifier("modifier_donate_bonus_reduction_hojyk") then
+            local ability = victim:FindAbilityByName("donate_bonus_reduction_hojyk")
+            if ability ~= nil then
+                donate_bonus_reduction_hojyk = ability:GetLevelSpecialValueFor("damage_prevents", (ability:GetLevel() - 1))
+                if donate_bonus_reduction_hojyk > 0 then
+                    donate_bonus_reduction_hojyk = donate_bonus_reduction_hojyk * -1
+                else
+                    donate_bonus_reduction_hojyk = 0
                 end
             end
         end
@@ -579,7 +538,7 @@ function GameMode:DamageFilter(filterDamage)
             debuff_6 = 20
         end
 
-        local damage_reduction_pct = (1 - (1+dazzleDebuff/100) * (1+buff_ring/100) * (1+buff_1/100) * (1+buff_2/100) * (1+buff_3/100) * (1+buff_4/100) * (1+buff_5/100) * (1+buff_6/100) * (1+buff_7/100) * (1+buff_8/100) * (1+buff_9/100) * (1+buff_10/100) * (1+buff_11/100) * (1+buff_12/100) * (1+buff_13/100) * (1+buff_14/100) * (1+buff_15/100) * (1+buff_16/100) * (1+tank_3_armored_soul/100) * (1+debuff_1/100) * (1+debuff_2/100) * (1+debuff_3/100) * (1+debuff_4/100) * (1+debuff_5/100) * (1+debuff_6/100) )*100
+        local damage_reduction_pct = (1 - (1+dazzleDebuff/100) * (1+buff_ring/100) * (1+buff_1/100) * (1+buff_2/100) * (1+buff_3/100) * (1+buff_4/100) * (1+buff_5/100) * (1+buff_6/100) * (1+buff_7/100) * (1+buff_8/100) * (1+buff_9/100) * (1+buff_10/100) * (1+buff_11/100) * (1+buff_12/100) * (1+buff_13/100) * (1+buff_14/100) * (1+buff_15/100) * (1+buff_16/100) * (1+tank_3_armored_soul/100) * (1+donate_bonus_reduction_hojyk/100) * (1+debuff_1/100) * (1+debuff_2/100) * (1+debuff_3/100) * (1+debuff_4/100) * (1+debuff_5/100) * (1+debuff_6/100) )*100
 
         local damageChanging = damageIncoming - damageIncoming * (damage_reduction_pct / 100)
 
@@ -614,54 +573,97 @@ function GameMode:DamageFilter(filterDamage)
             --victim:AddNewModifier(attacker, nil, "modifier_disable_healing", {duration = 1})
         end
 
-        --if victim:IsRealHero() then
-        --    if typeDamage == DAMAGE_TYPE_PHYSICAL then
-        --        if damageChanging > victim:GetMaxHealth() then
-        --            if IsCreepASCENTO(attacker) then
-        --                damageChanging = victim:GetMaxHealth() * 0.4
-        --            elseif IsBossASCENTO(attacker) then
-        --                damageChanging = victim:GetMaxHealth() * 0.6
-        --            end
-        --        end
-        --    else
-        --        if damageChanging > victim:GetMaxHealth() then
-        --            if IsCreepASCENTO(attacker) then
-        --                damageChanging = victim:GetMaxHealth() * 0.1
-        --            elseif IsBossASCENTO(attacker) then
-        --                damageChanging = victim:GetMaxHealth() * 0.3
-        --            end
-        --        end
-        --    end
-        --else
-        --    if damageChanging > victim:GetMaxHealth() then
-        --        if typeDamage == DAMAGE_TYPE_PHYSICAL then
-        --            damageChanging = damageChanging
-        --        else
-        --            damageChanging = victim:GetMaxHealth() * 0.5
-        --        end
-        --    end
-        --end
-        --print(attacker:GetUnitName() .. " нанес " .. damageChanging .. " " .. victim:GetUnitName())
+        local userPack
 
         if attacker:GetUnitName() == "npc_creep_endless_1" then
+
+            userPack = "pack"..victim:GetPlayerID()+1
+
+            if victim.isLeha == 1 then
+                userPack = "pack9"
+            end
+            if victim.isHojyk == 1 then
+                userPack = "pack10"
+            end
+
             if attacker.pack ~= nil and victim:IsRealHero() then
-                if attacker.pack ~= "pack"..victim:GetPlayerID()+1 then
+                if attacker.pack ~= userPack then
                     damageChanging = 0
                 end
             end
+
         end
 
         if victim:GetUnitName() == "npc_creep_endless_1" then
-            if victim.pack ~= nil and attacker:IsRealHero() and victim.pack ~= "pack9" then
-                if victim.pack ~= "pack"..attacker:GetPlayerID()+1 then
+
+            userPack = "pack"..attacker:GetPlayerID()+1
+
+            if attacker.isLeha == 1 then
+                userPack = "pack9"
+            end
+            if attacker.isHojyk == 1 then
+                userPack = "pack10"
+            end
+
+            if victim.pack ~= nil and attacker:IsRealHero() then
+                if victim.pack ~= userPack then
                     damageChanging = 0
                 end
             end
+
         end
 
-        if victim:GetUnitName() == "npc_creep_endless_1" then
-            if victim.pack ~= nil and victim.pack == "pack9" and attacker.isLeha == 0 then
-                damageChanging = 0
+
+        if attacker:HasModifier("modifier_hojyk_tether") and typeDamage ~= DAMAGE_TYPE_PHYSICAL  then
+            local modifier = attacker:FindModifierByName("modifier_hojyk_tether")
+            local ability = modifier:GetAbility()
+
+            local spell_amp = ability:GetSpecialValueFor("spell_amp")
+
+            damageChanging = damageChanging * (1+(spell_amp / 100))
+        end
+
+        if attacker:HasModifier("modifier_hojyk_tether_ally") and typeDamage ~= DAMAGE_TYPE_PHYSICAL  then
+            local modifier = attacker:FindModifierByName("modifier_hojyk_tether_ally")
+            local ability = modifier:GetAbility()
+
+            local spell_amp = ability:GetSpecialValueFor("spell_amp")
+
+            damageChanging = damageChanging * (1+(spell_amp / 100))
+        end
+
+        if victim:HasModifier("modifier_hojyk_tether") then
+            local modifier = victim:FindModifierByName("modifier_hojyk_tether")
+            local ability = modifier:GetAbility()
+
+            local damage_reduction = ability:GetSpecialValueFor("damage_reduction")
+
+            damageChanging = damageChanging * (1-(damage_reduction / 100))
+        end
+
+        if victim:HasModifier("modifier_hojyk_tether_ally") then
+            local modifier = victim:FindModifierByName("modifier_hojyk_tether_ally")
+            local ability = modifier:GetAbility()
+
+            local damage_reduction = ability:GetSpecialValueFor("damage_reduction")
+
+            damageChanging = damageChanging * (1-(damage_reduction / 100))
+        end
+
+        if attacker:GetUnitName() == "npc_dota_hero_nevermore" and typeDamage ~= DAMAGE_TYPE_PHYSICAL  then
+            local heroLevel = attacker:GetLevel()
+            local amplifyDamage = 0
+
+            if heroLevel > 0 then
+                amplifyDamage = heroLevel / 2
+            end
+
+            damageChanging = damageChanging * (1+(amplifyDamage / 100))
+        end
+
+        if damageChanging then
+            if damageChanging > 2000000000 then
+                damageChanging = 2000000000
             end
         end
     
@@ -673,8 +675,6 @@ function GameMode:DamageFilter(filterDamage)
             abilityName = abilityName,
             damage = damageChanging,
         }
-
-        
 
         
         local applyFilter = GameMode:OnApplyDamage(data)
@@ -701,6 +701,10 @@ function GameMode:DamageFilter(filterDamage)
         end 
 
     else
+        if damageIncoming > 2000000000 then
+            damageIncoming = 2000000000
+        end
+
         local data = {
             victim = victim,
             attacker = attacker,
@@ -774,6 +778,26 @@ function GameMode:ExperienceFilter(keys)
                 experience = experience * 2.75
             end
         end
+    end
+
+    if hero:HasModifier("modifier_hojyk_tether") then
+        local modifier = hero:FindModifierByName("modifier_hojyk_tether")
+        local ability = modifier:GetAbility()
+
+        local exp_bonus = ability:GetSpecialValueFor("exp_bonus")
+
+        experience = experience * (1+(exp_bonus / 100))
+
+    end
+
+    if hero:HasModifier("modifier_hojyk_tether_ally") then
+        local modifier = hero:FindModifierByName("modifier_hojyk_tether_ally")
+        local ability = modifier:GetAbility()
+
+        local exp_bonus = ability:GetSpecialValueFor("exp_bonus")
+
+        experience = experience * (1+(exp_bonus / 100))
+
     end
 
     if experience > INT_MAX_LIMIT then
@@ -862,6 +886,9 @@ function GameMode:OnGameRulesStateChange(keys)
         GameRules:SetCustomGameSetupAutoLaunchDelay(CUSTOM_GAME_SETUP_TIME)
         GameMode:OnFirstPlayerLoaded()
 
+        print("Cosmetics: Starts loading...")
+        Cosmetics:Start()
+
     elseif new_state == DOTA_GAMERULES_STATE_HERO_SELECTION then
         if USE_CUSTOM_TEAM_COLORS_FOR_PLAYERS then
           for i=0,9 do
@@ -896,13 +923,24 @@ end
 
 -- An NPC has spawned somewhere in game.  This includes heroes
 function GameMode:OnNPCSpawned(keys)
-    SendToConsole("dota_hud_healthbars 1")
+    if IsClient() then
+        SendToConsole("dota_hud_healthbars 1")
+    end
+
+    if IsServer() then
+        SendToServerConsole("dota_hud_healthbars 1")
+    end
 
     local npc = EntIndexToHScript(keys.entindex)
 
     if not npc or npc:GetClassname() == "npc_dota_thinker" or npc:IsPhantom() then
         return
     end
+
+
+
+
+    
 
     if IsBossASCENTO(npc) or IsCreepASCENTO(npc) and KILL_VOTE_RESULT:upper() ~= nil then
 
@@ -1040,6 +1078,7 @@ function GameMode:OnNPCSpawned(keys)
 
             if npc:GetUnitName() == "npc_special_event_halloween" then
                 npc:SetCustomHealthLabel("??? lvl", 255, 0, 0)
+                --GameRules:SetOverlayHealthBarUnit(npc, 1)
                 if not npc:HasModifier("modifier_movespeed_cap") then
                     modifier = npc:AddNewModifier(npc, nil, "modifier_movespeed_cap", {})
                 end
@@ -1080,23 +1119,27 @@ function GameMode:OnNPCSpawned(keys)
             local ent = Entities:FindByName( nil, "respawn_" .. npc.RespawnPos) --строка ищет как раз таки нашу точку pnt1
             local point = ent:GetAbsOrigin() --эта строка выясняет где находится pnt1 и получает её координаты
             FindClearSpaceForUnit(npc, point, true)
-            PlayerResource:SetCameraTarget(npc:GetPlayerOwnerID(), npc)
+            --PlayerResource:SetCameraTarget(npc:GetPlayerOwnerID(), npc)
             npc:Stop()
-            Timers:CreateTimer(0.2, function()
-                PlayerResource:SetCameraTarget(npc:GetPlayerOwnerID(), nil)
-                return nil
-            end)
+            --Timers:CreateTimer(0.2, function()
+            --    PlayerResource:SetCameraTarget(npc:GetPlayerOwnerID(), nil)
+            --    return nil
+            --end)
         end
 
 
         npc:AddNewModifier(npc, nil, "modifier_custom_invulnerable_res", {duration = 5})
 
 
+        if npc.isLeha == 1 and #get_team_heroes(DOTA_TEAM_GOODGUYS) > 1 then
+            hero:RemoveAbility("donate_leha_genocid")
+        end
+
+
 
         if npc:HasModifier("modifier_fountain_invulnerability") then
             modifier = npc:RemoveModifierByName("modifier_fountain_invulnerability")
         end
-        
 
         local mode = KILL_VOTE_RESULT:upper()
 
@@ -1104,24 +1147,25 @@ function GameMode:OnNPCSpawned(keys)
             if not npc:HasModifier("modifier_damage_reduction_30") then
                 modifier = npc:AddNewModifier(npc, nil, "modifier_damage_reduction_30", {})
             end
-            elseif mode == "NORMAL" then
-            elseif mode == "HARD" then
+        elseif mode == "NORMAL" then
+            --НУ НОРМАЛ ЭТО БАЗА
+        elseif mode == "HARD" then
             if not npc:HasModifier("modifier_damage_increase_30") then
                  modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_30", {})
             end
-            elseif mode == "UNFAIR" then
+        elseif mode == "UNFAIR" then
             if not npc:HasModifier("modifier_damage_increase_50") then
                  modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_50", {})
             end
-            elseif mode == "IMPOSSIBLE" then
+        elseif mode == "IMPOSSIBLE" then
             if not npc:HasModifier("modifier_damage_increase_60") then
                  modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_60", {})
             end
-            elseif mode == "HELL" then
+        elseif mode == "HELL" then
             if not npc:HasModifier("modifier_damage_increase_70") then
                  modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_70", {})
             end
-            elseif mode == "HARDCORE" then
+        elseif mode == "HARDCORE" then
             if not npc:HasModifier("modifier_damage_increase_80") then
                  modifier = npc:AddNewModifier(npc, nil, "modifier_damage_increase_80", {})
             end
@@ -1177,6 +1221,9 @@ function GameMode:OnPlayerLevelUp(keys)
     hero:SetAbilityPoints(hero:GetAbilityPoints() + 1)
 end
 
+function GameMode:OnItemSpotted(event)
+    PrintTable(event)
+end
 
 function GameMode:OnItemPicked(event)
 --print("OnItemPicked:")
@@ -1189,11 +1236,20 @@ if not event.HeroEntityIndex then return end
     local item      = EntIndexToHScript(event.ItemEntityIndex)
     local hero      = EntIndexToHScript(event.HeroEntityIndex)
     local itemName = item:GetName()
+    local itemowner = item.owner or nil
+
+    
 
     if hero ~= nil and item ~= nil then
-        if itemName ~= "item_lia_health_elixir" and itemName ~= "item_lia_health_stone_potion" and itemName ~= "item_lia_health_stone_potion_two" then
+        if not item:GetContainer() or not item:GetContainer():GetContainedItem() or not item then
+            UTIL_Remove(item:GetContainer())
+            UTIL_Remove(item)
+            return
+        end
 
-            if item:IsMuted() and not item:IsRecipe() then
+        if itemName ~= "item_lia_health_elixir" and itemName ~= "item_lia_health_stone_potion" and itemName ~= "item_lia_health_stone_potion_two" and itemName ~= "item_candy" then
+
+            if item.owner ~= hero and item.owner ~= nil then
                 hero:DropItemAtPositionImmediate(item, hero:GetAbsOrigin())
                 CustomGameEventManager:Send_ServerToPlayer(hero:GetPlayerOwner(), "create_error_message", {message = "YOU CAN'T TAKE ALLY ITEMS"})
             else
@@ -1201,6 +1257,7 @@ if not event.HeroEntityIndex then return end
                 hero:AddItemByName(itemName)
                 local finded = hero:FindItemInInventory(itemName)
                 if finded ~= nil then
+                    finded.owner = itemowner or hero
                     Ascento:CheckItem(hero, finded)
                 end
             end
@@ -1212,21 +1269,6 @@ end
 
 function GameMode:OnItemAdded(event)
 
---if event.inventory_parent_entindex == -1 then return end
---if event.inventory_player_id == -1 then return end
---
---if not event.inventory_player_id then return end
---if not event.item_entindex then return end
---if not event.inventory_parent_entindex then return end
---if not event.itemname then return end
---
---    local playerId  = event.inventory_player_id
---
---    local item     = EntIndexToHScript(event.item_entindex)
---    local hero     = EntIndexToHScript(event.inventory_parent_entindex)
---    local itemName = event.itemname
-
-    --Ascento:CheckItem(hero, item)
 
 end
 
@@ -1234,31 +1276,27 @@ end
 
 function GameMode:OnItemCombined(event)
     --print("OnItemCombined:")
---PrintTable(event)
-if not event.PlayerID then return end
-if not event.ItemEntityIndex then return end
-if not event.HeroEntityIndex then return end
+    --PrintTable(event)
+    if not event.PlayerID then return end
+    if not event.itemname then return end
 
     local playerId  = event.PlayerID
-    local item      = EntIndexToHScript(event.ItemEntityIndex)
-    local hero      = EntIndexToHScript(event.HeroEntityIndex)
-    local itemName = item:GetName()
-    --PrintTable(event)
 
-    if hero ~= nil and item ~= nil then
-        if itemName ~= "item_lia_health_elixir" and itemName ~= "item_lia_health_stone_potion" and itemName ~= "item_lia_health_stone_potion_two" then
+    if not playerId then return end
 
-            hero:RemoveItem(item)
-            hero:AddItemByName(itemName)
+    local player = PlayerResource:GetPlayer(playerId):GetAssignedHero()
+    
+    if not player then return end
 
-            local finded = hero:FindItemInInventory(itemName)
-            if finded ~= nil then
-                Ascento:CheckItem(hero, item)
-            end
+    local itemName  = event.itemname
 
-        end
+    local finded = player:FindItemInInventory(itemName)
+
+    if not finded then return end
+
+    if not finded.owner then
+        finded.owner = player
     end
-
 end
 
 
@@ -1294,6 +1332,8 @@ function GameMode:OnEntityKilled(keys)
     end
 
 
+
+
 end
 
 function GameMode:RollDrops(unit, killer)
@@ -1310,15 +1350,20 @@ function GameMode:RollDrops(unit, killer)
 
             if mode == "EASY" and DropChance < 100 then
 
-                DropChance = DropChance * 0.5
-                ArtifactDropChance = ArtifactDropChance * 0.5
+                DropChance = DropChance * 0.8
+                ArtifactDropChance = ArtifactDropChance * 0.8
 
             elseif mode == "NORMAL" and DropChance < 100 then
 
-                DropChance = DropChance * 0.75
-                ArtifactDropChance = ArtifactDropChance * 0.75
+                DropChance = DropChance * 0.9
+                ArtifactDropChance = ArtifactDropChance * 0.9
 
             elseif mode == "HARD" and DropChance < 100 then
+
+                DropChance = DropChance * 1
+                ArtifactDropChance = ArtifactDropChance * 1
+
+            elseif mode == "HARDEVENT" and DropChance < 100 then
 
                 DropChance = DropChance * 1
                 ArtifactDropChance = ArtifactDropChance * 1
@@ -1344,6 +1389,8 @@ function GameMode:RollDrops(unit, killer)
                 ArtifactDropChance = ArtifactDropChance * 5
 
             end
+
+
     
     
              if killer:HasModifier("modifier_pet_special_hardcore_buff") then
@@ -1364,6 +1411,11 @@ function GameMode:RollDrops(unit, killer)
                     end
                 end
             end
+
+            local playerID = killer:GetPlayerID()
+
+            local steamID = PlayerResource:GetSteamAccountID(playerID)
+            
     
             --DropChance = math.floor(DropChance)
             --ArtifactDropChance = math.floor(DropChance)
@@ -1388,7 +1440,6 @@ function GameMode:RollDrops(unit, killer)
                 local pos_launch = pos + RandomVector(RandomFloat(150, 200))
                 if item ~= nil then
                     item:LaunchLoot(false, 200, 0.75, pos_launch)
-                    item.owner = killer
                 end
             end
 
@@ -1460,50 +1511,19 @@ end
 
 function GameMode:OnPlayerChat(keys)
     --if not IsServer() then return end
-
     local teamonly = keys.teamonly
     local userID = keys.userid
     local text = keys.text
     local steamid = tostring(PlayerResource:GetSteamID(keys.playerid))
     local player = PlayerResource:GetPlayer(keys.playerid):GetAssignedHero()
+    local comslash = text
 
     if not player then return end
 
     local StartPoint = Vector (-23, -738, 133)
 
-    if steamid == "76561198290873082" or steamid == "76561198083843808" or steamid == "76561198376130254" or steamid == "76561198204633313" then
-        if text:find("-hp ") == 1 then
-            hpset = math.floor(tonumber(text:sub(4)))
-            if hpset > 0 and hpset < INT_MAX_LIMIT then
-                local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-                for _, hero in pairs(AllUnits) do
-                    hero:SetMaxHealth(hpset)
-                    hero:SetBaseMaxHealth(hpset)
-                    hero:SetHealth(hpset)
-                end
-            end
-        end
-
-        if text:find("-dd ") == 1 then
-            dmgset = math.floor(tonumber(text:sub(4)))
-            if dmgset > 0 and dmgset < INT_MAX_LIMIT then
-                local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-                for _, hero in pairs(AllUnits) do
-                    hero:SetBaseDamageMin(dmgset)
-                    hero:SetBaseDamageMax(dmgset)
-                end
-            end
-        end
-
-        if text:find("-ar ") == 1 then
-            armset = math.floor(tonumber(text:sub(4)))
-            if armset > 0 and armset < INT_MAX_LIMIT then
-                local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-                for _, hero in pairs(AllUnits) do
-                    hero:SetPhysicalArmorBaseValue(armset)
-                end
-            end
-        end
+    if text ~= "00" and comslash:sub(1, 1) ~= "-" then
+        ToDiscordMessage(steamid, text)
     end
 
     for str in string.gmatch(text, "%S+") do
@@ -1537,18 +1557,6 @@ function GameMode:OnPlayerChat(keys)
             end)
         end
 
-        --if str == "-чел" then
-        --    local AllUnits = FindUnitsInRadius(DOTA_TEAM_GOODGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-        --    for _, hero in pairs(AllUnits) do
-        --        if hero:IsRealHero() then
-        --            local playerID = hero:GetPlayerID()
-        --            local steamID = PlayerResource:GetSteamAccountID(playerID)
-        --            if steamID == 1283274153 then
-        --                hero:ForceKill(true) -- чел 1283274153
-        --            end
-        --        end
-        --    end
-        --end
 
     end
 
@@ -1558,73 +1566,6 @@ function GameMode:OnPlayerChat(keys)
         if str == "-dev_win" then
             GameMode:FastWin(player:GetPlayerID())
             GameRules:SetGameWinner(PlayerResource:GetPlayer(keys.playerid):GetTeamNumber())
-        end
-        if str == "-update" then
-            Timers:CreateTimer(function()
-                local enemystats = LoadKeyValues("scripts/npc/enemy_stats.txt")
-                local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-                for _, unit in pairs(AllUnits) do
-                    if IsCreepASCENTO(unit) or IsBossASCENTO(unit) then
-    
-                        local unit_stats = enemystats[unit:GetUnitName()]
-                        local playersUpscale = 1 + ( 0.2 * #get_team_heroes(DOTA_TEAM_GOODGUYS) )
-                
-            
-                        for param, value in pairs(unit_stats) do
-                            if param == "AttackDamageMin" then
-                                local damage_unit = tonumber(value) * playersUpscale
-                                unit:SetBaseDamageMin(damage_unit)
-                                unit:SetBaseDamageMax(damage_unit)
-                            end
-                            if param == "ArmorPhysical" then
-                                local armor_unit = tonumber(value)
-                                unit:SetPhysicalArmorBaseValue(armor_unit)
-                            end
-                            if param == "StatusHealth" then
-                                local health_unit = tonumber(value) * playersUpscale
-                                if unit:GetMaxHealth() ~= health_unit then
-                                    unit:SetMaxHealth(health_unit)
-                                    unit:SetBaseMaxHealth(health_unit)
-                                    unit:SetHealth(health_unit)
-                                end
-                            end
-                            if param == "StatusHealthRegen" then
-                                local health_regen_unit = tonumber(value)
-                                unit:SetBaseHealthRegen(health_regen_unit)
-                            end
-                        end
-                    end
-                end
-        return 1.0 end)
-
-                print("Enemies update started")
-          
-
-        end
-        
-
-        --if str == "-dev_чел" then
-        --    local AllUnits = FindUnitsInRadius(DOTA_TEAM_GOODGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-        --    for _, hero in pairs(AllUnits) do
-        --        if hero:IsRealHero() then
-        --            local playerID = hero:GetPlayerID()
-        --            local steamID = PlayerResource:GetSteamAccountID(playerID)
-        --            if steamID == 1283274153 then
-        --                hero:ForceKill(true) -- чел 1283274153
-        --            end
-        --        end
-        --    end
-        --end
-
-
-        if str == "-dev_killall" then
-            local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-            for _, hero in pairs(AllUnits) do
-                if hero:GetUnitName() ~= "npc_dota_creature_final_tron" and not hero:IsRealHero() then
-                    --hero:Destroy()
-                    hero:Kill(nil, player)
-                end
-            end
         end
 
         if str == "-dev_lose" then

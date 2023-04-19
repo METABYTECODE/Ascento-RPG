@@ -39,6 +39,9 @@ function ChangeHero ( keys )
     UTIL_Remove(caster.EPpet)
     UTIL_Remove(caster.LEpet)
     UTIL_Remove(caster.ANpet)
+    UTIL_Remove(caster.NYpet)
+
+    Cosmetics:RemoveWearable( caster, 'all' )
 
 	if caster:GetUnitName() ~= "npc_dota_hero_nevermore" then
         new_hero = PlayerResource:ReplaceHeroWith(caster:GetPlayerOwnerID(), "npc_dota_hero_nevermore", PlayerResource:GetGold(caster:GetPlayerOwnerID()), 0)
@@ -56,26 +59,16 @@ function ChangeHero ( keys )
       CurrentProf:SetStackCount(3)
     end
 
-    local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/arcana_wings.vmdl"})
-    item:FollowEntity(new_hero, true)
-    new_hero.arcanaitem1 = item
-
-    local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/head_arcana.vmdl"})
-    item:FollowEntity(new_hero, true)
-    new_hero.arcanaitem2 = item
-
-    --local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/shadow_fiend_arcana.vmdl"})
+    --local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/heroes/shadow_fiend/arcana_wings.vmdl"})
     --item:FollowEntity(new_hero, true)
+    --new_hero.arcanaitem1 = item
 
-    local item = SpawnEntityFromTableSynchronous("prop_dynamic", {model = "models/items/shadow_fiend/arms_deso/arms_deso.vmdl"})
-    item:FollowEntity(new_hero, true)
-    new_hero.arcanaitem3 = item
 
 
     
       
 
-    Timers:CreateTimer(3,function()
+    Timers:CreateTimer(1,function()
       GameMode:FirstLoadNoReq(new_hero)
 
         return nil

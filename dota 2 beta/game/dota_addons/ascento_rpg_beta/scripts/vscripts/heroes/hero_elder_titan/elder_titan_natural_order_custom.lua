@@ -1,6 +1,6 @@
 if elder_titan_natural_order_custom == nil then elder_titan_natural_order_custom = class({}) end
 
-require('libraries/isboss')
+require('util')
 LinkLuaModifier("modifier_elder_titan_natural_order_custom_passive","heroes/hero_elder_titan/elder_titan_natural_order_custom.lua",LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_elder_titan_natural_order_custom_aura","heroes/hero_elder_titan/elder_titan_natural_order_custom.lua",LUA_MODIFIER_MOTION_NONE)
 

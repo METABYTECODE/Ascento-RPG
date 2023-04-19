@@ -126,6 +126,25 @@
 
   }
 
+
+  "npc_dota_pet_new_year"
+  {
+    // General
+    //
+    "BaseClass"         "npc_dota_companion"  // Class of entity of link to.
+    "Model"           "models/items/courier/basim/basim.vmdl"  // Model.
+    "SoundSet"          "0"         // Name of sound set.
+    "MovementCapabilities"    "DOTA_UNIT_CAP_MOVE_GROUND"
+    "AttackCapabilities"    "DOTA_UNIT_CAP_NO_ATTACK"
+    "BoundsHullName"      "DOTA_HULL_SIZE_SMALL"
+    "VisionDaytimeRange"    "0"   // Range of vision during day light.
+    "VisionNighttimeRange"    "0"   // Range of vision at night time.
+    "ModelScale"        "1.5"
+    "MovementSpeed"       "325"   // Speed
+    "MovementTurnRate"      "1.0"   // Turning rate.   
+
+  }
+
   "npc_dota_pet_mythical"
   {
     // General

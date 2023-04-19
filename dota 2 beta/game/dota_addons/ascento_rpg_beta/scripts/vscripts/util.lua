@@ -414,10 +414,7 @@ function IsCreepASCENTO(unit)
     "npc_dota_creature_lich_creep",
     "npc_dota_creature_wisp_creep",
     "npc_dota_creature_grimstroke_creep",
-    "npc_dota_creature_dazzle_creep",
-    "npc_dota_boss_aghanim_crystal",
-    "npc_dota_boss_aghanim_spear",
-    "npc_dota_creature_aghanim_minion"
+    "npc_dota_creature_dazzle_creep"
   }
 
   for _,theUnit in ipairs(unitNames) do
@@ -679,6 +676,11 @@ function ClearItems(mustHaveOwner)
       --if string.find(name, "item_hallowen_legendary_pet_datadriven") then
       --  break
       --end
+
+      if not containedItem then
+        UTIL_Remove(item)
+      end
+
 
       if containedItem and (mustHaveOwner and owner == nil and ((gameTime - creationTime) > 40)) then
 

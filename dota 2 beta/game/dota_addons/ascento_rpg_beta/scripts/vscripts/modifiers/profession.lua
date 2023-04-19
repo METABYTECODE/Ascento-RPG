@@ -80,6 +80,11 @@ function modifier_profession:OnIntervalThink(kv)
         statusModifier:SetStackCount(self.status_resist)
     end
 
+
+
+    
+    
+
     self:GetCaster():CalculateStatBonus(true) 
     self:OnRefresh()
 
@@ -103,7 +108,7 @@ function modifier_profession:OnRefresh( kv )
     self.great_cleave_radius = 350
 end
 
---------------------------------------------------------------------------------
+-------------------------------------------------------------------------------- MODIFIER_STATE_ATTACK_ALLIES  
 
 function modifier_profession:DeclareFunctions()
     local funcs = {
@@ -119,6 +124,8 @@ end
 function modifier_profession:OnTooltip( params )
     return self:GetStackCount()
 end
+
+
 
 function modifier_profession:OnTooltip2( params )
     return self.great_cleave_damage
@@ -163,35 +170,6 @@ function modifier_profession:OnAttackLanded( params )
                 end
             end
         end
-
-
-        self:PlayEffects( target )
-
     end
-
-    --return 0
 end
 
-
-function modifier_profession:PlayEffects( target )
-    -- Load effects
-    local particle_cast = "particles/units/heroes/hero_sven/sven_spell_great_cleave.vpcf"
-
-
-
-    -- Create Particle
-    local effect_cast = ParticleManager:CreateParticle( particle_cast, PATTACH_ABSORIGIN_FOLLOW, target )
-    ParticleManager:SetParticleControlEnt(
-        effect_cast,
-        0,
-        target,
-        PATTACH_POINT_FOLLOW,
-        "attach_hitloc",
-        target:GetOrigin(), -- unknown
-        true -- unknown, true
-    )
-    ParticleManager:SetParticleControlForward( effect_cast, 1, (self:GetParent():GetOrigin()-target:GetOrigin()):Normalized() )
-    ParticleManager:ReleaseParticleIndex( effect_cast )
-
-    --EmitSoundOn( sound_cast, target )
-end

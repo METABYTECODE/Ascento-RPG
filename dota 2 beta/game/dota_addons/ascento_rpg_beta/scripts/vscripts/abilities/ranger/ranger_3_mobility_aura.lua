@@ -31,7 +31,11 @@ end
 --------------------------------------------------------------------------------
 -- Aura
 function modifier_ranger_3_mobility_aura:IsAura()
-	return (not self:GetCaster():PassivesDisabled())
+	if self:GetAbility():GetLevel() > 0 and not self:GetCaster():PassivesDisabled() then
+		return true
+	else
+		return false
+	end
 end
 
 function modifier_ranger_3_mobility_aura:GetModifierAura()
@@ -112,7 +116,7 @@ end
 --------------------------------------------------------------------------------
 -- Graphics & Animations
 
-function modifier_ranger_3_mobility_aura_effect:GetTexture() return "ranger_3_mobility_aura" end
+function modifier_ranger_3_mobility_aura_effect:GetTexture() return "drow_ranger_trueshot" end
 
  function modifier_ranger_3_mobility_aura_effect:GetEffectName()
  	return "particles/units/heroes/hero_drow/drow_aura_buff.vpcf"

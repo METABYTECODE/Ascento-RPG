@@ -18,7 +18,7 @@ function donate_steal_kills:OnSpellStart()
 	end
 
 	local projectile_name = "particles/units/heroes/hero_rubick/rubick_spell_steal.vpcf"
-	local projectile_speed = 1000
+	local projectile_speed = 100
 
 	-- Create Projectile
 	local info = {

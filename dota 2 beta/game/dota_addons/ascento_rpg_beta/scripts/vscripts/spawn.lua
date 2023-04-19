@@ -26,6 +26,11 @@ function Spawn:OnEntityKilled( keys )
 	local killedUnit = EntIndexToHScript( keys.entindex_killed )
 	local killerUnit = EntIndexToHScript( keys.entindex_attacker )
 	local name = killedUnit:GetUnitName()
+    local playerID
+    local player
+    local killerSteamID
+
+    
 
 	--Timers:CreateTimer(0.1, function() 
     --    Quests:OnEntityKilled(keys)
@@ -66,11 +71,13 @@ function Spawn:OnEntityKilled( keys )
     if killedUnit:IsRealHero() then
         killedUnit.deaths = killedUnit.deaths + 1
     end
+
     
     if killerEntity:IsRealHero() then 
 
-        local playerID = killerEntity:GetPlayerID()
-        local player = PlayerResource:GetPlayer(playerID)
+        playerID = killerEntity:GetPlayerID()
+        player = PlayerResource:GetPlayer(playerID)
+        killerSteamID = PlayerResource:GetSteamAccountID(playerID)
 
         local newSpawnPointForHero = GameRules.SpawnsTable[killedUnit:GetUnitName()]
 
@@ -97,6 +104,25 @@ function Spawn:OnEntityKilled( keys )
         end
 
         if IsCreepASCENTO(killedUnit) then
+
+            if killerEntity:HasModifier("modifier_hojyk_tether_ally") then
+                local modifier = killerEntity:FindModifierByName("modifier_hojyk_tether_ally")
+                local ability = modifier:GetAbility()
+
+                tethplayerID = ability.tether_caster:GetPlayerID()
+                tethplayer = PlayerResource:GetPlayer(tethplayerID)
+
+                ability.tether_caster.creep_kills = ability.tether_caster.creep_kills + 1
+                CustomGameEventManager:Send_ServerToPlayer(tethplayer, "on_player_kill_creeps", {playerKilledCreeps = tonumber(ability.tether_caster.creep_kills), need_kill_creeps = tonumber(CREEP_KILLS_DEFAULT)})
+                CustomGameEventManager:Send_ServerToPlayer(tethplayer, "on_player_stats_update_creeps", {playerKilledCreeps = tonumber(ability.tether_caster.all_creep_kills + ability.tether_caster.creep_kills)})
+
+                if ability.tether_caster.boss_kills >= BOSS_KILLS_DEFAULT and ability.tether_caster.creep_kills >= CREEP_KILLS_DEFAULT and ability.tether_caster.uvedomlenie ~= 1 then
+                    ability.tether_caster.uvedomlenie = 1
+
+                    GameRules:SendCustomMessage("<font color='#00EA43'>".. ability.tether_caster:GetUnitName() ..": </font><font color='green'>Now you need kill the Skeleton Boss.</font>", 0, 0)
+                end
+            end
+
             killerEntity.creep_kills = killerEntity.creep_kills + 1
             CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_creeps", {playerKilledCreeps = tonumber(killerEntity.creep_kills), need_kill_creeps = tonumber(CREEP_KILLS_DEFAULT)})
             CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_creeps", {playerKilledCreeps = tonumber(killerEntity.all_creep_kills + killerEntity.creep_kills)})
@@ -110,6 +136,25 @@ function Spawn:OnEntityKilled( keys )
 
         end
         if IsBossASCENTO(killedUnit) then
+
+            if killerEntity:HasModifier("modifier_hojyk_tether_ally") then
+                local modifier = killerEntity:FindModifierByName("modifier_hojyk_tether_ally")
+                local ability = modifier:GetAbility()
+                
+                tethplayerID = ability.tether_caster:GetPlayerID()
+                tethplayer = PlayerResource:GetPlayer(tethplayerID)
+
+                ability.tether_caster.boss_kills = ability.tether_caster.boss_kills + 1
+                CustomGameEventManager:Send_ServerToPlayer(tethplayer, "on_player_kill_boss", {playerKilledBoss = tonumber(ability.tether_caster.boss_kills), need_kill_boss = tonumber(BOSS_KILLS_DEFAULT)})
+                CustomGameEventManager:Send_ServerToPlayer(tethplayer, "on_player_stats_update_boss", {playerKilledBoss = tonumber(ability.tether_caster.all_boss_kills + ability.tether_caster.boss_kills)})
+
+                if ability.tether_caster.boss_kills >= BOSS_KILLS_DEFAULT and ability.tether_caster.creep_kills >= CREEP_KILLS_DEFAULT and ability.tether_caster.uvedomlenie ~= 1 then
+                    ability.tether_caster.uvedomlenie = 1
+
+                    GameRules:SendCustomMessage("<font color='#00EA43'>".. ability.tether_caster:GetUnitName() ..": </font><font color='green'>Now you need kill the Skeleton Boss.</font>", 0, 0)
+                end
+            end
+
             killerEntity.boss_kills = killerEntity.boss_kills + 1
             CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_boss", {playerKilledBoss = tonumber(killerEntity.boss_kills), need_kill_boss = tonumber(BOSS_KILLS_DEFAULT)})
             CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_boss", {playerKilledBoss = tonumber(killerEntity.all_boss_kills + killerEntity.boss_kills)})
@@ -123,10 +168,6 @@ function Spawn:OnEntityKilled( keys )
         end
         
 
-        
-
-
-        
     end
 
 
@@ -139,7 +180,6 @@ function Spawn:OnEntityKilled( keys )
 
         GameMode:RollDrops(killedUnit, killerEntity)
 
-        
 
         local point = "spawner_" .. name
         local caster_respoint = killedUnit:GetAbsOrigin()
@@ -233,7 +273,19 @@ function Spawn:OnEntityKilled( keys )
                 end
             end
         end
+        --local particle_origin = killedUnit:GetAbsOrigin()
+        --particles/items2_fx/ward_die_generic_b.vpcf
+        local timerTime = 1
+        if killerSteamID == 130569575 or killerSteamID == 158686274 or killerSteamID == 330607354 then
+            timerTime = 0
+        end
 
+        Timers:CreateTimer(timerTime,function()
+            UTIL_Remove(killedUnit)
+            return nil
+        end) 
+
+        
     end
   end
 
@@ -315,6 +367,7 @@ local unitNames = {
 
 
   	local entityfound = nil
+    local time = 0.00
 
 
   	for _,theUnit in ipairs(unitNames) do
@@ -325,6 +378,9 @@ local unitNames = {
   		if pointName ~= nil then
   			for _,thePoint in ipairs(pointName) do
 
+                time = time + 0.10
+
+                Timers:CreateTimer(time,function()
                     local spawnPosition = thePoint:GetAbsOrigin()
                     PrecacheUnitByNameAsync(theUnit, function(...) end)
                     CreateUnitByNameAsync(theUnit, spawnPosition + RandomVector( RandomFloat( 0, 50)), true, nil, nil, DOTA_TEAM_BADGUYS, function(unit)
@@ -340,11 +396,17 @@ local unitNames = {
 
                         GameMode:GiveDropItems(unit)
 
+        
                         if unit:GetUnitName() == "npc_dota_creature_final_tron" then
                             unit:AddNewModifier(unit, nil, "modifier_custom_invulnerable", {})
                         end
 
                     end)
+                    return nil
+                end) 
+
+
+                
 
 
 

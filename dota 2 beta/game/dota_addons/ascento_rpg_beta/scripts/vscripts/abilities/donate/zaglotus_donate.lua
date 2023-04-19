@@ -175,15 +175,13 @@ function modifier_zaglotus_donate_host:OnDeath(data)
 	elseif caster == attacker then
 		if IsCreepASCENTO(unit) then
 			parent.creep_kills = parent.creep_kills + 1
-			CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_creeps", {playerKilledCreeps = tonumber(parent.creep_kills)})
-            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_creeps", {playerKilledCreeps = tonumber(parent.all_creep_kills + parent.creep_kills)})
-            print(parent.creep_kills)
+			--CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_creeps", {playerKilledCreeps = tonumber(parent.creep_kills)})
+            --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_creeps", {playerKilledCreeps = tonumber(parent.all_creep_kills + parent.creep_kills)})
 		end
 		if IsBossASCENTO(unit) then
 			parent.boss_kills = parent.boss_kills + 1
-			CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_boss", {playerKilledBoss = tonumber(parent.boss_kills)})
-            CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_boss", {playerKilledBoss = tonumber(parent.all_boss_kills + parent.boss_kills)})
-			print(parent.boss_kills)
+			--CustomGameEventManager:Send_ServerToPlayer(player, "on_player_kill_boss", {playerKilledBoss = tonumber(parent.boss_kills)})
+            --CustomGameEventManager:Send_ServerToPlayer(player, "on_player_stats_update_boss", {playerKilledBoss = tonumber(parent.all_boss_kills + parent.boss_kills)})
 		end
 
 		if unit:GetUnitName() == "npc_creep_endless_1" and caster:IsRealHero() then

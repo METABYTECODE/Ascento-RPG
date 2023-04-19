@@ -12,6 +12,13 @@ LinkLuaModifier("modifier_damage_reduction_50", "modifiers/buffs/damage_reductio
 LinkLuaModifier("modifier_damage_reduction_60", "modifiers/buffs/damage_reduction_60.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_damage_reduction_70", "modifiers/buffs/damage_reduction_70.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_damage_reduction_80", "modifiers/buffs/damage_reduction_80.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_85", "modifiers/buffs/damage_reduction_85.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_90", "modifiers/buffs/damage_reduction_90.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_92", "modifiers/buffs/damage_reduction_92.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_94", "modifiers/buffs/damage_reduction_94.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_96", "modifiers/buffs/damage_reduction_96.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_98", "modifiers/buffs/damage_reduction_98.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_damage_reduction_99", "modifiers/buffs/damage_reduction_99.lua", LUA_MODIFIER_MOTION_NONE)
 
 LinkLuaModifier("modifier_boss_damage_reduction", "modifiers/boss_damage_reduction.lua", LUA_MODIFIER_MOTION_NONE)
 LinkLuaModifier("modifier_custom_invulnerable", "modifiers/invulnerable.lua", LUA_MODIFIER_MOTION_NONE)
@@ -42,4 +49,9 @@ LinkLuaModifier("modifier_custom_attribute_spell_amp", "modifiers/attributes/spe
 LinkLuaModifier("modifier_custom_attribute_strength", "modifiers/attributes/strength", LUA_MODIFIER_MOTION_NONE)
 
 LinkLuaModifier("modifier_disable_healing", "modifiers/disable_healing", LUA_MODIFIER_MOTION_NONE)
+
+LinkLuaModifier("modifier_new_year_pet", "/abilities/donate/new_year_pet", LUA_MODIFIER_MOTION_NONE)
+--LinkLuaModifier("modifier_event_shield", "/modifiers/april/event_shield", LUA_MODIFIER_MOTION_NONE)
+--LinkLuaModifier("modifier_april_hero", "/modifiers/april/april_hero", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_april_health", "/modifiers/april/april_health", LUA_MODIFIER_MOTION_NONE)
 

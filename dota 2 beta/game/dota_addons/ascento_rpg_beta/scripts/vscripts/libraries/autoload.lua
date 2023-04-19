@@ -10,9 +10,6 @@ require('libraries/autoload/timers')
 -- This library can be used for sending panorama notifications to the UIs of players/teams/everyone
 require('libraries/autoload/notifications')
 
--- This library can be used for starting customized animations on units from lua
-require('libraries/autoload/animations')
-
 -- This library can be used for performing "Frankenstein" attachments on units
 --require('libraries/autoload/attachments')
 
@@ -26,7 +23,7 @@ require('libraries/autoload/playertables')
 -- require('modmaker')
 
 -- This library provides an automatic graph construction of path_corner entities within the map
-require('libraries/autoload/pathgraph')
+--require('libraries/autoload/pathgraph')
 
 -- This library (by Noya) provides player selection inspection and management from server lua
 --require('libraries/autoload/selection')
@@ -45,9 +42,10 @@ require('libraries/autoload/player_resource')             -- Core lua library
 --require('libraries/autoload/cosmetics') 
 require('libraries/autoload/pseudorng') 
 --require('libraries/autoload/achievments') 
-if GetMapName() == "ascento_rpg" then
-	require('libraries/autoload/neutral_slot')
-else
-	--require('libraries/autoload/path')
-end
+
+require('libraries/autoload/neutral_slot')
+
+require( "libraries/kvparser/kvparser" )
+require( "libraries/cosmetics/cosmetics" )
+require( "libraries/extensions/extensions" )
 

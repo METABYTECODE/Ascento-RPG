@@ -61,7 +61,7 @@ function GameMode:OnAllPlayersLoaded()
     
     Timers:CreateTimer(function()
         GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>Please save your progress sometimes.</font>", 0, 0)
-        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>Available commands:</font>", 0, 0)
+        GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>Available commands in chat:</font>", 0, 0)
         GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>-uncheck: Reset your checkpoint</font>", 0, 0)
         GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>-spawn: Teleport to Spawn</font>", 0, 0)
         GameRules:SendCustomMessage("<font color='#00EA43'>ASCENTO RPG: </font><font color='#ff0000'>00: Suicide</font>", 0, 0)
@@ -79,7 +79,7 @@ function GameMode:OnAllPlayersLoaded()
 
   --
 
-  local mode = KILL_VOTE_RESULT:upper()
+    local mode = KILL_VOTE_RESULT:upper()
 
   if mode == "EASY" then
         BOSS_KILLS_DEFAULT = math.floor(BOSS_KILLS_DEFAULT * 1.1)
@@ -128,20 +128,14 @@ function GameMode:OnAllPlayersLoaded()
     end
   end)
 
-    
 
+    Timers:CreateTimer(function()
+        GameMode:FromDiscordChat()
+        return 5
+      end
+    )
+  
 
-
-  --ОБРАЩЕНИЕ КО ВСЕМ ЮНИТАМ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-        
-        --local StartPoint = Vector (-23, -738, 133)
-        --local AllUnits = FindUnitsInRadius(DOTA_TEAM_BADGUYS, StartPoint, nil, 25000, DOTA_UNIT_TARGET_TEAM_FRIENDLY, DOTA_UNIT_TARGET_ALL, DOTA_UNIT_TARGET_FLAG_NONE, FIND_ANY_ORDER, false)
-        --for _, enemy in pairs(AllUnits) do 
-        --    if enemy:HasModifier("modifier_invulnerable") then
-        --       enemy:RemoveModifierByName("modifier_invulnerable")
-        --       print("Снял modifier_invulnerable")
-        --    end
-        --end
 end 
 
 
@@ -156,9 +150,7 @@ function GameMode:OnHeroInGame(hero)
         local steamID = PlayerResource:GetSteamAccountID(playerID)
         local current_hero = hero:GetUnitName()
         local abil = hero:GetAbilityByIndex(1)
-        --print("Steam Community ID: " .. tostring(steamID))
-        --print("Current Hero: " .. tostring(current_hero))
-        --print("OnHeroInGame | " .. current_hero .. " | " .. steamID)
+
         hero.order_timer = 10
         GameMode:FirstLoad(hero)
         GameMode:DonateLoad(hero)
@@ -169,6 +161,7 @@ function GameMode:OnHeroInGame(hero)
 
         
         EmitAnnouncerSound("soundboard.new_year_drums")
+        
 
         local item_to_remove = hero:FindItemInInventory("item_tpscroll")
         local item_to_remove2 = hero:FindItemInInventory("item_tpscroll_fake")
@@ -179,7 +172,9 @@ function GameMode:OnHeroInGame(hero)
             hero:RemoveItem(item_to_remove2)
         end
 
-        _G.lootDrop[playerID] = true
+        if _G.lootDrop[playerID] == nil then
+            _G.lootDrop[playerID] = true
+        end
 
         CustomGameEventManager:RegisterListener("loot_drop", function(userId, event)
             local state = tostring(event.option)
@@ -211,8 +206,8 @@ function GameMode:OnHeroInGame(hero)
             hero.all_boss_kills = 0
         end
         
-         --ПРОВЕРКА НА ТУЛЗЫ И ЧИТЫ
-         print(steamID)
+        --ПРОВЕРКА НА ТУЛЗЫ И ЧИТЫ
+        --print(steamID)
         if steamID ~= 330607354 and steamID ~= 123578080 and steamID ~= 244367585 and steamID ~= 0 then 
             if IsInToolsMode() or GameRules:IsCheatMode() then
                 GameRules:SetGameWinner(DOTA_TEAM_BADGUYS)
@@ -233,11 +228,6 @@ function GameMode:OnHeroInGame(hero)
 
 
 --START UPGRADES |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-
-        --hero:FindAbilityByName("phantom_assassin_phantom_strike_datadriven"):UpgradeAbility(true)
-
-        --local blink = hero:AddAbility("phantom_assassin_phantom_strike_datadriven")
-        --blink:UpgradeAbility(true)
 
         if not hero:HasModifier("modifier_movespeed_cap") then
             hero:AddNewModifier (hero, nil, "modifier_movespeed_cap", {duration = -1})

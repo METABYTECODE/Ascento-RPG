@@ -109,7 +109,7 @@ end
 function modifier_incarnation:GetModifierExtraHealthPercentage( params )
     if self:GetStackCount() == 0 then return 0 end
 
-    return self:GetStackCount() * 0.3 -- +0,3% хп за ренку
+    return self:GetStackCount() * 0.2 -- +0,2% хп за ренку
 end
 
 function modifier_incarnation:GetModifierMoveSpeedBonus_Percentage( params )
@@ -158,10 +158,10 @@ function modifier_incarnation:GetModifierBaseDamageOutgoing_Percentage( params )
     if self:GetStackCount() == 0 then return 0 end
 
     if self:GetStackCount() > 699 then -- 700: 7.5% урона
-        return 7.5 + self:GetStackCount() * 0.2
+        return 7.5 + self:GetStackCount() * 0.15
     end
 
-    return self:GetStackCount() * 0.2 -- +0,2% урона за ренку
+    return self:GetStackCount() * 0.15 -- +0,15% урона за ренку
 end
 
 

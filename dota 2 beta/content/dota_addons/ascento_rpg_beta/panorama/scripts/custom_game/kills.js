@@ -9,7 +9,7 @@ var KillsUI = /** @class */ (function () {
         this.hasVotedText = this.instructions.FindChild("HasVoted");
         this.hasVotedText.visible = false;
         this.discord.SetPanelEvent("onmouseactivate", function () {
-            $.DispatchEvent('ExternalBrowserGoToURL', 'https://discord.gg/A9G9qpYWWF');
+            $.DispatchEvent('ExternalBrowserGoToURL', 'https://discord.gg/DXSh4Snhgm');
         });
         this.header.text = $.Localize("#difficulty_select");
         this.timerPanel = new KillsSelection(this.container, $.Localize("#difficulty_easy"), "Easy");

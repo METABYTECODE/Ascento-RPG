@@ -1,0 +1,12 @@
+{
+  "host": "0.0.0.0",
+  "port": 3000,
+  "version": "version",
+  "db_user": "db_user",
+  "db_name": "db_name",
+  "db_pass": "db_pass",
+  "keys": ["SERVERKEY"],
+  "difficulties": ["EASY", "NORMAL", "HARD", "HARDEVENT", "UNFAIR", "IMPOSSIBLE", "HELL", "HARDCORE"],
+  "telebot_token": "TelegramBotToken",
+  "admin_steam_id": [000]
+}

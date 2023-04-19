@@ -140,7 +140,7 @@
         "SoundSet"      "Hero_DragonKnight"
         "UnitLabel"                 "Tank"
 
-        "DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "Enabled"       "1"
         "HeroPool1"     "1"
@@ -235,7 +235,7 @@
         "SoundSet"      "Hero_LegionCommander"
         "UnitLabel"                 "Fighter"
         
-        //"DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "VoiceFile"     ""
         "Enabled"       "1"
@@ -317,7 +317,7 @@
         "SoundSet"      "Hero_PhantomAssassin"
         "UnitLabel"                 "Assassin"
         
-        "DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "Enabled"       "1"
         "BotImplemented"        "1"
@@ -416,8 +416,28 @@
         "IdleExpression"        "scenes/drowranger/drowranger_exp_idle_01.vcd"
         "SoundSet"      "Hero_DrowRanger"
         "UnitLabel"                 "Ranger"
+
+        "precache"
+        {
+            "model"     "models/items/drow/drow_arcana/drow_arcana_arms.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_shoulder.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_weapon.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_pedestal.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_legs.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_quiver.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_head.vmdl"
+            "model"     "models/items/drow/drow_arcana/drow_arcana_back.vmdl"
+
+            "particle"  "particles/econ/items/drow/drow_arcana/drow_arcana_base_attack.vpcf"
+            "particle"  "particles/econ/items/drow/drow_arcana/drow_arcana_loadout.vpcf"
+            "particle"  "particles/econ/items/drow/drow_arcana/drow_arcana_ambient_head.vpcf"
+            "particle"  "particles/econ/items/drow/drow_arcana/drow_arcana_arm_ambient.vpcf"
+        }
+
         
-        "DisableWearables"              "0"
+        
+        "DisableWearables"      "1"
 
         "PickSound"     "drowranger_dro_spawn_03"
         "BanSound"      "drowranger_dro_anger_01"
@@ -475,7 +495,7 @@
         "AttackAnimationPoint"      "0.330000"
         "AttackAcquisitionRange"        "600"
         "AttackRange"       "400"
-        "ProjectileModel"       "particles/units/heroes/hero_drow/drow_base_attack.vpcf"
+        "ProjectileModel"       "particles/econ/items/drow/drow_arcana/drow_arcana_base_attack.vpcf"
         "ProjectileSpeed"       "1250"
         "AttributePrimary"      "DOTA_ATTRIBUTE_AGILITY"
         "AttributeBaseStrength"     "5"
@@ -516,7 +536,7 @@
         "IdleSoundLoop"     "Hero_Oracle.IdleLoop"
         "UnitLabel"                 "Support"
         
-        "DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "Enabled"       "1"
         "BotImplemented"        "1"
@@ -620,7 +640,7 @@
         "IdleSoundLoop"     "Hero_Invoker.IdleLoop"
         "UnitLabel"                 "Mage"
         
-        "DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "Enabled"       "1"
         "HeroUnlockOrder"       "3"
@@ -728,7 +748,7 @@
         
         "ProjectileSpeed"       "6000"
         
-        "DisableWearables"              "0"
+        "DisableWearables"      "1"
 
         "Enabled"                   "1"
         "CMEnabled"                 "0"
@@ -808,6 +828,7 @@
 
 "npc_dota_hero_dazzle"
     {
+        "DisableWearables"      "1"
         "BaseClass"                 "npc_dota_hero"
         "Model"     "models/heroes/dazzle/dazzle.vmdl"
         "IdleExpression"        "scenes/dazzle/dazzle_exp_idle_01.vcd"
@@ -815,7 +836,6 @@
 
         "UnitLabel"                 "Cultist"
         
-        "DisableWearables"              "0"
 
         "Enabled"       "1"
         "BotImplemented"        "1"
@@ -918,12 +938,12 @@
         "Model"     "models/heroes/shadow_fiend/shadow_fiend_arcana.vmdl"
         "DisableWearables"      "1"
 
-        "Ability1"      "donate_bonus_crit_sf"
-        "Ability2"      "donate_bonus_damage_sf"
+        "Ability1"      "donate_leha_doom_aura"
+        "Ability2"      "donate_leha_genocid"
         "Ability3"      "rubick_bonus_damage"
         "Ability4"      "medusa_split_shot_lua"
-        "Ability5"      "generic_hidden"
-        "Ability6"      "generic_hidden"
+        "Ability5"      "donate_bonus_crit_sf"
+        "Ability6"      "donate_bonus_damage_sf"
         "Ability10"     "generic_hidden"
         "Ability11"     "generic_hidden"
         "Ability12"     "generic_hidden"
@@ -952,6 +972,7 @@
 
     "npc_dota_hero_juggernaut"
     {
+        "DisableWearables"      "1"
 
         "Ability1"      "donate_bonus_crit_sf"
         "Ability2"      "donate_bonus_damage_sf"
@@ -975,8 +996,10 @@
 
     "npc_dota_hero_crystal_maiden"
     {
+        "DisableWearables"      "1"
         "AttackRange"       "800"
         "AttackRate"        "1.850000"
+
         "Ability1"          "crystal_maiden_crystal_nova_custom"
         "Ability2"          "crystal_maiden_freezing_field_custom"
         "Ability3"          "crystal_maiden_arcane_aura_custom"
@@ -994,6 +1017,7 @@
 
     "npc_dota_hero_terrorblade"
     {
+        "DisableWearables"      "1"
         
         "Ability1"      "donate_bruiser_tb"
         "Ability2"      "donate_agi_to_atk"
@@ -1009,13 +1033,6 @@
         "Ability15"     "generic_hidden"
         "Ability16"     "generic_hidden"
         "Ability17"     "generic_hidden"
-
-        
-        "precache"
-        {
-            "model"     "models/heroes/terrorblade/demon.vmdl"
-        }
-        
     }
 
 
@@ -1026,148 +1043,122 @@
 
     "npc_dota_hero_marci"
     {
-        "Model"             "models/heroes/marci/marci_base.vmdl"
-        "IdleExpression"    "scenes/marci/marci_exp_idle_01.vcd"
-        "SoundSet"          "Hero_Marci"
-        "PickSound"         "marci_pick"
-        "BanSound"          "marci_ban"
-        "Enabled"           "1"
-        "HeroUnlockOrder"   "0"
-        "Role"              "Support,Carry,Initiator,Disabler,Escape"
-        "Rolelevels"        "1,1,2,1,1"
-        "Complexity"        "2"
-        "Team"              "Good"
-        "HeroID"            "136"
-        "HeroOrderID"           "122"
-        "BotImplemented"        "0"
-        "ModelScale"            "1"
-        "VersusScale"           "1"
-        "LoadoutScale"          "0.8"
-        "SpectatorLoadoutScale" "1"
-        "HeroGlowColor"         "0 50 247"
-        "CMEnabled"             "1"
-        "workshop_guide_name"       "Marci"
-        "new_player_enable"         "1"
-        "LastHitChallengeRival"     "npc_dota_hero_mirana"
-        "HeroSelectSoundEffect"     "Hero_Marci.Pick"
-        "GibType"       "default"
-        "Ability1"      "marci_grapple"
-        "Ability2"      "marci_companion_run"
-        "Ability3"      "marci_guardian"
-        "Ability4"      "generic_hidden"
-        "Ability5"      "generic_hidden"
-        "Ability6"      "marci_unleash"
-        
-        "AbilityDraftAbilities"
-        {
-            "Ability1"      "marci_grapple"
-            "Ability2"      "marci_companion_run"
-            "Ability3"      "marci_guardian"
-            "Ability6"      "marci_unleash"
-        }   
+        "DisableWearables"      "1"
+        "Ability1"                      "marci_grapple"
+        "Ability2"                      "marci_companion_run"
+        "Ability3"                      "marci_guardian"
+        "Ability4"                      "generic_hidden"
+        "Ability5"                      "generic_hidden"
+        "Ability6"                      "marci_unleash"
 
-        "Ability10"     "special_bonus_unique_marci_lunge_range"
-        "Ability11"     "special_bonus_unique_marci_grapple_damage"
-        "Ability12"     "special_bonus_unique_marci_guardian_lifesteal"
-        "Ability13"     "special_bonus_unique_marci_lunge_cooldown"
-        "Ability14"     "special_bonus_unique_marci_grapple_stun_duration"
-        "Ability15"     "special_bonus_unique_marci_unleash_speed"
-        "Ability16"     "special_bonus_unique_marci_unleash_silence"
-        "Ability17"     "special_bonus_unique_marci_guardian_magic_immune"
-        "ArmorPhysical"             "0"
-        "AttackCapabilities"        "DOTA_UNIT_CAP_MELEE_ATTACK"
-        "AttackDamageMin"           "33"
-        "AttackDamageMax"           "37"
-        "AttackRate"                "1.700000"
-        "AttackAnimationPoint"      "0.300000"
-        "AttackAcquisitionRange"    "600"
-        "AttackRange"               "150"
-        "ProjectileSpeed"           "0"
-        "AttributePrimary"          "DOTA_ATTRIBUTE_STRENGTH"
-        "AttributeBaseStrength"     "23"
-        "AttributeStrengthGain"     "3.600000"
-        "AttributeBaseIntelligence" "19"
-        "AttributeIntelligenceGain" "1.900000"
-        "AttributeBaseAgility"      "20"
-        "AttributeAgilityGain"      "2.40000"
-        "StatusManaRegen"           "0.0"
-        "MovementSpeed"         "315"
-        "MovementTurnRate"      "0.900000"
-        "animation_transitions"
-        {
-        //  "ACT_DOTA_RUN"
-        //  {
-        //      "regular"       "0.300000"
-        //  }
-            "ACT_DOTA_IDLE"
-            {
-                "regular"       "0.5000"
-                "unleash"       "0.3000"
-                "injured"       "0.2000"
-            }
-        }   
-        "AttackSpeedActivityModifiers"
-        {
-            "fast"      "180"
-            "faster"    "250"
-        }
-        "HealthBarOffset"       "200"
-        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
-        "ItemSlots"
-        {
-            "0"
-            {
-                "SlotIndex"     "0"
-                "SlotName"      "head"
-                "SlotText"      "#LoadoutSlot_Head"
-                "TextureWidth"      "512"
-                "TextureHeight"     "512"
-                "MaxPolygonsLOD0"       "2500"
-                "MaxPolygonsLOD1"       "1250"
-            }
-            "1"
-            {
-                "SlotIndex"     "1"
-                "SlotName"      "armor"
-                "SlotText"      "#LoadoutSlot_Armor"
-                "TextureWidth"      "512"
-                "TextureHeight"     "512"
-                "MaxPolygonsLOD0"       "4000"
-                "MaxPolygonsLOD1"       "2000"
-            }
-            "2"
-            {
-                "SlotIndex"     "2"
-                "SlotName"      "shoulder"
-                "SlotText"      "#LoadoutSlot_shoulder"
-                "TextureWidth"      "512"
-                "TextureHeight"     "512"
-                "MaxPolygonsLOD0"       "3000"
-                "MaxPolygonsLOD1"       "1500"
-            }
-            "3"
-            {
-                "SlotIndex"     "3"
-                "SlotName"      "back"
-                "SlotText"      "#LoadoutSlot_Back"
-                "TextureWidth"      "512"
-                "TextureHeight"     "256"
-                "MaxPolygonsLOD0"       "2500"
-                "MaxPolygonsLOD1"       "1250"
-            }
-            "4"
-            {
-                "SlotIndex"     "4"
-                "SlotName"      "taunt"
-                "SlotText"      "#LoadoutSlot_Taunt"
-            }
-        }
-        "particle_folder"       "particles/units/heroes/hero_marci"
-        "GameSoundsFile"        "soundevents/game_sounds_heroes/game_sounds_marci.vsndevts"
-        "VoiceFile"             "soundevents/voscripts/game_sounds_vo_marci.vsndevts"
+        "Ability10"                     "generic_hidden"
+        "Ability11"                     "generic_hidden"
+        "Ability12"                     "generic_hidden"
+        "Ability13"                     "generic_hidden"
+        "Ability14"                     "generic_hidden"
+        "Ability15"                     "generic_hidden"
+        "Ability16"                     "generic_hidden"
+        "Ability17"                     "generic_hidden"
+    }
+
+"npc_dota_hero_templar_assassin" //Димарик (webdevery)
+    {
+        "DisableWearables"      "1"
+        "Ability1"                      "templar_assassin_refraction"
+        "Ability2"                      "templar_assassin_meld"
+        "Ability3"                      "templar_assassin_psi_blades"
+        "Ability4"                      "templar_assassin_trap"
+        "Ability5"                      "templar_assassin_trap_teleport"
+        "Ability6"                      "templar_assassin_psionic_trap"
+
+        "Ability10"                     "generic_hidden"
+        "Ability11"                     "generic_hidden"
+        "Ability12"                     "generic_hidden"
+        "Ability13"                     "generic_hidden"
+        "Ability14"                     "generic_hidden"
+        "Ability15"                     "generic_hidden"
+        "Ability16"                     "generic_hidden"
+        "Ability17"                     "generic_hidden"
     }
 
 
+    "npc_dota_hero_muerta"
+    {
+        "DisableWearables"      "1"
+        "AttackRate"        "3.500000"
+
+        "Ability1"      "donate_muerta_damage_datadriven"
+        "Ability2"      "donate_muerta_mobility_aura"
+        "Ability3"      "donate_muerta_disarm"
+        "Ability4"      "donate_muerta_bsa"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "generic_hidden"
+
+        "Ability7"      "generic_hidden"
+        "Ability8"      "generic_hidden"
+        "Ability9"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+    }
+
+
+    "npc_dota_hero_wisp"
+    {
+        "DisableWearables"      "1"
+
+        "Model"     "models/heroes/wisp/wisp.vmdl"
+
+        "precache"
+        {
+            "model"     "models/items/io/io_ti7/io_ti7.vmdl"
+            "model"     "models/items/io/io_ti7/io_ti7_heart.vmdl"
+            "model"     "models/items/io/io_ti7/io_ti7_debris_a.vmdl"
+            "model"     "models/items/io/io_ti7/io_ti7_debris_b.vmdl"
+            "model"     "models/items/io/io_ti7/io_ti7_additive.vmdl"
+            "model"     "models/development/invisiblebox.vmdl"
+
+            "particle"  "particles/econ/items/wisp/wisp_tether_ti7.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_death_ti7.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7_heart.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7_gem_glow.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7_heart_glow.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7_trace.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_death_ti7_burst.vpcf"
+            "particle"  "particles/econ/items/wisp/wisp_ambient_ti7_trace_sparkle.vpcf"
+            "particle"  "particles/units/heroes/hero_wisp/wisp_base_attack.vpcf"
+            
+        }
+        
+        "Ability1"      "hojyk_tether"
+        "Ability2"      "donate_bonus_damage_hojyk"
+        "Ability3"      "donate_bonus_sp_amp_hojyk"       
+        "Ability4"      "donate_bonus_reduction_hojyk"
+        "Ability5"      "generic_hidden"
+        "Ability6"      "generic_hidden"
+        "Ability7"      "hojyk_tether_break"
+        "Ability8"      "generic_hidden"
+        "Ability10"     "generic_hidden"
+        "Ability11"     "generic_hidden"
+        "Ability12"     "generic_hidden"
+        "Ability13"     "generic_hidden"
+        "Ability14"     "generic_hidden"
+        "Ability15"     "generic_hidden"
+        "Ability16"     "generic_hidden"
+        "Ability17"     "generic_hidden"
+
+        "ProjectileModel"       "particles/units/heroes/hero_wisp/wisp_base_attack.vpcf"
+
+        "BoundsHullName"        "DOTA_HULL_SIZE_HERO"
+        "RingRadius"        "70"
+
+    }
     
 
 

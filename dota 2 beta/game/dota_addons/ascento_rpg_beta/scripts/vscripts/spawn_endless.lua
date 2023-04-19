@@ -26,14 +26,39 @@ end
 function EndlessSpawn:OnEntityKilled( keys )
     local killedUnit = EntIndexToHScript( keys.entindex_killed )
     local killerUnit = EntIndexToHScript( keys.entindex_attacker )
-    local name = killedUnit:GetUnitName()
-    local PackName = killedUnit.pack
-    local killerTeam = killerUnit:GetTeam()
-    --print("event OnEntityKilled has called")
 
-    if killerUnit ~= nil then
+    if killerUnit ~= nil and killerUnit:IsRealHero() then 
+
+        local name = killedUnit:GetUnitName()
+        local PackName = killedUnit.pack
+        local killerTeam = killerUnit:GetTeam()
+
+        local playerID = killerUnit:GetPlayerID()
+
+        local killerSteamID = PlayerResource:GetSteamAccountID(playerID)
+        --print("event OnEntityKilled has called")
+
         if name == "npc_creep_endless_1" and killerUnit:IsRealHero() then
+
+            if killerUnit:HasModifier("modifier_hojyk_tether_ally") then
+                local modifier = killerUnit:FindModifierByName("modifier_hojyk_tether_ally")
+                local ability = modifier:GetAbility()
+
+                Ascento:RandomEndlessModifier(ability.tether_caster, killedUnit:GetLevel(), PackName)
+            end
+
             Ascento:RandomEndlessModifier(killerUnit, killedUnit:GetLevel(), PackName)
+
+            local timerTime = 1
+            if killerSteamID == 130569575 or killerSteamID == 158686274 then
+                timerTime = 0
+            end
+
+            Timers:CreateTimer(timerTime,function()
+                UTIL_Remove(killedUnit)
+                return nil
+            end)
+            
         end
     end
 
@@ -113,6 +138,14 @@ pack9 = {    --эта таблица хранит инфу о паке
     packname = "pack9", --имя пака
     isAlive = true --флаг, что пак "живой"
 }
+pack10 = {    --эта таблица хранит инфу о паке
+    creeps = { npc_creep_endless_1 = 5}, --тут мы храним инфу о том кого мы спавним и в каком количестве. Имя - ключ, количество - значение.
+    spawnPoint = {"spawn_1_hojyk", AbsOrigin = "" }, -- тут мы храним инфу о спавнпоинте, имя ставите такое же как указали у спавнпоинта
+    level = 1, --уровень крипов
+    maxlevel = 5000, --макс уровень крипов
+    packname = "pack10", --имя пака
+    isAlive = true --флаг, что пак "живой"
+}
 
 
 loc1 = { --информация о локациях, может быть избыточна для вас
@@ -151,6 +184,10 @@ loc9 = { --информация о локациях, может быть изб�
     packs = { pack9  }, --информация о паках на локации
     locationLevel = 1 -- текущий уровень локации
 }
+loc10 = { --информация о локациях, может быть избыточна для вас
+    packs = { pack10  }, --информация о паках на локации
+    locationLevel = 1 -- текущий уровень локации
+}
 
 
 map = { --хранит всю инфу об объектах на карте, может быть избыточна для вас
@@ -163,7 +200,8 @@ map = { --хранит всю инфу об объектах на карте, м
         loc6,
         loc7,
         loc8,
-        loc9
+        loc9,
+        loc10
     }
 }
 
@@ -186,6 +224,7 @@ end
 
 function EndlessSpawn:SpawnPack(pack, levelpack)
     local leha = 0
+    local hojyk = 0
 
     if pack.packname == "pack9" then
         for k, hero in pairs(get_team_heroes(DOTA_TEAM_GOODGUYS)) do
@@ -195,9 +234,17 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
         end
     end
 
+    if pack.packname == "pack10" then
+        for k, hero in pairs(get_team_heroes(DOTA_TEAM_GOODGUYS)) do
+            if hero.isHojyk == 1 then
+                hojyk = 1
+            end
+        end
+    end
+
     
 
-    if (pack.packname == "pack9" and leha == 1) or (pack.packname ~= "pack9") then
+    if (pack.packname == "pack10" and hojyk == 1) or (pack.packname == "pack9" and leha == 1) or (pack.packname ~= "pack9" and pack.packname ~= "pack10") then
 
         if levelpack >= pack.maxlevel then levelpack = pack.maxlevel end
         
@@ -212,6 +259,9 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
         end
             
         creep_model = GetRandomTableElement(theUnitTable)
+        if pack.packname == "pack9" then
+            creep_model = "models/creeps/neutral_creeps/n_creep_troll_skeleton/n_creep_skeleton_melee.vmdl"
+        end
 
         for k,v in pairs(pack.creeps) do
             for c = 1, v do
@@ -269,13 +319,13 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     elseif mode == "HARDCORE" then
 
                         givedXP = givedXP * 2.25
-                        hpScale = 100
-                        dmgScale = 64
+                        hpScale = 80
+                        dmgScale = 50
             
                     end
 
                     givedXP = givedXP * (0.45 + cycle * 0.2)
-                    givedXP = givedXP / 2
+                    givedXP = givedXP / 5
 
                     givedXP = math.floor(givedXP)
                     if givedXP > INT_MAX_LIMIT then
@@ -286,7 +336,7 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     unit:SetMinimumGoldBounty(0)
                     unit:SetMaximumGoldBounty(0)
 
-                    local giveHP = unit:GetMaxHealth() * hpScale * multiplier * 0.12
+                    local giveHP = unit:GetMaxHealth() * hpScale * multiplier * 0.1
                     if giveHP > INT_MAX_LIMIT then
                         giveHP = INT_MAX_LIMIT
                     end
@@ -295,7 +345,7 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     unit:SetMaxHealth(giveHP)
                     unit:SetHealth(giveHP)
 
-                    local giveDMG = unit:GetBaseDamageMax() * dmgScale * multiplier * 0.2
+                    local giveDMG = unit:GetBaseDamageMax() * dmgScale * multiplier * 0.18
                     if giveDMG > INT_MAX_LIMIT then
                         giveDMG = INT_MAX_LIMIT
                     end
@@ -304,7 +354,7 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     unit:SetBaseDamageMax(giveDMG)
 
                     unit:SetBaseMoveSpeed(unit:GetBaseMoveSpeed() + multiplier)
-                    unit:SetPhysicalArmorBaseValue(unit:GetPhysicalArmorBaseValue() * cycle / 2)
+                    unit:SetPhysicalArmorBaseValue(unit:GetPhysicalArmorBaseValue() * cycle / 1.5)
 
                     
 
@@ -336,25 +386,21 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     elseif levelpack >= 1400 and levelpack < 1600 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_90", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:SetBaseMagicalResistanceValue(50)
                     elseif levelpack >= 1600 and levelpack < 1800 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_92", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:AddAbility("mars_bulwark")
                         unit:SetBaseMagicalResistanceValue(60)
                     elseif levelpack >= 1800 and levelpack < 2000 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_94", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:AddAbility("mars_bulwark")
                         unit:AddAbility("slark_essence_shift_lua")
                         unit:SetBaseMagicalResistanceValue(70)
                     elseif levelpack >= 2000 and levelpack < 2200 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_96", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:AddAbility("mars_bulwark")
                         unit:AddAbility("slark_essence_shift_lua")
                         unit:AddAbility("donate_disarmor")
@@ -362,7 +408,6 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     elseif levelpack >= 2200 and levelpack < 2400 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_98", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:AddAbility("mars_bulwark")
                         unit:AddAbility("slark_essence_shift_lua")
                         unit:AddAbility("donate_disarmor")
@@ -371,34 +416,36 @@ function EndlessSpawn:SpawnPack(pack, levelpack)
                     elseif levelpack >= 2400 then
                         modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_99", {})
                         unit:AddAbility("boss_power_reduct")
-                        unit:AddAbility("boss_raging_blood")
                         unit:AddAbility("mars_bulwark")
                         unit:AddAbility("slark_essence_shift_lua")
                         unit:AddAbility("donate_disarmor")
                         unit:AddAbility("life_stealer_feast_donate")
                         unit:AddAbility("elder_titan_natural_order")
                         unit:SetBaseMagicalResistanceValue(95)
+                    elseif levelpack >= 2600 then --
+                        modifier = unit:AddNewModifier(unit, nil, "modifier_damage_reduction_99", {})
+                        unit:AddAbility("boss_power_reduct")
+                        unit:AddAbility("mars_bulwark")
+                        unit:AddAbility("slark_essence_shift_lua")
+                        unit:AddAbility("donate_disarmor")
+                        unit:AddAbility("life_stealer_feast_donate")
+                        unit:AddAbility("elder_titan_natural_order")
+                        unit:SetBaseMagicalResistanceValue(96)
                     end
                     
-                    
-
                     if levelpack < 2200 then
                       unit:SetModelScale(1 + levelpack/2200)
                     end
+
                     if levelpack >= 2200 then
                       unit:SetModelScale(2)
                     end
-
-
-
-                        --print("Пак: " .. levelpack)
 
                     if unit:HasModifier("modifier_neutral_upgrade_attackspeed") then
                         local modifier = unit:FindModifierByName("modifier_neutral_upgrade_attackspeed")
                         modifier:SetStackCount(levelpack)
                         --print("Скорость атаки для пака: " .. levelpack)
                     end
-
 
             end
         end  
@@ -414,11 +461,18 @@ function EndlessSpawn:CheckPacks()
         for j = 1, #map.locations[i].packs do
             if map.locations[i].packs[j].isAlive then --бегаем только по "живым" пакам
                 local creepCount =  FindUnitsInRadius(DOTA_TEAM_BADGUYS, map.locations[i].packs[j].spawnPoint.AbsOrigin ,nil, 800, 1, 2, 0, 0, false)
+                local timer = 0.8
 
-               
+                if i == 9 then
+                    timer = 0.1
+                end
+                if i == 10 then
+                    timer = 0.2
+                end
+
                 if  #creepCount == 0 then
                     map.locations[i].packs[j].isAlive = false
-                    Timers:CreateTimer(0.2, --тут вместо 5 указываем время, через которое должен реснуться пак
+                    Timers:CreateTimer(timer, --тут вместо 5 указываем время, через которое должен реснуться пак
                         function()
                           EndlessSpawn:SpawnPack(map.locations[i].packs[j], map.locations[i].packs[j].level)
 
@@ -439,8 +493,16 @@ function EndlessSpawn:ClearPack(playerID)
     for k,v in pairs(creepCount) do
         UTIL_Remove(v)
     end
-                
-    Timers:CreateTimer(0.2, --тут вместо 5 указываем время, через которое должен реснуться пак
+    
+    local timer = 0.8           
+    if i == 9 then
+        timer = 0.1
+    end
+    if i == 10 then
+        timer = 0.2
+    end
+
+    Timers:CreateTimer(timer, --тут вместо 5 указываем время, через которое должен реснуться пак
         function()
           EndlessSpawn:SpawnPack(map.locations[i].packs[j], 1)
     end)     

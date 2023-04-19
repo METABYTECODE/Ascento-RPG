@@ -4280,308 +4280,6 @@
   }
 
 
-// Rewrite of Gyrocopter Call Down
-// Author: YOLOSPAGHETTI
-// Date: March 28, 2016
-// Version: 6.86
-// Type: Datadriven
-//
-// ----- FILE REQUIREMENTS -----
-// Script files:
-// scripts/vscripts/heroes/hero_gyrocopter/call_down.lua
-//
-// Notes: Missing some particles and for the marker particle, the targeting array moves out instead of in
-"call_down_datadriven"
-{
-  // General
-  //-------------------------------------------------------------------------------------------------------------
-  "BaseClass"       "ability_datadriven"
-  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-  "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
-  "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-  "AoERadius"           "600"
-  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
-  "FightRecapLevel"       "2"
-  "AbilityTextureName"      "gyrocopter_call_down"
-  "MaxLevel" "1"
-  
-  "precache"
-  {
-    "particle"    "particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
-    "particle"    "particles/units/heroes/hero_gyrocopter/gyro_call_down_explosion_impact_b.vpcf"
-    "particle"    "particles/units/heroes/hero_gyrocopter/gyro_calldown_explosion_flash_c.vpcf"
-    "particle"    "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_first.vpcf"
-    "particle"    "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_second.vpcf"
-    "soundfile"   "sounds/weapons/hero/gyrocopter/call_down_cast.vsnd"
-    "soundfile"   "sounds/weapons/hero/gyrocopter/call_down_impact.vsnd"
-  }
-  
-  // Casting
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilityCastRange"        "1500"
-  "AbilityCastPoint"        "0 0 0"
-
-  // Time   
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilityCooldown"       "5"
-  
-  // Cost
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilityManaCost"       "0"
-  
-  // Special
-  //-------------------------------------------------------------------------------------------------------------
-  "AbilitySpecial"
-  {
-    "01"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "slow_duration_first"   "3"
-    }
-    "02"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "slow_duration_second"    "5"
-    }
-    "03"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "damage_first"        "10000"
-    }
-    "04"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "damage_second"       "50000"
-    }
-    "05"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "slow_first"        "-25"
-    }
-    "06"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "slow_second"       "-90"
-    }
-    "07"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "radius"          "600"
-    }
-    "08"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "range_scepter"         "0"
-    }
-    "09"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "damage_second_scepter"   "50000"
-    }
-    "10"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "missile_delay"       "3.0"
-    }
-    "11"
-    {
-      "var_type"          "FIELD_INTEGER"
-      "vision_radius"       "300"
-    }
-    "12"
-    {
-      "var_type"          "FIELD_FLOAT"
-      "vision_duration"     "4.0"
-    }
-  }
-  
-  "OnSpellStart"
-  {
-    "FireSound"
-    {
-      "EffectName"  "Hero_Gyrocopter.CallDown.Fire"
-      "Target"    "CASTER"
-    }
-  
-    "CreateThinker"
-    {
-      "ModifierName"  "modifier_call_down_marker_first"
-      "Target"    "POINT" 
-    }
-    
-    "RunScript"
-    {
-      "ScriptFile"  "heroes/hero_gyrocopter/call_down.lua"
-      "Function"    "GiveVision"
-    }
-  }
-  
-  "Modifiers"
-  {
-    "modifier_call_down_marker_first"
-    {
-      "Duration"  "%missile_delay"
-    
-      "OnCreated"
-      {
-        "AttachEffect"
-        {
-          "EffectName"    "particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
-          "EffectAttachType"  "attach_origin"
-          "Target"      "TARGET"
-          "ControlPoints"
-          {
-            "00" "0 0 0"
-            "01" "%radius %radius %radius"
-          }
-        }
-        
-        "TrackingProjectile"
-        {
-          "Target"            "TARGET"
-          "EffectName"        "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_first.vpcf"
-          "Dodgeable"         "1"
-          "ProvidesVision"    "0"
-          "MoveSpeed"         "100"
-          "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
-          "TargetTypes"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-        }
-            
-        "TrackingProjectile"
-        {
-          "Target"            "TARGET"
-          "EffectName"        "particles/econ/items/gyrocopter/hero_gyrocopter_gyrotechnics/gyro_calldown_second.vpcf"
-          "Dodgeable"         "1"
-          "ProvidesVision"    "0"
-          "MoveSpeed"         "100"
-          "SourceAttachment"  "DOTA_PROJECTILE_ATTACHMENT_ATTACK_1"
-          "TargetTypes"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
-        }
-      }
-      
-      "OnDestroy"
-      {
-        "FireSound"
-        {
-          "EffectName"  "Hero_Gyrocopter.CallDown.Damage"
-          "Target"    "TARGET"
-        }
-      
-        "ActOnTargets"
-        {
-          "Target"
-          {
-            "Center"          "TARGET"
-            "Radius"        "%radius"
-            "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-            "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-          }
-  
-          "Action"
-          {         
-            "Damage"
-            {
-              "Target"  "TARGET"
-              "Type"    "DAMAGE_TYPE_MAGICAL"
-              "Damage"  "%damage_first"
-            }
-            
-            "ApplyModifier"
-            {
-              "ModifierName"    "modifier_missile_slow_first"
-              "Target"      "TARGET"
-            }
-          }
-        }
-        
-        "CreateThinker"
-        {
-          "ModifierName"  "modifier_call_down_marker_second"
-          "Target"    "TARGET"  
-        }
-      }
-    }
-  
-    "modifier_call_down_marker_second"
-    {
-      "Duration"  "%missile_delay"
-    
-      "OnCreated"
-      {
-        "AttachEffect"
-        {
-          "EffectName"    "particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
-          "EffectAttachType"  "attach_origin"
-          "Target"      "TARGET"
-          "ControlPoints"
-          {
-            "00" "0 0 0"
-            "01" "%radius %radius %radius"
-          }
-        }
-      }
-      
-      "OnDestroy"
-      {
-        "FireSound"
-        {
-          "EffectName"  "Hero_Gyrocopter.CallDown.Damage"
-          "Target"    "TARGET"
-        }
-      
-        "ActOnTargets"
-        {
-          "Target"
-          {
-            "Center"          "TARGET"
-            "Radius"        "%radius"
-            "Teams"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-            "Types"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-          }
-  
-          "Action"
-          {         
-            "Damage"
-            {
-              "Target"  "TARGET"
-              "Type"    "DAMAGE_TYPE_MAGICAL"
-              "Damage"  "%damage_second"
-            }
-            
-            "ApplyModifier"
-            {
-              "ModifierName"    "modifier_missile_slow_second"
-              "Target"      "TARGET"
-            }
-          }
-        }
-      }
-    }
-  
-    "modifier_missile_slow_first"
-    {
-      "Duration"  "%slow_duration_first"
-      "IsDebuff" "1"
-      
-      "Properties"
-      {
-        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%slow_first"
-      }
-    }
-    
-    "modifier_missile_slow_second"
-    {
-      "Duration"  "%slow_duration_second"
-      "IsDebuff" "1"
-      
-      "Properties"
-      {
-        "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"  "%slow_second"
-      }
-    }
-  }
-}
-
 
 
 // Rewrite of Death Prophet Carrion Swarm
@@ -7773,494 +7471,6 @@
 
 
 
-//=================================================================================================================
-  // Aghanim: Spell Swap
-  //=================================================================================================================
-  "aghanim_spell_swap"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_spell_swap"
-    "ScriptFile"          "abilities/creatures/aghanim_spell_swap"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_MAGICAL"   
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_5"
-    "AbilityChannelAnimation"    "ACT_DOTA_CHANNEL_ABILITY_5"
-    "AnimationIgnoresModelScale"  "1"
-    "AbilityCastPoint"        "0.0"
-    "MaxLevel"            "6"
-    "IsOnCastBar"          "0"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "10000"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "36"
-    "AbilityChannelTime"      "7.5 7.5 7.5 7.5 6.0 2.5"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-    
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "animation_rate"      "0.1"
-      }
-      "02"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "move_speed_slow_pct"    "50"
-      }
-      "03"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "num_crystal_hits"      "9 12 15 18 21 46"
-      }
-    }
-  }
-
-  "aghanim_laser"
-  {
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_laser"
-    "ScriptFile"          "aghanim/aghanim_laser"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_PURE"   
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_YES"
-    //"SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
-    "AbilityChannelAnimation"   "ACT_DOTA_CHANNEL_ABILITY_2"
-    "AnimationIgnoresModelScale"  "0"
-    "AbilityCastPoint"        "0.0 0.0 0.0 0.0"
-
-    "AOERadius"          "0"
-
-    "MaxLevel"            "4"
-    //"IsOnCastBar"          "1"
-
-    "AbilityCastRange"        "9200"
-    "AbilityCooldown"        "20 20 20 20"
-    "AbilityChannelTime"      "2.0"
-    "AbilityManaCost"        "0"
-    
-    "AbilitySpecial"
-    {  
-      "01"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "damage_interval"    "0.2"
-      }
-      "02"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_radius"    "500"
-      }  
-      "03"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_damage"     "40 50 60 2055"
-        "CalculateSpellDamageTooltip" "1"
-      }
-      "04"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "beam_damage_pct"   "2.0 2.5 3.0 25.5"
-        "CalculateSpellDamageTooltip" "1"
-      }
-      "05"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "linger_create_interval"     "0.5"
-      }
-      "06"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_speed"    "270 280 290 300"
-      }
-      "07"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "linger_time"    "5.0 6.0 7.0 8.0"
-      } 
-      "08"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "leash_range"   "200" // percent of the cast range
-      }
-    }
-  }
-
-  "aghanim_blink"
-  {
-    "BaseClass"           "ability_lua"
-    "AbilityTextureName"      "aghanim_blink"
-    "ScriptFile"          "aghanim/aghanim_blink"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-    "AbilitySound"          "Hero_QueenOfPain.Blink_in"
-
-    "IsOnCastBar"         "0"
-    //"HasScepterUpgrade"     "1"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
-    "AbilityCastRange"        "9500"
-    "AbilityCastPoint"        "0.1"
-    "MaxLevel"            "4"
-    "AOERadius"           "800"
-    "AbilityCooldown"       "6"
-    "AbilityManaCost"       "0"
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "blink_range"     "800 900 1000 9500"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_aoe"      "175 185 195 700"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_damage"     "20000"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "slow_amount"     "70"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "heal_reduction"    "0"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_duration"   "3 4 5 6"
-      }
-      "07"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "slow_duration"     "4.5"
-      }
-      "08"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "scepter_aoe"     "350 400 450 700"
-        "RequiresScepter"   "1"
-      }
-      "09"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "scepter_cast_point"  "0.0"
-        "RequiresScepter"   "1"
-      }
-      "10"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "normal_cast_point"   "0.0"
-      }
-    }
-    "precache"
-    {
-      "particle"      "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_debuff.vpcf"
-      "particle"      "particles/status_fx/status_effect_iceblast.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_preimage.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_warmup.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_arrival.vpcf"
-    }  
-  }
-  "aghanim_blink3"
-  {
-    "BaseClass"           "ability_lua"
-    "AbilityTextureName"      "aghanim_blink"
-    "ScriptFile"          "aghanim/aghanim_blink"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-    "AbilitySound"          "Hero_QueenOfPain.Blink_in"
-    "IsOnCastBar"         "1"
-    "HasScepterUpgrade"       "1"
-    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_YES"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
-    "AbilityCastRange"        "9500"
-    "AbilityCastPoint"        "0.1"
-    "MaxLevel"            "4"
-    "AOERadius"           "750"
-    "AbilityCooldown"       "10"
-    "AbilityManaCost"       "0"
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "blink_range"        "1200 1400 2000 3000"
-      }
-      "02"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "debuff_aoe"        "700 700 700 750"
-      }
-      "03"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "debuff_damage"      "3000"
-      }
-      "04"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "slow_amount"        "70"
-      }
-      "05"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "heal_reduction"      "0"
-      }
-      "06"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "debuff_duration"      "3 4 5 6"
-      }
-      "07"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "slow_duration"      "4.5"
-      }
-      "08"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "scepter_aoe"        "350 400 450 750"
-        "RequiresScepter"      "1"
-      }
-      "09"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "scepter_cast_point"    "0.1"
-        "RequiresScepter"      "1"
-      }
-      "10"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "normal_cast_point"    "0.0"
-      }
-    }
-    "precache"
-    {
-      "particle"      "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_debuff.vpcf"
-      "particle"      "particles/status_fx/status_effect_iceblast.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_preimage.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_warmup.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_arrival.vpcf"
-    }   
-  }
-
-  "aghanim_blink2"
-  {
-    "BaseClass"           "ability_lua"
-    "AbilityTextureName"      "aghanim_blink2"
-    "ScriptFile"          "aghanim/aghanim_blink2"
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
-    "AbilitySound"          "Hero_QueenOfPain.Blink_in"
-    "AbilityType"         "DOTA_ABILITY_TYPE_BASIC"
-    //"IsOnCastBar"         "1"
-    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "LevelsBetweenUpgrades"     "9"
-    "HasScepterUpgrade"       "1"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_3"
-    "AbilityCastRange"        "1200 1900 3200 7500"
-    "AbilityCastPoint"        "0.0"
-    "MaxLevel"            "4"
-    "AOERadius"           "375 400 425 450"
-    "AbilityCooldown"       "17"
-    "AbilityManaCost"       "0"
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "blink_range"     "1200 1900 3200 7500"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_aoe"      "375 400 425 450"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_damage"     "1500 4500 12500 20000"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "slow_amount"     "70"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "heal_reduction"    "0"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "debuff_duration"   "1 2 3 4"
-      }
-      "07"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "slow_duration"     "4.5"
-      }
-      "08"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "scepter_aoe"     "425 475 555 701"
-        "RequiresScepter"   "1"
-      }
-      "09"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "scepter_cast_point"  "0.0"
-        "RequiresScepter"   "1"
-      }
-      "10"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "normal_cast_point"   "0.5"
-      }
-      "11"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "stats_mult"      "15 24 32 47"
-        "DamageTypeTooltip"   "DAMAGE_TYPE_MAGICAL"
-      }
-      "12"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "invul_duration"    "2.0"
-      }
-      "13"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "health_increase"   "0"
-      }
-      "14"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "attack_range"      "2000"
-      }
-      "15"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "magic_resist"      "0"
-      }
-      "16"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "armor_bonus"     "0"
-      }
-      "17"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "health_bonus"      "0"
-      }
-    }
-    "precache"
-    {
-      "particle"      "particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_debuff.vpcf"
-      "particle"      "particles/status_fx/status_effect_iceblast.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_preimage.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_warmup.vpcf"
-      "particle"      "particles/creatures/aghanim/aghanim_blink_arrival.vpcf"
-    }   
-  }
-  "aghanim_spell_lock"
-  {
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_spell_lock"
-    "ScriptFile"          "aghanim/aghanim_spell_lock"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_MAGICAL"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-    "AnimationIgnoresModelScale"  "0"
-    "AbilityCastPoint"        "0.0"
-    "MaxLevel"            "1"
-
-    "AbilityCastRange"        "1000"
-    "AbilityCooldown"        "26"
-    "AbilityManaCost"        "0"
-    
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "num_crystal_hits"      "72"
-        "LinkedSpecialBonus"    "special_bonus_unique_aghanim_3"
-      }
-      "02"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "crystal_duration"      "36"
-      }
-      "03"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "move_speed_slow_perc"    "25"
-        "LinkedSpecialBonus"    "special_bonus_unique_aghanim_7"
-      }
-      "04"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "bonus_damage"        "2000"
-      }
-      "05"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "max_distance"        "2500"
-      }
-      "06"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "link_duration"      "3"
-      }
-      "07"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "link_threshold_mult"    "1.8" // multiple of cast range as link break threshold ( 1.5 = 150% of cast range )
-      }
-    }
-  }
-
 
   "custom_vitality_rend_2"
 {
@@ -8326,89 +7536,6 @@
   }
 }
 
-//=================================================================================================================
-  // Aghanim: Shard Attack
-  //=================================================================================================================
-  "aghanim_shard_attack"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_shard_attack"
-    "ScriptFile"          "abilities/creatures/aghanim_shard_attack"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_PURE" 
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"   
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_YES"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_6"
-    "AbilityChannelAnimation"    "ACT_DOTA_CHANNEL_ABILITY_6"
-    "AnimationIgnoresModelScale"  "1"
-    "AbilityCastPoint"        "0.0"
-    "MaxLevel"            "6"
-    "IsOnCastBar"          "0"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "10000"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "33.0"
-    "AbilityChannelTime"      "8.0"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-    
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "spiral_projectiles"    "12 12 13 14 15 16"
-      }
-      "02"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "spiral_projectile_waves"   "6"
-      }
-      "03"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "spiral_projectile_width"   "50"
-      }
-      "04"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "spiral_projectile_damage"  "2250 2250 2500 2750 3000 12500"
-      }
-      "05"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "spiral_projectile_speed"   "625 625 675 725 735 750"
-      }
-      "06"
-      {
-        "var_type"               "FIELD_FLOAT"
-        "spiral_projectile_rotation_speed"   "1.2"
-      }
-      "07"
-      {
-        "var_type"                  "FIELD_FLOAT"
-        "spiral_projectile_speed_change_interval"   "0.75"
-      }
-      "08"
-      {
-        "var_type"                  "FIELD_INTEGER"
-        "spiral_projectile_damage_max_hp"       "15"
-      }
-    }
-  }
-
   "jotaro_absolute_defense"
   {
     "BaseClass"          "ability_lua"
@@ -8432,273 +7559,6 @@
   }
 
 
-  //=================================================================================================================
-  // Aghanim: Portal Spear
-  //=================================================================================================================
-  "aghanim_spear"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityTextureName"      "aghanim_spear"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_MAGICAL"   
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_YES_STRONG"
-    "AbilityUnitTargetTeam"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilitySound"          "Hero_Mars.Spear.Cast"
-    "MaxLevel"            "6"
-    "IsOnCastBar"          "0"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastPoint"        "0.0"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "10.0"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "damage"      "2200 2640 3080 3520 3960 25400"
-      }
-      "02"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "spear_speed"    "1000 1100 1200 1300 1400 1100"
-      }
-      "03"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "spear_width"    "130"
-      }
-      "04"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "spear_vision"    "300"
-      }
-      "05"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "spear_range"    "10000"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "activity_duration"  "1.7"
-      }
-      "07"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "stun_duration"  "1.25 1.5 1.75 2.0 2.25 2.5"
-      }
-      "08"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "knockback_duration"  "0.25"
-      }      
-      "09"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "knockback_distance"  "75"
-      }
-      "10"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "bonus_dmg_from_hp"     "25" //hardcoded
-      }
-    }
-    "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_5"
-    "AbilityCastGestureSlot"    "DEFAULT"
-  }
-
-  //=================================================================================================================
-  // Aghanim: Staff Beams
-  //=================================================================================================================
-  "aghanim_staff_beams"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_staff_beams"
-    "ScriptFile"          "abilities/creatures/aghanim_staff_beams"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_MAGICAL"
-    "AbilityUnitTargetFlags"    "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_YES"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_2"
-    "AbilityChannelAnimation"   "ACT_DOTA_CHANNEL_ABILITY_2"
-    "AnimationIgnoresModelScale"  "1"
-    "AbilityCastPoint"        "0.0"
-
-    "MaxLevel"            "6"
-    "IsOnCastBar"          "0"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-     "AbilityCastRange"       "10000"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "34"
-    "AbilityChannelTime"      "6.0"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-    
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_speed"    "320 340 360 380 400 420"
-      }  
-      "02"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_radius"    "200"
-      }  
-      "03"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_dps"      "0"
-      } 
-      "04"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "linger_time"    "5.0 6.0 7.0 8.0 9.0 7.0"
-      } 
-      "05"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "linger_create_interval"     "0.5"
-      } 
-      "06"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "damage_interval"    "0.1"
-      }
-      "07"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "beam_dps_pct"    "30 33 36 39 42 110"
-      }
-    }
-  }
-
-
-  //=================================================================================================================
-  // Aghanim: Summon Portals
-  //=================================================================================================================
-  "aghanim_summon_portals"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "aghanim_summon_portals"
-    "ScriptFile"          "abilities/creatures/aghanim_summon_portals.lua"
-
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_MAGICAL"   
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-    "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
-    "AbilityChannelAnimation"    "ACT_DOTA_CHANNEL_ABILITY_4"
-    "AnimationIgnoresModelScale"  "1"
-    "AbilityCastPoint"        "0.0"
-    "AnimationPlaybackRate"    "1.0"
-    "MaxLevel"            "6"
-    "IsOnCastBar"          "0"
-
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-     "AbilityCastRange"       "10000"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "29"
-    "AbilityChannelTime"      "5.0"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-    
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "base_portals"    "4 4 5 6 7 8"
-      }  
-      "02"
-      {
-        "var_type"         "FIELD_INTEGER"
-        "portal_health_pct"   "0"
-      }  
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "min_portal_offset"    "600"  
-      }
-      "04"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "max_portal_offset"    "600"  
-      }
-      "05"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "portal_time"      "2.0 1.8 1.6 1.4 1.2"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "total_portal_depth"  "20 24 28 32 36"
-      }
-      "07"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "staff_crush_radius"  "400"
-      }
-      "08"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "staff_crush_damage"  "3400 4250 5100 5950 6800 29650"
-      }
-      "09"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "staff_crush_stun_duration" "2.0 3.0 4.0 5.0 6.0 6.0"
-      }
-
-      "10"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "staff_crush_delay"      "0.30"
-      }
-      "11"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "staff_crush_max_hp"       "25"
-      }
-    }
-  }
 
 "ability_absolute_no_cc"
   {
@@ -8991,108 +7851,6 @@
   } 
 
 
-  //=================================================================================================================
-  // Aghanim Crystal Attack
-  //=================================================================================================================
-  "aghanim_crystal_attack"
-  {
-    // General
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_POINT"
-    "AbilityUnitTargetTeam"    "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"    "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitDamageType"    "DAMAGE_TYPE_PHYSICAL"
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-    "BaseClass"          "ability_lua"
-    "AbilityTextureName"      "ancient_apparition_ice_blast"
-    "ScriptFile"          "abilities/creatures/aghanim_crystal_attack"
-    "MaxLevel"            "6"
-
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
-    "AnimationIgnoresModelScale"  "1"
-
-    "IsOnCastBar"          "0"
-    
-    // Casting
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCastRange"        "10000"
-    "AbilityCastPoint"        "0.0"
-
-    // Time  
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"        "3"
-
-    // Cost
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilityManaCost"        "0"
-
-    // Special
-    //-------------------------------------------------------------------------------------------------------------
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "attack_time"        "1.7 1.65 1.6 1.55 1.5 1.45"
-      }
-      "02"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "explosion_radius"      "550"
-      }
-      "03"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "attack_damage"      "1800 2100 2400 2700 3000 39000"
-      }
-      "04"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "knockback_duration"    "0.5 0.55 0.6 0.65 0.7 0.75"
-      }
-      "05"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "knockback_distance"    "80 90 100 110 120 130"
-      }
-      "06"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "knockback_height"      "80 90 100 110 120 130"
-      }
-      "07"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "heal_suppression_pct"    "0"
-      }
-      "08"
-      {
-        "var_type"          "FIELD_FLOAT"
-        "debuff_duration"      "12.0"
-      }
-      "09"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "armor_reduction_pct"    "18 26 34 42 50 78"
-      }
-      "10"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "pulse_radius"        "550"
-      }
-      "11"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "pulse_damage"        "0"
-      }
-      "12"
-      {
-        "var_type"          "FIELD_INTEGER"
-        "pulse_damage_pct"      "15 20 25 30 35 50"
-      }
-    }
-  }
-
 
   "bloodseeker_thirst_3"
   {
@@ -9200,282 +7958,6 @@
       }
     }
   }
-
-  "aghanim_empty_spell1"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-
-  "aghanim_empty_spell2"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-
-  "aghanim_empty_spell3"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-
-  "aghanim_empty_spell4"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-
-  "aghanim_empty_spell5"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-
-  "aghanim_empty_spell6"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "aghanim_spell_locked"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
-    "MaxLevel"            "1"
-  }
-  "temporary_slot_used"
-  {
-    "BaseClass"          "doom_bringer_empty1"
-    "AbilityTextureName"      "doom_bringer_empty2"
-    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-    "MaxLevel"            "1"
-  }
-  "aghanim_shard_toss"
-  {
-    "BaseClass"           "ability_lua"
-    "ScriptFile"          "aghanim/aghanim_shard_toss"
-    "AbilityTextureName"      "aghanim_shard_toss"
-    "MaxLevel"            "3"
-    
-    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
-    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "AbilityUnitDamageType"     "DAMAGE_TYPE_MAGICAL"
-    "SpellImmunityType"      "SPELL_IMMUNITY_ENEMIES_NO"
-
-    "AOERadius"          "550"
-
-    "AbilityType"         "DOTA_ABILITY_TYPE_ULTIMATE"
-
-    "AbilityCastRange"        "1000 1200 1400"
-    "AbilityCastPoint"        "0.0"
-    "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_6"
-
-    "AbilityCooldown"       "70"
-    "AbilityManaCost"       "0"
-
-    "AbilitySpecial"
-    {
-      "1"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "pulses"        "3 4 5"
-        "LinkedSpecialBonus"  "special_bonus_unique_aghanim_6"
-        "LinkedSpecialBonusField" "bonus_pulses"
-      }
-      "02"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "min_width"       "120"
-      }
-      "03"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "max_width"       "800"
-      }
-      "04"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "travel_time"     "1.5 1.3 1.1"
-        "LinkedSpecialBonus"  "special_bonus_unique_aghanim_6"
-        "LinkedSpecialBonusField"    "timer_reduction"
-        "LinkedSpecialBonusOperation"   "SPECIAL_BONUS_MULTIPLY"
-      }
-      "05"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "trigger_radius"    "120"
-      }
-      "06"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "pass_damage"     "60 80 100"
-      }
-      "07"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "proc_damage"     "100 120 150"
-      }
-      "08"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "init_time"       "1.3 1.1 0.9"
-      }
-      "09"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "phase_delay"     "0.9 0.8 0.7"
-        "LinkedSpecialBonus"  "special_bonus_unique_aghanim_6"
-        "LinkedSpecialBonusField"    "timer_reduction"
-        "LinkedSpecialBonusOperation"   "SPECIAL_BONUS_MULTIPLY"
-      }
-      "10"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "min_range"       "300"
-      }
-      "11"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "erupt_radius"      "175"
-      }
-      "12"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "shard_bonus_damage"  "300 500 800"
-      }
-      "13"
-      {
-        "var_type"        "FIELD_FLOAT"
-        "stun_duration"     "0.1 0.2 0.5"
-      }
-      "14"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "shard_erupt_radius"  "250"
-      }
-      "14"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "max_range"      "2500"
-      }
-      "15"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "shard_count"      "3"
-        "LinkedSpecialBonus"  "special_bonus_unique_aghanim_5"
-      }
-      "16"
-      {
-        "var_type"        "FIELD_INTEGER"
-        "movespeed"      "20 30 40"
-      }
-    }
-  }
-
-  "special_bonus_unique_aghanim_1" // Laser damages buildings
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  }
-
-  "special_bonus_unique_aghanim_2" // laser uses aghanim's movespeed
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  }
-
-  "special_bonus_unique_aghanim_3" // +3 spell lock crystal health
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "value"       "3"
-      }
-    }
-  }
-
-  "special_bonus_unique_aghanim_4" // spell lock locks ultimates
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  }
-
-  "special_bonus_unique_aghanim_5" // +2 ult shards
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"    "FIELD_INTEGER"
-        "value"    "2"
-      }
-    }
-  }
-
-  "special_bonus_unique_aghanim_6" // Extra shard pulses + shorter delay
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"      "FIELD_INTEGER"
-        "bonus_pulses"    "1"
-      }
-      "02"
-      {
-        "var_type"      "FIELD_FLOAT"
-        "timer_reduction"   "0.5"
-      }
-    }
-  }
-
-  "special_bonus_unique_aghanim_7" // increased spell steal slow
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-    "AbilitySpecial"
-    {
-      "01"
-      {
-        "var_type"    "FIELD_INTEGER"
-        "value"    "20"
-      }
-    }
-  }
-
-  "special_bonus_unique_aghanim_8" // spell lock shoots ult crystal on success
-  {
-    "BaseClass"      "special_bonus_undefined"              
-    "AbilityType"     "DOTA_ABILITY_TYPE_ATTRIBUTES"
-    "AbilityBehavior"   "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-  }
-
-
 
 
 
@@ -10745,6 +9227,164 @@
     }
     "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_3"
   }
+
+
+
+"event_bash_datadriven"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "ability_datadriven"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "AbilityUnitDamageType"     "DAMAGE_TYPE_PHYSICAL"  
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+  "AbilityTextureName"      "slardar_bash"
+  "MaxLevel" "1"
+  "RequiredLevel" "1"
+  // Precache
+  //-------------------------------------------------------------------------------------------------------------
+  "precache"
+   {
+    "soundfile"   "soundevents/game_sounds_heroes/game_sounds_slardar.vsndevts"
+    "particle"  "particles/generic_gameplay/generic_stunned.vpcf"  
+   }
+
+  // Stats
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityModifierSupportBonus"   "25"
+
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "chance"        "5"
+    }
+    "02"
+    {
+      "var_type"        "FIELD_FLOAT"
+      "duration"        "0.1"
+    }
+  }
+  "Modifiers"
+  {
+    "modifier_bash_stun_datadriven"
+    {
+      "IsDebuff"    "1"
+      "OverrideAnimation"   "ACT_DOTA_DISABLED"
+
+      "EffectName" "particles/generic_gameplay/generic_stunned.vpcf"
+          "EffectAttachType" "follow_overhead"
+
+      "States"
+      {
+        "MODIFIER_STATE_STUNNED"  "MODIFIER_STATE_VALUE_ENABLED"
+      }
+    }
+
+
+    "modifier_bash_datadriven"    
+    {
+      "IsHidden"  "1"
+      "Passive" "1"
+
+      "OnAttackLanded"
+      {
+        "Random"
+        {
+          "Chance"  "%chance"
+          "PseudoRandom"    "DOTA_PSEUDO_RANDOM_SLARDAR_BASH"
+
+          "OnSuccess"
+          {
+            "FireSound"
+            {
+              "EffectName"  "Hero_Slardar.Bash"
+              "Target"    "TARGET"
+            }
+
+            "ApplyModifier"
+            {
+              "Target"
+              {
+                "Center"  "TARGET"
+                "Types"   "DOTA_UNIT_TARGET_HERO"
+              }
+              "ModifierName"  "modifier_bash_stun_datadriven"
+              "Duration"    "%duration"
+            }
+
+            "ApplyModifier"
+            {
+              "Target"
+              {
+                "Center"  "TARGET"
+                "Types"   "DOTA_UNIT_TARGET_BASIC"
+              }
+              "ModifierName"  "modifier_bash_stun_datadriven"
+              "Duration"    "%duration"
+            }        
+          }
+        }
+      } 
+    }
+  }
+}
+
+
+
+"event_dispersion_datadriven"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "ability_datadriven"
+  "AbilityTextureName"      "BTNSpikedBarricades"
+  "AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "SpellImmunityType"     "SPELL_IMMUNITY_ENEMIES_NO"
+  "AbilityUnitDamageType"       "DAMAGE_TYPE_PURE"
+  "MaxLevel" "1"
+
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"      "FIELD_INTEGER"
+      "min_radius"      "1000"
+    }
+    "02"
+    {
+      "var_type"      "FIELD_INTEGER"
+      "max_radius"      "1500"
+    }
+    "03"
+    {
+      "var_type"      "FIELD_INTEGER"
+      "damage_reflection_pct"   "10"
+    }
+  }
+
+  "precache"
+  {
+    "particle"  "particles/units/heroes/hero_spectre/spectre_dispersion.vpcf"
+    "particle"  "particles/units/heroes/hero_spectre/spectre_dispersion_fallback_mid.vpcf"
+    "particle"  "particles/units/heroes/hero_spectre/spectre_dispersion_b_fallback_low.vpcf"
+  }
+
+  "OnCreated"
+  {
+    "RunScript"
+    {
+      "ScriptFile"  "heroes/hero_spectre/event_dispersion.lua"
+      "Function"    "ApplyModifier"
+    }
+  }
+}
+
+
 
 
 }

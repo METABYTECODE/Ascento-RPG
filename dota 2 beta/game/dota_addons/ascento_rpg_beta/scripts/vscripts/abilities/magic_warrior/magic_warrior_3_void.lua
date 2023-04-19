@@ -23,13 +23,13 @@ function modifier_magic_warrior_3_void:DeclareFunctions()
 end
 
 function modifier_magic_warrior_3_void:OnCreated()
-    self.store_damage = self:GetAbility():GetSpecialValueFor("store_damage")
+    self.store_damage = self:GetAbility():GetSpecialValueFor("store_damage") / 100
     self.duration_buff = self:GetAbility():GetSpecialValueFor("duration_buff")
 end
 
 
 function modifier_magic_warrior_3_void:OnRefresh( kv )
-    self.store_damage = self:GetAbility():GetSpecialValueFor("store_damage")
+    self.store_damage = self:GetAbility():GetSpecialValueFor("store_damage") / 100
     self.duration_buff = self:GetAbility():GetSpecialValueFor("duration_buff")
 end
 
@@ -37,7 +37,8 @@ end
 function modifier_magic_warrior_3_void:OnAttacked(keys)
 
     if keys.target == self:GetParent() then -- Check if the attacked unit is the modifier's parent
-        local damageTaken = keys.damage -- Get the amount of damage taken
+        --PrintTable(keys)
+        local damageTaken = keys.original_damage -- Get the amount of damage taken
         local duration = self.duration_buff -- The duration of the bonus damage in seconds
         local bonusDamage = damageTaken * self.store_damage -- The amount of bonus damage is 50% of the damage taken
 

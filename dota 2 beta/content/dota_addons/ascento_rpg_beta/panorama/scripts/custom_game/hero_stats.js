@@ -371,6 +371,46 @@ var updateString = $("#Reinc_text_top");
     $("#Reinc_100000").style.color = "green"
   }
 
+  if (DataForUpdate > 149999){
+    $("#Reinc_150000").style.color = "green"
+  }
+
+  if (DataForUpdate > 199999){
+    $("#Reinc_200000").style.color = "green"
+  }
+
+  if (DataForUpdate > 249999){
+    $("#Reinc_250000").style.color = "green"
+  }
+
+  if (DataForUpdate > 299999){
+    $("#Reinc_300000").style.color = "green"
+  }
+
+  if (DataForUpdate > 349999){
+    $("#Reinc_350000").style.color = "green"
+  }
+
+  if (DataForUpdate > 399999){
+    $("#Reinc_400000").style.color = "green"
+  }
+
+  if (DataForUpdate > 449999){
+    $("#Reinc_450000").style.color = "green"
+  }
+
+  if (DataForUpdate > 499999){
+    $("#Reinc_500000").style.color = "green"
+  }
+
+  if (DataForUpdate > 749999){
+    $("#Reinc_750000").style.color = "green"
+  }
+
+  if (DataForUpdate > 999999){
+    $("#Reinc_1000000").style.color = "green"
+  }
+
   })
 
 

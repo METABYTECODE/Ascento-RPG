@@ -3,14 +3,704 @@
 
 
 
+"donate_field_of_blades"
+{ 
+
+    "BaseClass"                         "ability_lua"
+    "ScriptFile"                        "abilities/donate/donate_field_of_blades.lua" 
+    "AbilityBehavior"                   "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"             "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"              "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"                 "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"             "DAMAGE_TYPE_PHYSICAL" 
+    "MaxLevel"                          "10"
+    "LevelsBetweenUpgrades"             "10"
+    
+    "AbilityTextureName"                "donate_field_of_blades"
+
+    "precache"
+    {
+      "particle"                        "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_v2_blade_fury_disk.vpcf"
+      "particle"                        "particles/econ/items/juggernaut/jugg_arcana/juggernaut_arcana_v2_blade_fury_dragon.vpcf"
+    }
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"                      "FIELD_INTEGER"
+        "damage"                        "10 20 30 40 50 60 70 80 90 100"
+        "DamageTypeTooltip"             "DAMAGE_TYPE_PHYSICAL"
+        "CalculateSpellDamageTooltip"   "1"
+      }
+
+      "02"
+      {
+        "var_type"                      "FIELD_INTEGER"
+        "damage_pure"                   "1 2 3 4 5 6 7 8 9 10"
+        "DamageTypeTooltip"             "DAMAGE_TYPE_PURE"
+        "CalculateSpellDamageTooltip"   "0"
+      }
+
+      "03"
+      {
+        "var_type"                  "FIELD_INTEGER"
+        "radius"                    "1400"
+      }
+    }
+
+}
+
+"donate_bonus_damage_hojyk"
+{
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_bonus_damage_hojyk.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "keeper_of_the_light_blinding_light"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_damage_pct"    "50 100 150 200 250 300 350 400 450 500"
+      }
+    }
+
+}
+
+   "donate_bonus_reduction_hojyk"
+    {
+    
+    //Armored soul provides armor bonus and prevents part of incoming damage. 500 +(10 20 30 40 50 60 70 80 90 100 110 120 130 104 150 160 170 180 190 200)% bonus armor Prevents (2 4 6 8 10 12 14 16 18 20 22 24 26 28 30 32 34 36 38 40)% of damage. 
+    
+    
+        "BaseClass"                     "ability_lua"
+        "ScriptFile"                    "abilities/donate/donate_bonus_reduction_hojyk.lua"
+        "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+        "MaxLevel"                      "10"
+        "LevelsBetweenUpgrades"         "20"
+        "RequiredLevel"                 "1"
+    
+        "AbilityTextureName"                            "tank_3_armored_soul"
+    
+        "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "armor"        "50"
+            }
+            "02"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "armor_pct"        "10 20 30 40 50 60 70 80 90 100"
+            }
+            "03"
+            {
+                "var_type"              "FIELD_INTEGER"
+                "damage_prevents"        "5 10 15 20 25 30 35 40 45 50"
+            }     
+        }  
+    }
+
+
+
+
+  "donate_bonus_sp_amp_hojyk"
+{
+
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_bonus_sp_amp_hojyk.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "20"
+    "RequiredLevel"                 "1"
+
+    "AbilityTextureName"                            "rubick_arcane_supremacy"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "bonus_damage_pct"    "100 200 300 400 500 600 700 800 900 1000"
+      }
+    }
+
+}
+
+"hojyk_tether"
+{
+  // General
+  //-------------------------------------------------------------------------------------------------------------
+  "BaseClass"       "ability_datadriven"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+  "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+  "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ALLIES_YES"
+  "SpellDispellableType"      "SPELL_DISPELLABLE_NO"
+
+  "AbilityTextureName"      "wisp_tether"
+
+  "LinkedAbility"         "hojyk_tether_break"
+
+  // Casting
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastPoint"        "0"
+  "AbilityCastAnimation"      "ACT_INVALID"
+
+  // Time   
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCooldown"       "20.0"
+  "AbilityDuration"       "-1"
+
+  // Cost
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityManaCost"       "0"
+  
+  // Cast Range
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilityCastRange"        "100000"
+
+  "MaxLevel" "10"
+  "RequiredLevel" "1"
+  "LevelsBetweenUpgrades" "10"
+
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "radius"          "100000"
+    }
+    "02"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "tether_duration"     "-1"
+    }
+    "03"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "latch_distance_to_target"  "100000"
+    }
+    "04"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "latch_destroy_tree_radius" "0"
+    }
+    "05"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "exp_bonus"        "50"
+    }
+    "06"
+    {
+      "var_type"          "FIELD_INTEGER"
+      "spell_amp"        "50 100 150 200 250 300 350 400 450 500"
+    }
+    "07"
+    {
+      "var_type"          "FIELD_FLOAT"
+      "damage_reduction"  "2.5 5 7.5 10 12.5 15 17.5 20 22.5 25"
+    }
+  }
+  
+  // Data driven
+  //-------------------------------------------------------------------------------------------------------------
+  "precache"
+  {
+    "soundfile"         "soundevents/game_sounds_heroes/game_sounds_wisp.vsndevts"
+    "particle"          "particles/units/heroes/hero_wisp/wisp_tether.vpcf"
+    "particle"          "particles/units/heroes/hero_wisp/wisp_tether_hit.vpcf"
+    "particle"          "particles/units/heroes/hero_wisp/wisp_tether_slow.vpcf"
+  }
+  
+  "OnSpellStart"
+  {
+    
+    "RunScript"
+    {
+      "ScriptFile"    "heroes/hero_wisp/tether.lua"
+      "Function"      "CastTether"
+      "Target"      "TARGET"
+    }
+  }
+  
+  "Modifiers"
+  {
+    "modifier_hojyk_tether"
+    {
+      "IsDebuff"  "0"
+      "IsPurgable"  "1"
+      "Duration"  "-1"
+      
+      "OnCreated"
+      {
+        "FireSound"
+        {
+          "EffectName"    "Hero_Wisp.Tether"  // a loop sound
+          "Target"      "CASTER"
+        }
+      }
+      
+      "OnDestroy"
+      {
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "EndTether"
+        }
+      
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "StopSound"
+          "sound_name"    "Hero_Wisp.Tether"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Hero_Wisp.Tether.Stop"
+          "Target"      "CASTER"
+        }
+      }
+
+
+
+      "ThinkInterval"     "0.5"
+      "OnIntervalThink"
+      {
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "Think_killed"
+        }
+      }
+      
+    }
+    
+    "modifier_hojyk_tether_ally"
+    {
+      "IsDebuff"  "0"
+      "IsPurgable"  "1"
+      "Duration"  "-1"
+      
+      "OnCreated"
+      {
+        "FireSound"
+        {
+          "EffectName"    "Hero_Wisp.Tether.Target"
+          "Target"      "TARGET"
+        }
+      }
+      
+      "OnDestroy"
+      {
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "EndTether2"
+        }
+      }
+
+    }
+  }
+}
+
+"hojyk_tether_break"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"       "ability_datadriven"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+    "LinkedAbility"         "hojyk_tether"
+    "AbilityTextureName"      "wisp_tether_break"
+
+    // Casting
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCastPoint"        "0 0 0 0"
+    "AbilityCastAnimation"      "ACT_INVALID"
+
+    // Time   
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"       "1.0 1.0 1.0 1.0"
+
+    "OnSpellStart"
+    {
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "EndTether"
+          
+          "ally_modifier"   "modifier_hojyk_tether_ally"
+        }
+      
+        "RunScript"
+        {
+          "ScriptFile"    "heroes/hero_wisp/tether.lua"
+          "Function"      "StopSound"
+          "sound_name"    "Hero_Wisp.Tether"
+        }
+        
+        "FireSound"
+        {
+          "EffectName"    "Hero_Wisp.Tether.Stop"
+          "Target"      "CASTER"
+        }
+    }
+  }
+
+
+
+"donate_muerta_mobility_aura"
+{
+
+//Gives all allies 25% movespeed and (50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000) attack speed
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_muerta_mobility_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ALLIES_YES"
+    "MaxLevel" "20"
+    "RequiredLevel" "1"
+    "LevelsBetweenUpgrades" "10"
+
+    "AbilityTextureName"                            "drow_ranger_trueshot"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "attack_speed"    "50 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950 1000"
+        "CalculateSpellDamageTooltip"   "0"
+      }
+      "02"
+      {
+        "var_type"        "FIELD_INTEGER"
+        "movespeed_pct"    "25"
+        "CalculateSpellDamageTooltip"   "0"
+      }
+    }
+
+
+}
+
+
+
+"donate_muerta_disarm"
+  {
+
+    "BaseClass"                     "ability_lua"
+    "AbilityCastRange"              "1200"
+    "ScriptFile"                    "abilities/donate/donate_muerta_disarm.lua"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "AbilityTextureName"            "elder_titan_natural_order"
+
+    "MaxLevel"                      "5"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "1"
+    
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+        {
+            "01"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "range"                 "1200"
+            }
+            "02"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "disarmor"          "10 20 30 40 50"
+            }
+            "03"
+            {
+                "var_type"          "FIELD_INTEGER"
+                "disresist"         "10 20 30 40 50"
+            }
+        }
+  }
+
+"donate_muerta_bsa"
+{
+
+//Your basic attack time is slower (6.0), but you deal x(2.75 3.0 3.25 3.5 3.75 4.0 4.25 4.5 4.75 5.0) damage
+
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_muerta_bsa.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+    "RequiredLevel"                 "0"
+
+    "AbilityTextureName"                            "ranger_1_heavy_bolts"
+
+    "AbilitySpecial"
+    {
+      "01"
+      {
+          "var_type"        "FIELD_FLOAT"
+          "base_attack_time"    "3.0 2.75 2.5 2.25 2.0 1.75 1.5 1.25 1.0 0.75"
+      }
+    }
+
+}
+
+"donate_muerta_damage_datadriven"
+{
+  // General
+  //------------------------------------------------------------------------------------------------------------- 
+  "BaseClass"       "ability_datadriven"
+  "AbilityTextureName"      "SpecialPurePassive"
+  "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+  "AbilityUnitDamageType"       "DAMAGE_TYPE_PURE"
+  "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_NO"
+
+  "RequiredLevel" "1"
+  "MaxLevel" "1"
+  
+  // Special
+  //-------------------------------------------------------------------------------------------------------------
+  "AbilitySpecial"
+  {
+    "01"
+    {
+      "var_type"        "FIELD_INTEGER"
+      "bonus_damage"        "50000"
+    }
+  }
+
+  "precache"
+  {
+    "particle"    "particles/units/heroes/hero_spectre/spectre_desolate.vpcf"
+    "soundfile"   "soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+  }
+
+  "Modifiers"
+  {
+    "modifier_donate_muerta_damage_datadriven"
+    {
+      "Passive" "1"
+      "IsHidden"  "1"
+
+      "OnAttackLanded"
+      {
+        "RunScript"
+        {
+          "ScriptFile"  "abilities/donate/muerta_damage.lua"
+          "Function"    "Desolate"
+          "Target"    "TARGET"
+        }
+      }
+    }
+  }
+}
+
+
+"donate_necro_aura"
+{ 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_necro_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+
+    "precache"
+    {
+      "particle"  "particles/items4_fx/scepter_aura_ring_detail.vpcf"
+    }
+
+
+
+
+    "AbilityTextureName"                            "necrolyte_heartstopper_aura"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "damage"               "111 222 333 444 555 666 777 888 999 1111"
+      }
+
+      "02"
+      {
+        "var_type"                "FIELD_INTEGER"
+        "radius"                  "1400"
+      }
+    }
+
+}
+
+"donate_oracle_aura"
+{ 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_oracle_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+
+    "AbilityTextureName"                            "donate_oracle_aura"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "damage"               "111 222 333 444 555 666 777 888 999 1111"
+      }
+
+      "02"
+      {
+        "var_type"                "FIELD_INTEGER"
+        "radius"                  "1400"
+      }
+    }
+
+}
+
+
+"donate_hojuk_aura"
+{ 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_hojuk_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+
+    "AbilityTextureName"                            "donate_hojuk_aura"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "damage"               "77 88 99 111 222 333 444 555 666 777"
+      }
+
+      "02"
+      {
+        "var_type"                "FIELD_INTEGER"
+        "radius"                  "1350"
+      }
+    }
+
+
+}
+
+
+"donate_hhhh_aura"
+{ 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_hhhh_aura.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+
+    "AbilityTextureName"                            "razor_eye_of_the_storm"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "damage"               "111 222 333 444 555 666 777 888 999 1111"
+      }
+
+      "02"
+      {
+        "var_type"                "FIELD_INTEGER"
+        "radius"                  "1400"
+      }
+    }
+
+
+}
+
+"donate_leha_genocid"
+{ 
+
+    "BaseClass"                     "ability_lua"
+    "ScriptFile"                    "abilities/donate/donate_leha_genocid.lua" 
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+    "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
+    "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
+    "MaxLevel"                      "10"
+    "LevelsBetweenUpgrades"         "10"
+
+    "AbilityTextureName"            "donate_leha_genocid"
+
+    "AbilitySpecial"
+    {
+        "01"
+      {
+        "var_type"                "FIELD_FLOAT"
+        "damage"               "150 250 350 450 550 650 750 850 950 1050"
+      }
+
+      "02"
+      {
+        "var_type"                "FIELD_INTEGER"
+        "radius"                  "-1"
+      }
+    }
+
+
+}
+
 "donate_leha_doom_aura"
 { 
 
     "BaseClass"                     "ability_lua"
     "ScriptFile"                    "abilities/donate/donate_leha_doom_aura.lua" 
-    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+    "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
     "AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_ENEMY"
-    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityUnitTargetType"         "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "SpellDispellableType"          "SPELL_DISPELLABLE_NO"
+    "SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_NO"
     "AbilityUnitDamageType"         "DAMAGE_TYPE_PURE" 
     "MaxLevel"                      "10"
     "LevelsBetweenUpgrades"         "10"
@@ -22,13 +712,13 @@
         "01"
       {
         "var_type"                "FIELD_FLOAT"
-        "damage"               "100 200 300 400 500 600 700 800 900 1000"
+        "damage"               "150 250 350 450 550 650 750 850 950 1050"
       }
 
       "02"
       {
         "var_type"                "FIELD_INTEGER"
-        "radius"                  "1500"
+        "radius"                  "1400"
       }
     }
 
@@ -141,7 +831,7 @@
 
     // Time
     //-------------------------------------------------------------------------------------------------------------
-    "AbilityCooldown"       "20"
+    "AbilityCooldown"       "30"
 
     // Special
     //-------------------------------------------------------------------------------------------------------------
@@ -150,7 +840,7 @@
       "01"
       {
         "var_type"      "FIELD_INTEGER"
-        "ability_cooldown"    "20"
+        "ability_cooldown"    "30"
       }
 
     }
@@ -170,6 +860,58 @@
 
   }
 
+
+  "pop_donate"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"           "ability_lua"
+    "ScriptFile"          "abilities/donate/pop_donate"
+    "AbilityTextureName"      "pop_donate"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+    "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "LinkedAbility"         "pop_donate_bue"
+
+    "MaxLevel"            "1"
+    "RequiredLevel" "1"
+    "LevelsBetweenUpgrades" "1"
+
+    "IsInnateAbility"       "1"
+    "AbilityCastRange"        "333"
+
+    // Time
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilityCooldown"       "33"
+
+    // Special
+    //-------------------------------------------------------------------------------------------------------------
+    "AbilitySpecial"
+    {
+      "01"
+      {
+        "var_type"      "FIELD_INTEGER"
+        "ability_cooldown"    "33"
+      }
+
+    }
+  }
+
+  "pop_donate_bue"
+  {
+    // General
+    //-------------------------------------------------------------------------------------------------------------
+    "BaseClass"           "ability_lua"
+    "ScriptFile"          "abilities/donate/pop_donate"
+    "AbilityTextureName"      "pop_donate_bue"
+    "SpellImmunityType"       "SPELL_IMMUNITY_ENEMIES_YES"
+    "AbilityBehavior"       "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+
+    "MaxLevel"            "1"
+
+  }
+
 "donate_steal_kills"
 {
     "BaseClass"                     "ability_lua"
@@ -178,19 +920,19 @@
     "AbilityBehavior"           "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
     "AbilityUnitTargetTeam"     "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
     "AbilityUnitTargetType"     "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_YES"
+    "SpellImmunityType"         "SPELL_IMMUNITY_ENEMIES_NO"
 
     "MaxLevel"                      "10"
-    "LevelsBetweenUpgrades"         "10"
-    "RequiredLevel"                 "0"
+    "LevelsBetweenUpgrades"         "20"
+    "RequiredLevel"                 "10"
 
     "AbilityTextureName"                "rubick_spell_steal"
 
-    "AbilityManaCost"                   "500"
-    "AbilityCooldown"                   "60"
+    "AbilityManaCost"                   "2500"
+    "AbilityCooldown"                   "66"
 
-    "AbilityCastRange"        "500"
-    "AbilityCastPoint"        "1.0"
+    "AbilityCastRange"        "1000"
+    "AbilityCastPoint"        "5.0"
 
     "AbilityCastAnimation"    "ACT_DOTA_CAST_ABILITY_1"
 
@@ -199,7 +941,7 @@
         "01"
         {
             "var_type"              "FIELD_INTEGER"
-            "steal_kills"              "10 20 30 40 50 60 70 80 90 100"
+            "steal_kills"              "5 10 20 30 40 50 60 70 80 90"
         }         
     }
 }
@@ -400,7 +1142,7 @@
         "01"
         {
           "var_type"        "FIELD_INTEGER"
-          "disarmor"    "-1"
+          "disarmor"    "-2"
         }
     }
 }

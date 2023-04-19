@@ -6,7 +6,7 @@ function item_lia_health_stone_potion:GetIntrinsicModifierName()
 end
 
 function item_lia_health_stone_potion:CastFilterResult()
-	if self:GetCaster():GetHealthPercent() == 100 then
+	if self:GetCaster():GetHealthPercent() == 100 and self:GetCaster():GetMana() >= self:GetCaster():GetMaxMana() then
 		return UF_FAIL_CUSTOM
 	end
 	return UF_SUCCESS
@@ -18,6 +18,7 @@ end
 
 function item_lia_health_stone_potion:OnSpellStart()
 	self:GetCaster():Heal(self:GetSpecialValueFor("heal_amount"), self)
+	self:GetCaster():GiveMana(self:GetSpecialValueFor("heal_amount"))
 	self:GetCaster():EmitSound("DOTA_Item.Mango.Activate") --Emit sound for the health
 	
 	local particle = ParticleManager:CreateParticle("particles/items_fx/healing_flask.vpcf", PATTACH_ABSORIGIN_FOLLOW, self:GetCaster())

@@ -19,13 +19,13 @@ function modifier_movespeed_cap:IsPurgable() return false end
 function modifier_movespeed_cap:IsPurgeException() return false end
 
 function modifier_movespeed_cap:GetModifierMoveSpeed_Max( params )
-    return 5000
+    return 5555
 end
 
 
 
 function modifier_movespeed_cap:GetModifierMoveSpeed_Limit( params )
-    return 5000
+    return 5555
 end
 
 function modifier_movespeed_cap:GetModifierIgnoreMovespeedLimit( params )
@@ -34,6 +34,7 @@ end
 
 function modifier_movespeed_cap:CheckState() 
   local state = {
+    [MODIFIER_STATE_NO_UNIT_COLLISION] = true,
     [MODIFIER_STATE_NO_HEALTH_BAR] = true
   }
   return state

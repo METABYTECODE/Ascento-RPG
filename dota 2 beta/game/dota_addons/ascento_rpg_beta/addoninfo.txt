@@ -1,6 +1,6 @@
 "AddonInfo"
 {
-    "version"        "1.89.0"
+    "version"        "1.90"
     "maps"        "ascento_rpg"
     "ascento_rpg"
     {

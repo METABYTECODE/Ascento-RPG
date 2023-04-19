@@ -38,8 +38,8 @@ end
 
 function modifier_no_collision_custom:CheckState() 
   local state = {
-    [MODIFIER_STATE_NO_HEALTH_BAR] = true,
-    [MODIFIER_STATE_NO_UNIT_COLLISION] = true
+    [MODIFIER_STATE_NO_UNIT_COLLISION] = true,
+    [MODIFIER_STATE_NO_HEALTH_BAR] = true
   }
   return state
 end
